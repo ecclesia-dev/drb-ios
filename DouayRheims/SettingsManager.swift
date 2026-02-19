@@ -7,6 +7,7 @@ final class SettingsManager: ObservableObject {
 
     @AppStorage("fontSize") var fontSize: Double = 18.0
     @AppStorage("lineSpacing") var lineSpacing: Double = 5.0
+    @AppStorage("showCommentary") var showCommentary: Bool = true
 
     private init() {}
 

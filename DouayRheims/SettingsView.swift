@@ -50,6 +50,20 @@ struct SettingsView: View {
                 }
             }
 
+            Section("Commentary") {
+                Toggle(isOn: $settings.showCommentary) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Show Commentary")
+                            .font(Theme.serifBody(16))
+                            .foregroundColor(Theme.textPrimary(colorScheme))
+                        Text("Tap a verse to view Haydock, Lapide, and Douai annotations")
+                            .font(Theme.serifBody(13))
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .tint(Theme.accent(colorScheme))
+            }
+
             Section("About") {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Douay-Rheims Bible")

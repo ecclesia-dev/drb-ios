@@ -22,6 +22,10 @@
 		A1000013 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000013; };
 		A1000014 /* ReadingPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000014; };
 		A1000015 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000015; };
+		A1000016 /* CommentaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000016; };
+		A1000017 /* haydock.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000017; };
+		A1000018 /* lapide.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000018; };
+		A1000019 /* douai-1609.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000019; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		A2000013 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		A2000014 /* ReadingPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingPlanView.swift; sourceTree = "<group>"; };
 		A2000015 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A2000016 /* CommentaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentaryManager.swift; sourceTree = "<group>"; };
+		A2000017 /* haydock.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = haydock.tsv; sourceTree = "<group>"; };
+		A2000018 /* lapide.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = lapide.tsv; sourceTree = "<group>"; };
+		A2000019 /* douai-1609.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "douai-1609.tsv"; sourceTree = "<group>"; };
 		A3000001 /* DouayRheims.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouayRheims.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,7 +86,11 @@
 				A2000013 /* SettingsManager.swift */,
 				A2000014 /* ReadingPlanView.swift */,
 				A2000015 /* SettingsView.swift */,
+				A2000016 /* CommentaryManager.swift */,
 				A2000010 /* drb.tsv */,
+				A2000017 /* haydock.tsv */,
+				A2000018 /* lapide.tsv */,
+				A2000019 /* douai-1609.tsv */,
 				A2000003 /* Assets.xcassets */,
 			);
 			path = DouayRheims;
@@ -152,6 +164,9 @@
 			files = (
 				A1000003 /* Assets.xcassets in Resources */,
 				A1000010 /* drb.tsv in Resources */,
+				A1000017 /* haydock.tsv in Resources */,
+				A1000018 /* lapide.tsv in Resources */,
+				A1000019 /* douai-1609.tsv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +190,7 @@
 				A1000013 /* SettingsManager.swift in Sources */,
 				A1000014 /* ReadingPlanView.swift in Sources */,
 				A1000015 /* SettingsView.swift in Sources */,
+				A1000016 /* CommentaryManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
