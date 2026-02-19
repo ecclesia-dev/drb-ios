@@ -11,9 +11,16 @@ struct BookListView: View {
                     ForEach(bibleData.books.filter { $0.testament == testament }) { book in
                         NavigationLink(destination: ChapterListView(book: book)) {
                             HStack {
-                                Text(book.name)
-                                    .font(Theme.serifBody(17))
-                                    .foregroundColor(Theme.textPrimary(colorScheme))
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(book.name)
+                                        .font(Theme.serifBody(17))
+                                        .foregroundColor(Theme.textPrimary(colorScheme))
+                                    if Theme.deuterocanonical.contains(book.name) {
+                                        Text("Deuterocanonical")
+                                            .font(.system(size: 11, weight: .medium))
+                                            .foregroundColor(Theme.goldAccent(colorScheme))
+                                    }
+                                }
                                 Spacer()
                                 Text("\(book.chapters.count)")
                                     .font(Theme.serifItalic(14))

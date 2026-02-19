@@ -20,10 +20,24 @@ struct ContentView: View {
             }
 
             NavigationStack {
+                ReadingPlanView()
+            }
+            .tabItem {
+                Label("Plan", systemImage: "calendar")
+            }
+
+            NavigationStack {
                 BookmarksView()
             }
             .tabItem {
                 Label("Bookmarks", systemImage: "bookmark")
+            }
+
+            NavigationStack {
+                SettingsView()
+            }
+            .tabItem {
+                Label("Settings", systemImage: "textformat.size")
             }
         }
         .tint(Theme.accent(colorScheme))

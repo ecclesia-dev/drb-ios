@@ -6,6 +6,7 @@ struct ChapterView: View {
 
     @EnvironmentObject var bibleData: BibleDataManager
     @EnvironmentObject var bookmarks: BookmarkManager
+    @EnvironmentObject var settings: SettingsManager
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
@@ -14,20 +15,41 @@ struct ChapterView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 // Chapter header
-                Text("\(book.name)")
-                    .font(Theme.serifBold(24))
+                Text(book.name)
+                    .font(settings.headerFont)
                     .foregroundColor(Theme.accent(colorScheme))
                     .padding(.bottom, 2)
                 Text("Chapter \(chapter)")
-                    .font(Theme.serifItalic(18))
+                    .font(settings.subHeaderFont)
                     .foregroundColor(.secondary)
                     .padding(.bottom, 20)
 
-                // Verses as flowing text
+                // Verses
                 ForEach(verses) { verse in
                     VerseRow(verse: verse)
                         .padding(.bottom, 8)
                 }
+
+                // Prev/Next navigation
+                HStack {
+                    if chapter > 1 {
+                        NavigationLink(destination: ChapterView(book: book, chapter: chapter - 1)) {
+                            Label("Chapter \(chapter - 1)", systemImage: "chevron.left")
+                                .font(Theme.serifBody(15))
+                        }
+                    }
+                    Spacer()
+                    if book.chapters.contains(chapter + 1) {
+                        NavigationLink(destination: ChapterView(book: book, chapter: chapter + 1)) {
+                            Label("Chapter \(chapter + 1)", systemImage: "chevron.right")
+                                .font(Theme.serifBody(15))
+                                .environment(\.layoutDirection, .rightToLeft)
+                        }
+                    }
+                }
+                .foregroundColor(Theme.accent(colorScheme))
+                .padding(.top, 24)
+                .padding(.bottom, 16)
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 16)
@@ -41,19 +63,20 @@ struct ChapterView: View {
 struct VerseRow: View {
     let verse: Verse
     @EnvironmentObject var bookmarks: BookmarkManager
+    @EnvironmentObject var settings: SettingsManager
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: 0) {
             Text("\(verse.verse) ")
-                .font(Theme.serifBold(12))
+                .font(settings.verseNumberFont)
                 .foregroundColor(Theme.accent(colorScheme))
                 .baselineOffset(4)
 
             Text(verse.text)
-                .font(Theme.serifBody(18))
+                .font(settings.bodyFont)
                 .foregroundColor(Theme.textPrimary(colorScheme))
-                .lineSpacing(5)
+                .lineSpacing(CGFloat(settings.lineSpacing))
                 .fixedSize(horizontal: false, vertical: true)
 
             Spacer(minLength: 0)
