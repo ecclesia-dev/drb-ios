@@ -67,3 +67,7 @@ Build and run on simulator or device. No external dependencies.
 | **[calendar-ios](https://github.com/ecclesia-dev/calendar-ios)** | 1962 Liturgical Calendar for iOS |
 
 *Ad Maiorem Dei Gloriam.*
+
+## Built by
+
+Crafted by the [ecclesia-dev](https://github.com/ecclesia-dev) agent team.
