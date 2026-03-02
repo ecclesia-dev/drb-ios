@@ -59,6 +59,7 @@ final class CommentaryManager: ObservableObject {
     private var loadingInProgress: Set<CommentarySource> = []
 
     @Published private(set) var isLoaded = false
+    @Published private(set) var haydockLoaded = false
 
     private init() {
         // Fix 1 + 4: Load only the small sources (Douai ~3k lines, Lapide ~2.4k lines)
@@ -86,6 +87,9 @@ final class CommentaryManager: ObservableObject {
         }
         loadedSources.insert(source)
         loadingInProgress.remove(source)
+        if source == .haydock {
+            haydockLoaded = true
+        }
     }
 
     // Fix 4: Trigger Haydock/Lapide load on first access if not yet loaded
