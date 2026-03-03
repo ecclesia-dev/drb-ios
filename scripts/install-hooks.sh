@@ -11,10 +11,8 @@ mkdir -p "$HOOK_DIR"
 
 cat > "$HOOK_FILE" << 'HOOKEOF'
 #!/bin/sh
-# Pre-push safety hook — blocks pushes of workspace files
+# Pre-push safety hook — guards against pushing internal files
 # Installed in all ecclesia-dev project repos
-
-FORBIDDEN="MEMORY.md USER.md SOUL.md IDENTITY.md AGENTS.md HEARTBEAT.md ORG.MD PIPELINE.md SPRINTS.md STATUS.md PROJECT_INDEX.md MISSION.md MISTAKES.md memory/ .secrets/ knowledge/"
 
 # Check that git root is NOT the workspace root
 GIT_ROOT=$(git rev-parse --show-toplevel)
@@ -26,14 +24,20 @@ if [ -n "$WORKSPACE" ] && [ "$GIT_ROOT" = "$WORKSPACE" ]; then
   exit 1
 fi
 
-# Check if any forbidden workspace files are tracked
-for f in $FORBIDDEN; do
-  if git ls-files --error-unmatch "$f" 2>/dev/null; then
-    echo "❌ PUSH BLOCKED: workspace file '$f' is tracked in this repo."
-    echo "   Remove it with: git rm --cached $f"
-    exit 1
-  fi
-done
+# Check for a local forbidden-files list (not committed to the repo)
+FORBIDDEN_LIST="${WORKSPACE:+$WORKSPACE/.push-forbidden}"
+
+if [ -n "$FORBIDDEN_LIST" ] && [ -f "$FORBIDDEN_LIST" ]; then
+  while IFS= read -r f || [ -n "$f" ]; do
+    [ -z "$f" ] && continue
+    [ "${f#\#}" != "$f" ] && continue  # skip comments
+    if git ls-files --error-unmatch "$f" 2>/dev/null; then
+      echo "❌ PUSH BLOCKED: internal file '$f' is tracked in this repo."
+      echo "   Remove it with: git rm --cached $f"
+      exit 1
+    fi
+  done < "$FORBIDDEN_LIST"
+fi
 
 echo "✅ Pre-push check passed."
 exit 0

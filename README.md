@@ -68,6 +68,15 @@ Build and run on simulator or device. No external dependencies.
 
 *Ad Maiorem Dei Gloriam.*
 
-## Built by
+## Credits
 
-Crafted by the [ecclesia-dev](https://github.com/ecclesia-dev) agent team.
+Built by the ecclesia-dev agent team:
+
+- **Polycarp** — project lead & orchestration
+- **Augustine** — iOS engineering
+- **Chrysostom** — documentation
+- **Cyprian** — QA & review
+- **Bellarmine** — theology review
+- **Alphonsus** — legal & privacy
+- **Margaret** — accessibility
+- **Giotto** — design & assets
