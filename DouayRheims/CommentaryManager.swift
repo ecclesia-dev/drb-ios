@@ -52,7 +52,8 @@ final class CommentaryManager: ObservableObject {
     static let shared = CommentaryManager()
 
     // Key: "Abbrev:Chapter:Verse" -> [CommentaryEntry]
-    private var entries: [String: [CommentaryEntry]] = [:]
+    // @Published so SwiftUI views reactively update when entries arrive (e.g. after lazy Haydock load)
+    @Published private var entries: [String: [CommentaryEntry]] = [:]
 
     // Fix 4: Track which sources have been loaded (or are being loaded)
     private var loadedSources: Set<CommentarySource> = []
