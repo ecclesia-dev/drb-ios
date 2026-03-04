@@ -23,7 +23,7 @@ Douay-Rheims Bible
 ## 3. Description (4000 char max)
 
 ```
-The Douay-Rheims Bible with three classic Catholic commentaries — Haydock, Cornelius à Lapide, and the original 1609 Douai annotations. All 73 books. Completely free. No ads, no accounts, no tracking.
+The Douay-Rheims Bible with three classic Catholic commentaries — Haydock, Cornelius à Lapide, and the original Douay-Rheims annotations. All 73 books. Completely free. No ads, no accounts, no tracking.
 
 Tap any verse to read what the Fathers and Doctors of the Church taught about it. The commentary panel slides open right next to the text — no navigating away, no losing your place.
 
@@ -34,7 +34,7 @@ WHAT'S INCLUDED
 • Complete Douay-Rheims text — all 73 books of the Catholic canon (Challoner revision), 35,805 verses, in traditional Vulgate order
 • Haydock Commentary — over 35,000 entries covering the entire Bible, drawing on Church Fathers, Doctors, and approved commentators
 • Cornelius à Lapide — 2,400+ entries on the Gospels and Epistles, one of the most thorough Catholic New Testament commentaries ever written
-• 1609 Douai Annotations — 3,100+ original notes from the first English Catholic Bible
+• Original Douay-Rheims Annotations — 3,100+ notes from the first English Catholic Bible, as published at Rheims (1582) and Douai (1609)
 
 FEATURES
 
@@ -74,7 +74,7 @@ catholic,haydock,vulgate,challoner,douai,commentary,latin,bible study,traditiona
 ## 5. Promotional Text (170 char max)
 
 ```
-The complete Douay-Rheims Bible with Haydock, Cornelius à Lapide, and 1609 Douai commentaries. 73 books, 35,000+ notes. iPad optimized. Totally free.
+The complete Douay-Rheims Bible with Haydock, Cornelius à Lapide, and original Douay-Rheims annotations. 73 books, 35,000+ notes. iPad optimized. Totally free.
 ```
 (149 characters)
 
@@ -87,7 +87,7 @@ https://ecclesiadev.com
 ## 7. Privacy Policy URL
 
 ```
-https://ecclesiadev.com/privacy
+https://ecclesiadev.com/privacy.html
 ```
 
 > **FLAG:** This page does not exist yet. Must be live before App Store submission. Content can mirror PRIVACY.md in this repo.
@@ -104,5 +104,5 @@ https://ecclesiadev.com/privacy
 ## 10. What's New (v1.0)
 
 ```
-First release. The complete Douay-Rheims Bible with three Catholic commentaries — Haydock, Cornelius à Lapide, and 1609 Douai annotations. iPad optimized with side-by-side reading.
+First release. The complete Douay-Rheims Bible with three Catholic commentaries — Haydock, Cornelius à Lapide, and original Douay-Rheims annotations. iPad optimized with side-by-side reading.
 ```
