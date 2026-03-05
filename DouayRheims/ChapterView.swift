@@ -327,6 +327,21 @@ struct CommentaryContent: View {
                             .fixedSize(horizontal: false, vertical: true)
                             .textSelection(.enabled)
                     }
+
+                    if let note = source.spellingNote {
+                        HStack(alignment: .top, spacing: 6) {
+                            Image(systemName: "info.circle")
+                                .font(.system(size: 11))
+                                .foregroundColor(.secondary)
+                                .padding(.top, 1)
+                            Text(note)
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        .padding(.top, 8)
+                        .padding(.horizontal, 2)
+                    }
                 }
                 .padding(.horizontal, 20)
                 .padding(.vertical, 12)

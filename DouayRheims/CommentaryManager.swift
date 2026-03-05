@@ -32,6 +32,16 @@ enum CommentarySource: String, CaseIterable, Identifiable {
         case .douai1609: return "Original Douai Annotations (1609)"
         }
     }
+
+    /// Optional note displayed beneath the commentary text for sources that need context.
+    var spellingNote: String? {
+        switch self {
+        case .douai1609:
+            return "Original 1609 spelling is preserved. Old English orthography — including ſ (long s) printed as f, and other archaic forms — is authentic, not an error."
+        default:
+            return nil
+        }
+    }
 }
 
 // MARK: - Commentary Entry
