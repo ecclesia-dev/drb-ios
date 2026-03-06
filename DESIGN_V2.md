@@ -2,7 +2,7 @@
 ## "Trad Catholic Logos"
 
 **Owner:** Augustine (Engineering)  
-**Priority:** P0 — Tim's explicit request  
+**Priority:** P0 — Owner request  
 **Goal:** Multi-pane synchronized Bible study interface with all commentary sources from the CLI
 
 ---
