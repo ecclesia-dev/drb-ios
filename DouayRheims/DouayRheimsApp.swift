@@ -6,6 +6,8 @@ struct DouayRheimsApp: App {
     @StateObject private var bookmarks = BookmarkManager.shared
     @StateObject private var settings = SettingsManager.shared
     @StateObject private var commentary = CommentaryManager.shared
+    @StateObject private var navigator = BibleNavigator()
+    @StateObject private var database = DatabaseManager.shared
 
     var body: some Scene {
         WindowGroup {
@@ -14,6 +16,8 @@ struct DouayRheimsApp: App {
                 .environmentObject(bookmarks)
                 .environmentObject(settings)
                 .environmentObject(commentary)
+                .environmentObject(navigator)
+                .environmentObject(database)
         }
     }
 }
