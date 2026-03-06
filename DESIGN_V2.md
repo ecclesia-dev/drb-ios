@@ -231,7 +231,6 @@ Tab bar with one panel per tab. Same navigation state syncs across tabs. Swipe b
 `feat: [description] [Augustine]`
 
 Notify on completion:
-`openclaw system event --text "Done: drb-ios v2.0 multi-pane Logos-style redesign complete" --mode now`
 
 ---
 
