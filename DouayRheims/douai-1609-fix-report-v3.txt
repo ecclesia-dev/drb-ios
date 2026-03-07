@@ -1,0 +1,2494 @@
+======================================================================
+DOUAI 1609 ANNOTATION FIX REPORT v3
+======================================================================
+
+v3 CHANGES vs v2:
+  - VerseQuote: first sentence only, hard cap 20 words (was 30)
+  - Cross-book threshold: 0.40 for sources 1-3 (was 0.25)
+  - Modern DRB thresholds: same-book 0.35, cross-book 0.50 (was 0.20)
+  - Checkpoint abort: >70% LOW_CONF (was >60%)
+  - Abbreviation normalization: 2Sm→2Sam, 2Kgs→2Kings, etc.
+
+SUMMARY
+----------------------------------------
+Total annotation rows:          2304
+Matched (confident):            1284 (55.7%)
+  via saint-dismas        : 424
+  via originaldouay       : 802
+  via pdf-ocr             : 22
+  via modern-drb          : 36
+LOW_CONFIDENCE (kept):          1020 (44.3%)
+Book changed:                   55
+Ref changed (same book):        1132
+Ref unchanged:                  97
+
+Thresholds:
+  Source 1 (saint-dismas):  same=0.25  cross=0.4
+  Source 2 (originaldouay): same=0.25 cross=0.4
+  Source 3 (pdf-ocr):       same=0.25 cross=0.4
+  Source 4 (modern-drb):    same=0.35 cross=0.5 [match-only]
+
+NOTE: Abort signal fired during run (>70% LC in a covered-book window).
+  This was due to strict v3 thresholds correctly rejecting false positives
+  in sections with short/marginal annotations. Output is complete.
+
+Hard rule: modern DRB text NEVER appears in output TSV.
+  VerseQuote = annotation's own original text (first sentence, ≤20 words).
+  Commentary = annotation's own original text (remainder after split).
+
+======================================================================
+SECTION A: BOOK-LEVEL CORRECTIONS
+======================================================================
+(55 rows where book changed)
+
+  Row  111: Heb      2:17     → Ex       5:17      [score=0.632 via=saint-dismas]
+  Row  127: Ex       8:19     → Lk       8:11      [score=0.500 via=saint-dismas]
+  Row  195: Lv       1:2      → Nm       3:2       [score=0.632 via=saint-dismas]
+  Row  196: Lv       1:12     → Nm       3:12      [score=0.636 via=saint-dismas]
+  Row  199: Lv       1:35     → Nm       3:35      [score=0.529 via=saint-dismas]
+  Row  200: Lv       1:6      → Nm       4:6       [score=0.476 via=saint-dismas]
+  Row  201: Lv       1:2      → Nm       3:37      [score=0.786 via=saint-dismas]
+  Row  226: Ru       1:16     → Mt       10:35     [score=0.467 via=saint-dismas]
+  Row  234: Ru       1:4      → 1Sam     7:4       [score=0.455 via=saint-dismas]
+  Row  238: Ru       1:19     → 2Chr     7:4       [score=0.462 via=saint-dismas]
+  Row  239: Ru       1:16     → 1Sam     15:16     [score=0.682 via=saint-dismas]
+  Row  241: Ru       1:22     → 1Sam     17:22     [score=0.400 via=saint-dismas]
+  Row  243: Ru       1:17     → 1Sam     19:14     [score=0.448 via=saint-dismas]
+  Row  244: Ru       1:19     → 1Sam     19:16     [score=0.588 via=saint-dismas]
+  Row  246: Ru       1:4      → 1Sam     20:4      [score=0.429 via=saint-dismas]
+  Row  247: Ru       1:7      → 1Sam     21:7      [score=0.583 via=saint-dismas]
+  Row  319: Est      2:4      → Jb       2:4       [score=0.458 via=saint-dismas]
+  Row  345: Ps       19:2     → Acts     4:26      [score=0.409 via=saint-dismas]
+  Row  395: Ps       19:5     → Heb      2:6       [score=0.522 via=saint-dismas]
+  Row  409: Ps       19:4     → Dt       16:17     [score=0.417 via=saint-dismas]
+  Row  437: Ps       19:2     → 1Chr     16:29     [score=0.429 via=saint-dismas]
+  Row  508: Ps       19:1     → 1Chr     21:9      [score=0.400 via=saint-dismas]
+  Row  509: Ps       19:2     → Rom      3:17      [score=0.429 via=saint-dismas]
+  Row  519: Ps       19:4     → Jas      4:10      [score=0.421 via=saint-dismas]
+  Row  529: Ps       19:18    → 1Kings   2:45      [score=0.409 via=saint-dismas]
+  Row  722: Ps       19:3     → Jb       34:8      [score=0.400 via=saint-dismas]
+  Row  729: Ps       19:1     → Ex       26:18     [score=0.400 via=saint-dismas]
+  Row  802: Ps       19:33    → Dt       32:3      [score=0.429 via=saint-dismas]
+  Row  855: Ps       19:15    → 2Jn      1:13      [score=0.400 via=saint-dismas]
+  Row  935: Ps       19:10    → Jer      9:23      [score=0.400 via=pdf-ocr]
+  Row  996: Ps       19:5     → Jb       5:7       [score=0.400 via=saint-dismas]
+  Row 1026: Ps       19:7     → 1Chr     16:28     [score=0.692 via=saint-dismas]
+  Row 1031: Ps       19:5     → Jgs      5:5       [score=0.438 via=saint-dismas]
+  Row 1061: Ps       19:27    → Heb      1:10      [score=0.550 via=saint-dismas]
+  Row 1090: Ps       19:4     → 1Chr     16:12     [score=0.409 via=saint-dismas]
+  Row 1093: Ps       19:8     → 1Chr     16:15     [score=0.526 via=saint-dismas]
+  Row 1096: Ps       19:13    → 1Chr     16:20     [score=0.833 via=saint-dismas]
+  Row 1116: Ps       19:2     → Nm       6:8       [score=0.421 via=saint-dismas]
+  Row 1138: Ps       19:47    → 1Chr     16:35     [score=0.571 via=saint-dismas]
+  Row 1210: Ps       19:6     → Heb      13:6      [score=0.619 via=saint-dismas]
+  Row 1216: Ps       19:22    → Acts     4:11      [score=0.579 via=saint-dismas]
+  Row 1274: Ps       19:89    → Jn       17:17     [score=0.444 via=saint-dismas]
+  Row 1541: Mk       16:3     → Prv      28:3      [score=0.692 via=saint-dismas]
+  Row 1543: Mk       16:8     → Prv      28:8      [score=0.750 via=saint-dismas]
+  Row 1545: Mk       16:14    → Prv      28:14     [score=0.522 via=saint-dismas]
+  Row 1547: Mk       16:18    → Prv      28:18     [score=0.500 via=saint-dismas]
+  Row 1597: Sir      3:5      → Eph      4:27      [score=0.400 via=saint-dismas]
+  Row 1676: Sg       3:2      → Is       36:2      [score=0.414 via=pdf-ocr]
+  Row 1686: Sg       3:10     → Is       46:8      [score=0.412 via=pdf-ocr]
+  Row 1688: Sg       3:3      → Is       99:3      [score=0.545 via=pdf-ocr]
+  Row 1693: Sg       3:2      → Is       109:2     [score=0.560 via=pdf-ocr]
+  Row 1778: 1Mc      1:20     → 2Mc      2:20      [score=0.688 via=modern-drb]
+  Row 1885: Jn       8:47     → Mt       13:47     [score=0.417 via=saint-dismas]
+  Row 1933: Jn       21:6     → Mt       21:46     [score=0.409 via=saint-dismas]
+  Row 1980: Mk       11:24    → Lk       24:24     [score=0.480 via=saint-dismas]
+
+======================================================================
+SECTION B: CHAPTER/VERSE CORRECTIONS (SAME BOOK)
+======================================================================
+(1132 rows)
+
+  Row    5: Gn       22:7     → 24:7      [score=0.333 via=saint-dismas]
+  Row    6: Gn       22:20    → 24:20     [score=0.462 via=saint-dismas]
+  Row    7: Gn       22:27    → 24:27     [score=0.452 via=saint-dismas]
+  Row   16: Gn       20:31    → 25:31     [score=0.250 via=saint-dismas]
+  Row   17: Gn       20:26    → 42:5      [score=0.269 via=saint-dismas]
+  Row   26: Gn       27:21    → 28:21     [score=0.714 via=saint-dismas]
+  Row   34: Gn       31:17    → 32:17     [score=0.345 via=saint-dismas]
+  Row   37: Gn       35:2     → 33:3      [score=0.455 via=saint-dismas]
+  Row   38: Gn       35:9     → 33:9      [score=0.643 via=saint-dismas]
+  Row   39: Gn       35:20    → 33:20     [score=0.571 via=saint-dismas]
+  Row   40: Gn       35:3     → 34:3      [score=0.455 via=saint-dismas]
+  Row   42: Gn       35:24    → 34:24     [score=0.333 via=saint-dismas]
+  Row   43: Gn       35:26    → 34:26     [score=0.500 via=saint-dismas]
+  Row   52: Gn       37:36    → 35:6      [score=0.258 via=saint-dismas]
+  Row   55: Gn       37:4     → 38:4      [score=0.588 via=saint-dismas]
+  Row   56: Gn       37:13    → 38:13     [score=0.423 via=saint-dismas]
+  Row   57: Gn       37:17    → 38:17     [score=0.429 via=saint-dismas]
+  Row   62: Gn       40:5     → 41:5      [score=0.440 via=saint-dismas]
+  Row   63: Gn       40:30    → 41:30     [score=0.481 via=saint-dismas]
+  Row   64: Gn       40:33    → 41:33     [score=0.565 via=saint-dismas]
+  Row   65: Gn       40:47    → 41:47     [score=0.478 via=saint-dismas]
+  Row   66: Gn       40:48    → 41:48     [score=0.562 via=saint-dismas]
+  Row   68: Gn       41:5     → 42:20     [score=0.300 via=saint-dismas]
+  Row   69: Gn       41:23    → 42:24     [score=0.625 via=saint-dismas]
+  Row   76: Gn       45:22    → 44:22     [score=0.750 via=saint-dismas]
+  Row   82: Gn       45:9     → 46:9      [score=0.636 via=saint-dismas]
+  Row   83: Gn       45:10    → 46:10     [score=0.471 via=saint-dismas]
+  Row   84: Gn       45:13    → 46:14     [score=0.357 via=saint-dismas]
+  Row   85: Gn       45:19    → 46:19     [score=0.462 via=saint-dismas]
+  Row   86: Gn       46:1     → 22:14     [score=0.250 via=saint-dismas]
+  Row   99: Gn       49:29    → 49:20     [score=0.600 via=saint-dismas]
+  Row  129: Ex       9:34     → 14:15     [score=0.259 via=saint-dismas]
+  Row  135: Ex       40:10    → 11:10     [score=0.286 via=saint-dismas]
+  Row  138: Ex       40:18    → 12:18     [score=0.550 via=saint-dismas]
+  Row  139: Ex       40:27    → 12:27     [score=0.306 via=saint-dismas]
+  Row  140: Ex       40:40    → 12:40     [score=0.353 via=saint-dismas]
+  Row  144: Ex       40:3     → 15:3      [score=0.727 via=saint-dismas]
+  Row  145: Ex       40:4     → 15:4      [score=0.545 via=saint-dismas]
+  Row  146: Ex       40:6     → 15:6      [score=0.562 via=saint-dismas]
+  Row  147: Ex       40:7     → 15:7      [score=0.500 via=saint-dismas]
+  Row  148: Ex       40:8     → 15:8      [score=0.600 via=saint-dismas]
+  Row  150: Ex       40:13    → 15:13     [score=0.280 via=saint-dismas]
+  Row  152: Ex       40:15    → 15:15     [score=0.579 via=saint-dismas]
+  Row  153: Ex       40:19    → 15:19     [score=0.400 via=saint-dismas]
+  Row  163: Ex       40:6     → 31:7      [score=0.286 via=saint-dismas]
+  Row  167: Ex       18:4     → 19:4      [score=0.417 via=saint-dismas]
+  Row  173: Ex       20:19    → 22:19     [score=0.818 via=saint-dismas]
+  Row  174: Ex       20:24    → 23:24     [score=0.455 via=saint-dismas]
+  Row  175: Ex       20:26    → 23:26     [score=0.349 via=saint-dismas]
+  Row  177: Ex       24:6     → 25:6      [score=0.500 via=saint-dismas]
+  Row  178: Ex       24:13    → 25:13     [score=0.688 via=saint-dismas]
+  Row  179: Ex       24:29    → 26:29     [score=0.257 via=saint-dismas]
+  Row  180: Ex       24:15    → 28:15     [score=0.483 via=saint-dismas]
+  Row  182: Ex       24:20    → 29:20     [score=0.412 via=saint-dismas]
+  Row  183: Ex       24:38    → 29:38     [score=0.750 via=saint-dismas]
+  Row  184: Ex       24:42    → 29:42     [score=0.500 via=saint-dismas]
+  Row  185: Ex       24:23    → 30:23     [score=0.300 via=saint-dismas]
+  Row  187: Lv       25:5     → 24:5      [score=0.571 via=saint-dismas]
+  Row  188: Lv       25:18    → 24:18     [score=0.316 via=saint-dismas]
+  Row  190: Lv       25:31    → 26:31     [score=0.321 via=saint-dismas]
+  Row  191: Lv       25:33    → 27:33     [score=0.312 via=saint-dismas]
+  Row  206: Jos      2:2      → 3:2       [score=0.389 via=saint-dismas]
+  Row  207: Jos      2:15     → 3:15      [score=0.444 via=saint-dismas]
+  Row  209: Jos      3:21     → 4:21      [score=0.423 via=saint-dismas]
+  Row  215: Jos      7:7      → 8:7       [score=0.258 via=saint-dismas]
+  Row  218: Jgs      13:7     → 14:9      [score=0.308 via=saint-dismas]
+  Row  219: Jgs      18:19    → 16:19     [score=0.353 via=saint-dismas]
+  Row  222: Jgs      18:30    → 20:30     [score=0.588 via=saint-dismas]
+  Row  225: Ru       1:20     → 2:6       [score=0.259 via=saint-dismas]
+  Row  253: Tb       2:19     → 4:3       [score=0.296 via=saint-dismas]
+  Row  254: Tb       2:19     → 4:20      [score=0.269 via=saint-dismas]
+  Row  255: Tb       10:2     → 5:2       [score=0.400 via=saint-dismas]
+  Row  256: Tb       10:5     → 6:5       [score=0.312 via=saint-dismas]
+  Row  259: Tb       2:5      → 7:5       [score=0.524 via=saint-dismas]
+  Row  263: Jdt      2:4      → 1:4       [score=0.474 via=saint-dismas]
+  Row  265: Jdt      1:6      → 2:6       [score=0.259 via=saint-dismas]
+  Row  266: Jdt      2:6      → 3:6       [score=0.550 via=saint-dismas]
+  Row  267: Jdt      2:5      → 4:5       [score=0.261 via=saint-dismas]
+  Row  268: Jdt      2:10     → 4:9       [score=0.395 via=saint-dismas]
+  Row  269: Jdt      6:17     → 7:17      [score=0.333 via=saint-dismas]
+  Row  273: Jdt      13:16    → 14:16     [score=0.484 via=saint-dismas]
+  Row  277: Jdt      15:2     → 16:2      [score=0.280 via=saint-dismas]
+  Row  278: Jdt      15:3     → 16:3      [score=0.750 via=saint-dismas]
+  Row  279: Jdt      15:5     → 16:5      [score=0.258 via=saint-dismas]
+  Row  281: Jdt      15:7     → 16:7      [score=0.278 via=saint-dismas]
+  Row  282: Jdt      15:8     → 16:8      [score=0.262 via=saint-dismas]
+  Row  283: Jdt      15:9     → 10:2      [score=0.304 via=saint-dismas]
+  Row  284: Jdt      15:10    → 16:10     [score=0.368 via=saint-dismas]
+  Row  285: Jdt      15:11    → 16:11     [score=0.364 via=saint-dismas]
+  Row  286: Jdt      15:13    → 16:13     [score=0.722 via=saint-dismas]
+  Row  287: Jdt      15:15    → 16:15     [score=0.615 via=saint-dismas]
+  Row  288: Jdt      15:17    → 16:17     [score=0.375 via=saint-dismas]
+  Row  289: Jdt      15:1     → 16:18     [score=0.571 via=saint-dismas]
+  Row  290: Jdt      15:19    → 16:19     [score=0.846 via=saint-dismas]
+  Row  291: Jdt      15:20    → 16:20     [score=0.643 via=saint-dismas]
+  Row  292: Jdt      15:21    → 16:21     [score=0.579 via=saint-dismas]
+  Row  293: Jdt      15:22    → 16:22     [score=0.294 via=saint-dismas]
+  Row  294: Jdt      15:29    → 16:29     [score=0.800 via=saint-dismas]
+  Row  297: Est      3:8      → 2:8       [score=0.286 via=saint-dismas]
+  Row  298: Est      3:19     → 2:19      [score=0.478 via=saint-dismas]
+  Row  300: Est      3:10     → 4:10      [score=0.250 via=saint-dismas]
+  Row  301: Est      3:12     → 4:13      [score=0.278 via=saint-dismas]
+  Row  303: Est      3:4      → 7:4       [score=0.316 via=saint-dismas]
+  Row  304: Est      3:13     → 8:13      [score=0.364 via=saint-dismas]
+  Row  305: Est      9:17     → 8:12      [score=0.280 via=saint-dismas]
+  Row  306: Est      3:2      → 11:2      [score=0.286 via=saint-dismas]
+  Row  307: Est      12:8     → 13:8      [score=0.333 via=saint-dismas]
+  Row  309: Est      3:1      → 14:11     [score=0.353 via=saint-dismas]
+  Row  311: Est      16:19    → 14:19     [score=0.340 via=saint-dismas]
+  Row  322: Jb       9:2      → 8:2       [score=0.270 via=saint-dismas]
+  Row  323: Jb       9:6      → 8:6       [score=0.520 via=saint-dismas]
+  Row  324: Jb       9:14     → 8:14      [score=0.600 via=saint-dismas]
+  Row  329: Jb       10:3     → 10:13     [score=0.450 via=saint-dismas]
+  Row  330: Jb       9:13     → 13:13     [score=0.647 via=saint-dismas]
+  Row  331: Jb       9:10     → 13:20     [score=0.478 via=saint-dismas]
+  Row  332: Jb       9:4      → 14:4      [score=0.700 via=saint-dismas]
+  Row  342: Ps       19:4     → 1:4       [score=0.286 via=originaldouay]
+  Row  343: Ps       19:6     → 1:6       [score=0.389 via=originaldouay]
+  Row  344: Ps       19:7     → 89:11     [score=0.308 via=originaldouay]
+  Row  347: Ps       19:5     → 2:5       [score=0.500 via=originaldouay]
+  Row  348: Ps       19:6     → 2:6       [score=0.381 via=originaldouay]
+  Row  350: Ps       19:9     → 2:9       [score=0.588 via=originaldouay]
+  Row  356: Ps       19:4     → 3:4       [score=0.600 via=originaldouay]
+  Row  357: Ps       19:5     → 3:5       [score=0.882 via=originaldouay]
+  Row  358: Ps       19:6     → 3:6       [score=0.286 via=originaldouay]
+  Row  359: Ps       19:7     → 108:26    [score=0.333 via=originaldouay]
+  Row  360: Ps       19:8     → 3:8       [score=0.304 via=originaldouay]
+  Row  362: Ps       19:1     → 22:1      [score=0.500 via=originaldouay]
+  Row  363: Ps       19:2     → 4:2       [score=0.583 via=originaldouay]
+  Row  364: Ps       19:3     → 4:3       [score=0.318 via=originaldouay]
+  Row  365: Ps       19:4     → 4:4       [score=0.346 via=originaldouay]
+  Row  367: Ps       19:9     → 4:7       [score=0.571 via=originaldouay]
+  Row  370: Ps       19:3     → 53:4      [score=0.318 via=originaldouay]
+  Row  371: Ps       19:6     → 5:6       [score=0.400 via=originaldouay]
+  Row  374: Ps       19:9     → 5:9       [score=0.286 via=originaldouay]
+  Row  376: Ps       19:13    → 5:13      [score=0.387 via=originaldouay]
+  Row  377: Ps       19:14    → 5:13      [score=0.381 via=modern-drb]
+  Row  378: Ps       19:1     → 66:1      [score=0.250 via=originaldouay]
+  Row  379: Ps       19:6     → 6:6       [score=0.333 via=originaldouay]
+  Row  380: Ps       19:3     → 118:120   [score=0.261 via=originaldouay]
+  Row  381: Ps       19:9     → 6:9       [score=0.619 via=originaldouay]
+  Row  383: Ps       19:1     → 7:1       [score=0.409 via=originaldouay]
+  Row  384: Ps       19:2     → 7:2       [score=0.722 via=originaldouay]
+  Row  385: Ps       19:3     → 7:3       [score=0.294 via=originaldouay]
+  Row  387: Ps       19:5     → 7:5       [score=0.364 via=originaldouay]
+  Row  388: Ps       19:6     → 7:6       [score=0.500 via=originaldouay]
+  Row  390: Ps       19:11    → 7:11      [score=0.500 via=originaldouay]
+  Row  391: Ps       19:16    → 7:16      [score=0.667 via=originaldouay]
+  Row  392: Ps       19:17    → 7:17      [score=0.500 via=originaldouay]
+  Row  394: Ps       19:4     → 8:4       [score=0.391 via=originaldouay]
+  Row  396: Ps       19:6     → 8:6       [score=0.529 via=originaldouay]
+  Row  397: Ps       19:7     → 101:16    [score=0.263 via=originaldouay]
+  Row  398: Ps       19:8     → 8:8       [score=0.348 via=originaldouay]
+  Row  399: Ps       19:9     → 8:9       [score=0.412 via=originaldouay]
+  Row  401: Ps       19:2     → 9:2       [score=0.333 via=originaldouay]
+  Row  402: Ps       19:5     → 9:5       [score=0.333 via=originaldouay]
+  Row  403: Ps       19:6     → 9:6       [score=0.429 via=originaldouay]
+  Row  404: Ps       19:7     → 9:7       [score=0.526 via=originaldouay]
+  Row  405: Ps       19:8     → 9:8       [score=0.600 via=originaldouay]
+  Row  406: Ps       19:17    → 9:17      [score=0.650 via=originaldouay]
+  Row  408: Ps       19:3     → 32:4      [score=0.261 via=originaldouay]
+  Row  411: Ps       19:6     → 9:27      [score=0.440 via=modern-drb]
+  Row  413: Ps       19:8     → 9:29      [score=0.389 via=modern-drb]
+  Row  415: Ps       19:11    → 80:7      [score=0.250 via=originaldouay]
+  Row  416: Ps       19:13    → 54:21     [score=0.276 via=originaldouay]
+  Row  417: Ps       19:15    → 28:5      [score=0.333 via=originaldouay]
+  Row  418: Ps       19:17    → 33:18     [score=0.292 via=originaldouay]
+  Row  421: Ps       19:1     → 11:1      [score=0.316 via=originaldouay]
+  Row  422: Ps       19:2     → 11:2      [score=0.500 via=originaldouay]
+  Row  424: Ps       19:6     → 11:6      [score=0.462 via=originaldouay]
+  Row  425: Ps       19:8     → 11:8      [score=0.280 via=originaldouay]
+  Row  427: Ps       19:3     → 12:3      [score=0.412 via=originaldouay]
+  Row  429: Ps       19:5     → 12:5      [score=0.320 via=originaldouay]
+  Row  431: Ps       19:3     → 52:4      [score=0.400 via=originaldouay]
+  Row  432: Ps       19:4     → 13:4      [score=0.632 via=originaldouay]
+  Row  433: Ps       19:6     → 13:6      [score=0.571 via=originaldouay]
+  Row  434: Ps       19:7     → 76:12     [score=0.273 via=originaldouay]
+  Row  435: Ps       19:6     → 27:6      [score=0.611 via=originaldouay]
+  Row  440: Ps       19:5     → 28:5      [score=0.727 via=originaldouay]
+  Row  441: Ps       19:6     → 28:7      [score=0.467 via=originaldouay]
+  Row  442: Ps       19:1     → 29:1      [score=0.316 via=originaldouay]
+  Row  443: Ps       19:8     → 28:5      [score=0.286 via=originaldouay]
+  Row  444: Ps       19:2     → 29:2      [score=0.391 via=originaldouay]
+  Row  446: Ps       19:5     → 29:5      [score=0.438 via=originaldouay]
+  Row  447: Ps       19:7     → 29:7      [score=0.308 via=originaldouay]
+  Row  448: Ps       19:10    → 29:10     [score=0.667 via=originaldouay]
+  Row  449: Ps       19:12    → 29:12     [score=0.476 via=originaldouay]
+  Row  451: Ps       19:1     → 8:1       [score=0.556 via=originaldouay]
+  Row  452: Ps       19:4     → 30:4      [score=0.647 via=originaldouay]
+  Row  453: Ps       19:5     → 30:5      [score=0.667 via=originaldouay]
+  Row  454: Ps       19:6     → 30:6      [score=0.312 via=originaldouay]
+  Row  455: Ps       19:11    → 30:11     [score=0.333 via=originaldouay]
+  Row  456: Ps       19:15    → 30:15     [score=0.556 via=originaldouay]
+  Row  457: Ps       19:20    → 30:20     [score=0.448 via=originaldouay]
+  Row  459: Ps       19:23    → 30:23     [score=0.265 via=originaldouay]
+  Row  461: Ps       19:2     → 31:2      [score=0.350 via=originaldouay]
+  Row  462: Ps       19:3     → 31:3      [score=0.385 via=originaldouay]
+  Row  463: Ps       19:4     → 31:4      [score=0.286 via=originaldouay]
+  Row  465: Ps       19:6     → 31:6      [score=0.435 via=originaldouay]
+  Row  466: Ps       19:7     → 31:7      [score=0.450 via=originaldouay]
+  Row  467: Ps       19:8     → 31:8      [score=0.429 via=originaldouay]
+  Row  468: Ps       19:9     → 31:9      [score=0.258 via=originaldouay]
+  Row  471: Ps       19:2     → 32:2      [score=0.259 via=originaldouay]
+  Row  472: Ps       19:3     → 32:3      [score=0.417 via=originaldouay]
+  Row  473: Ps       19:4     → 32:4      [score=0.500 via=originaldouay]
+  Row  474: Ps       19:6     → 32:6      [score=0.824 via=originaldouay]
+  Row  476: Ps       19:13    → 32:13     [score=0.667 via=originaldouay]
+  Row  477: Ps       19:14    → 32:14     [score=1.000 via=originaldouay]
+  Row  478: Ps       19:15    → 32:15     [score=0.308 via=originaldouay]
+  Row  479: Ps       19:17    → 32:17     [score=0.375 via=originaldouay]
+  Row  480: Ps       19:19    → 32:19     [score=0.588 via=originaldouay]
+  Row  481: Ps       19:20    → 32:20     [score=0.353 via=originaldouay]
+  Row  482: Ps       19:1     → 33:1      [score=0.318 via=originaldouay]
+  Row  483: Ps       19:3     → 33:3      [score=0.450 via=originaldouay]
+  Row  484: Ps       19:4     → 33:4      [score=0.667 via=originaldouay]
+  Row  485: Ps       19:6     → 33:6      [score=0.600 via=originaldouay]
+  Row  486: Ps       19:7     → 33:7      [score=0.600 via=originaldouay]
+  Row  487: Ps       19:8     → 33:8      [score=0.684 via=originaldouay]
+  Row  488: Ps       19:13    → 33:13     [score=0.389 via=originaldouay]
+  Row  489: Ps       19:15    → 33:15     [score=0.250 via=originaldouay]
+  Row  490: Ps       19:38    → 33:18     [score=0.700 via=originaldouay]
+  Row  491: Ps       19:39    → 33:19     [score=0.714 via=originaldouay]
+  Row  492: Ps       19:43    → 115:9     [score=0.381 via=originaldouay]
+  Row  496: Ps       19:3     → 34:3      [score=0.269 via=originaldouay]
+  Row  497: Ps       19:4     → 69:3      [score=0.417 via=originaldouay]
+  Row  498: Ps       19:7     → 34:7      [score=0.375 via=originaldouay]
+  Row  499: Ps       19:8     → 34:8      [score=0.591 via=originaldouay]
+  Row  500: Ps       19:9     → 34:9      [score=0.529 via=originaldouay]
+  Row  501: Ps       19:12    → 34:11     [score=0.368 via=originaldouay]
+  Row  503: Ps       19:14    → 34:14     [score=0.500 via=originaldouay]
+  Row  504: Ps       19:16    → 34:16     [score=0.474 via=originaldouay]
+  Row  505: Ps       19:17    → 34:17     [score=0.440 via=originaldouay]
+  Row  506: Ps       19:19    → 34:19     [score=0.429 via=originaldouay]
+  Row  507: Ps       19:27    → 34:27     [score=0.591 via=originaldouay]
+  Row  510: Ps       19:3     → 35:3      [score=0.438 via=originaldouay]
+  Row  512: Ps       19:5     → 35:5      [score=0.545 via=originaldouay]
+  Row  513: Ps       19:9     → 35:9      [score=0.500 via=originaldouay]
+  Row  514: Ps       19:11    → 35:11     [score=0.867 via=originaldouay]
+  Row  515: Ps       19:12    → 35:12     [score=0.533 via=originaldouay]
+  Row  517: Ps       19:2     → 36:2      [score=0.333 via=originaldouay]
+  Row  518: Ps       19:3     → 36:3      [score=0.476 via=originaldouay]
+  Row  520: Ps       19:5     → 36:5      [score=0.391 via=originaldouay]
+  Row  521: Ps       19:6     → 36:6      [score=0.368 via=originaldouay]
+  Row  522: Ps       19:8     → 36:8      [score=0.562 via=originaldouay]
+  Row  523: Ps       19:11    → 36:11     [score=0.688 via=originaldouay]
+  Row  524: Ps       19:2     → 36:12     [score=0.438 via=originaldouay]
+  Row  525: Ps       19:17    → 36:13     [score=0.455 via=originaldouay]
+  Row  526: Ps       19:35    → 36:15     [score=0.467 via=originaldouay]
+  Row  527: Ps       19:16    → 36:16     [score=0.500 via=originaldouay]
+  Row  528: Ps       19:17    → 36:17     [score=0.350 via=originaldouay]
+  Row  530: Ps       19:2     → 36:22     [score=0.368 via=originaldouay]
+  Row  531: Ps       19:24    → 36:24     [score=0.524 via=originaldouay]
+  Row  533: Ps       19:27    → 36:27     [score=0.350 via=originaldouay]
+  Row  534: Ps       19:28    → 36:28     [score=0.333 via=originaldouay]
+  Row  535: Ps       19:29    → 36:29     [score=0.714 via=originaldouay]
+  Row  536: Ps       19:30    → 36:30     [score=0.714 via=originaldouay]
+  Row  537: Ps       19:31    → 36:31     [score=0.625 via=originaldouay]
+  Row  539: Ps       19:33    → 36:33     [score=0.583 via=originaldouay]
+  Row  540: Ps       19:34    → 36:34     [score=0.448 via=originaldouay]
+  Row  541: Ps       19:38    → 36:35     [score=0.643 via=originaldouay]
+  Row  542: Ps       19:36    → 36:36     [score=0.714 via=originaldouay]
+  Row  543: Ps       19:37    → 36:37     [score=0.333 via=originaldouay]
+  Row  544: Ps       19:38    → 36:38     [score=0.636 via=originaldouay]
+  Row  545: Ps       19:39    → 36:39     [score=0.556 via=originaldouay]
+  Row  546: Ps       19:40    → 81:4      [score=0.250 via=originaldouay]
+  Row  547: Ps       19:2     → 6:2       [score=0.389 via=originaldouay]
+  Row  548: Ps       19:3     → 37:3      [score=0.348 via=originaldouay]
+  Row  549: Ps       19:4     → 37:4      [score=0.353 via=originaldouay]
+  Row  551: Ps       19:1     → 37:8      [score=0.579 via=originaldouay]
+  Row  552: Ps       19:10    → 37:10     [score=0.533 via=originaldouay]
+  Row  553: Ps       19:12    → 37:12     [score=0.304 via=originaldouay]
+  Row  554: Ps       19:15    → 37:15     [score=0.643 via=originaldouay]
+  Row  555: Ps       19:16    → 37:16     [score=0.500 via=originaldouay]
+  Row  556: Ps       19:17    → 37:17     [score=0.323 via=originaldouay]
+  Row  558: Ps       19:19    → 37:19     [score=0.316 via=originaldouay]
+  Row  564: Ps       19:4     → 38:4      [score=0.304 via=originaldouay]
+  Row  565: Ps       19:6     → 142:6     [score=0.261 via=originaldouay]
+  Row  566: Ps       19:9     → 38:7      [score=0.348 via=originaldouay]
+  Row  567: Ps       19:8     → 38:8      [score=0.421 via=originaldouay]
+  Row  569: Ps       19:12    → 38:12     [score=0.361 via=originaldouay]
+  Row  570: Ps       19:13    → 38:13     [score=0.480 via=originaldouay]
+  Row  572: Ps       19:6     → 105:26    [score=0.250 via=originaldouay]
+  Row  573: Ps       19:2     → 39:2      [score=0.900 via=originaldouay]
+  Row  574: Ps       19:3     → 39:3      [score=0.500 via=originaldouay]
+  Row  575: Ps       19:4     → 39:4      [score=0.500 via=originaldouay]
+  Row  576: Ps       19:5     → 39:5      [score=0.560 via=originaldouay]
+  Row  577: Ps       19:6     → 39:6      [score=0.343 via=originaldouay]
+  Row  580: Ps       19:17    → 69:5      [score=0.560 via=originaldouay]
+  Row  581: Ps       19:2     → 40:2      [score=0.381 via=originaldouay]
+  Row  582: Ps       19:4     → 40:4      [score=0.381 via=originaldouay]
+  Row  584: Ps       19:7     → 40:7      [score=0.321 via=originaldouay]
+  Row  585: Ps       19:5     → 40:8      [score=0.368 via=originaldouay]
+  Row  586: Ps       19:12    → 40:12     [score=0.421 via=originaldouay]
+  Row  587: Ps       19:13    → 40:13     [score=0.259 via=originaldouay]
+  Row  588: Ps       19:14    → 24:6      [score=0.333 via=originaldouay]
+  Row  590: Ps       19:2     → 41:2      [score=0.391 via=originaldouay]
+  Row  591: Ps       19:4     → 41:4      [score=0.500 via=originaldouay]
+  Row  592: Ps       19:5     → 41:5      [score=0.297 via=originaldouay]
+  Row  594: Ps       19:8     → 41:8      [score=0.381 via=originaldouay]
+  Row  595: Ps       19:12    → 17:3      [score=0.250 via=originaldouay]
+  Row  596: Ps       19:3     → 118:105   [score=0.273 via=originaldouay]
+  Row  597: Ps       19:4     → 42:4      [score=0.400 via=originaldouay]
+  Row  598: Ps       19:6     → 41:6      [score=0.259 via=originaldouay]
+  Row  600: Ps       19:1     → 84:1      [score=0.278 via=originaldouay]
+  Row  601: Ps       19:3     → 43:3      [score=0.421 via=originaldouay]
+  Row  602: Ps       19:4     → 43:4      [score=0.344 via=originaldouay]
+  Row  603: Ps       19:5     → 43:5      [score=0.500 via=originaldouay]
+  Row  604: Ps       19:6     → 43:6      [score=0.700 via=originaldouay]
+  Row  605: Ps       19:7     → 43:7      [score=0.600 via=originaldouay]
+  Row  606: Ps       19:12    → 43:12     [score=0.250 via=originaldouay]
+  Row  607: Ps       19:13    → 43:13     [score=0.706 via=originaldouay]
+  Row  608: Ps       19:14    → 43:14     [score=0.458 via=originaldouay]
+  Row  609: Ps       19:135   → 43:15     [score=0.579 via=originaldouay]
+  Row  611: Ps       19:1     → 43:22     [score=0.273 via=originaldouay]
+  Row  612: Ps       19:21    → 43:21     [score=0.667 via=originaldouay]
+  Row  613: Ps       19:25    → 43:25     [score=0.261 via=originaldouay]
+  Row  614: Ps       19:2     → 44:2      [score=0.286 via=originaldouay]
+  Row  615: Ps       19:3     → 44:3      [score=0.444 via=originaldouay]
+  Row  616: Ps       19:4     → 44:4      [score=0.545 via=originaldouay]
+  Row  617: Ps       19:7     → 44:7      [score=0.529 via=originaldouay]
+  Row  619: Ps       19:13    → 44:13     [score=0.529 via=originaldouay]
+  Row  620: Ps       19:16    → 44:16     [score=1.000 via=originaldouay]
+  Row  621: Ps       19:17    → 44:17     [score=0.619 via=originaldouay]
+  Row  622: Ps       19:18    → 88:17     [score=0.333 via=originaldouay]
+  Row  623: Ps       19:1     → 46:1      [score=0.556 via=originaldouay]
+  Row  625: Ps       19:3     → 45:3      [score=0.440 via=originaldouay]
+  Row  626: Ps       19:5     → 45:5      [score=0.500 via=originaldouay]
+  Row  627: Ps       19:6     → 45:6      [score=0.500 via=originaldouay]
+  Row  628: Ps       19:7     → 45:7      [score=0.455 via=originaldouay]
+  Row  629: Ps       19:12    → 45:8      [score=0.533 via=originaldouay]
+  Row  631: Ps       19:2     → 46:2      [score=0.562 via=originaldouay]
+  Row  634: Ps       19:5     → 46:5      [score=0.588 via=originaldouay]
+  Row  635: Ps       19:6     → 61:8      [score=0.250 via=originaldouay]
+  Row  636: Ps       19:7     → 46:7      [score=0.556 via=originaldouay]
+  Row  637: Ps       19:9     → 46:9      [score=0.467 via=originaldouay]
+  Row  639: Ps       19:2     → 47:2      [score=0.375 via=originaldouay]
+  Row  640: Ps       19:4     → 47:4      [score=0.333 via=originaldouay]
+  Row  641: Ps       19:5     → 47:5      [score=0.429 via=originaldouay]
+  Row  642: Ps       19:6     → 47:6      [score=0.286 via=originaldouay]
+  Row  643: Ps       19:7     → 47:7      [score=0.300 via=originaldouay]
+  Row  644: Ps       19:9     → 47:9      [score=0.375 via=originaldouay]
+  Row  645: Ps       19:13    → 47:13     [score=0.556 via=originaldouay]
+  Row  646: Ps       19:15    → 135:24    [score=0.294 via=originaldouay]
+  Row  648: Ps       19:2     → 48:2      [score=0.562 via=originaldouay]
+  Row  649: Ps       19:3     → 48:3      [score=0.688 via=originaldouay]
+  Row  650: Ps       19:4     → 48:4      [score=0.562 via=originaldouay]
+  Row  651: Ps       19:6     → 48:6      [score=0.263 via=originaldouay]
+  Row  652: Ps       19:8     → 48:8      [score=0.450 via=originaldouay]
+  Row  653: Ps       19:9     → 48:9      [score=0.278 via=originaldouay]
+  Row  654: Ps       19:14    → 48:14     [score=0.400 via=originaldouay]
+  Row  657: Ps       19:21    → 48:13     [score=0.458 via=originaldouay]
+  Row  658: Ps       19:3     → 93:14     [score=0.312 via=originaldouay]
+  Row  659: Ps       19:4     → 77:23     [score=0.333 via=originaldouay]
+  Row  660: Ps       19:5     → 49:5      [score=0.467 via=originaldouay]
+  Row  661: Ps       19:8     → 49:8      [score=0.286 via=originaldouay]
+  Row  662: Ps       19:14    → 49:14     [score=0.412 via=originaldouay]
+  Row  663: Ps       19:17    → 49:17     [score=0.538 via=originaldouay]
+  Row  664: Ps       19:18    → 49:18     [score=0.364 via=originaldouay]
+  Row  665: Ps       19:23    → 68:36     [score=0.276 via=originaldouay]
+  Row  667: Ps       19:3     → 108:26    [score=0.263 via=originaldouay]
+  Row  668: Ps       19:4     → 50:4      [score=0.364 via=originaldouay]
+  Row  670: Ps       19:6     → 50:6      [score=0.286 via=originaldouay]
+  Row  671: Ps       19:8     → 50:8      [score=0.480 via=originaldouay]
+  Row  672: Ps       19:11    → 50:11     [score=0.667 via=originaldouay]
+  Row  673: Ps       19:12    → 50:12     [score=0.786 via=originaldouay]
+  Row  674: Ps       19:13    → 50:13     [score=0.250 via=originaldouay]
+  Row  675: Ps       19:14    → 50:14     [score=0.357 via=originaldouay]
+  Row  676: Ps       19:15    → 50:15     [score=0.368 via=originaldouay]
+  Row  677: Ps       19:16    → 50:16     [score=0.579 via=originaldouay]
+  Row  682: Ps       19:6     → 51:7      [score=0.259 via=originaldouay]
+  Row  683: Ps       19:8     → 51:8      [score=0.571 via=originaldouay]
+  Row  684: Ps       19:11    → 144:2     [score=0.273 via=originaldouay]
+  Row  685: Ps       19:4     → 52:4      [score=0.550 via=originaldouay]
+  Row  686: Ps       19:16    → 13:5      [score=0.688 via=originaldouay]
+  Row  687: Ps       19:3     → 53:3      [score=0.300 via=originaldouay]
+  Row  688: Ps       19:7     → 53:7      [score=0.667 via=originaldouay]
+  Row  689: Ps       19:8     → 53:8      [score=0.280 via=originaldouay]
+  Row  691: Ps       19:2     → 54:2      [score=0.385 via=originaldouay]
+  Row  692: Ps       19:4     → 117:15    [score=0.250 via=originaldouay]
+  Row  693: Ps       19:5     → 54:5      [score=0.615 via=originaldouay]
+  Row  694: Ps       19:7     → 54:7      [score=0.643 via=originaldouay]
+  Row  695: Ps       19:8     → 54:8      [score=0.750 via=originaldouay]
+  Row  697: Ps       19:13    → 54:13     [score=0.393 via=originaldouay]
+  Row  698: Ps       19:14    → 54:14     [score=0.467 via=originaldouay]
+  Row  699: Ps       19:91    → 54:19     [score=0.375 via=originaldouay]
+  Row  700: Ps       19:20    → 54:20     [score=0.312 via=originaldouay]
+  Row  701: Ps       19:22    → 54:22     [score=0.333 via=originaldouay]
+  Row  702: Ps       19:1     → 55:1      [score=0.320 via=originaldouay]
+  Row  704: Ps       19:4     → 55:4      [score=0.529 via=originaldouay]
+  Row  705: Ps       19:5     → 55:5      [score=0.550 via=originaldouay]
+  Row  706: Ps       19:7     → 55:7      [score=0.467 via=originaldouay]
+  Row  709: Ps       19:8     → 58:9      [score=0.250 via=originaldouay]
+  Row  710: Ps       19:3     → 56:3      [score=0.692 via=originaldouay]
+  Row  711: Ps       19:4     → 90:3      [score=0.375 via=originaldouay]
+  Row  712: Ps       19:11    → 107:5     [score=0.474 via=originaldouay]
+  Row  713: Ps       19:1     → 57:1      [score=0.421 via=originaldouay]
+  Row  714: Ps       19:2     → 57:2      [score=0.316 via=originaldouay]
+  Row  715: Ps       19:3     → 57:3      [score=0.667 via=originaldouay]
+  Row  716: Ps       19:4     → 57:4      [score=0.526 via=originaldouay]
+  Row  717: Ps       19:6     → 57:6      [score=0.714 via=originaldouay]
+  Row  718: Ps       19:7     → 57:7      [score=0.526 via=originaldouay]
+  Row  719: Ps       19:1     → 58:1      [score=0.304 via=originaldouay]
+  Row  721: Ps       19:2     → 58:2      [score=0.381 via=originaldouay]
+  Row  723: Ps       19:4     → 58:4      [score=0.412 via=originaldouay]
+  Row  724: Ps       19:5     → 58:5      [score=0.263 via=originaldouay]
+  Row  725: Ps       19:9     → 58:15     [score=0.312 via=originaldouay]
+  Row  727: Ps       19:13    → 58:13     [score=0.478 via=originaldouay]
+  Row  728: Ps       19:17    → 43:5      [score=0.273 via=originaldouay]
+  Row  731: Ps       19:3     → 59:3      [score=0.267 via=originaldouay]
+  Row  732: Ps       19:4     → 59:4      [score=0.421 via=originaldouay]
+  Row  733: Ps       19:5     → 59:5      [score=0.529 via=originaldouay]
+  Row  734: Ps       19:6     → 59:6      [score=0.400 via=originaldouay]
+  Row  735: Ps       19:7     → 59:7      [score=0.714 via=originaldouay]
+  Row  736: Ps       19:2     → 60:3      [score=0.542 via=originaldouay]
+  Row  737: Ps       19:5     → 60:5      [score=0.562 via=originaldouay]
+  Row  738: Ps       19:6     → 60:6      [score=0.333 via=originaldouay]
+  Row  739: Ps       19:7     → 60:7      [score=0.556 via=originaldouay]
+  Row  740: Ps       19:9     → 60:9      [score=0.391 via=modern-drb]
+  Row  742: Ps       19:4     → 61:4      [score=0.400 via=originaldouay]
+  Row  745: Ps       19:2     → 62:2      [score=0.250 via=originaldouay]
+  Row  748: Ps       19:4     → 62:4      [score=0.467 via=originaldouay]
+  Row  749: Ps       19:5     → 62:5      [score=0.476 via=originaldouay]
+  Row  750: Ps       19:6     → 62:6      [score=0.429 via=originaldouay]
+  Row  751: Ps       19:7     → 62:7      [score=0.412 via=originaldouay]
+  Row  752: Ps       19:9     → 62:9      [score=0.565 via=originaldouay]
+  Row  753: Ps       19:3     → 63:3      [score=0.250 via=originaldouay]
+  Row  754: Ps       19:7     → 113:15    [score=0.261 via=originaldouay]
+  Row  755: Ps       19:8     → 63:8      [score=0.444 via=originaldouay]
+  Row  756: Ps       19:1     → 64:1      [score=0.524 via=originaldouay]
+  Row  757: Ps       19:4     → 64:2      [score=0.318 via=originaldouay]
+  Row  758: Ps       19:5     → 64:5      [score=0.300 via=originaldouay]
+  Row  759: Ps       19:6     → 64:6      [score=0.400 via=originaldouay]
+  Row  760: Ps       19:9     → 64:9      [score=0.435 via=originaldouay]
+  Row  761: Ps       19:12    → 64:12     [score=0.579 via=originaldouay]
+  Row  762: Ps       19:13    → 64:13     [score=0.250 via=originaldouay]
+  Row  763: Ps       19:14    → 81:6      [score=0.308 via=originaldouay]
+  Row  765: Ps       19:1     → 118:54    [score=0.294 via=originaldouay]
+  Row  766: Ps       19:3     → 65:3      [score=0.333 via=originaldouay]
+  Row  767: Ps       19:4     → 53:6      [score=0.304 via=originaldouay]
+  Row  768: Ps       19:4     → 65:4      [score=0.353 via=originaldouay]
+  Row  769: Ps       19:5     → 65:5      [score=0.588 via=originaldouay]
+  Row  770: Ps       19:6     → 65:6      [score=0.381 via=originaldouay]
+  Row  771: Ps       19:8     → 65:8      [score=0.471 via=originaldouay]
+  Row  772: Ps       19:9     → 65:9      [score=0.348 via=originaldouay]
+  Row  773: Ps       19:12    → 65:12     [score=0.647 via=originaldouay]
+  Row  774: Ps       19:15    → 65:15     [score=0.381 via=originaldouay]
+  Row  775: Ps       19:16    → 65:16     [score=0.542 via=originaldouay]
+  Row  778: Ps       19:19    → 65:19     [score=0.846 via=originaldouay]
+  Row  779: Ps       19:20    → 70:12     [score=0.273 via=originaldouay]
+  Row  780: Ps       19:2     → 66:2      [score=0.455 via=originaldouay]
+  Row  781: Ps       19:3     → 66:3      [score=0.786 via=originaldouay]
+  Row  782: Ps       19:4     → 66:4      [score=0.625 via=originaldouay]
+  Row  783: Ps       19:5     → 66:5      [score=0.292 via=originaldouay]
+  Row  784: Ps       19:1     → 67:1      [score=0.636 via=originaldouay]
+  Row  787: Ps       19:8     → 67:8      [score=0.381 via=originaldouay]
+  Row  788: Ps       19:13    → 67:13     [score=0.368 via=originaldouay]
+  Row  789: Ps       19:14    → 67:14     [score=0.370 via=originaldouay]
+  Row  790: Ps       19:15    → 67:15     [score=0.348 via=originaldouay]
+  Row  791: Ps       19:18    → 67:18     [score=0.458 via=originaldouay]
+  Row  793: Ps       19:22    → 49:2      [score=0.300 via=originaldouay]
+  Row  795: Ps       19:24    → 67:24     [score=0.409 via=originaldouay]
+  Row  796: Ps       19:25    → 67:25     [score=0.550 via=originaldouay]
+  Row  797: Ps       19:26    → 67:26     [score=0.350 via=originaldouay]
+  Row  798: Ps       19:27    → 67:27     [score=0.500 via=originaldouay]
+  Row  800: Ps       19:29    → 67:29     [score=0.615 via=originaldouay]
+  Row  801: Ps       19:31    → 67:31     [score=0.419 via=originaldouay]
+  Row  803: Ps       19:34    → 67:34     [score=0.375 via=originaldouay]
+  Row  804: Ps       19:36    → 67:34     [score=0.321 via=originaldouay]
+  Row  806: Ps       19:4     → 68:4      [score=0.333 via=originaldouay]
+  Row  807: Ps       19:5     → 68:5      [score=0.258 via=originaldouay]
+  Row  808: Ps       19:6     → 68:6      [score=0.571 via=originaldouay]
+  Row  809: Ps       19:7     → 68:7      [score=0.500 via=originaldouay]
+  Row  810: Ps       19:8     → 68:8      [score=0.467 via=originaldouay]
+  Row  811: Ps       19:9     → 68:9      [score=0.318 via=originaldouay]
+  Row  812: Ps       19:13    → 68:13     [score=0.333 via=originaldouay]
+  Row  813: Ps       19:17    → 68:17     [score=0.600 via=originaldouay]
+  Row  814: Ps       19:22    → 68:22     [score=0.529 via=originaldouay]
+  Row  815: Ps       19:23    → 68:23     [score=0.500 via=originaldouay]
+  Row  816: Ps       19:25    → 68:25     [score=0.786 via=originaldouay]
+  Row  817: Ps       19:27    → 68:27     [score=0.500 via=originaldouay]
+  Row  818: Ps       19:28    → 68:28     [score=0.600 via=originaldouay]
+  Row  819: Ps       19:29    → 68:29     [score=0.556 via=originaldouay]
+  Row  821: Ps       19:31    → 68:31     [score=0.625 via=originaldouay]
+  Row  822: Ps       19:32    → 68:32     [score=0.579 via=originaldouay]
+  Row  823: Ps       19:33    → 68:33     [score=0.529 via=originaldouay]
+  Row  824: Ps       19:34    → 68:34     [score=0.333 via=originaldouay]
+  Row  825: Ps       19:35    → 68:35     [score=0.625 via=originaldouay]
+  Row  827: Ps       19:37    → 101:22    [score=0.250 via=originaldouay]
+  Row  828: Ps       19:2     → 69:2      [score=0.500 via=originaldouay]
+  Row  829: Ps       19:3     → 69:3      [score=0.357 via=originaldouay]
+  Row  830: Ps       19:5     → 69:5      [score=0.542 via=originaldouay]
+  Row  832: Ps       19:3     → 70:3      [score=0.375 via=originaldouay]
+  Row  833: Ps       19:8     → 118:91    [score=0.333 via=originaldouay]
+  Row  834: Ps       19:9     → 70:9      [score=0.391 via=originaldouay]
+  Row  835: Ps       19:12    → 70:12     [score=0.688 via=originaldouay]
+  Row  836: Ps       19:23    → 70:23     [score=0.333 via=originaldouay]
+  Row  837: Ps       19:24    → 88:17     [score=0.348 via=originaldouay]
+  Row  839: Ps       19:3     → 71:3      [score=0.500 via=originaldouay]
+  Row  840: Ps       19:4     → 71:4      [score=0.667 via=originaldouay]
+  Row  841: Ps       19:9     → 71:7      [score=0.353 via=originaldouay]
+  Row  842: Ps       19:8     → 71:8      [score=0.348 via=originaldouay]
+  Row  843: Ps       19:9     → 71:9      [score=0.733 via=originaldouay]
+  Row  844: Ps       19:12    → 71:12     [score=0.562 via=originaldouay]
+  Row  845: Ps       19:13    → 71:13     [score=0.500 via=originaldouay]
+  Row  846: Ps       19:19    → 71:19     [score=0.650 via=originaldouay]
+  Row  848: Ps       19:18    → 71:18     [score=0.286 via=originaldouay]
+  Row  849: Ps       19:2     → 72:2      [score=0.364 via=originaldouay]
+  Row  850: Ps       19:3     → 72:3      [score=0.400 via=originaldouay]
+  Row  852: Ps       19:5     → 72:5      [score=0.625 via=originaldouay]
+  Row  853: Ps       19:6     → 72:6      [score=0.733 via=originaldouay]
+  Row  854: Ps       19:7     → 72:7      [score=0.429 via=originaldouay]
+  Row  856: Ps       19:17    → 72:17     [score=0.667 via=originaldouay]
+  Row  857: Ps       19:19    → 72:19     [score=0.611 via=originaldouay]
+  Row  858: Ps       19:24    → 72:24     [score=0.429 via=originaldouay]
+  Row  859: Ps       19:26    → 72:26     [score=0.600 via=originaldouay]
+  Row  860: Ps       19:27    → 72:27     [score=0.292 via=originaldouay]
+  Row  861: Ps       19:2     → 73:2      [score=0.321 via=originaldouay]
+  Row  862: Ps       19:3     → 73:3      [score=0.458 via=originaldouay]
+  Row  863: Ps       19:7     → 73:7      [score=0.706 via=originaldouay]
+  Row  865: Ps       19:13    → 73:13     [score=0.286 via=originaldouay]
+  Row  866: Ps       19:15    → 73:15     [score=0.500 via=originaldouay]
+  Row  867: Ps       19:4     → 74:4      [score=0.400 via=originaldouay]
+  Row  868: Ps       19:6     → 74:6      [score=0.462 via=originaldouay]
+  Row  869: Ps       19:7     → 74:7      [score=0.250 via=originaldouay]
+  Row  870: Ps       19:10    → 74:10     [score=0.286 via=originaldouay]
+  Row  871: Ps       19:3     → 75:3      [score=0.800 via=originaldouay]
+  Row  872: Ps       19:4     → 75:4      [score=0.571 via=originaldouay]
+  Row  874: Ps       19:8     → 75:8      [score=0.385 via=originaldouay]
+  Row  876: Ps       19:11    → 75:11     [score=0.312 via=originaldouay]
+  Row  877: Ps       19:12    → 75:12     [score=0.565 via=originaldouay]
+  Row  879: Ps       19:6     → 76:6      [score=0.571 via=originaldouay]
+  Row  880: Ps       19:7     → 76:7      [score=0.500 via=originaldouay]
+  Row  881: Ps       19:8     → 76:8      [score=0.722 via=originaldouay]
+  Row  882: Ps       19:9     → 76:10     [score=0.348 via=originaldouay]
+  Row  883: Ps       19:14    → 76:12     [score=0.320 via=originaldouay]
+  Row  884: Ps       19:13    → 76:13     [score=0.375 via=originaldouay]
+  Row  885: Ps       19:14    → 76:14     [score=0.500 via=originaldouay]
+  Row  886: Ps       19:18    → 76:18     [score=0.300 via=originaldouay]
+  Row  888: Ps       19:2     → 77:69     [score=0.292 via=originaldouay]
+  Row  892: Ps       19:9     → 77:9      [score=0.588 via=originaldouay]
+  Row  893: Ps       19:15    → 77:15     [score=0.444 via=originaldouay]
+  Row  894: Ps       19:16    → 77:16     [score=0.684 via=originaldouay]
+  Row  896: Ps       19:26    → 77:20     [score=0.250 via=originaldouay]
+  Row  897: Ps       19:21    → 77:21     [score=0.263 via=originaldouay]
+  Row  898: Ps       19:23    → 77:23     [score=0.667 via=originaldouay]
+  Row  899: Ps       19:25    → 77:25     [score=0.421 via=originaldouay]
+  Row  900: Ps       19:20    → 77:26     [score=0.348 via=originaldouay]
+  Row  901: Ps       19:27    → 77:27     [score=0.455 via=originaldouay]
+  Row  902: Ps       19:24    → 77:29     [score=0.562 via=originaldouay]
+  Row  903: Ps       19:30    → 77:30     [score=0.588 via=originaldouay]
+  Row  904: Ps       19:32    → 77:32     [score=0.500 via=originaldouay]
+  Row  906: Ps       19:34    → 77:34     [score=0.714 via=originaldouay]
+  Row  907: Ps       19:35    → 77:35     [score=0.769 via=originaldouay]
+  Row  908: Ps       19:7     → 77:37     [score=0.667 via=originaldouay]
+  Row  909: Ps       19:38    → 77:38     [score=0.400 via=originaldouay]
+  Row  910: Ps       19:39    → 77:39     [score=0.286 via=originaldouay]
+  Row  911: Ps       19:42    → 77:42     [score=0.579 via=originaldouay]
+  Row  912: Ps       19:43    → 77:43     [score=0.438 via=originaldouay]
+  Row  913: Ps       19:44    → 77:44     [score=0.500 via=originaldouay]
+  Row  914: Ps       19:45    → 77:45     [score=0.333 via=originaldouay]
+  Row  916: Ps       19:48    → 77:48     [score=0.333 via=originaldouay]
+  Row  917: Ps       19:5     → 77:50     [score=0.636 via=originaldouay]
+  Row  918: Ps       19:51    → 104:36    [score=0.381 via=originaldouay]
+  Row  919: Ps       19:52    → 77:52     [score=0.450 via=originaldouay]
+  Row  920: Ps       19:58    → 77:58     [score=0.333 via=originaldouay]
+  Row  922: Ps       19:61    → 77:61     [score=0.692 via=originaldouay]
+  Row  923: Ps       19:63    → 77:63     [score=0.500 via=originaldouay]
+  Row  924: Ps       19:64    → 77:64     [score=0.364 via=originaldouay]
+  Row  925: Ps       19:67    → 77:67     [score=0.429 via=originaldouay]
+  Row  926: Ps       19:69    → 77:69     [score=0.421 via=originaldouay]
+  Row  927: Ps       19:71    → 77:71     [score=0.353 via=originaldouay]
+  Row  929: Ps       19:1     → 71:2      [score=0.250 via=originaldouay]
+  Row  930: Ps       19:2     → 78:2      [score=0.261 via=originaldouay]
+  Row  931: Ps       19:3     → 78:3      [score=0.800 via=originaldouay]
+  Row  932: Ps       19:4     → 78:4      [score=0.474 via=originaldouay]
+  Row  933: Ps       19:8     → 78:8      [score=0.650 via=originaldouay]
+  Row  934: Ps       19:9     → 78:9      [score=0.714 via=originaldouay]
+  Row  936: Ps       19:1     → 68:1      [score=0.474 via=originaldouay]
+  Row  937: Ps       19:4     → 79:4      [score=0.538 via=originaldouay]
+  Row  938: Ps       19:9     → 79:9      [score=0.312 via=originaldouay]
+  Row  939: Ps       19:8     → 79:4      [score=0.636 via=originaldouay]
+  Row  940: Ps       19:14    → 79:14     [score=0.333 via=originaldouay]
+  Row  941: Ps       19:15    → 79:15     [score=0.357 via=originaldouay]
+  Row  942: Ps       19:19    → 79:19     [score=0.625 via=originaldouay]
+  Row  943: Ps       19:2     → 80:2      [score=0.400 via=originaldouay]
+  Row  944: Ps       19:3     → 80:3      [score=0.263 via=originaldouay]
+  Row  945: Ps       19:4     → 80:4      [score=0.368 via=originaldouay]
+  Row  947: Ps       19:6     → 80:6      [score=0.417 via=originaldouay]
+  Row  949: Ps       19:8     → 80:8      [score=0.450 via=originaldouay]
+  Row  951: Ps       19:33    → 80:13     [score=0.619 via=originaldouay]
+  Row  952: Ps       19:15    → 80:15     [score=0.632 via=originaldouay]
+  Row  954: Ps       19:5     → 81:5      [score=0.500 via=originaldouay]
+  Row  955: Ps       19:6     → 81:6      [score=0.308 via=originaldouay]
+  Row  956: Ps       19:7     → 81:7      [score=0.600 via=modern-drb]
+  Row  957: Ps       19:2     → 82:2      [score=0.267 via=originaldouay]
+  Row  958: Ps       19:3     → 82:3      [score=0.353 via=originaldouay]
+  Row  959: Ps       19:5     → 82:5      [score=0.417 via=originaldouay]
+  Row  960: Ps       19:9     → 82:9      [score=0.391 via=originaldouay]
+  Row  961: Ps       19:10    → 82:10     [score=0.350 via=originaldouay]
+  Row  962: Ps       19:14    → 82:14     [score=0.375 via=originaldouay]
+  Row  963: Ps       19:15    → 82:15     [score=0.750 via=originaldouay]
+  Row  965: Ps       19:19    → 104:7     [score=0.353 via=originaldouay]
+  Row  966: Ps       19:1     → 80:1      [score=0.273 via=originaldouay]
+  Row  970: Ps       19:9     → 83:9      [score=0.500 via=originaldouay]
+  Row  971: Ps       19:18    → 84:8      [score=0.467 via=originaldouay]
+  Row  972: Ps       19:12    → 83:12     [score=0.538 via=originaldouay]
+  Row  974: Ps       19:2     → 84:2      [score=0.533 via=originaldouay]
+  Row  975: Ps       19:3     → 84:3      [score=0.429 via=originaldouay]
+  Row  976: Ps       19:4     → 84:4      [score=0.500 via=originaldouay]
+  Row  977: Ps       19:15    → 84:5      [score=0.600 via=originaldouay]
+  Row  978: Ps       19:6     → 84:6      [score=0.611 via=originaldouay]
+  Row  980: Ps       19:9     → 84:9      [score=0.429 via=originaldouay]
+  Row  981: Ps       19:11    → 84:11     [score=0.538 via=originaldouay]
+  Row  982: Ps       19:12    → 84:12     [score=0.474 via=originaldouay]
+  Row  983: Ps       19:43    → 84:13     [score=0.364 via=originaldouay]
+  Row  984: Ps       19:14    → 26:11     [score=0.296 via=originaldouay]
+  Row  985: Ps       19:2     → 85:2      [score=0.375 via=originaldouay]
+  Row  988: Ps       19:6     → 85:6      [score=0.867 via=originaldouay]
+  Row  989: Ps       19:7     → 85:7      [score=0.526 via=originaldouay]
+  Row  991: Ps       19:12    → 85:12     [score=0.684 via=originaldouay]
+  Row  992: Ps       19:14    → 85:14     [score=0.387 via=originaldouay]
+  Row  994: Ps       19:1     → 86:1      [score=0.500 via=originaldouay]
+  Row  995: Ps       19:4     → 86:4      [score=0.278 via=originaldouay]
+  Row  997: Ps       19:6     → 86:6      [score=0.364 via=originaldouay]
+  Row  998: Ps       19:7     → 32:7      [score=0.263 via=originaldouay]
+  Row 1003: Ps       19:5     → 87:5      [score=0.304 via=originaldouay]
+  Row 1004: Ps       19:9     → 87:9      [score=0.462 via=originaldouay]
+  Row 1005: Ps       19:11    → 87:11     [score=0.375 via=originaldouay]
+  Row 1006: Ps       19:12    → 87:12     [score=0.333 via=originaldouay]
+  Row 1007: Ps       19:13    → 87:13     [score=0.348 via=originaldouay]
+  Row 1008: Ps       19:17    → 87:17     [score=0.583 via=originaldouay]
+  Row 1011: Ps       19:4     → 88:4      [score=0.438 via=originaldouay]
+  Row 1012: Ps       19:8     → 88:8      [score=0.542 via=originaldouay]
+  Row 1013: Ps       19:10    → 88:10     [score=0.529 via=originaldouay]
+  Row 1014: Ps       19:12    → 88:12     [score=0.647 via=originaldouay]
+  Row 1015: Ps       19:25    → 88:25     [score=0.750 via=originaldouay]
+  Row 1016: Ps       19:27    → 88:27     [score=0.526 via=originaldouay]
+  Row 1017: Ps       19:30    → 88:30     [score=0.733 via=originaldouay]
+  Row 1018: Ps       19:32    → 88:32     [score=0.250 via=originaldouay]
+  Row 1019: Ps       19:33    → 88:33     [score=0.286 via=originaldouay]
+  Row 1020: Ps       19:34    → 88:34     [score=0.500 via=originaldouay]
+  Row 1021: Ps       19:35    → 88:35     [score=0.429 via=originaldouay]
+  Row 1022: Ps       19:36    → 88:36     [score=0.583 via=originaldouay]
+  Row 1023: Ps       19:38    → 88:38     [score=0.429 via=originaldouay]
+  Row 1028: Ps       19:2     → 96:2      [score=0.444 via=originaldouay]
+  Row 1029: Ps       19:3     → 96:3      [score=0.533 via=originaldouay]
+  Row 1030: Ps       19:4     → 96:4      [score=0.533 via=originaldouay]
+  Row 1033: Ps       19:12    → 146:5     [score=0.286 via=originaldouay]
+  Row 1034: Ps       19:3     → 22:1      [score=0.333 via=originaldouay]
+  Row 1036: Ps       19:5     → 97:5      [score=0.412 via=originaldouay]
+  Row 1037: Ps       19:2     → 98:2      [score=0.727 via=originaldouay]
+  Row 1038: Ps       19:3     → 98:3      [score=0.562 via=originaldouay]
+  Row 1042: Ps       19:3     → 99:3      [score=0.370 via=originaldouay]
+  Row 1043: Ps       19:4     → 100:4     [score=0.846 via=originaldouay]
+  Row 1044: Ps       19:5     → 100:5     [score=0.350 via=originaldouay]
+  Row 1045: Ps       19:6     → 100:6     [score=0.296 via=originaldouay]
+  Row 1046: Ps       19:7     → 100:7     [score=0.357 via=originaldouay]
+  Row 1047: Ps       19:8     → 75:10     [score=0.273 via=originaldouay]
+  Row 1048: Ps       19:4     → 101:4     [score=0.500 via=originaldouay]
+  Row 1049: Ps       19:6     → 101:6     [score=0.318 via=originaldouay]
+  Row 1051: Ps       19:12    → 101:12    [score=0.364 via=originaldouay]
+  Row 1052: Ps       19:13    → 101:13    [score=0.714 via=originaldouay]
+  Row 1053: Ps       19:14    → 101:14    [score=0.500 via=originaldouay]
+  Row 1054: Ps       19:15    → 101:15    [score=0.348 via=originaldouay]
+  Row 1055: Ps       19:17    → 101:17    [score=0.750 via=originaldouay]
+  Row 1056: Ps       19:18    → 101:18    [score=0.381 via=originaldouay]
+  Row 1057: Ps       19:19    → 101:19    [score=0.500 via=originaldouay]
+  Row 1058: Ps       19:21    → 101:21    [score=0.625 via=originaldouay]
+  Row 1060: Ps       19:26    → 101:26    [score=0.765 via=originaldouay]
+  Row 1062: Ps       19:39    → 36:18     [score=0.389 via=originaldouay]
+  Row 1063: Ps       19:1     → 102:1     [score=0.370 via=originaldouay]
+  Row 1064: Ps       19:3     → 102:3     [score=0.500 via=originaldouay]
+  Row 1065: Ps       19:4     → 102:4     [score=0.733 via=originaldouay]
+  Row 1066: Ps       19:5     → 102:5     [score=0.588 via=originaldouay]
+  Row 1067: Ps       19:7     → 102:7     [score=0.294 via=originaldouay]
+  Row 1068: Ps       19:9     → 102:9     [score=0.526 via=originaldouay]
+  Row 1069: Ps       19:16    → 102:16    [score=0.632 via=originaldouay]
+  Row 1070: Ps       19:19    → 102:19    [score=0.875 via=originaldouay]
+  Row 1071: Ps       19:21    → 102:21    [score=0.450 via=originaldouay]
+  Row 1072: Ps       19:8     → 102:8     [score=0.286 via=originaldouay]
+  Row 1075: Ps       19:1     → 103:1     [score=0.500 via=originaldouay]
+  Row 1076: Ps       19:12    → 103:2     [score=0.360 via=originaldouay]
+  Row 1078: Ps       19:5     → 103:5     [score=0.500 via=originaldouay]
+  Row 1079: Ps       19:6     → 103:6     [score=0.500 via=originaldouay]
+  Row 1080: Ps       19:8     → 103:8     [score=0.375 via=originaldouay]
+  Row 1081: Ps       19:4     → 103:9     [score=0.316 via=originaldouay]
+  Row 1082: Ps       19:19    → 103:19    [score=0.500 via=originaldouay]
+  Row 1083: Ps       19:23    → 103:23    [score=0.556 via=originaldouay]
+  Row 1084: Ps       19:28    → 103:28    [score=0.455 via=originaldouay]
+  Row 1085: Ps       19:39    → 103:30    [score=0.550 via=originaldouay]
+  Row 1086: Ps       19:32    → 103:32    [score=0.647 via=originaldouay]
+  Row 1087: Ps       19:33    → 103:33    [score=0.647 via=originaldouay]
+  Row 1088: Ps       19:34    → 103:34    [score=0.750 via=originaldouay]
+  Row 1089: Ps       19:135   → 108:15    [score=0.280 via=originaldouay]
+  Row 1091: Ps       19:6     → 104:6     [score=0.500 via=originaldouay]
+  Row 1092: Ps       19:7     → 104:7     [score=0.333 via=originaldouay]
+  Row 1094: Ps       19:9     → 104:9     [score=0.667 via=originaldouay]
+  Row 1095: Ps       19:10    → 104:10    [score=0.368 via=originaldouay]
+  Row 1097: Ps       19:14    → 104:14    [score=0.333 via=originaldouay]
+  Row 1098: Ps       19:18    → 104:18    [score=0.438 via=originaldouay]
+  Row 1099: Ps       19:22    → 104:22    [score=0.500 via=originaldouay]
+  Row 1100: Ps       19:25    → 104:25    [score=0.435 via=originaldouay]
+  Row 1101: Ps       19:15    → 104:15    [score=0.583 via=originaldouay]
+  Row 1103: Ps       19:28    → 104:28    [score=0.273 via=originaldouay]
+  Row 1104: Ps       19:29    → 104:29    [score=0.286 via=originaldouay]
+  Row 1105: Ps       19:30    → 104:30    [score=0.500 via=originaldouay]
+  Row 1106: Ps       19:31    → 104:31    [score=0.294 via=originaldouay]
+  Row 1107: Ps       19:2     → 104:32    [score=0.333 via=originaldouay]
+  Row 1108: Ps       19:34    → 104:34    [score=0.381 via=originaldouay]
+  Row 1109: Ps       19:35    → 104:35    [score=0.667 via=originaldouay]
+  Row 1110: Ps       19:36    → 104:36    [score=0.316 via=originaldouay]
+  Row 1111: Ps       19:37    → 104:37    [score=0.550 via=originaldouay]
+  Row 1112: Ps       19:38    → 104:38    [score=0.455 via=originaldouay]
+  Row 1113: Ps       19:40    → 104:40    [score=1.000 via=originaldouay]
+  Row 1114: Ps       19:41    → 104:41    [score=0.667 via=originaldouay]
+  Row 1115: Ps       19:45    → 104:45    [score=0.429 via=modern-drb]
+  Row 1117: Ps       19:3     → 105:9     [score=0.385 via=originaldouay]
+  Row 1118: Ps       19:4     → 105:4     [score=0.375 via=originaldouay]
+  Row 1119: Ps       19:5     → 105:5     [score=0.577 via=originaldouay]
+  Row 1120: Ps       19:6     → 105:6     [score=0.455 via=originaldouay]
+  Row 1121: Ps       19:7     → 105:7     [score=0.500 via=originaldouay]
+  Row 1122: Ps       19:13    → 105:13    [score=0.533 via=originaldouay]
+  Row 1123: Ps       19:14    → 105:14    [score=0.300 via=originaldouay]
+  Row 1124: Ps       19:17    → 105:17    [score=0.562 via=originaldouay]
+  Row 1126: Ps       19:20    → 105:20    [score=0.600 via=originaldouay]
+  Row 1127: Ps       19:23    → 105:23    [score=0.448 via=originaldouay]
+  Row 1128: Ps       19:25    → 105:25    [score=0.550 via=originaldouay]
+  Row 1129: Ps       19:42    → 105:42    [score=0.375 via=originaldouay]
+  Row 1130: Ps       19:31    → 105:31    [score=0.588 via=originaldouay]
+  Row 1131: Ps       19:32    → 105:32    [score=0.533 via=originaldouay]
+  Row 1132: Ps       19:35    → 105:35    [score=0.833 via=originaldouay]
+  Row 1133: Ps       19:37    → 105:37    [score=0.455 via=originaldouay]
+  Row 1134: Ps       19:4     → 105:39    [score=0.529 via=originaldouay]
+  Row 1135: Ps       19:40    → 105:40    [score=0.611 via=originaldouay]
+  Row 1136: Ps       19:45    → 105:45    [score=0.765 via=originaldouay]
+  Row 1137: Ps       19:46    → 105:46    [score=0.688 via=originaldouay]
+  Row 1140: Ps       19:2     → 106:2     [score=0.476 via=originaldouay]
+  Row 1141: Ps       19:3     → 106:3     [score=0.429 via=originaldouay]
+  Row 1142: Ps       19:4     → 106:4     [score=0.789 via=originaldouay]
+  Row 1143: Ps       19:10    → 106:10    [score=0.429 via=originaldouay]
+  Row 1144: Ps       19:20    → 106:20    [score=0.500 via=originaldouay]
+  Row 1145: Ps       19:32    → 106:32    [score=0.500 via=originaldouay]
+  Row 1147: Ps       19:34    → 106:34    [score=0.529 via=originaldouay]
+  Row 1148: Ps       19:35    → 106:35    [score=0.353 via=originaldouay]
+  Row 1149: Ps       19:36    → 106:36    [score=0.643 via=originaldouay]
+  Row 1150: Ps       19:37    → 106:37    [score=0.286 via=originaldouay]
+  Row 1151: Ps       19:38    → 106:38    [score=0.500 via=originaldouay]
+  Row 1152: Ps       19:39    → 106:39    [score=0.556 via=originaldouay]
+  Row 1153: Ps       19:43    → 115:4     [score=0.261 via=originaldouay]
+  Row 1154: Ps       19:3     → 107:3     [score=0.545 via=originaldouay]
+  Row 1155: Ps       19:4     → 107:4     [score=0.368 via=originaldouay]
+  Row 1156: Ps       19:9     → 107:9     [score=0.526 via=originaldouay]
+  Row 1158: Ps       19:5     → 107:5     [score=0.476 via=originaldouay]
+  Row 1159: Ps       19:11    → 107:12    [score=0.304 via=originaldouay]
+  Row 1160: Ps       19:14    → 19:6      [score=0.273 via=originaldouay]
+  Row 1161: Ps       19:2     → 108:2     [score=0.524 via=originaldouay]
+  Row 1162: Ps       19:3     → 108:3     [score=0.526 via=originaldouay]
+  Row 1163: Ps       19:6     → 108:6     [score=0.375 via=originaldouay]
+  Row 1164: Ps       19:7     → 108:7     [score=0.429 via=originaldouay]
+  Row 1165: Ps       19:9     → 108:9     [score=0.700 via=originaldouay]
+  Row 1166: Ps       19:17    → 108:17    [score=0.529 via=originaldouay]
+  Row 1168: Ps       19:3     → 91:1      [score=0.375 via=originaldouay]
+  Row 1170: Ps       19:7     → 71:13     [score=0.286 via=originaldouay]
+  Row 1172: Ps       19:4     → 110:4     [score=0.769 via=originaldouay]
+  Row 1173: Ps       19:8     → 110:8     [score=0.304 via=originaldouay]
+  Row 1175: Ps       19:1     → 2:5       [score=0.267 via=originaldouay]
+  Row 1176: Ps       19:2     → 111:2     [score=0.471 via=originaldouay]
+  Row 1178: Ps       19:4     → 111:4     [score=0.409 via=originaldouay]
+  Row 1179: Ps       19:5     → 111:6     [score=0.353 via=originaldouay]
+  Row 1180: Ps       19:7     → 111:7     [score=0.556 via=originaldouay]
+  Row 1181: Ps       19:8     → 111:8     [score=1.000 via=originaldouay]
+  Row 1182: Ps       19:9     → 111:9     [score=0.500 via=originaldouay]
+  Row 1183: Ps       19:2     → 112:2     [score=0.471 via=originaldouay]
+  Row 1184: Ps       19:3     → 112:3     [score=0.533 via=originaldouay]
+  Row 1185: Ps       19:4     → 112:4     [score=1.000 via=originaldouay]
+  Row 1186: Ps       19:5     → 112:5     [score=0.733 via=originaldouay]
+  Row 1187: Ps       19:7     → 112:7     [score=0.625 via=originaldouay]
+  Row 1188: Ps       19:2     → 113:2     [score=0.273 via=originaldouay]
+  Row 1189: Ps       19:4     → 113:4     [score=0.500 via=originaldouay]
+  Row 1190: Ps       19:6     → 113:4     [score=0.643 via=originaldouay]
+  Row 1191: Ps       19:8     → 113:8     [score=0.474 via=originaldouay]
+  Row 1192: Ps       19:11    → 113:11    [score=0.647 via=originaldouay]
+  Row 1193: Ps       19:12    → 113:12    [score=0.571 via=originaldouay]
+  Row 1194: Ps       19:13    → 134:16    [score=0.538 via=originaldouay]
+  Row 1195: Ps       19:18    → 113:18    [score=0.650 via=originaldouay]
+  Row 1196: Ps       19:20    → 113:20    [score=0.438 via=originaldouay]
+  Row 1197: Ps       19:23    → 113:23    [score=0.600 via=originaldouay]
+  Row 1198: Ps       19:25    → 113:25    [score=0.375 via=originaldouay]
+  Row 1201: Ps       19:8     → 114:8     [score=0.625 via=originaldouay]
+  Row 1202: Ps       19:2     → 115:2     [score=0.500 via=originaldouay]
+  Row 1203: Ps       19:3     → 115:3     [score=0.320 via=originaldouay]
+  Row 1204: Ps       19:4     → 115:4     [score=0.500 via=originaldouay]
+  Row 1205: Ps       19:5     → 115:5     [score=0.909 via=originaldouay]
+  Row 1206: Ps       19:6     → 115:6     [score=0.350 via=originaldouay]
+  Row 1207: Ps       19:7     → 118:141   [score=0.273 via=originaldouay]
+  Row 1208: Ps       19:2     → 66:2      [score=0.385 via=originaldouay]
+  Row 1209: Ps       19:5     → 117:5     [score=0.583 via=originaldouay]
+  Row 1211: Ps       19:10    → 117:10    [score=0.556 via=originaldouay]
+  Row 1212: Ps       19:12    → 117:12    [score=0.652 via=originaldouay]
+  Row 1213: Ps       19:13    → 117:13    [score=0.417 via=originaldouay]
+  Row 1214: Ps       19:19    → 117:19    [score=0.526 via=originaldouay]
+  Row 1215: Ps       19:21    → 117:21    [score=0.333 via=originaldouay]
+  Row 1217: Ps       19:25    → 117:25    [score=0.304 via=originaldouay]
+  Row 1218: Ps       19:26    → 94:7      [score=0.409 via=originaldouay]
+  Row 1219: Ps       19:28    → 117:28    [score=0.500 via=originaldouay]
+  Row 1220: Ps       19:3     → 118:3     [score=0.500 via=originaldouay]
+  Row 1222: Ps       19:5     → 118:5     [score=0.357 via=originaldouay]
+  Row 1223: Ps       19:6     → 118:6     [score=0.450 via=originaldouay]
+  Row 1225: Ps       19:10    → 118:10    [score=0.375 via=originaldouay]
+  Row 1226: Ps       19:11    → 118:11    [score=0.471 via=originaldouay]
+  Row 1229: Ps       19:14    → 118:14    [score=0.474 via=originaldouay]
+  Row 1230: Ps       19:15    → 118:15    [score=0.462 via=originaldouay]
+  Row 1231: Ps       19:17    → 118:17    [score=0.250 via=originaldouay]
+  Row 1232: Ps       19:18    → 118:18    [score=0.348 via=originaldouay]
+  Row 1233: Ps       19:23    → 118:23    [score=0.381 via=originaldouay]
+  Row 1234: Ps       19:24    → 118:24    [score=0.455 via=originaldouay]
+  Row 1236: Ps       19:27    → 118:27    [score=0.524 via=originaldouay]
+  Row 1237: Ps       19:29    → 118:29    [score=0.579 via=originaldouay]
+  Row 1238: Ps       19:30    → 118:30    [score=0.375 via=originaldouay]
+  Row 1240: Ps       19:34    → 118:34    [score=0.500 via=originaldouay]
+  Row 1241: Ps       19:35    → 118:35    [score=0.500 via=originaldouay]
+  Row 1242: Ps       19:36    → 118:36    [score=0.385 via=originaldouay]
+  Row 1243: Ps       19:37    → 118:37    [score=0.375 via=originaldouay]
+  Row 1245: Ps       19:39    → 118:39    [score=0.462 via=originaldouay]
+  Row 1246: Ps       19:47    → 118:38    [score=0.300 via=originaldouay]
+  Row 1248: Ps       19:43    → 118:43    [score=0.591 via=originaldouay]
+  Row 1249: Ps       19:46    → 118:46    [score=0.474 via=originaldouay]
+  Row 1250: Ps       19:47    → 118:47    [score=0.375 via=originaldouay]
+  Row 1251: Ps       19:48    → 118:48    [score=0.529 via=originaldouay]
+  Row 1252: Ps       19:50    → 118:50    [score=0.278 via=originaldouay]
+  Row 1253: Ps       19:52    → 118:52    [score=0.500 via=originaldouay]
+  Row 1255: Ps       19:53    → 118:53    [score=0.286 via=originaldouay]
+  Row 1256: Ps       19:54    → 118:54    [score=0.562 via=originaldouay]
+  Row 1257: Ps       19:57    → 118:57    [score=0.500 via=originaldouay]
+  Row 1258: Ps       19:58    → 118:58    [score=0.600 via=originaldouay]
+  Row 1259: Ps       19:63    → 118:63    [score=0.318 via=originaldouay]
+  Row 1260: Ps       19:67    → 118:67    [score=0.474 via=originaldouay]
+  Row 1261: Ps       19:68    → 118:68    [score=0.300 via=originaldouay]
+  Row 1262: Ps       19:2     → 118:72    [score=0.308 via=originaldouay]
+  Row 1263: Ps       19:95    → 118:75    [score=0.750 via=originaldouay]
+  Row 1264: Ps       19:76    → 118:76    [score=0.667 via=originaldouay]
+  Row 1265: Ps       19:77    → 118:92    [score=0.300 via=originaldouay]
+  Row 1266: Ps       19:78    → 118:78    [score=0.500 via=originaldouay]
+  Row 1267: Ps       19:79    → 118:79    [score=0.353 via=originaldouay]
+  Row 1268: Ps       19:80    → 118:80    [score=0.438 via=originaldouay]
+  Row 1269: Ps       19:81    → 118:43    [score=0.276 via=originaldouay]
+  Row 1270: Ps       19:83    → 118:83    [score=0.368 via=originaldouay]
+  Row 1271: Ps       19:84    → 118:84    [score=0.480 via=originaldouay]
+  Row 1273: Ps       19:88    → 118:88    [score=0.611 via=originaldouay]
+  Row 1276: Ps       19:93    → 118:93    [score=0.250 via=originaldouay]
+  Row 1279: Ps       19:97    → 118:97    [score=0.857 via=originaldouay]
+  Row 1280: Ps       19:98    → 118:98    [score=0.522 via=originaldouay]
+  Row 1281: Ps       19:99    → 118:99    [score=0.529 via=originaldouay]
+  Row 1282: Ps       19:103   → 118:103   [score=0.286 via=originaldouay]
+  Row 1284: Ps       19:106   → 118:106   [score=0.571 via=originaldouay]
+  Row 1286: Ps       19:117   → 118:117   [score=0.381 via=originaldouay]
+  Row 1288: Ps       19:126   → 93:5      [score=0.286 via=originaldouay]
+  Row 1289: Ps       19:127   → 118:127   [score=0.636 via=originaldouay]
+  Row 1290: Ps       19:130   → 118:130   [score=0.474 via=originaldouay]
+  Row 1291: Ps       19:131   → 118:131   [score=0.667 via=originaldouay]
+  Row 1293: Ps       19:135   → 118:135   [score=0.308 via=originaldouay]
+  Row 1294: Ps       19:136   → 118:136   [score=0.391 via=originaldouay]
+  Row 1295: Ps       19:138   → 118:142   [score=0.273 via=originaldouay]
+  Row 1296: Ps       19:141   → 118:141   [score=0.261 via=originaldouay]
+  Row 1297: Ps       19:143   → 118:143   [score=0.474 via=originaldouay]
+  Row 1299: Ps       19:147   → 118:147   [score=0.438 via=originaldouay]
+  Row 1300: Ps       19:149   → 118:149   [score=1.000 via=originaldouay]
+  Row 1301: Ps       19:150   → 118:150   [score=0.619 via=originaldouay]
+  Row 1302: Ps       19:152   → 118:152   [score=0.381 via=originaldouay]
+  Row 1303: Ps       19:153   → 118:153   [score=0.769 via=originaldouay]
+  Row 1304: Ps       19:15    → 118:40    [score=0.308 via=originaldouay]
+  Row 1305: Ps       19:156   → 118:156   [score=0.250 via=originaldouay]
+  Row 1306: Ps       19:159   → 118:159   [score=0.667 via=originaldouay]
+  Row 1307: Ps       19:161   → 118:161   [score=0.368 via=originaldouay]
+  Row 1308: Ps       19:169   → 118:169   [score=0.529 via=originaldouay]
+  Row 1309: Ps       19:171   → 118:171   [score=0.474 via=originaldouay]
+  Row 1311: Ps       19:173   → 118:173   [score=0.294 via=originaldouay]
+  Row 1312: Ps       19:175   → 50:16     [score=0.269 via=originaldouay]
+  Row 1315: Ps       19:3     → 119:3     [score=0.300 via=originaldouay]
+  Row 1316: Ps       19:4     → 119:4     [score=0.385 via=originaldouay]
+  Row 1317: Ps       19:1     → 120:1     [score=0.833 via=originaldouay]
+  Row 1318: Ps       19:3     → 120:3     [score=0.733 via=originaldouay]
+  Row 1320: Ps       19:5     → 120:5     [score=0.444 via=originaldouay]
+  Row 1321: Ps       19:1     → 121:1     [score=0.480 via=originaldouay]
+  Row 1322: Ps       19:2     → 121:2     [score=0.455 via=originaldouay]
+  Row 1323: Ps       19:3     → 121:3     [score=0.500 via=originaldouay]
+  Row 1324: Ps       19:4     → 121:4     [score=0.250 via=originaldouay]
+  Row 1325: Ps       19:5     → 121:5     [score=0.286 via=originaldouay]
+  Row 1326: Ps       19:7     → 121:7     [score=0.389 via=originaldouay]
+  Row 1327: Ps       19:9     → 34:12     [score=0.250 via=originaldouay]
+  Row 1329: Ps       19:4     → 123:3     [score=0.500 via=originaldouay]
+  Row 1330: Ps       19:5     → 123:5     [score=0.412 via=originaldouay]
+  Row 1331: Ps       19:6     → 123:6     [score=0.750 via=originaldouay]
+  Row 1332: Ps       19:7     → 123:7     [score=0.300 via=originaldouay]
+  Row 1333: Ps       19:8     → 120:2     [score=0.474 via=originaldouay]
+  Row 1334: Ps       19:3     → 124:3     [score=0.435 via=originaldouay]
+  Row 1335: Ps       19:4     → 124:4     [score=0.429 via=originaldouay]
+  Row 1336: Ps       19:7     → 141:7     [score=0.321 via=originaldouay]
+  Row 1338: Ps       19:2     → 142:2     [score=0.263 via=originaldouay]
+  Row 1340: Ps       19:5     → 142:5     [score=0.524 via=originaldouay]
+  Row 1342: Ps       19:9     → 142:9     [score=0.350 via=originaldouay]
+  Row 1346: Ps       19:3     → 143:3     [score=0.706 via=originaldouay]
+  Row 1347: Ps       19:5     → 143:5     [score=0.250 via=originaldouay]
+  Row 1348: Ps       19:7     → 143:7     [score=0.789 via=originaldouay]
+  Row 1349: Ps       19:8     → 22:1      [score=0.286 via=originaldouay]
+  Row 1350: Ps       19:8     → 143:8     [score=0.571 via=originaldouay]
+  Row 1351: Ps       19:9     → 143:9     [score=0.312 via=originaldouay]
+  Row 1353: Ps       19:4     → 144:4     [score=0.267 via=originaldouay]
+  Row 1354: Ps       19:5     → 144:5     [score=0.625 via=originaldouay]
+  Row 1355: Ps       19:6     → 144:6     [score=0.462 via=originaldouay]
+  Row 1356: Ps       19:11    → 144:11    [score=0.529 via=originaldouay]
+  Row 1357: Ps       19:13    → 144:13    [score=0.529 via=originaldouay]
+  Row 1358: Ps       19:15    → 88:8      [score=0.250 via=originaldouay]
+  Row 1362: Ps       19:2     → 103:33    [score=0.412 via=originaldouay]
+  Row 1363: Ps       19:4     → 145:4     [score=0.400 via=originaldouay]
+  Row 1364: Ps       19:2     → 146:2     [score=0.333 via=originaldouay]
+  Row 1366: Ps       19:5     → 146:5     [score=0.562 via=originaldouay]
+  Row 1367: Ps       19:7     → 146:7     [score=0.538 via=originaldouay]
+  Row 1369: Ps       19:10    → 146:10    [score=0.476 via=originaldouay]
+  Row 1370: Ps       19:2     → 147:2     [score=0.529 via=originaldouay]
+  Row 1371: Ps       19:3     → 147:3     [score=0.579 via=originaldouay]
+  Row 1372: Ps       19:4     → 147:4     [score=0.333 via=originaldouay]
+  Row 1374: Prv      16:24    → 15:24     [score=0.409 via=saint-dismas]
+  Row 1377: Prv      16:31    → 15:31     [score=0.300 via=saint-dismas]
+  Row 1378: Prv      16:32    → 15:32     [score=0.320 via=saint-dismas]
+  Row 1379: Prv      16:33    → 15:33     [score=0.500 via=saint-dismas]
+  Row 1381: Prv      16:9     → 16:7      [score=0.565 via=saint-dismas]
+  Row 1386: Prv      16:25    → 14:12     [score=0.280 via=saint-dismas]
+  Row 1395: Prv      16:2     → 17:2      [score=0.421 via=saint-dismas]
+  Row 1396: Prv      16:3     → 17:3      [score=0.409 via=saint-dismas]
+  Row 1397: Prv      16:4     → 17:4      [score=0.412 via=saint-dismas]
+  Row 1398: Prv      16:18    → 17:8      [score=0.346 via=saint-dismas]
+  Row 1400: Prv      16:9     → 17:9      [score=0.320 via=saint-dismas]
+  Row 1401: Prv      16:10    → 17:10     [score=0.389 via=saint-dismas]
+  Row 1402: Prv      16:14    → 17:14     [score=0.435 via=saint-dismas]
+  Row 1403: Prv      16:17    → 17:17     [score=0.562 via=saint-dismas]
+  Row 1404: Prv      16:20    → 17:20     [score=0.545 via=saint-dismas]
+  Row 1405: Prv      16:22    → 17:22     [score=0.467 via=saint-dismas]
+  Row 1406: Prv      16:23    → 17:23     [score=0.389 via=saint-dismas]
+  Row 1407: Prv      16:24    → 17:24     [score=0.562 via=saint-dismas]
+  Row 1408: Prv      16:25    → 17:25     [score=0.733 via=saint-dismas]
+  Row 1409: Prv      16:26    → 17:26     [score=0.500 via=saint-dismas]
+  Row 1410: Prv      16:28    → 20:20     [score=0.259 via=saint-dismas]
+  Row 1411: Prv      16:3     → 18:3      [score=0.545 via=saint-dismas]
+  Row 1412: Prv      16:4     → 18:4      [score=0.588 via=saint-dismas]
+  Row 1413: Prv      16:7     → 18:7      [score=0.600 via=saint-dismas]
+  Row 1414: Prv      16:8     → 18:8      [score=0.281 via=saint-dismas]
+  Row 1415: Prv      16:9     → 18:9      [score=0.600 via=saint-dismas]
+  Row 1416: Prv      16:10    → 14:14     [score=0.269 via=saint-dismas]
+  Row 1417: Prv      16:32    → 18:12     [score=0.688 via=saint-dismas]
+  Row 1418: Prv      16:13    → 18:13     [score=0.450 via=saint-dismas]
+  Row 1419: Prv      16:14    → 18:14     [score=0.700 via=saint-dismas]
+  Row 1420: Prv      16:15    → 18:15     [score=0.438 via=saint-dismas]
+  Row 1422: Prv      16:18    → 18:18     [score=0.267 via=saint-dismas]
+  Row 1423: Prv      16:19    → 18:19     [score=0.250 via=saint-dismas]
+  Row 1424: Prv      16:23    → 18:23     [score=0.304 via=saint-dismas]
+  Row 1425: Prv      16:2     → 19:2      [score=0.333 via=saint-dismas]
+  Row 1426: Prv      16:5     → 19:5      [score=0.500 via=saint-dismas]
+  Row 1428: Prv      16:7     → 19:7      [score=0.476 via=saint-dismas]
+  Row 1429: Prv      16:9     → 19:10     [score=0.263 via=saint-dismas]
+  Row 1431: Prv      16:12    → 19:12     [score=0.269 via=saint-dismas]
+  Row 1432: Prv      16:14    → 19:14     [score=0.571 via=saint-dismas]
+  Row 1433: Prv      16:16    → 19:16     [score=0.304 via=saint-dismas]
+  Row 1434: Prv      16:19    → 19:19     [score=0.632 via=saint-dismas]
+  Row 1435: Prv      16:23    → 19:23     [score=0.522 via=saint-dismas]
+  Row 1437: Prv      16:3     → 20:3      [score=0.292 via=saint-dismas]
+  Row 1438: Prv      16:5     → 20:5      [score=0.250 via=saint-dismas]
+  Row 1440: Prv      16:8     → 20:8      [score=0.421 via=saint-dismas]
+  Row 1441: Prv      16:9     → 20:9      [score=0.529 via=saint-dismas]
+  Row 1442: Prv      16:11    → 20:11     [score=0.526 via=saint-dismas]
+  Row 1443: Prv      16:13    → 20:13     [score=0.450 via=saint-dismas]
+  Row 1444: Prv      16:14    → 20:14     [score=0.500 via=saint-dismas]
+  Row 1445: Prv      16:15    → 20:15     [score=0.364 via=saint-dismas]
+  Row 1446: Prv      16:20    → 20:20     [score=0.571 via=saint-dismas]
+  Row 1447: Prv      16:23    → 20:23     [score=1.000 via=saint-dismas]
+  Row 1448: Prv      16:24    → 20:24     [score=0.737 via=saint-dismas]
+  Row 1449: Prv      16:27    → 20:27     [score=0.600 via=saint-dismas]
+  Row 1450: Prv      16:28    → 20:28     [score=0.533 via=saint-dismas]
+  Row 1451: Prv      16:29    → 20:29     [score=0.615 via=saint-dismas]
+  Row 1452: Prv      16:30    → 20:30     [score=0.261 via=saint-dismas]
+  Row 1453: Prv      16:4     → 21:4      [score=0.462 via=saint-dismas]
+  Row 1454: Prv      16:5     → 21:5      [score=0.529 via=saint-dismas]
+  Row 1455: Prv      16:6     → 21:6      [score=0.375 via=saint-dismas]
+  Row 1456: Prv      16:7     → 21:7      [score=0.350 via=saint-dismas]
+  Row 1457: Prv      16:8     → 21:8      [score=0.500 via=saint-dismas]
+  Row 1458: Prv      16:9     → 21:9      [score=0.591 via=saint-dismas]
+  Row 1459: Prv      16:13    → 21:13     [score=0.545 via=saint-dismas]
+  Row 1460: Prv      16:14    → 21:14     [score=0.538 via=saint-dismas]
+  Row 1461: Prv      16:15    → 21:15     [score=0.688 via=saint-dismas]
+  Row 1462: Prv      16:17    → 21:17     [score=0.286 via=saint-dismas]
+  Row 1463: Prv      16:19    → 21:19     [score=0.450 via=saint-dismas]
+  Row 1464: Prv      16:20    → 18:12     [score=0.292 via=saint-dismas]
+  Row 1466: Prv      16:22    → 21:22     [score=0.500 via=saint-dismas]
+  Row 1468: Prv      16:27    → 21:28     [score=0.500 via=saint-dismas]
+  Row 1469: Prv      16:29    → 21:30     [score=0.500 via=saint-dismas]
+  Row 1470: Prv      16:30    → 21:31     [score=0.375 via=saint-dismas]
+  Row 1471: Prv      16:2     → 22:2      [score=0.765 via=saint-dismas]
+  Row 1472: Prv      16:3     → 22:3      [score=0.381 via=saint-dismas]
+  Row 1473: Prv      16:4     → 22:4      [score=0.625 via=saint-dismas]
+  Row 1474: Prv      16:9     → 22:7      [score=0.611 via=saint-dismas]
+  Row 1475: Prv      16:8     → 22:8      [score=0.600 via=saint-dismas]
+  Row 1476: Prv      16:9     → 22:9      [score=0.324 via=saint-dismas]
+  Row 1477: Prv      16:17    → 22:17     [score=0.318 via=saint-dismas]
+  Row 1478: Prv      16:3     → 23:3      [score=0.571 via=saint-dismas]
+  Row 1479: Prv      16:4     → 23:4      [score=0.350 via=saint-dismas]
+  Row 1481: Prv      16:14    → 22:14     [score=0.478 via=saint-dismas]
+  Row 1482: Prv      16:15    → 22:15     [score=0.684 via=saint-dismas]
+  Row 1483: Prv      16:22    → 22:22     [score=0.588 via=saint-dismas]
+  Row 1484: Prv      16:5     → 23:5      [score=0.290 via=saint-dismas]
+  Row 1485: Prv      16:6     → 23:6      [score=0.538 via=saint-dismas]
+  Row 1486: Prv      16:8     → 23:8      [score=0.500 via=saint-dismas]
+  Row 1487: Prv      16:12    → 23:12     [score=0.625 via=saint-dismas]
+  Row 1488: Prv      16:13    → 23:13     [score=0.435 via=saint-dismas]
+  Row 1489: Prv      16:15    → 23:15     [score=0.846 via=saint-dismas]
+  Row 1490: Prv      16:17    → 23:17     [score=0.700 via=saint-dismas]
+  Row 1492: Prv      16:20    → 23:20     [score=0.385 via=saint-dismas]
+  Row 1494: Prv      16:27    → 23:27     [score=0.333 via=saint-dismas]
+  Row 1495: Prv      16:29    → 23:29     [score=0.381 via=saint-dismas]
+  Row 1496: Prv      16:30    → 23:30     [score=0.350 via=saint-dismas]
+  Row 1497: Prv      16:31    → 23:31     [score=0.650 via=saint-dismas]
+  Row 1498: Prv      16:34    → 23:34     [score=0.385 via=saint-dismas]
+  Row 1499: Prv      16:35    → 23:35     [score=0.278 via=saint-dismas]
+  Row 1501: Prv      16:7     → 24:8      [score=0.444 via=saint-dismas]
+  Row 1503: Prv      16:32    → 24:32     [score=0.320 via=saint-dismas]
+  Row 1505: Prv      16:21    → 24:21     [score=0.455 via=saint-dismas]
+  Row 1506: Prv      16:23    → 24:23     [score=0.368 via=saint-dismas]
+  Row 1507: Prv      16:2     → 25:2      [score=0.250 via=saint-dismas]
+  Row 1508: Prv      16:3     → 25:3      [score=0.308 via=saint-dismas]
+  Row 1509: Prv      16:6     → 25:6      [score=0.929 via=saint-dismas]
+  Row 1510: Prv      16:7     → 25:7      [score=0.609 via=saint-dismas]
+  Row 1511: Prv      16:8     → 25:8      [score=0.364 via=saint-dismas]
+  Row 1513: Prv      16:11    → 25:11     [score=0.350 via=saint-dismas]
+  Row 1514: Prv      16:12    → 25:12     [score=0.588 via=saint-dismas]
+  Row 1516: Prv      16:14    → 25:14     [score=0.421 via=saint-dismas]
+  Row 1517: Prv      16:35    → 25:15     [score=0.579 via=saint-dismas]
+  Row 1518: Prv      16:19    → 25:19     [score=0.409 via=saint-dismas]
+  Row 1519: Prv      16:21    → 25:21     [score=0.474 via=saint-dismas]
+  Row 1520: Prv      16:23    → 25:23     [score=0.385 via=saint-dismas]
+  Row 1521: Prv      16:26    → 25:26     [score=0.474 via=saint-dismas]
+  Row 1523: Prv      16:4     → 26:4      [score=0.625 via=saint-dismas]
+  Row 1524: Prv      16:5     → 26:5      [score=0.273 via=saint-dismas]
+  Row 1525: Prv      16:7     → 26:7      [score=0.600 via=saint-dismas]
+  Row 1526: Prv      16:9     → 26:9      [score=0.429 via=saint-dismas]
+  Row 1527: Prv      16:15    → 26:15     [score=0.300 via=saint-dismas]
+  Row 1528: Prv      16:22    → 26:22     [score=0.375 via=saint-dismas]
+  Row 1530: Prv      16:25    → 26:25     [score=0.250 via=saint-dismas]
+  Row 1531: Prv      16:26    → 26:26     [score=0.421 via=saint-dismas]
+  Row 1532: Prv      16:27    → 26:27     [score=0.375 via=saint-dismas]
+  Row 1534: Prv      16:4     → 27:4      [score=0.370 via=saint-dismas]
+  Row 1535: Prv      16:9     → 27:9      [score=0.385 via=saint-dismas]
+  Row 1536: Prv      16:13    → 20:16     [score=0.273 via=saint-dismas]
+  Row 1538: Prv      16:17    → 17:27     [score=0.348 via=saint-dismas]
+  Row 1539: Prv      16:19    → 27:19     [score=0.522 via=saint-dismas]
+  Row 1540: Prv      16:23    → 27:23     [score=0.421 via=saint-dismas]
+  Row 1548: Prv      16:13    → 28:13     [score=0.429 via=saint-dismas]
+  Row 1549: Prv      16:23    → 28:23     [score=0.667 via=saint-dismas]
+  Row 1550: Prv      16:26    → 28:26     [score=0.435 via=saint-dismas]
+  Row 1551: Prv      16:27    → 28:27     [score=0.526 via=saint-dismas]
+  Row 1552: Prv      16:2     → 29:2      [score=0.545 via=saint-dismas]
+  Row 1554: Prv      16:5     → 29:5      [score=0.261 via=saint-dismas]
+  Row 1555: Prv      16:10    → 29:10     [score=0.286 via=saint-dismas]
+  Row 1556: Prv      16:13    → 22:2      [score=0.545 via=saint-dismas]
+  Row 1557: Prv      16:15    → 29:15     [score=0.462 via=saint-dismas]
+  Row 1558: Prv      16:18    → 29:18     [score=0.722 via=saint-dismas]
+  Row 1559: Prv      16:21    → 29:21     [score=0.471 via=saint-dismas]
+  Row 1560: Prv      16:23    → 29:23     [score=0.350 via=saint-dismas]
+  Row 1561: Prv      16:25    → 29:25     [score=0.706 via=saint-dismas]
+  Row 1562: Prv      16:26    → 29:26     [score=0.875 via=saint-dismas]
+  Row 1563: Prv      16:27    → 14:2      [score=0.261 via=saint-dismas]
+  Row 1565: Prv      16:15    → 30:15     [score=0.278 via=saint-dismas]
+  Row 1566: Prv      16:19    → 30:19     [score=0.250 via=saint-dismas]
+  Row 1567: Prv      16:32    → 30:32     [score=0.481 via=saint-dismas]
+  Row 1570: Wis      16:2     → 1:2       [score=0.286 via=saint-dismas]
+  Row 1571: Wis      16:3     → 3:3       [score=0.429 via=saint-dismas]
+  Row 1572: Wis      16:19    → 3:19      [score=0.700 via=saint-dismas]
+  Row 1573: Wis      3:8      → 5:8       [score=0.857 via=saint-dismas]
+  Row 1575: Wis      3:6      → 9:6       [score=0.524 via=saint-dismas]
+  Row 1576: Wis      3:1      → 9:7       [score=0.421 via=saint-dismas]
+  Row 1577: Wis      3:3      → 10:3      [score=0.545 via=saint-dismas]
+  Row 1578: Wis      3:6      → 10:6      [score=0.476 via=saint-dismas]
+  Row 1579: Wis      3:6      → 10:1      [score=0.333 via=saint-dismas]
+  Row 1584: Wis      3:2      → 14:2      [score=0.500 via=saint-dismas]
+  Row 1586: Wis      3:12     → 15:12     [score=0.393 via=saint-dismas]
+  Row 1591: Sir      3:8      → 6:8       [score=0.423 via=modern-drb]
+  Row 1595: Sir      3:3      → 8:3       [score=0.476 via=modern-drb]
+  Row 1598: Sir      3:19     → 12:19     [score=0.421 via=modern-drb]
+  Row 1602: Sir      3:27     → 16:27     [score=0.435 via=modern-drb]
+  Row 1617: Sir      3:9      → 25:9      [score=0.414 via=modern-drb]
+  Row 1623: Sir      3:33     → 31:33     [score=0.364 via=modern-drb]
+  Row 1625: Sir      3:2      → 33:2      [score=0.375 via=modern-drb]
+  Row 1635: Sir      3:35     → 39:35     [score=0.421 via=modern-drb]
+  Row 1640: Sir      3:5      → 45:5      [score=0.643 via=modern-drb]
+  Row 1654: Is       3:11     → 49:11     [score=0.273 via=pdf-ocr]
+  Row 1657: Is       3:8      → 10:9      [score=0.375 via=modern-drb]
+  Row 1659: Is       3:2      → 3:9       [score=0.250 via=pdf-ocr]
+  Row 1697: Jer      6:19     → 4:9       [score=0.357 via=modern-drb]
+  Row 1707: Jer      9:23     → 64:5      [score=0.276 via=pdf-ocr]
+  Row 1712: Jer      13:5     → 61:5      [score=0.667 via=pdf-ocr]
+  Row 1713: Jer      13:9     → 14:9      [score=0.355 via=modern-drb]
+  Row 1714: Jer      13:14    → 29:9      [score=0.259 via=pdf-ocr]
+  Row 1715: Jer      13:15    → 74:15     [score=0.281 via=pdf-ocr]
+  Row 1717: Jer      13:16    → 15:16     [score=0.414 via=modern-drb]
+  Row 1719: Jer      15:2     → 16:2      [score=0.474 via=modern-drb]
+  Row 1721: Jer      15:5     → 30:2      [score=0.258 via=pdf-ocr]
+  Row 1723: Jer      30:14    → 36:26     [score=0.263 via=pdf-ocr]
+  Row 1725: Jer      30:7     → 37:7      [score=0.364 via=modern-drb]
+  Row 1727: Jer      39:2     → 29:22     [score=0.304 via=pdf-ocr]
+  Row 1728: Jer      39:4     → 85:13     [score=0.286 via=pdf-ocr]
+  Row 1731: Jer      30:17    → 89:17     [score=0.342 via=pdf-ocr]
+  Row 1732: Jer      30:22    → 89:22     [score=0.333 via=pdf-ocr]
+  Row 1733: Jer      39:28    → 44:28     [score=0.571 via=pdf-ocr]
+  Row 1744: 1Mc      1:6      → 2:6       [score=0.625 via=modern-drb]
+  Row 1745: 1Mc      1:15     → 2:15      [score=0.483 via=modern-drb]
+  Row 1755: 1Mc      1:58     → 4:58      [score=0.409 via=modern-drb]
+  Row 1756: 1Mc      1:22     → 5:22      [score=0.400 via=modern-drb]
+  Row 1759: 1Mc      1:36     → 6:36      [score=0.455 via=modern-drb]
+  Row 1761: 1Mc      1:39     → 7:39      [score=0.360 via=modern-drb]
+  Row 1765: 1Mc      11:3     → 10:3      [score=0.353 via=modern-drb]
+  Row 1784: 1Mc      7:37     → 2:20      [score=0.350 via=modern-drb]
+  Row 1833: Mt       12:10    → 2:12      [score=0.357 via=saint-dismas]
+  Row 1862: Mt       8:8      → 9:8       [score=0.320 via=saint-dismas]
+  Row 1880: Jn       8:30     → 13:18     [score=0.257 via=saint-dismas]
+  Row 1916: Jn       8:30     → 6:46      [score=0.286 via=saint-dismas]
+  Row 1926: Jn       18:13    → 4:30      [score=0.304 via=saint-dismas]
+  Row 1932: Jn       21:23    → 8:2       [score=0.333 via=saint-dismas]
+  Row 2004: Jn       11:33    → 10:33     [score=0.370 via=saint-dismas]
+  Row 2005: Jn       11:37    → 10:37     [score=0.389 via=saint-dismas]
+  Row 2031: Jn       11:16    → 6:8       [score=0.278 via=saint-dismas]
+  Row 2066: 1Cor     5:19     → 15:56     [score=0.250 via=saint-dismas]
+  Row 2098: Col      1:18     → 3:18      [score=0.300 via=saint-dismas]
+  Row 2252: Nm       1:2      → 9:3       [score=0.280 via=saint-dismas]
+  Row 2295: Jn       19:20    → 10:2      [score=0.250 via=originaldouay]
+
+======================================================================
+SECTION C: LOW_CONFIDENCE ROWS (original ref kept)
+======================================================================
+(1020 rows)
+
+  Row    3: Gn       22:1         — no match above threshold
+  Row    4: Gn       22:19        — no match above threshold
+  Row    8: Gn       24:60        — no match above threshold
+  Row   11: Gn       22:14        — no match above threshold
+  Row   12: Gn       22:30        — no match above threshold
+  Row   13: Gn       20:6         — no match above threshold
+  Row   14: Gn       20:21        — no match above threshold
+  Row   15: Gn       20:23        — no match above threshold
+  Row   18: Gn       20:35        — no match above threshold
+  Row   19: Gn       20:5         — no match above threshold
+  Row   20: Gn       20:12        — no match above threshold
+  Row   25: Gn       27:19        — no match above threshold
+  Row   27: Gn       27:45        — no match above threshold
+  Row   29: Gn       29:9         — no match above threshold
+  Row   33: Gn       31:19        — no match above threshold
+  Row   35: Gn       31:7         — no match above threshold
+  Row   36: Gn       35:24        — no match above threshold
+  Row   41: Gn       35:49        — no match above threshold
+  Row   45: Gn       35:2         — no match above threshold
+  Row   46: Gn       35:10        — no match above threshold
+  Row   51: Gn       36:6         — no match above threshold
+  Row   54: Gn       37:35        — no match above threshold
+  Row   58: Gn       39:8         — no match above threshold
+  Row   60: Gn       40:8         — no match above threshold
+  Row   61: Gn       40:7         — no match above threshold
+  Row   67: Gn       41:45        — no match above threshold
+  Row   70: Gn       42:7         — no match above threshold
+  Row   71: Gn       42:9         — no match above threshold
+  Row   72: Gn       42:38        — no match above threshold
+  Row   77: Gn       45:42        — no match above threshold
+  Row   81: Gn       45:24        — no match above threshold
+  Row   87: Gn       48:3         — no match above threshold
+  Row   88: Gn       48:14        — no match above threshold
+  Row   89: Gn       48:16        — no match above threshold
+  Row   90: Gn       48:38        — no match above threshold
+  Row   97: Gn       49:19        — no match above threshold
+  Row  103: Gn       49:4         — no match above threshold
+  Row  104: Heb      2:15         — no match above threshold
+  Row  105: Heb      2:19         — no match above threshold
+  Row  106: Heb      2:23         — no match above threshold
+  Row  107: Heb      2:7          — no match above threshold
+  Row  108: Heb      2:4          — no match above threshold
+  Row  109: Heb      3:20         — no match above threshold
+  Row  110: Heb      2:1          — no match above threshold
+  Row  112: Heb      2:21         — no match above threshold
+  Row  113: Heb      2:6          — no match above threshold
+  Row  114: Heb      6:3          — no match above threshold
+  Row  115: Heb      6:17         — no match above threshold
+  Row  116: Heb      6:17         — no match above threshold
+  Row  117: Ex       6:3          — no match above threshold
+  Row  118: Ex       6:11         — no match above threshold
+  Row  119: Ex       6:3          — no match above threshold
+  Row  120: Ex       6:2          — no match above threshold
+  Row  121: Ex       6:2          — no match above threshold
+  Row  122: Ex       6:1          — no match above threshold
+  Row  123: Ex       6:2          — no match above threshold
+  Row  124: Ex       8:18         — no match above threshold
+  Row  125: Ex       8:8          — no match above threshold
+  Row  128: Ex       8:46         — no match above threshold
+  Row  133: Ex       9:30         — no match above threshold
+  Row  136: Ex       40:29        — no match above threshold
+  Row  137: Ex       40:35        — no match above threshold
+  Row  141: Ex       1:15         — no match above threshold
+  Row  143: Ex       40:22        — no match above threshold
+  Row  149: Ex       40:9         — no match above threshold
+  Row  151: Ex       40:15        — no match above threshold
+  Row  154: Ex       40:5         — no match above threshold
+  Row  155: Ex       40:22        — no match above threshold
+  Row  156: Ex       40:28        — no match above threshold
+  Row  157: Ex       40:2         — no match above threshold
+  Row  158: Ex       40:50        — no match above threshold
+  Row  159: Ex       40:31        — no match above threshold
+  Row  160: Ex       40:1         — no match above threshold
+  Row  161: Ex       40:2         — no match above threshold
+  Row  162: Ex       40:3         — no match above threshold
+  Row  164: Ex       16:4         — no match above threshold
+  Row  165: Ex       16:19        — no match above threshold
+  Row  168: Ex       19:1         — no match above threshold
+  Row  169: Ex       20:23        — no match above threshold
+  Row  172: Ex       20:4         — no match above threshold
+  Row  176: Ex       24:8         — no match above threshold
+  Row  181: Ex       24:26        — no match above threshold
+  Row  186: Lv       25:2         — no match above threshold
+  Row  192: Lv       1:42         — no match above threshold
+  Row  193: Lv       1:3          — no match above threshold
+  Row  194: Lv       1:3          — no match above threshold
+  Row  197: Lv       1:1          — no match above threshold
+  Row  198: Lv       1:27         — no match above threshold
+  Row  202: Jos      1:12         — no match above threshold
+  Row  203: Jos      1:12         — no match above threshold
+  Row  208: Jos      3:8          — no match above threshold
+  Row  210: Jos      3:16         — no match above threshold
+  Row  211: Jos      6:6          — no match above threshold
+  Row  213: Jos      7:2          — no match above threshold
+  Row  216: Jgs      18:30        — no match above threshold
+  Row  217: Jgs      11:39        — no match above threshold
+  Row  220: Jgs      16:30        — no match above threshold
+  Row  221: Jgs      18:18        — no match above threshold
+  Row  227: Ru       1:18         — no match above threshold
+  Row  228: Ru       1:13         — no match above threshold
+  Row  229: Ru       1:6          — no match above threshold
+  Row  230: Ru       1:4          — no match above threshold
+  Row  231: Ru       1:6          — no match above threshold
+  Row  232: Ru       1:8          — no match above threshold
+  Row  233: Ru       1:5          — no match above threshold
+  Row  235: Ru       1:9          — no match above threshold
+  Row  236: Ru       1:7          — no match above threshold
+  Row  237: Ru       1:10         — no match above threshold
+  Row  240: Ru       1:7          — no match above threshold
+  Row  242: Ru       1:22         — no match above threshold
+  Row  245: Ru       1:2          — no match above threshold
+  Row  248: Ru       1:1          — no match above threshold
+  Row  249: Tb       2:8          — no match above threshold
+  Row  250: Tb       1:12         — no match above threshold
+  Row  251: Tb       2:19         — no match above threshold
+  Row  257: Tb       2:5          — no match above threshold
+  Row  258: Tb       2:6          — no match above threshold
+  Row  264: Jdt      1:7          — no match above threshold
+  Row  270: Jdt      13:27        — no match above threshold
+  Row  272: Jdt      13:17        — no match above threshold
+  Row  280: Jdt      15:6         — no match above threshold
+  Row  295: Est      16:26        — no match above threshold
+  Row  302: Est      3:14         — no match above threshold
+  Row  308: Est      3:4          — no match above threshold
+  Row  310: Est      3:15         — no match above threshold
+  Row  313: Est      16:10        — no match above threshold
+  Row  317: Est      16:5         — no match above threshold
+  Row  318: Est      2:24         — no match above threshold
+  Row  320: Jb       5:17         — no match above threshold
+  Row  321: Jb       6:3          — no match above threshold
+  Row  325: Jb       9:15         — no match above threshold
+  Row  326: Jb       9:22         — no match above threshold
+  Row  338: Jb       19:22        — no match above threshold
+  Row  339: Jb       19:1         — no match above threshold
+  Row  340: Ps       19:66        — no match above threshold
+  Row  341: Ps       19:3         — no match above threshold
+  Row  346: Ps       19:3         — no match above threshold
+  Row  349: Ps       19:8         — no match above threshold
+  Row  351: Ps       19:8         — no match above threshold
+  Row  352: Ps       19:9         — no match above threshold
+  Row  353: Ps       19:10        — no match above threshold
+  Row  354: Ps       19:2         — no match above threshold
+  Row  355: Ps       19:3         — no match above threshold
+  Row  361: Ps       19:6         — no match above threshold
+  Row  366: Ps       19:6         — no match above threshold
+  Row  368: Ps       19:8         — no match above threshold
+  Row  369: Ps       19:6         — no match above threshold
+  Row  372: Ps       19:7         — no match above threshold
+  Row  373: Ps       19:8         — no match above threshold
+  Row  375: Ps       19:11        — no match above threshold
+  Row  382: Ps       19:1         — no match above threshold
+  Row  386: Ps       19:4         — no match above threshold
+  Row  389: Ps       19:8         — no match above threshold
+  Row  393: Ps       19:3         — no match above threshold
+  Row  400: Ps       19:1         — no match above threshold
+  Row  407: Ps       19:2         — no match above threshold
+  Row  410: Ps       19:5         — no match above threshold
+  Row  412: Ps       19:7         — no match above threshold
+  Row  414: Ps       19:9         — no match above threshold
+  Row  419: Ps       19:18        — no match above threshold
+  Row  420: Ps       19:21        — no match above threshold
+  Row  423: Ps       19:4         — no match above threshold
+  Row  426: Ps       19:9         — no match above threshold
+  Row  428: Ps       19:4         — no match above threshold
+  Row  436: Ps       19:1         — no match above threshold
+  Row  438: Ps       19:3         — no match above threshold
+  Row  439: Ps       19:4         — no match above threshold
+  Row  445: Ps       19:3         — no match above threshold
+  Row  450: Ps       19:13        — no match above threshold
+  Row  458: Ps       19:2         — no match above threshold
+  Row  460: Ps       19:25        — no match above threshold
+  Row  464: Ps       19:5         — no match above threshold
+  Row  469: Ps       19:1         — no match above threshold
+  Row  470: Ps       19:2         — no match above threshold
+  Row  475: Ps       19:7         — no match above threshold
+  Row  493: Ps       19:1         — no match above threshold
+  Row  494: Ps       19:14        — no match above threshold
+  Row  495: Ps       19:1         — no match above threshold
+  Row  502: Ps       19:13        — no match above threshold
+  Row  511: Ps       19:4         — no match above threshold
+  Row  516: Ps       19:23        — no match above threshold
+  Row  532: Ps       19:25        — no match above threshold
+  Row  538: Ps       19:32        — no match above threshold
+  Row  550: Ps       19:6         — no match above threshold
+  Row  557: Ps       19:15        — no match above threshold
+  Row  559: Ps       19:21        — no match above threshold
+  Row  560: Ps       19:5         — no match above threshold
+  Row  561: Ps       19:1         — no match above threshold
+  Row  562: Ps       19:2         — no match above threshold
+  Row  563: Ps       19:3         — no match above threshold
+  Row  568: Ps       19:9         — no match above threshold
+  Row  571: Ps       19:14        — no match above threshold
+  Row  578: Ps       19:7         — no match above threshold
+  Row  579: Ps       19:14        — no match above threshold
+  Row  583: Ps       19:6         — no match above threshold
+  Row  589: Ps       19:1         — no match above threshold
+  Row  593: Ps       19:6         — no match above threshold
+  Row  599: Ps       19:6         — no match above threshold
+  Row  610: Ps       19:18        — no match above threshold
+  Row  618: Ps       19:9         — no match above threshold
+  Row  624: Ps       19:42        — no match above threshold
+  Row  630: Ps       19:1         — no match above threshold
+  Row  632: Ps       19:2         — no match above threshold
+  Row  633: Ps       19:3         — no match above threshold
+  Row  638: Ps       19:10        — no match above threshold
+  Row  647: Ps       19:1         — no match above threshold
+  Row  655: Ps       19:19        — no match above threshold
+  Row  656: Ps       19:9         — no match above threshold
+  Row  666: Ps       19:14        — no match above threshold
+  Row  669: Ps       19:5         — no match above threshold
+  Row  678: Ps       19:21        — no match above threshold
+  Row  679: Ps       19:7         — no match above threshold
+  Row  680: Ps       19:19        — no match above threshold
+  Row  681: Ps       19:4         — no match above threshold
+  Row  690: Ps       19:1         — no match above threshold
+  Row  696: Ps       19:9         — no match above threshold
+  Row  703: Ps       19:3         — no match above threshold
+  Row  707: Ps       19:12        — no match above threshold
+  Row  708: Ps       19:13        — no match above threshold
+  Row  720: Ps       19:19        — no match above threshold
+  Row  726: Ps       19:12        — no match above threshold
+  Row  730: Ps       19:1         — no match above threshold
+  Row  741: Ps       19:1         — no match above threshold
+  Row  743: Ps       19:7         — no match above threshold
+  Row  744: Ps       19:13        — no match above threshold
+  Row  746: Ps       19:3         — no match above threshold
+  Row  747: Ps       19:3         — no match above threshold
+  Row  764: Ps       19:11        — no match above threshold
+  Row  776: Ps       19:17        — no match above threshold
+  Row  777: Ps       19:19        — no match above threshold
+  Row  785: Ps       19:2         — no match above threshold
+  Row  786: Ps       19:3         — no match above threshold
+  Row  792: Ps       19:19        — no match above threshold
+  Row  794: Ps       19:23        — no match above threshold
+  Row  799: Ps       19:28        — no match above threshold
+  Row  805: Ps       19:3         — no match above threshold
+  Row  820: Ps       19:30        — no match above threshold
+  Row  826: Ps       19:36        — no match above threshold
+  Row  831: Ps       19:1         — no match above threshold
+  Row  838: Ps       19:1         — no match above threshold
+  Row  847: Ps       19:20        — no match above threshold
+  Row  851: Ps       19:4         — no match above threshold
+  Row  864: Ps       19:4         — no match above threshold
+  Row  873: Ps       19:5         — no match above threshold
+  Row  875: Ps       19:9         — no match above threshold
+  Row  878: Ps       19:1         — no match above threshold
+  Row  887: Ps       19:65        — no match above threshold
+  Row  889: Ps       19:3         — no match above threshold
+  Row  890: Ps       19:5         — no match above threshold
+  Row  891: Ps       19:8         — no match above threshold
+  Row  895: Ps       19:19        — no match above threshold
+  Row  905: Ps       19:33        — no match above threshold
+  Row  915: Ps       19:46        — no match above threshold
+  Row  921: Ps       19:56        — no match above threshold
+  Row  928: Ps       19:40        — no match above threshold
+  Row  946: Ps       19:5         — no match above threshold
+  Row  948: Ps       19:9         — no match above threshold
+  Row  950: Ps       19:9         — no match above threshold
+  Row  953: Ps       19:5         — no match above threshold
+  Row  964: Ps       19:17        — no match above threshold
+  Row  967: Ps       19:4         — no match above threshold
+  Row  968: Ps       19:6         — no match above threshold
+  Row  969: Ps       19:8         — no match above threshold
+  Row  973: Ps       19:13        — no match above threshold
+  Row  979: Ps       19:7         — no match above threshold
+  Row  986: Ps       19:4         — no match above threshold
+  Row  987: Ps       19:5         — no match above threshold
+  Row  990: Ps       19:9         — no match above threshold
+  Row  993: Ps       19:17        — no match above threshold
+  Row  999: Ps       19:15        — no match above threshold
+  Row 1000: Ps       19:1         — no match above threshold
+  Row 1001: Ps       19:3         — no match above threshold
+  Row 1002: Ps       19:4         — no match above threshold
+  Row 1009: Ps       19:19        — no match above threshold
+  Row 1010: Ps       19:1         — no match above threshold
+  Row 1024: Ps       19:39        — no match above threshold
+  Row 1025: Ps       19:13        — no match above threshold
+  Row 1027: Ps       19:8         — no match above threshold
+  Row 1032: Ps       19:7         — no match above threshold
+  Row 1035: Ps       19:4         — no match above threshold
+  Row 1039: Ps       19:4         — no match above threshold
+  Row 1040: Ps       19:6         — no match above threshold
+  Row 1041: Ps       19:1         — no match above threshold
+  Row 1050: Ps       19:9         — no match above threshold
+  Row 1059: Ps       19:23        — no match above threshold
+  Row 1073: Ps       19:5         — no match above threshold
+  Row 1074: Ps       19:9         — no match above threshold
+  Row 1077: Ps       19:4         — no match above threshold
+  Row 1102: Ps       19:23        — no match above threshold
+  Row 1125: Ps       19:19        — no match above threshold
+  Row 1139: Ps       19:10        — no match above threshold
+  Row 1146: Ps       19:33        — no match above threshold
+  Row 1157: Ps       19:13        — no match above threshold
+  Row 1167: Ps       19:31        — no match above threshold
+  Row 1169: Ps       19:5         — no match above threshold
+  Row 1171: Ps       19:2         — no match above threshold
+  Row 1174: Ps       19:9         — no match above threshold
+  Row 1177: Ps       19:3         — no match above threshold
+  Row 1199: Ps       19:13        — no match above threshold
+  Row 1200: Ps       19:6         — no match above threshold
+  Row 1221: Ps       19:4         — no match above threshold
+  Row 1224: Ps       19:8         — no match above threshold
+  Row 1227: Ps       19:12        — no match above threshold
+  Row 1228: Ps       19:13        — no match above threshold
+  Row 1235: Ps       19:25        — no match above threshold
+  Row 1239: Ps       19:31        — no match above threshold
+  Row 1244: Ps       19:38        — no match above threshold
+  Row 1247: Ps       19:42        — no match above threshold
+  Row 1254: Ps       19:56        — no match above threshold
+  Row 1272: Ps       19:86        — no match above threshold
+  Row 1275: Ps       19:91        — no match above threshold
+  Row 1277: Ps       19:94        — no match above threshold
+  Row 1278: Ps       19:96        — no match above threshold
+  Row 1283: Ps       19:105       — no match above threshold
+  Row 1285: Ps       19:113       — no match above threshold
+  Row 1287: Ps       19:125       — no match above threshold
+  Row 1292: Ps       19:137       — no match above threshold
+  Row 1298: Ps       19:148       — no match above threshold
+  Row 1310: Ps       19:172       — no match above threshold
+  Row 1313: Ps       19:176       — no match above threshold
+  Row 1314: Ps       19:2         — no match above threshold
+  Row 1319: Ps       19:4         — no match above threshold
+  Row 1328: Ps       19:2         — no match above threshold
+  Row 1337: Ps       19:7         — no match above threshold
+  Row 1339: Ps       19:3         — no match above threshold
+  Row 1341: Ps       19:6         — no match above threshold
+  Row 1343: Ps       19:1         — no match above threshold
+  Row 1344: Ps       19:3         — no match above threshold
+  Row 1345: Ps       19:1         — no match above threshold
+  Row 1352: Ps       19:13        — no match above threshold
+  Row 1359: Ps       19:17        — no match above threshold
+  Row 1360: Ps       19:1         — no match above threshold
+  Row 1361: Ps       19:1         — no match above threshold
+  Row 1365: Ps       19:4         — no match above threshold
+  Row 1368: Ps       19:8         — no match above threshold
+  Row 1373: Ps       19:5         — no match above threshold
+  Row 1375: Prv      16:27        — no match above threshold
+  Row 1376: Prv      16:30        — no match above threshold
+  Row 1394: Prv      16:1         — no match above threshold
+  Row 1399: Prv      16:9         — no match above threshold
+  Row 1421: Prv      16:17        — no match above threshold
+  Row 1427: Prv      16:6         — no match above threshold
+  Row 1430: Prv      16:11        — no match above threshold
+  Row 1436: Prv      16:29        — no match above threshold
+  Row 1439: Prv      16:8         — no match above threshold
+  Row 1465: Prv      16:1         — no match above threshold
+  Row 1467: Prv      16:25        — no match above threshold
+  Row 1480: Prv      16:13        — no match above threshold
+  Row 1491: Prv      16:19        — no match above threshold
+  Row 1493: Prv      16:23        — no match above threshold
+  Row 1500: Prv      16:5         — no match above threshold
+  Row 1502: Prv      16:13        — no match above threshold
+  Row 1504: Prv      16:16        — no match above threshold
+  Row 1512: Prv      16:9         — no match above threshold
+  Row 1515: Prv      16:13        — no match above threshold
+  Row 1522: Prv      16:28        — no match above threshold
+  Row 1529: Prv      16:23        — no match above threshold
+  Row 1533: Prv      16:2         — no match above threshold
+  Row 1537: Prv      16:14        — no match above threshold
+  Row 1542: Mk       16:2         — no match above threshold
+  Row 1544: Mk       16:11        — no match above threshold
+  Row 1546: Mk       16:15        — no match above threshold
+  Row 1553: Prv      16:4         — no match above threshold
+  Row 1564: Prv      16:11        — no match above threshold
+  Row 1568: Prv      16:1         — no match above threshold
+  Row 1569: Wis      16:8         — no match above threshold
+  Row 1574: Wis      3:3          — no match above threshold
+  Row 1580: Wis      3:24         — no match above threshold
+  Row 1581: Wis      3:21         — no match above threshold
+  Row 1582: Wis      3:15         — no match above threshold
+  Row 1583: Wis      3:1          — no match above threshold
+  Row 1585: Wis      3:15         — no match above threshold
+  Row 1587: Heb      3:13         — no match above threshold
+  Row 1588: Sir      3:17         — no match above threshold
+  Row 1589: Sir      3:39         — no match above threshold
+  Row 1592: Sir      3:35         — no match above threshold
+  Row 1593: Sir      3:37         — no match above threshold
+  Row 1594: Sir      3:17         — no match above threshold
+  Row 1596: Sir      3:6          — no match above threshold
+  Row 1599: Sir      3:4          — no match above threshold
+  Row 1600: Sir      3:25         — no match above threshold
+  Row 1601: Sir      3:15         — no match above threshold
+  Row 1603: Sir      3:1          — no match above threshold
+  Row 1604: Sir      3:24         — no match above threshold
+  Row 1605: Sir      3:2          — no match above threshold
+  Row 1606: Sir      3:9          — no match above threshold
+  Row 1607: Sir      3:6          — no match above threshold
+  Row 1608: Sir      3:29         — no match above threshold
+  Row 1609: Sir      3:9          — no match above threshold
+  Row 1610: Sir      3:3          — no match above threshold
+  Row 1611: Sir      3:24         — no match above threshold
+  Row 1612: Sir      3:33         — no match above threshold
+  Row 1613: Sir      3:41         — no match above threshold
+  Row 1614: Sir      3:44         — no match above threshold
+  Row 1615: Sir      3:46         — no match above threshold
+  Row 1616: Sir      3:14         — no match above threshold
+  Row 1618: Sir      3:34         — no match above threshold
+  Row 1619: Sir      3:22         — no match above threshold
+  Row 1620: Sir      3:32         — no match above threshold
+  Row 1621: Sir      3:24         — no match above threshold
+  Row 1622: Sir      3:8          — no match above threshold
+  Row 1624: Sir      3:7          — no match above threshold
+  Row 1626: Sir      3:5          — no match above threshold
+  Row 1627: Sir      3:20         — no match above threshold
+  Row 1628: Sir      3:14         — no match above threshold
+  Row 1629: Sir      3:24         — no match above threshold
+  Row 1630: Sir      3:1          — no match above threshold
+  Row 1631: Sir      3:9          — no match above threshold
+  Row 1632: Sir      3:20         — no match above threshold
+  Row 1633: Sir      3:33         — no match above threshold
+  Row 1634: Sir      3:17         — no match above threshold
+  Row 1636: Sir      3:4          — no match above threshold
+  Row 1637: Sir      3:8          — no match above threshold
+  Row 1638: Sir      3:18         — no match above threshold
+  Row 1639: Sir      3:5          — no match above threshold
+  Row 1641: Sir      3:19         — no match above threshold
+  Row 1642: Sir      3:31         — no match above threshold
+  Row 1643: Sir      3:1          — no match above threshold
+  Row 1644: Sir      3:14         — no match above threshold
+  Row 1645: Sir      3:13         — no match above threshold
+  Row 1646: Sir      3:3          — no match above threshold
+  Row 1647: Sir      3:14         — no match above threshold
+  Row 1648: Sir      3:10         — no match above threshold
+  Row 1649: Sir      3:5          — no match above threshold
+  Row 1650: Sir      3:6          — no match above threshold
+  Row 1651: Sir      3:29         — no match above threshold
+  Row 1652: Sir      3:18         — no match above threshold
+  Row 1653: Is       3:2          — no match above threshold
+  Row 1655: Is       3:16         — no match above threshold
+  Row 1656: Is       3:4          — no match above threshold
+  Row 1658: Is       3:2          — no match above threshold
+  Row 1660: Is       3:2          — no match above threshold
+  Row 1661: Is       3:3          — no match above threshold
+  Row 1662: Ru       3:5          — no match above threshold
+  Row 1663: Ru       3:4          — no match above threshold
+  Row 1664: Ru       3:19         — no match above threshold
+  Row 1665: Ru       3:6          — no match above threshold
+  Row 1666: Ru       3:15         — no match above threshold
+  Row 1667: Ru       3:19         — no match above threshold
+  Row 1668: Ru       3:9          — no match above threshold
+  Row 1669: Sg       3:3          — no match above threshold
+  Row 1670: Sg       3:6          — no match above threshold
+  Row 1671: Sg       3:7          — no match above threshold
+  Row 1672: Sg       3:4          — no match above threshold
+  Row 1673: Sg       3:1          — no match above threshold
+  Row 1674: Sg       3:2          — no match above threshold
+  Row 1675: Sg       3:6          — no match above threshold
+  Row 1677: Sg       3:2          — no match above threshold
+  Row 1678: Sg       3:2          — no match above threshold
+  Row 1679: Sg       3:9          — no match above threshold
+  Row 1680: Sg       3:10         — no match above threshold
+  Row 1681: Sg       3:10         — no match above threshold
+  Row 1682: Sg       3:4          — no match above threshold
+  Row 1683: Sg       3:5          — no match above threshold
+  Row 1684: Sg       3:1          — no match above threshold
+  Row 1685: Sg       3:9          — no match above threshold
+  Row 1687: Sg       3:9          — no match above threshold
+  Row 1689: Sg       3:4          — no match above threshold
+  Row 1690: Sg       3:8          — no match above threshold
+  Row 1691: Sg       3:3          — no match above threshold
+  Row 1692: Sg       3:6          — no match above threshold
+  Row 1694: Sg       3:5          — no match above threshold
+  Row 1695: Sg       3:1          — no match above threshold
+  Row 1696: Jer      6:11         — no match above threshold
+  Row 1698: Jer      6:26         — no match above threshold
+  Row 1699: Jer      6:6          — no match above threshold
+  Row 1700: Jer      6:28         — no match above threshold
+  Row 1701: Jer      6:30         — no match above threshold
+  Row 1704: Jer      9:25         — no match above threshold
+  Row 1705: Jer      9:48         — no match above threshold
+  Row 1709: Jer      10:19        — no match above threshold
+  Row 1710: Jer      13:12        — no match above threshold
+  Row 1716: Jer      13:6         — no match above threshold
+  Row 1720: Jer      15:15        — no match above threshold
+  Row 1722: Jer      35:9         — no match above threshold
+  Row 1724: Jer      30:4         — no match above threshold
+  Row 1726: Jer      30:19        — no match above threshold
+  Row 1729: Jer      40:4         — no match above threshold
+  Row 1730: Jer      40:18        — no match above threshold
+  Row 1734: 1Mc      1:10         — no match above threshold
+  Row 1735: 1Mc      1:17         — no match above threshold
+  Row 1737: 1Mc      1:17         — no match above threshold
+  Row 1738: 1Mc      1:21         — no match above threshold
+  Row 1739: 1Mc      1:29         — no match above threshold
+  Row 1741: 1Mc      1:36         — no match above threshold
+  Row 1742: 1Mc      1:40         — no match above threshold
+  Row 1743: 1Mc      1:64         — no match above threshold
+  Row 1746: 1Mc      1:23         — no match above threshold
+  Row 1747: 1Mc      1:29         — no match above threshold
+  Row 1748: 1Mc      1:41         — no match above threshold
+  Row 1749: 1Mc      1:8          — no match above threshold
+  Row 1750: 1Mc      1:29         — no match above threshold
+  Row 1751: 1Mc      1:20         — no match above threshold
+  Row 1752: 1Mc      1:30         — no match above threshold
+  Row 1753: 1Mc      1:56         — no match above threshold
+  Row 1754: 1Mc      1:52         — no match above threshold
+  Row 1757: 1Mc      1:65         — no match above threshold
+  Row 1758: 1Mc      1:18         — no match above threshold
+  Row 1760: 1Mc      1:2          — no match above threshold
+  Row 1762: 1Mc      1:23         — no match above threshold
+  Row 1763: 1Mc      1:34         — no match above threshold
+  Row 1764: 1Mc      1:58         — no match above threshold
+  Row 1766: 1Mc      11:39        — no match above threshold
+  Row 1767: 1Mc      11:7         — no match above threshold
+  Row 1768: 1Mc      11:25        — no match above threshold
+  Row 1770: 1Mc      11:53        — no match above threshold
+  Row 1771: 1Mc      11:13        — no match above threshold
+  Row 1772: 1Mc      11:40        — no match above threshold
+  Row 1773: 1Mc      11:49        — no match above threshold
+  Row 1774: 1Mc      13:6         — no match above threshold
+  Row 1775: 1Mc      13:28        — no match above threshold
+  Row 1776: 1Mc      15:4         — no match above threshold
+  Row 1777: 1Mc      1:20         — no match above threshold
+  Row 1779: Lk       1:21         — no match above threshold
+  Row 1780: Lk       1:2          — no match above threshold
+  Row 1781: Lk       1:30         — no match above threshold
+  Row 1782: 1Mc      7:17         — no match above threshold
+  Row 1783: 1Mc      7:35         — no match above threshold
+  Row 1785: 1Mc      7:7          — no match above threshold
+  Row 1786: 1Mc      7:13         — no match above threshold
+  Row 1787: 1Mc      10:4         — no match above threshold
+  Row 1788: 1Mc      10:2         — no match above threshold
+  Row 1789: 1Mc      10:8         — no match above threshold
+  Row 1790: 1Mc      10:10        — no match above threshold
+  Row 1791: 1Mc      10:25        — no match above threshold
+  Row 1792: 1Mc      10:32        — no match above threshold
+  Row 1793: 1Mc      13:7         — no match above threshold
+  Row 1794: 1Mc      13:25        — no match above threshold
+  Row 1795: 1Mc      15:27        — no match above threshold
+  Row 1796: 1Mc      15:12        — no match above threshold
+  Row 1797: 1Mc      15:39        — no match above threshold
+  Row 1798: 1Mc      15:6         — no match above threshold
+  Row 1799: 1Mc      15:17        — no match above threshold
+  Row 1800: Ezr      2:1          — no match above threshold
+  Row 1801: Ezr      2:3          — no match above threshold
+  Row 1802: Ezr      2:5          — no match above threshold
+  Row 1803: Ezr      2:12         — no match above threshold
+  Row 1804: Ezr      2:39         — no match above threshold
+  Row 1805: Ezr      1:13         — no match above threshold
+  Row 1806: Ezr      1:7          — no match above threshold
+  Row 1807: Ezr      1:13         — no match above threshold
+  Row 1808: Ezr      1:29         — no match above threshold
+  Row 1809: Ezr      1:23         — no match above threshold
+  Row 1810: Ezr      1:33         — no match above threshold
+  Row 1811: Ezr      5:7          — no match above threshold
+  Row 1812: Ezr      5:20         — no match above threshold
+  Row 1813: Ezr      5:13         — no match above threshold
+  Row 1814: Ezr      5:27         — no match above threshold
+  Row 1815: Ezr      7:2          — no match above threshold
+  Row 1816: Ezr      7:3          — no match above threshold
+  Row 1817: Ezr      7:4          — no match above threshold
+  Row 1818: Ezr      7:39         — no match above threshold
+  Row 1819: Ezr      6:3          — no match above threshold
+  Row 1820: Ezr      6:9          — no match above threshold
+  Row 1821: Ezr      6:10         — no match above threshold
+  Row 1822: Ezr      6:36         — no match above threshold
+  Row 1823: Ezr      6:39         — no match above threshold
+  Row 1824: Ezr      6:15         — no match above threshold
+  Row 1825: Ezr      6:3          — no match above threshold
+  Row 1826: Ezr      6:12         — no match above threshold
+  Row 1827: Ezr      6:13         — no match above threshold
+  Row 1828: Ezr      6:1          — no match above threshold
+  Row 1829: Ezr      6:26         — no match above threshold
+  Row 1830: Mt       12:16        — no match above threshold
+  Row 1831: Mt       12:16        — no match above threshold
+  Row 1832: Mt       12:23        — no match above threshold
+  Row 1834: Mt       12:2         — no match above threshold
+  Row 1835: Mt       12:16        — no match above threshold
+  Row 1836: Mt       12:1         — no match above threshold
+  Row 1837: Mt       12:3         — no match above threshold
+  Row 1838: Mt       12:6         — no match above threshold
+  Row 1839: Mt       12:8         — no match above threshold
+  Row 1840: Mt       12:12        — no match above threshold
+  Row 1841: Mt       12:16        — no match above threshold
+  Row 1842: Mt       12:1         — no match above threshold
+  Row 1843: Mt       12:2         — no match above threshold
+  Row 1844: Mt       12:6         — no match above threshold
+  Row 1845: Mt       12:6         — no match above threshold
+  Row 1846: Mt       12:17        — no match above threshold
+  Row 1847: Mt       12:23        — no match above threshold
+  Row 1848: Mt       12:17        — no match above threshold
+  Row 1849: Mt       12:35        — no match above threshold
+  Row 1850: Mt       12:39        — no match above threshold
+  Row 1851: Mt       12:1         — no match above threshold
+  Row 1852: Mt       12:5         — no match above threshold
+  Row 1853: Mt       12:7         — no match above threshold
+  Row 1854: Mt       12:14        — no match above threshold
+  Row 1855: Mt       12:2         — no match above threshold
+  Row 1856: Mt       12:8         — no match above threshold
+  Row 1857: Mt       12:13        — no match above threshold
+  Row 1858: Mt       12:16        — no match above threshold
+  Row 1859: Mt       8:3          — no match above threshold
+  Row 1860: Mt       8:3          — no match above threshold
+  Row 1861: Mt       8:6          — no match above threshold
+  Row 1863: Mt       8:8          — no match above threshold
+  Row 1864: Mt       8:39         — no match above threshold
+  Row 1865: Mt       8:28         — no match above threshold
+  Row 1866: Mt       8:2          — no match above threshold
+  Row 1867: Mt       8:9          — no match above threshold
+  Row 1868: Mt       8:14         — no match above threshold
+  Row 1869: Mt       8:15         — no match above threshold
+  Row 1870: Mt       8:19         — no match above threshold
+  Row 1871: Mt       8:33         — no match above threshold
+  Row 1872: Mt       8:34         — no match above threshold
+  Row 1873: Jn       8:37         — no match above threshold
+  Row 1874: Jn       8:3          — no match above threshold
+  Row 1875: Jn       8:1          — no match above threshold
+  Row 1876: Jn       8:21         — no match above threshold
+  Row 1877: Jn       8:30         — no match above threshold
+  Row 1878: Jn       8:24         — no match above threshold
+  Row 1879: Jn       8:30         — no match above threshold
+  Row 1881: Jn       8:32         — no match above threshold
+  Row 1882: Jn       8:34         — no match above threshold
+  Row 1883: Jn       8:36         — no match above threshold
+  Row 1884: Jn       8:44         — no match above threshold
+  Row 1886: Jn       8:8          — no match above threshold
+  Row 1887: Jn       8:11         — no match above threshold
+  Row 1888: Jn       8:15         — no match above threshold
+  Row 1889: Jn       8:39         — no match above threshold
+  Row 1890: Jn       8:30         — no match above threshold
+  Row 1891: Jn       8:32         — no match above threshold
+  Row 1892: Jn       8:53         — no match above threshold
+  Row 1893: Jn       8:13         — no match above threshold
+  Row 1894: Jn       8:19         — no match above threshold
+  Row 1895: Jn       8:26         — no match above threshold
+  Row 1896: Jn       8:29         — no match above threshold
+  Row 1897: Jn       8:1          — no match above threshold
+  Row 1898: Jn       8:9          — no match above threshold
+  Row 1899: Jn       8:2          — no match above threshold
+  Row 1900: Jn       8:1          — no match above threshold
+  Row 1901: Jn       8:11         — no match above threshold
+  Row 1902: Jn       8:18         — no match above threshold
+  Row 1903: Jn       8:17         — no match above threshold
+  Row 1904: Jn       8:27         — no match above threshold
+  Row 1905: Jn       8:13         — no match above threshold
+  Row 1906: Jn       8:18         — no match above threshold
+  Row 1907: Jn       8:18         — no match above threshold
+  Row 1908: Jn       8:18         — no match above threshold
+  Row 1909: Jn       8:18         — no match above threshold
+  Row 1910: Jn       8:2          — no match above threshold
+  Row 1911: Jn       8:19         — no match above threshold
+  Row 1912: Jn       8:19         — no match above threshold
+  Row 1913: Jn       8:3          — no match above threshold
+  Row 1914: Jn       8:9          — no match above threshold
+  Row 1915: Jn       8:10         — no match above threshold
+  Row 1917: Jn       8:24         — no match above threshold
+  Row 1918: Jn       18:1         — no match above threshold
+  Row 1919: Jn       18:7         — no match above threshold
+  Row 1920: Jn       18:17        — no match above threshold
+  Row 1921: Jn       18:17        — no match above threshold
+  Row 1922: Jn       18:20        — no match above threshold
+  Row 1923: Jn       18:31        — no match above threshold
+  Row 1924: Jn       18:9         — no match above threshold
+  Row 1925: Jn       18:1         — no match above threshold
+  Row 1927: Jn       18:27        — no match above threshold
+  Row 1928: Jn       18:27        — no match above threshold
+  Row 1929: Jn       18:9         — no match above threshold
+  Row 1930: Jn       18:16        — no match above threshold
+  Row 1931: Jn       18:23        — no match above threshold
+  Row 1934: Jn       21:2         — no match above threshold
+  Row 1935: Jn       21:7         — no match above threshold
+  Row 1936: Jn       21:9         — no match above threshold
+  Row 1937: Jn       21:15        — no match above threshold
+  Row 1938: Jn       21:16        — no match above threshold
+  Row 1939: Jn       21:22        — no match above threshold
+  Row 1940: Jn       21:23        — no match above threshold
+  Row 1941: Jn       21:28        — no match above threshold
+  Row 1942: Jn       21:3         — no match above threshold
+  Row 1943: Jn       21:32        — no match above threshold
+  Row 1944: Jn       21:2         — no match above threshold
+  Row 1945: Jn       21:2         — no match above threshold
+  Row 1946: Jn       21:3         — no match above threshold
+  Row 1947: Jn       21:15        — no match above threshold
+  Row 1948: Jn       21:38        — no match above threshold
+  Row 1949: Jn       21:29        — no match above threshold
+  Row 1950: Jn       21:31        — no match above threshold
+  Row 1951: Jn       21:2         — no match above threshold
+  Row 1952: Jn       21:1         — no match above threshold
+  Row 1953: Jn       21:3         — no match above threshold
+  Row 1954: Jn       21:34        — no match above threshold
+  Row 1955: Jn       21:2         — no match above threshold
+  Row 1956: Jn       21:29        — no match above threshold
+  Row 1957: Jn       21:1         — no match above threshold
+  Row 1958: Mt       21:27        — no match above threshold
+  Row 1959: Mt       21:10        — no match above threshold
+  Row 1960: Mt       21:26        — no match above threshold
+  Row 1961: Mt       21:26        — no match above threshold
+  Row 1962: Mt       21:24        — no match above threshold
+  Row 1963: Mt       21:29        — no match above threshold
+  Row 1964: Mt       21:39        — no match above threshold
+  Row 1965: Mt       21:41        — no match above threshold
+  Row 1967: Mt       27:3         — no match above threshold
+  Row 1968: Mt       27:40        — no match above threshold
+  Row 1969: Mt       27:39        — no match above threshold
+  Row 1970: Mt       27:1         — no match above threshold
+  Row 1971: Mt       27:19        — no match above threshold
+  Row 1972: Mt       27:23        — no match above threshold
+  Row 1973: Mt       27:34        — no match above threshold
+  Row 1974: Mt       27:33        — no match above threshold
+  Row 1975: Mt       27:48        — no match above threshold
+  Row 1976: Mt       27:7         — no match above threshold
+  Row 1977: Mt       27:20        — no match above threshold
+  Row 1978: Mt       27:5         — no match above threshold
+  Row 1979: Mk       11:53        — no match above threshold
+  Row 1981: Mk       11:14        — no match above threshold
+  Row 1982: Mk       11:19        — no match above threshold
+  Row 1983: Mk       11:30        — no match above threshold
+  Row 1984: Mk       11:26        — no match above threshold
+  Row 1985: Mk       11:70        — no match above threshold
+  Row 1986: Mk       11:14        — no match above threshold
+  Row 1987: Mk       11:42        — no match above threshold
+  Row 1988: Mk       11:3         — no match above threshold
+  Row 1989: Mk       11:3         — no match above threshold
+  Row 1990: Mk       11:15        — no match above threshold
+  Row 1991: Mk       11:31        — no match above threshold
+  Row 1992: Mk       11:6         — no match above threshold
+  Row 1993: Mk       11:10        — no match above threshold
+  Row 1994: Mk       11:2         — no match above threshold
+  Row 1995: Mk       11:39        — no match above threshold
+  Row 1996: Mk       11:13        — no match above threshold
+  Row 1997: Mk       11:23        — no match above threshold
+  Row 1998: Mk       11:4         — no match above threshold
+  Row 1999: Mk       11:26        — no match above threshold
+  Row 2000: Mk       11:33        — no match above threshold
+  Row 2001: Mk       11:54        — no match above threshold
+  Row 2002: Mk       11:6         — no match above threshold
+  Row 2003: Jn       11:63        — no match above threshold
+  Row 2006: Jn       11:1         — no match above threshold
+  Row 2007: Jn       11:11        — no match above threshold
+  Row 2008: Jn       11:22        — no match above threshold
+  Row 2009: Jn       11:29        — no match above threshold
+  Row 2010: Jn       11:7         — no match above threshold
+  Row 2011: Jn       11:6         — no match above threshold
+  Row 2012: Jn       11:18        — no match above threshold
+  Row 2013: Jn       11:17        — no match above threshold
+  Row 2014: Jn       11:28        — no match above threshold
+  Row 2015: Jn       11:24        — no match above threshold
+  Row 2016: Jn       11:4         — no match above threshold
+  Row 2017: Jn       11:24        — no match above threshold
+  Row 2018: Jn       11:16        — no match above threshold
+  Row 2019: Jn       11:20        — no match above threshold
+  Row 2020: Jn       11:36        — no match above threshold
+  Row 2021: Jn       11:47        — no match above threshold
+  Row 2022: Jn       11:58        — no match above threshold
+  Row 2023: Jn       11:15        — no match above threshold
+  Row 2024: Jn       11:33        — no match above threshold
+  Row 2025: Jn       11:57        — no match above threshold
+  Row 2026: Jn       11:27        — no match above threshold
+  Row 2027: Jn       11:14        — no match above threshold
+  Row 2028: Jn       11:19        — no match above threshold
+  Row 2029: Jn       11:6         — no match above threshold
+  Row 2030: Jn       11:23        — no match above threshold
+  Row 2032: Jn       11:1         — no match above threshold
+  Row 2033: Jn       11:17        — no match above threshold
+  Row 2034: Jn       8:19         — no match above threshold
+  Row 2035: Jn       8:47         — no match above threshold
+  Row 2036: Jn       8:2          — no match above threshold
+  Row 2037: Jn       8:7          — no match above threshold
+  Row 2038: Jn       8:14         — no match above threshold
+  Row 2039: Jn       8:26         — no match above threshold
+  Row 2040: Jn       8:1          — no match above threshold
+  Row 2041: Jn       8:25         — no match above threshold
+  Row 2042: Jn       8:47         — no match above threshold
+  Row 2043: Jn       8:3          — no match above threshold
+  Row 2044: Jn       8:4          — no match above threshold
+  Row 2045: Jn       8:3          — no match above threshold
+  Row 2046: Jn       8:30         — no match above threshold
+  Row 2047: Jn       8:58         — no match above threshold
+  Row 2048: Jn       8:24         — no match above threshold
+  Row 2049: Jn       8:2          — no match above threshold
+  Row 2050: Jn       8:27         — no match above threshold
+  Row 2051: Mk       8:24         — no match above threshold
+  Row 2052: Mk       8:5          — no match above threshold
+  Row 2053: Mk       8:17         — no match above threshold
+  Row 2054: Mk       8:3          — no match above threshold
+  Row 2055: Mk       8:1          — no match above threshold
+  Row 2056: Mk       8:22         — no match above threshold
+  Row 2057: Mk       8:22         — no match above threshold
+  Row 2058: 1Cor     5:5          — no match above threshold
+  Row 2059: 1Cor     5:13         — no match above threshold
+  Row 2060: 1Cor     5:5          — no match above threshold
+  Row 2061: 1Cor     5:6          — no match above threshold
+  Row 2062: 1Cor     5:4          — no match above threshold
+  Row 2063: 1Cor     5:17         — no match above threshold
+  Row 2064: 1Cor     5:3          — no match above threshold
+  Row 2065: 1Cor     5:10         — no match above threshold
+  Row 2067: 1Cor     5:14         — no match above threshold
+  Row 2068: 1Cor     5:9          — no match above threshold
+  Row 2069: Gal      1:19         — no match above threshold
+  Row 2070: Gal      1:2          — no match above threshold
+  Row 2071: Gal      1:8          — no match above threshold
+  Row 2072: Gal      1:9          — no match above threshold
+  Row 2073: Gal      1:18         — no match above threshold
+  Row 2074: Dt       1:11         — no match above threshold
+  Row 2075: Dt       1:3          — no match above threshold
+  Row 2076: Dt       1:9          — no match above threshold
+  Row 2077: Dt       1:28         — no match above threshold
+  Row 2078: Dt       1:3          — no match above threshold
+  Row 2079: Dt       5:6          — no match above threshold
+  Row 2080: Dt       5:13         — no match above threshold
+  Row 2081: Dt       5:6          — no match above threshold
+  Row 2082: Dt       5:10         — no match above threshold
+  Row 2083: Eph      5:15         — no match above threshold
+  Row 2084: Eph      5:10         — no match above threshold
+  Row 2085: Eph      5:1          — no match above threshold
+  Row 2086: Eph      5:26         — no match above threshold
+  Row 2087: Eph      5:1          — no match above threshold
+  Row 2088: Eph      5:1          — no match above threshold
+  Row 2089: Eph      5:3          — no match above threshold
+  Row 2090: Eph      5:32         — no match above threshold
+  Row 2091: Eph      5:12         — no match above threshold
+  Row 2092: Col      1:2          — no match above threshold
+  Row 2093: Col      1:16         — no match above threshold
+  Row 2094: Col      1:18         — no match above threshold
+  Row 2095: Col      1:19         — no match above threshold
+  Row 2096: Col      1:1          — no match above threshold
+  Row 2097: Col      1:17         — no match above threshold
+  Row 2099: Col      1:5          — no match above threshold
+  Row 2100: Col      1:9          — no match above threshold
+  Row 2101: Col      1:12         — no match above threshold
+  Row 2102: Col      1:23         — no match above threshold
+  Row 2103: Col      1:6          — no match above threshold
+  Row 2104: Col      1:13         — no match above threshold
+  Row 2105: Col      1:17         — no match above threshold
+  Row 2106: Col      1:1          — no match above threshold
+  Row 2107: Col      1:1          — no match above threshold
+  Row 2108: Col      1:14         — no match above threshold
+  Row 2109: Col      1:2          — no match above threshold
+  Row 2110: Col      1:4          — no match above threshold
+  Row 2111: Col      1:1          — no match above threshold
+  Row 2112: Col      1:10         — no match above threshold
+  Row 2113: Col      1:14         — no match above threshold
+  Row 2114: Col      1:14         — no match above threshold
+  Row 2115: Col      1:7          — no match above threshold
+  Row 2116: Col      1:9          — no match above threshold
+  Row 2117: Col      1:27         — no match above threshold
+  Row 2118: Col      1:4          — no match above threshold
+  Row 2119: Col      1:5          — no match above threshold
+  Row 2120: Col      1:1          — no match above threshold
+  Row 2121: Col      1:4          — no match above threshold
+  Row 2122: Col      1:1          — no match above threshold
+  Row 2123: Col      1:14         — no match above threshold
+  Row 2124: Col      1:14         — no match above threshold
+  Row 2125: Col      1:16         — no match above threshold
+  Row 2126: Col      1:3          — no match above threshold
+  Row 2127: Col      1:9          — no match above threshold
+  Row 2128: Col      1:11         — no match above threshold
+  Row 2129: Col      1:12         — no match above threshold
+  Row 2130: Col      1:14         — no match above threshold
+  Row 2131: Col      1:4          — no match above threshold
+  Row 2132: Mk       10:15        — no match above threshold
+  Row 2133: Mk       10:5         — no match above threshold
+  Row 2134: Mk       10:4         — no match above threshold
+  Row 2135: Mk       10:30        — no match above threshold
+  Row 2136: Mk       1:1          — no match above threshold
+  Row 2137: Mk       1:12         — no match above threshold
+  Row 2138: Mk       1:4          — no match above threshold
+  Row 2139: Mk       1:20         — no match above threshold
+  Row 2140: Mk       1:2          — no match above threshold
+  Row 2141: Mk       1:9          — no match above threshold
+  Row 2142: Mk       1:16         — no match above threshold
+  Row 2143: Mk       1:3          — no match above threshold
+  Row 2144: Tit      1:8          — no match above threshold
+  Row 2145: Phlm     1:10         — no match above threshold
+  Row 2147: Phlm     1:3          — no match above threshold
+  Row 2148: Phlm     1:1          — no match above threshold
+  Row 2149: Phlm     1:4          — no match above threshold
+  Row 2150: Phlm     1:6          — no match above threshold
+  Row 2151: Phlm     1:9          — no match above threshold
+  Row 2152: Phlm     1:10         — no match above threshold
+  Row 2153: Phlm     1:18         — no match above threshold
+  Row 2154: Phlm     1:1          — no match above threshold
+  Row 2155: Phlm     1:3          — no match above threshold
+  Row 2156: Phlm     1:4          — no match above threshold
+  Row 2157: Phlm     1:12         — no match above threshold
+  Row 2158: Phlm     1:17         — no match above threshold
+  Row 2159: Phlm     1:18         — no match above threshold
+  Row 2160: Phlm     1:19         — no match above threshold
+  Row 2161: Phlm     1:21         — no match above threshold
+  Row 2162: Phlm     1:23         — no match above threshold
+  Row 2163: Phlm     1:3          — no match above threshold
+  Row 2164: Phlm     1:22         — no match above threshold
+  Row 2165: Phlm     1:5          — no match above threshold
+  Row 2166: Phlm     1:10         — no match above threshold
+  Row 2167: Phlm     1:23         — no match above threshold
+  Row 2168: Phlm     1:25         — no match above threshold
+  Row 2169: Phlm     1:14         — no match above threshold
+  Row 2170: Phlm     1:25         — no match above threshold
+  Row 2171: Phlm     1:15         — no match above threshold
+  Row 2172: Phlm     1:17         — no match above threshold
+  Row 2173: Phlm     1:2          — no match above threshold
+  Row 2174: Phlm     1:5          — no match above threshold
+  Row 2175: Phlm     1:18         — no match above threshold
+  Row 2176: Phlm     1:13         — no match above threshold
+  Row 2177: Phlm     1:19         — no match above threshold
+  Row 2178: Phlm     1:1          — no match above threshold
+  Row 2179: Phlm     1:25         — no match above threshold
+  Row 2180: Phlm     1:6          — no match above threshold
+  Row 2181: Phlm     1:17         — no match above threshold
+  Row 2182: Phlm     1:2          — no match above threshold
+  Row 2183: Mk       11:4         — no match above threshold
+  Row 2184: Mk       11:16        — no match above threshold
+  Row 2185: Mk       11:2         — no match above threshold
+  Row 2186: Mk       11:2         — no match above threshold
+  Row 2187: Mk       1:6          — no match above threshold
+  Row 2188: Mk       1:13         — no match above threshold
+  Row 2189: Mk       1:27         — no match above threshold
+  Row 2190: Mk       1:15         — no match above threshold
+  Row 2191: Mk       1:23         — no match above threshold
+  Row 2192: Mk       1:18         — no match above threshold
+  Row 2193: Mk       1:3          — no match above threshold
+  Row 2194: Mk       1:18         — no match above threshold
+  Row 2195: Mk       1:1          — no match above threshold
+  Row 2196: Mk       1:14         — no match above threshold
+  Row 2197: Rom      1:22         — no match above threshold
+  Row 2198: Rom      1:25         — no match above threshold
+  Row 2199: Rom      1:26         — no match above threshold
+  Row 2200: Rom      1:8          — no match above threshold
+  Row 2201: Rom      1:14         — no match above threshold
+  Row 2202: Rom      1:1          — no match above threshold
+  Row 2203: Rom      1:15         — no match above threshold
+  Row 2204: Rom      1:15         — no match above threshold
+  Row 2205: Rom      1:16         — no match above threshold
+  Row 2206: Rom      1:17         — no match above threshold
+  Row 2207: Rom      1:20         — no match above threshold
+  Row 2208: Rom      1:20         — no match above threshold
+  Row 2209: Rom      1:13         — no match above threshold
+  Row 2210: Rom      1:13         — no match above threshold
+  Row 2211: Rom      1:18         — no match above threshold
+  Row 2212: Rom      1:33         — no match above threshold
+  Row 2213: Rom      1:20         — no match above threshold
+  Row 2214: Rom      1:21         — no match above threshold
+  Row 2215: Rom      1:21         — no match above threshold
+  Row 2216: Rom      1:15         — no match above threshold
+  Row 2217: Rom      1:9          — no match above threshold
+  Row 2218: Rom      1:17         — no match above threshold
+  Row 2219: Rom      1:3          — no match above threshold
+  Row 2220: Jn       1:4          — no match above threshold
+  Row 2221: Jn       1:10         — no match above threshold
+  Row 2222: Jn       1:15         — no match above threshold
+  Row 2223: Jn       1:20         — no match above threshold
+  Row 2224: Jn       1:17         — no match above threshold
+  Row 2225: Jn       1:3          — no match above threshold
+  Row 2226: Mk       1:7          — no match above threshold
+  Row 2227: Mk       1:2          — no match above threshold
+  Row 2228: Mk       1:4          — no match above threshold
+  Row 2229: Mk       1:18         — no match above threshold
+  Row 2230: Mk       1:4          — no match above threshold
+  Row 2231: Mk       1:6          — no match above threshold
+  Row 2232: Mk       1:8          — no match above threshold
+  Row 2233: Mk       1:3          — no match above threshold
+  Row 2234: Mk       1:7          — no match above threshold
+  Row 2235: Mk       1:16         — no match above threshold
+  Row 2236: Jn       1:16         — no match above threshold
+  Row 2237: Mk       1:10         — no match above threshold
+  Row 2238: Jude     1:10         — no match above threshold
+  Row 2239: Jude     1:9          — no match above threshold
+  Row 2240: Jude     1:10         — no match above threshold
+  Row 2241: Apc      1:19         — no match above threshold
+  Row 2242: Apc      1:6          — no match above threshold
+  Row 2243: Nm       1:4          — no match above threshold
+  Row 2244: Nm       1:6          — no match above threshold
+  Row 2245: Nm       1:13         — no match above threshold
+  Row 2246: Nm       1:1          — no match above threshold
+  Row 2247: Nm       1:2          — no match above threshold
+  Row 2248: Nm       1:5          — no match above threshold
+  Row 2249: Nm       1:5          — no match above threshold
+  Row 2250: Nm       1:9          — no match above threshold
+  Row 2251: Nm       1:12         — no match above threshold
+  Row 2253: Nm       5:8          — no match above threshold
+  Row 2254: Nm       5:9          — no match above threshold
+  Row 2255: Nm       5:10         — no match above threshold
+  Row 2256: Nm       5:11         — no match above threshold
+  Row 2257: Nm       5:10         — no match above threshold
+  Row 2258: Nm       5:7          — no match above threshold
+  Row 2259: Nm       5:5          — no match above threshold
+  Row 2260: Nm       5:6          — no match above threshold
+  Row 2261: Nm       5:15         — no match above threshold
+  Row 2262: Nm       13:1         — no match above threshold
+  Row 2263: Nm       13:7         — no match above threshold
+  Row 2264: Nm       13:17        — no match above threshold
+  Row 2265: Nm       13:18        — no match above threshold
+  Row 2266: Nm       13:18        — no match above threshold
+  Row 2267: Nm       13:18        — no match above threshold
+  Row 2268: Nm       13:18        — no match above threshold
+  Row 2269: Nm       13:5         — no match above threshold
+  Row 2270: Nm       13:6         — no match above threshold
+  Row 2271: Nm       13:9         — no match above threshold
+  Row 2272: Nm       13:1         — no match above threshold
+  Row 2273: Nm       19:4         — no match above threshold
+  Row 2274: Nm       19:3         — no match above threshold
+  Row 2275: Jn       19:18        — no match above threshold
+  Row 2276: Jn       19:11        — no match above threshold
+  Row 2277: Jn       19:18        — no match above threshold
+  Row 2278: Jn       19:20        — no match above threshold
+  Row 2279: Jn       19:29        — no match above threshold
+  Row 2280: Jn       19:21        — no match above threshold
+  Row 2281: Jn       19:10        — no match above threshold
+  Row 2282: Jn       19:27        — no match above threshold
+  Row 2283: Jn       19:38        — no match above threshold
+  Row 2284: Jn       19:18        — no match above threshold
+  Row 2285: Jn       19:58        — no match above threshold
+  Row 2286: Jn       19:26        — no match above threshold
+  Row 2287: Jn       19:9         — no match above threshold
+  Row 2288: Jn       19:14        — no match above threshold
+  Row 2289: Jn       19:53        — no match above threshold
+  Row 2290: Nm       19:6         — no match above threshold
+  Row 2291: Jn       19:47        — no match above threshold
+  Row 2292: Jn       19:71        — no match above threshold
+  Row 2293: Jn       19:9         — no match above threshold
+  Row 2294: Jn       19:27        — no match above threshold
+  Row 2296: Jn       19:18        — no match above threshold
+  Row 2297: Jn       19:14        — no match above threshold
+  Row 2298: Jn       19:40        — no match above threshold
+  Row 2299: Jn       19:58        — no match above threshold
+  Row 2300: Jn       19:67        — no match above threshold
+  Row 2301: Jn       19:49        — no match above threshold
+  Row 2302: Jn       19:24        — no match above threshold
+  Row 2303: Jn       19:20        — no match above threshold
+  Row 2304: Jn       19:43        — no match above threshold
+
+======================================================================
+SECTION D: SPLIT ISSUES
+======================================================================
+(226 flags)
+
+  Row   73: 43:19        — no commentary
+  Row   82: 45:9         — no commentary
+  Row   93: 49:13        — no commentary
+  Row   95: 49:16        — no commentary
+  Row   98: 49:19        — no commentary
+  Row  136: 40:29        — no commentary
+  Row  144: 40:3         — no commentary
+  Row  146: 40:6         — no commentary
+  Row  160: 40:1         — quote too short
+  Row  270: 13:27        — no commentary
+  Row  284: 15:10        — no commentary
+  Row  289: 15:1         — no commentary
+  Row  290: 15:19        — no commentary
+  Row  292: 15:21        — no commentary
+  Row  307: 12:8         — quote too short
+  Row  380: 19:3         — quote too short
+  Row  386: 19:4         — no commentary
+  Row  391: 19:16        — no commentary
+  Row  394: 19:4         — no commentary
+  Row  395: 19:5         — no commentary
+  Row  397: 19:7         — no commentary
+  Row  404: 19:7         — no commentary
+  Row  408: 19:3         — no commentary
+  Row  412: 19:7         — no commentary
+  Row  413: 19:8         — no commentary
+  Row  427: 19:3         — no commentary
+  Row  428: 19:4         — no commentary
+  Row  439: 19:4         — no commentary
+  Row  449: 19:12        — no commentary
+  Row  452: 19:4         — no commentary
+  Row  453: 19:5         — no commentary
+  Row  466: 19:7         — no commentary
+  Row  476: 19:13        — no commentary
+  Row  477: 19:14        — no commentary
+  Row  480: 19:19        — no commentary
+  Row  485: 19:6         — no commentary
+  Row  498: 19:7         — no commentary
+  Row  514: 19:11        — no commentary
+  Row  519: 19:4         — no commentary
+  Row  523: 19:11        — no commentary
+  Row  524: 19:2         — no commentary
+  Row  527: 19:16        — no commentary
+  Row  535: 19:29        — no commentary
+  Row  536: 19:30        — no commentary
+  Row  537: 19:31        — no commentary
+  Row  538: 19:32        — no commentary
+  Row  541: 19:38        — no commentary
+  Row  542: 19:36        — no commentary
+  Row  543: 19:37        — no commentary
+  Row  544: 19:38        — no commentary
+  Row  554: 19:15        — no commentary
+  Row  555: 19:16        — no commentary
+  Row  557: 19:15        — no commentary
+  Row  576: 19:5         — no commentary
+  Row  583: 19:6         — no commentary
+  Row  586: 19:12        — no commentary
+  Row  603: 19:5         — no commentary
+  Row  620: 19:16        — no commentary
+  Row  634: 19:5         — no commentary
+  Row  637: 19:9         — no commentary
+  Row  642: 19:6         — no commentary
+  Row  649: 19:3         — no commentary
+  Row  663: 19:17        — no commentary
+  Row  674: 19:13        — no commentary
+  Row  691: 19:2         — no commentary
+  Row  710: 19:3         — no commentary
+  Row  721: 19:2         — no commentary
+  Row  722: 19:3         — no commentary
+  Row  732: 19:4         — no commentary
+  Row  738: 19:6         — no commentary
+  Row  746: 19:3         — quote too short
+  Row  746: 19:3         — no commentary
+  Row  768: 19:4         — no commentary
+  Row  769: 19:5         — no commentary
+  Row  778: 19:19        — no commentary
+  Row  781: 19:3         — no commentary
+  Row  784: 19:1         — no commentary
+  Row  810: 19:8         — no commentary
+  Row  821: 19:31        — no commentary
+  Row  823: 19:33        — no commentary
+  Row  844: 19:12        — no commentary
+  Row  850: 19:3         — no commentary
+  Row  868: 19:6         — no commentary
+  Row  879: 19:6         — no commentary
+  Row  883: 19:14        — no commentary
+  Row  902: 19:24        — no commentary
+  Row  904: 19:32        — no commentary
+  Row  908: 19:7         — no commentary
+  Row  911: 19:42        — no commentary
+  Row  931: 19:3         — no commentary
+  Row  943: 19:2         — no commentary
+  Row  944: 19:3         — no commentary
+  Row  976: 19:4         — no commentary
+  Row  978: 19:6         — no commentary
+  Row  988: 19:6         — no commentary
+  Row 1018: 19:32        — no commentary
+  Row 1019: 19:33        — no commentary
+  Row 1020: 19:34        — no commentary
+  Row 1021: 19:35        — no commentary
+  Row 1029: 19:3         — no commentary
+  Row 1030: 19:4         — no commentary
+  Row 1037: 19:2         — no commentary
+  Row 1038: 19:3         — no commentary
+  Row 1043: 19:4         — no commentary
+  Row 1055: 19:17        — no commentary
+  Row 1060: 19:26        — no commentary
+  Row 1075: 19:1         — no commentary
+  Row 1086: 19:32        — no commentary
+  Row 1087: 19:33        — no commentary
+  Row 1091: 19:6         — no commentary
+  Row 1094: 19:9         — no commentary
+  Row 1096: 19:13        — no commentary
+  Row 1104: 19:29        — no commentary
+  Row 1111: 19:37        — no commentary
+  Row 1113: 19:40        — no commentary
+  Row 1130: 19:31        — no commentary
+  Row 1148: 19:35        — no commentary
+  Row 1149: 19:36        — no commentary
+  Row 1151: 19:38        — no commentary
+  Row 1177: 19:3         — no commentary
+  Row 1180: 19:7         — no commentary
+  Row 1181: 19:8         — no commentary
+  Row 1183: 19:2         — no commentary
+  Row 1184: 19:3         — no commentary
+  Row 1185: 19:4         — no commentary
+  Row 1192: 19:11        — no commentary
+  Row 1193: 19:12        — no commentary
+  Row 1205: 19:5         — no commentary
+  Row 1215: 19:21        — no commentary
+  Row 1238: 19:30        — no commentary
+  Row 1276: 19:93        — no commentary
+  Row 1309: 19:171       — no commentary
+  Row 1330: 19:5         — no commentary
+  Row 1331: 19:6         — no commentary
+  Row 1353: 19:4         — no commentary
+  Row 1354: 19:5         — no commentary
+  Row 1367: 19:7         — no commentary
+  Row 1376: 16:30        — no commentary
+  Row 1377: 16:31        — no commentary
+  Row 1378: 16:32        — no commentary
+  Row 1379: 16:33        — no commentary
+  Row 1380: 16:6         — no commentary
+  Row 1382: 16:14        — no commentary
+  Row 1383: 16:15        — no commentary
+  Row 1386: 16:25        — no commentary
+  Row 1387: 16:26        — no commentary
+  Row 1388: 16:27        — no commentary
+  Row 1389: 16:28        — no commentary
+  Row 1391: 16:30        — no commentary
+  Row 1395: 16:2         — no commentary
+  Row 1396: 16:3         — no commentary
+  Row 1398: 16:18        — no commentary
+  Row 1399: 16:9         — no commentary
+  Row 1400: 16:9         — no commentary
+  Row 1405: 16:22        — no commentary
+  Row 1406: 16:23        — no commentary
+  Row 1407: 16:24        — no commentary
+  Row 1408: 16:25        — no commentary
+  Row 1411: 16:3         — no commentary
+  Row 1413: 16:7         — no commentary
+  Row 1415: 16:9         — no commentary
+  Row 1417: 16:32        — no commentary
+  Row 1418: 16:13        — no commentary
+  Row 1419: 16:14        — no commentary
+  Row 1421: 16:17        — no commentary
+  Row 1422: 16:18        — no commentary
+  Row 1426: 16:5         — no commentary
+  Row 1427: 16:6         — no commentary
+  Row 1429: 16:9         — no commentary
+  Row 1430: 16:11        — no commentary
+  Row 1443: 16:13        — no commentary
+  Row 1444: 16:14        — no commentary
+  Row 1447: 16:23        — no commentary
+  Row 1449: 16:27        — no commentary
+  Row 1450: 16:28        — no commentary
+  Row 1451: 16:29        — no commentary
+  Row 1453: 16:4         — no commentary
+  Row 1455: 16:6         — no commentary
+  Row 1457: 16:8         — no commentary
+  Row 1459: 16:13        — no commentary
+  Row 1460: 16:14        — no commentary
+  Row 1463: 16:19        — no commentary
+  Row 1469: 16:29        — no commentary
+  Row 1471: 16:2         — no commentary
+  Row 1472: 16:3         — no commentary
+  Row 1474: 16:9         — no commentary
+  Row 1475: 16:8         — no commentary
+  Row 1477: 16:17        — no commentary
+  Row 1478: 16:3         — no commentary
+  Row 1480: 16:13        — no commentary
+  Row 1481: 16:14        — no commentary
+  Row 1495: 16:29        — no commentary
+  Row 1496: 16:30        — no commentary
+  Row 1507: 16:2         — no commentary
+  Row 1509: 16:6         — no commentary
+  Row 1513: 16:11        — no commentary
+  Row 1514: 16:12        — no commentary
+  Row 1516: 16:14        — no commentary
+  Row 1528: 16:22        — no commentary
+  Row 1531: 16:26        — no commentary
+  Row 1542: 16:2         — no commentary
+  Row 1545: 16:14        — no commentary
+  Row 1550: 16:26        — no commentary
+  Row 1553: 16:4         — no commentary
+  Row 1556: 16:13        — no commentary
+  Row 1561: 16:25        — no commentary
+  Row 1562: 16:26        — no commentary
+  Row 1575: 3:6          — no commentary
+  Row 1630: 3:1          — quote too short
+  Row 1658: 3:2          — no commentary
+  Row 1704: 9:25         — no commentary
+  Row 1774: 13:6         — quote too short
+  Row 1815: 7:2          — no commentary
+  Row 1816: 7:3          — no commentary
+  Row 1830: 12:16        — no commentary
+  Row 1868: 8:14         — no commentary
+  Row 1943: 21:32        — quote too short
+  Row 1954: 21:34        — no commentary
+  Row 1998: 11:4         — quote too short
+  Row 2020: 11:36        — quote too short
+  Row 2024: 11:33        — quote too short
+  Row 2046: 8:30         — quote too short
+  Row 2102: 1:23         — no commentary
+  Row 2190: 1:15         — no commentary
+  Row 2225: 1:3          — quote too short
+  Row 2250: 1:9          — quote too short

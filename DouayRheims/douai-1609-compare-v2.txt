@@ -1,0 +1,2687 @@
+======================================================================
+DOUAI 1609 ANNOTATION COMPARISON REPORT v2
+  Original:  douai-1609-clean.bak.tsv (2304 rows)
+  Fixed:     douai-1609-fixed-v2.tsv (2304 rows)
+======================================================================
+
+SUMMARY
+----------------------------------------
+  Total rows compared:    2304
+  Refs corrected:         1752
+    of which book changed:990
+  Unchanged + confident:  92
+  Still LOW_CONFIDENCE:   436
+  Potential new issues:   24
+
+
+======================================================================
+SECTION 1: RESOLVED — Refs Corrected
+======================================================================
+(1752 rows where ref changed)
+
+--- Book-level corrections ---
+  Row    3: Gn 22:1              → Jn 7:10
+  Row   11: Gn 22:14             → Jn 15:3
+  Row   13: Gn 20:6              → 1Chr 16:13
+  Row   19: Gn 20:5              → Wis 12:26
+  Row   20: Gn 20:12             → Ps 104:20
+  Row   33: Gn 31:19             → Est 9:32
+  Row   36: Gn 35:24             → Acts 23:9
+  Row   45: Gn 35:2              → Ex 17:13
+  Row   58: Gn 39:8              → 1Chr 20:7
+  Row   61: Gn 40:7              → Jn 1:10
+  Row   70: Gn 42:7              → Is 63:10
+  Row   71: Gn 42:9              → Lk 18:27
+  Row   86: Gn 46:1              → Mt 27:33
+  Row  103: Gn 49:4              → 1Chr 7:27
+  Row  106: Heb 2:23             → Ex 2:23
+  Row  109: Heb 3:20             → Ex 4:20
+  Row  111: Heb 2:17             → Ex 5:17
+  Row  112: Heb 2:21             → Ex 5:21
+  Row  113: Heb 2:6              → Nm 8:14
+  Row  114: Heb 6:3              → Ps 61:8
+  Row  115: Heb 6:17             → Mk 13:10
+  Row  116: Heb 6:17             → Ex 7:17
+  Row  118: Ex 6:11              → 2Cor 1:19
+  Row  120: Ex 6:2               → Jgs 20:11
+  Row  127: Ex 8:19              → Lk 8:11
+  Row  135: Ex 40:10             → 1Kings 14:29
+  Row  136: Ex 40:29             → Jb 10:5
+  Row  145: Ex 40:4              → Lk 24:8
+  Row  154: Ex 40:5              → Gn 49:10
+  Row  155: Ex 40:22             → Gn 28:19
+  Row  156: Ex 40:28             → Lv 8:36
+  Row  158: Ex 40:50             → Prv 22:2
+  Row  159: Ex 40:31             → Wis 8:14
+  Row  163: Ex 40:6              → Dt 10:14
+  Row  165: Ex 16:19             → Neh 13:24
+  Row  168: Ex 19:1              → Jos 9:17
+  Row  169: Ex 20:23             → Jb 8:22
+  Row  176: Ex 24:8              → Mk 14:69
+  Row  192: Lv 1:42              → Nm 1:44
+  Row  193: Lv 1:3               → Nm 2:3
+  Row  194: Lv 1:3               → Nm 2:5
+  Row  195: Lv 1:2               → Nm 3:2
+  Row  196: Lv 1:12              → Nm 3:12
+  Row  198: Lv 1:27              → Nm 3:27
+  Row  199: Lv 1:35              → Nm 3:35
+  Row  200: Lv 1:6               → Nm 4:6
+  Row  201: Lv 1:2               → Nm 3:37
+  Row  202: Jos 1:12             → Dt 34:12
+  Row  208: Jos 3:8              → Mt 14:9
+  Row  210: Jos 3:16             → Jb 18:21
+  Row  216: Jgs 18:30            → Mt 22:2
+  Row  226: Ru 1:16              → Mt 10:35
+  Row  229: Ru 1:6               → Prv 9:18
+  Row  230: Ru 1:4               → 1Sam 2:4
+  Row  231: Ru 1:6               → 1Sam 2:6
+  Row  232: Ru 1:8               → Ex 4:29
+  Row  233: Ru 1:5               → 1Sam 6:5
+  Row  234: Ru 1:4               → 1Sam 7:4
+  Row  236: Ru 1:7               → Ps 84:9
+  Row  237: Ru 1:10              → Lk 17:9
+  Row  238: Ru 1:19              → 2Chr 7:4
+  Row  239: Ru 1:16              → 1Sam 15:16
+  Row  240: Ru 1:7               → Sir 46:8
+  Row  241: Ru 1:22              → 1Sam 17:22
+  Row  242: Ru 1:22              → 1Sam 18:22
+  Row  243: Ru 1:17              → 1Sam 19:14
+  Row  244: Ru 1:19              → 1Sam 19:16
+  Row  246: Ru 1:4               → 1Sam 20:4
+  Row  247: Ru 1:7               → 1Sam 21:7
+  Row  257: Tb 2:5               → Sir 11:26
+  Row  264: Jdt 1:7              → Jon 4:1
+  Row  265: Jdt 1:6              → 1Cor 14:11
+  Row  269: Jdt 6:17             → Gn 3:23
+  Row  272: Jdt 13:17            → Jb 23:15
+  Row  275: Jdt 15:12            → Nm 31:2
+  Row  280: Jdt 15:6             → Gn 27:24
+  Row  283: Jdt 15:9             → Gn 38:19
+  Row  300: Est 3:10             → Mk 3:14
+  Row  308: Est 3:4              → 1Kings 10:6
+  Row  309: Est 3:1              → Rom 8:8
+  Row  310: Est 3:15             → Sir 40:5
+  Row  313: Est 16:10            → Acts 4:8
+  Row  318: Est 2:24             → Jb 2:12
+  Row  319: Est 2:4              → Jb 2:4
+  Row  320: Jb 5:17              → 2Kings 21:22
+  Row  325: Jb 9:15              → Lv 4:19
+  Row  342: Ps 19:4              → Jn 1:11
+  Row  344: Ps 19:7              → Jb 28:23
+  Row  345: Ps 19:2              → Acts 4:26
+  Row  347: Ps 19:5              → Jb 13:10
+  Row  350: Ps 19:9              → Dt 6:9
+  Row  351: Ps 19:8              → Heb 11:2
+  Row  355: Ps 19:3              → 1Jn 3:9
+  Row  357: Ps 19:5              → Gn 30:6
+  Row  358: Ps 19:6              → Dt 2:2
+  Row  362: Ps 19:1              → 2Sam 5:7
+  Row  363: Ps 19:2              → Jb 33:8
+  Row  364: Ps 19:3              → Mt 5:13
+  Row  365: Ps 19:4              → Dt 16:17
+  Row  367: Ps 19:9              → Est 15:17
+  Row  368: Ps 19:8              → Jdt 13:2
+  Row  370: Ps 19:3              → Prv 8:4
+  Row  376: Ps 19:13             → Dt 28:46
+  Row  377: Ps 19:14             → 2Tim 2:3
+  Row  378: Ps 19:1              → Lk 2:11
+  Row  379: Ps 19:6              → Jb 5:20
+  Row  381: Ps 19:9              → 2Cor 12:8
+  Row  383: Ps 19:1              → 2Kings 8:27
+  Row  384: Ps 19:2              → 2Sam 22:23
+  Row  388: Ps 19:6              → Rev 21:24
+  Row  392: Ps 19:17             → Ex 29:7
+  Row  395: Ps 19:5              → Heb 2:6
+  Row  396: Ps 19:6              → Heb 2:7
+  Row  399: Ps 19:9              → Prv 2:20
+  Row  405: Ps 19:8              → 2Chr 20:13
+  Row  406: Ps 19:17             → Prv 14:26
+  Row  408: Ps 19:3              → Prv 15:23
+  Row  409: Ps 19:4              → Dt 16:17
+  Row  410: Ps 19:5              → Is 45:27
+  Row  411: Ps 19:6              → Jb 18:8
+  Row  412: Ps 19:7              → Rom 3:13
+  Row  413: Ps 19:8              → Jos 10:43
+  Row  417: Ps 19:15             → 1Kings 2:45
+  Row  418: Ps 19:17             → Tb 13:11
+  Row  423: Ps 19:4              → Dt 1:20
+  Row  426: Ps 19:9              → Sir 27:8
+  Row  429: Ps 19:5              → Jer 32:31
+  Row  431: Ps 19:3              → Eccl 7:21
+  Row  433: Ps 19:6              → Ex 15:3
+  Row  434: Ps 19:7              → Gn 31:49
+  Row  435: Ps 19:6              → 1Kings 17:22
+  Row  436: Ps 19:1              → Jb 29:4
+  Row  437: Ps 19:2              → 1Chr 16:29
+  Row  438: Ps 19:3              → Ex 2:25
+  Row  440: Ps 19:5              → Prv 10:27
+  Row  441: Ps 19:6              → Rev 19:6
+  Row  443: Ps 19:8              → 2Sam 22:47
+  Row  446: Ps 19:5              → 1Chr 9:5
+  Row  451: Ps 19:1              → Jb 7:2
+  Row  452: Ps 19:4              → Est 15:17
+  Row  453: Ps 19:5              → Neh 13:14
+  Row  456: Ps 19:15             → Gn 30:29
+  Row  457: Ps 19:20             → Dt 12:25
+  Row  458: Ps 19:2              → Jb 10:5
+  Row  461: Ps 19:2              → Rom 4:8
+  Row  464: Ps 19:5              → Jb 38:10
+  Row  467: Ps 19:8              → Ex 33:3
+  Row  469: Ps 19:1              → Acts 16:8
+  Row  471: Ps 19:2              → Gn 22:14
+  Row  472: Ps 19:3              → Col 1:19
+  Row  473: Ps 19:4              → Wis 7:16
+  Row  474: Ps 19:6              → 2Sam 23:2
+  Row  476: Ps 19:13             → Jn 3:31
+  Row  477: Ps 19:14             → Jdt 2:3
+  Row  479: Ps 19:17             → Lv 17:8
+  Row  480: Ps 19:19             → Jb 33:30
+  Row  481: Ps 19:20             → 2Sam 22:2
+  Row  482: Ps 19:1              → 1Sam 19:12
+  Row  483: Ps 19:3              → Ex 14:18
+  Row  484: Ps 19:4              → Gn 30:6
+  Row  485: Ps 19:6              → Mk 14:29
+  Row  486: Ps 19:7              → Gn 39:2
+  Row  487: Ps 19:8              → 1Sam 14:37
+  Row  489: Ps 19:15             → 1Pet 3:12
+  Row  490: Ps 19:38             → 1Sam 8:21
+  Row  491: Ps 19:39             → 2Chr 30:18
+  Row  492: Ps 19:43             → Acts 16:32
+  Row  495: Ps 19:1              → Jb 12:10
+  Row  499: Ps 19:8              → Mt 24:17
+  Row  500: Ps 19:9              → Tb 13:17
+  Row  502: Ps 19:13             → Gal 3:27
+  Row  504: Ps 19:16             → Acts 7:49
+  Row  506: Ps 19:19             → Jn 7:16
+  Row  507: Ps 19:27             → 2Sam 21:6
+  Row  508: Ps 19:1              → 1Chr 21:9
+  Row  509: Ps 19:2              → Rom 3:17
+  Row  513: Ps 19:9              → Nm 11:17
+  Row  514: Ps 19:11             → Prv 8:9
+  Row  515: Ps 19:12             → Prv 5:13
+  Row  516: Ps 19:23             → Acts 11:2
+  Row  518: Ps 19:3              → Prv 15:3
+  Row  519: Ps 19:4              → Jas 4:10
+  Row  522: Ps 19:8              → Dt 6:12
+  Row  523: Ps 19:11             → Nm 35:13
+  Row  524: Ps 19:2              → Mt 24:51
+  Row  525: Ps 19:17             → Gn 15:4
+  Row  527: Ps 19:16             → Heb 7:22
+  Row  529: Ps 19:18             → 1Kings 2:45
+  Row  534: Ps 19:28             → Prv 20:22
+  Row  535: Ps 19:29             → Lv 25:23
+  Row  536: Ps 19:30             → Dt 21:19
+  Row  537: Ps 19:31             → Lk 12:53
+  Row  538: Ps 19:32             → Jer 99:9
+  Row  539: Ps 19:33             → Lv 21:4
+  Row  540: Ps 19:34             → Ex 12:25
+  Row  542: Ps 19:36             → Jn 1:10
+  Row  543: Ps 19:37             → 1Cor 11:8
+  Row  544: Ps 19:38             → Prv 10:28
+  Row  545: Ps 19:39             → 2Chr 35:2
+  Row  549: Ps 19:4              → 1Cor 1:28
+  Row  551: Ps 19:1              → Jb 6:13
+  Row  552: Ps 19:10             → Jb 42:2
+  Row  553: Ps 19:12             → Jb 19:14
+  Row  567: Ps 19:8              → Jb 17:15
+  Row  568: Ps 19:9              → Eph 6:19
+  Row  569: Ps 19:12             → Dt 8:17
+  Row  570: Ps 19:13             → Jb 13:17
+  Row  571: Ps 19:14             → Heb 13:19
+  Row  572: Ps 19:6              → Gn 47:7
+  Row  573: Ps 19:2              → 2Sam 22:21
+  Row  574: Ps 19:3              → Jb 19:9
+  Row  575: Ps 19:4              → Jb 30:11
+  Row  579: Ps 19:14             → Rom 16:8
+  Row  580: Ps 19:17             → Prv 23:25
+  Row  581: Ps 19:2              → Prv 19:22
+  Row  582: Ps 19:4              → Ex 29:24
+  Row  584: Ps 19:7              → 1Cor 7:38
+  Row  588: Ps 19:14             → Mt 13:49
+  Row  589: Ps 19:1              → 2Chr 6:25
+  Row  594: Ps 19:8              → Prv 7:3
+  Row  595: Ps 19:12             → Rev 2:28
+  Row  597: Ps 19:4              → 1Tim 1:11
+  Row  598: Ps 19:6              → Jb 2:9
+  Row  599: Ps 19:6              → Is 46:23
+  Row  601: Ps 19:3              → Ex 15:12
+  Row  602: Ps 19:4              → Gn 13:6
+  Row  603: Ps 19:5              → Jn 1:49
+  Row  607: Ps 19:13             → Rev 14:5
+  Row  612: Ps 19:21             → Jos 9:19
+  Row  617: Ps 19:7              → Heb 1:8
+  Row  619: Ps 19:13             → Dt 28:42
+  Row  620: Ps 19:16             → 2Chr 36:6
+  Row  623: Ps 19:1              → Jb 7:2
+  Row  625: Ps 19:3              → Nm 31:23
+  Row  626: Ps 19:5              → 1Jn 5:10
+  Row  629: Ps 19:12             → Prv 15:16
+  Row  630: Ps 19:1              → Is 3:8
+  Row  631: Ps 19:2              → Neh 13:7
+  Row  633: Ps 19:3              → Mt 5:35
+  Row  634: Ps 19:5              → Jn 13:23
+  Row  638: Ps 19:10             → 1Chr 1:28
+  Row  641: Ps 19:5              → 2Sam 2:25
+  Row  644: Ps 19:9              → 1Jn 3:16
+  Row  646: Ps 19:15             → Lk 1:55
+  Row  647: Ps 19:1              → Mk 7:29
+  Row  648: Ps 19:2              → Jb 13:17
+  Row  649: Ps 19:3              → Ex 4:29
+  Row  650: Ps 19:4              → Jb 33:3
+  Row  657: Ps 19:21             → Mk 2:27
+  Row  658: Ps 19:3              → Prv 20:22
+  Row  659: Ps 19:4              → Jn 3:31
+  Row  665: Ps 19:23             → Ex 15:2
+  Row  666: Ps 19:14             → 1Chr 15:12
+  Row  675: Ps 19:14             → 2Jn 1:13
+  Row  677: Ps 19:16             → Mk 3:35
+  Row  678: Ps 19:21             → Ex 28:13
+  Row  681: Ps 19:4              → Jer 52:2
+  Row  683: Ps 19:8              → Wis 5:2
+  Row  685: Ps 19:4              → Eccl 7:21
+  Row  693: Ps 19:5              → 2Sam 22:6
+  Row  694: Ps 19:7              → Rev 2:28
+  Row  696: Ps 19:9              → Rev 19:10
+  Row  698: Ps 19:14             → Prv 7:2
+  Row  702: Ps 19:1              → 2Cor 3:11
+  Row  705: Ps 19:5              → Gn 20:12
+  Row  709: Ps 19:8              → Jos 13:2
+  Row  710: Ps 19:3              → Rom 7:20
+  Row  711: Ps 19:4              → 2Sam 22:17
+  Row  713: Ps 19:1              → Lk 1:69
+  Row  715: Ps 19:3              → 2Thes 2:17
+  Row  717: Ps 19:6              → Jb 35:12
+  Row  718: Ps 19:7              → Jos 9:14
+  Row  719: Ps 19:1              → Mt 8:23
+  Row  720: Ps 19:19             → 2Chr 17:4
+  Row  722: Ps 19:3              → Jb 34:8
+  Row  727: Ps 19:13             → Jb 21:9
+  Row  728: Ps 19:17             → Nm 17:4
+  Row  729: Ps 19:1              → Mt 11:6
+  Row  730: Ps 19:1              → Mk 15:38
+  Row  734: Ps 19:6              → Nm 16:24
+  Row  737: Ps 19:5              → Nm 3:25
+  Row  739: Ps 19:7              → Gn 35:28
+  Row  741: Ps 19:1              → Dn 13:25
+  Row  743: Ps 19:7              → Gn 20:12
+  Row  750: Ps 19:6              → Jb 8:21
+  Row  756: Ps 19:1              → Acts 4:15
+  Row  757: Ps 19:4              → Lk 14:14
+  Row  759: Ps 19:6              → Eccl 6:7
+  Row  760: Ps 19:9              → Jb 8:22
+  Row  761: Ps 19:12             → Jb 5:23
+  Row  763: Ps 19:14             → 2Cor 11:22
+  Row  764: Ps 19:11             → Lam 3:34
+  Row  765: Ps 19:1              → Jb 38:19
+  Row  766: Ps 19:3              → Nm 24:5
+  Row  767: Ps 19:4              → 2Tim 4:8
+  Row  769: Ps 19:5              → Ex 29:45
+  Row  771: Ps 19:8              → 2Kings 21:22
+  Row  772: Ps 19:9              → 2Cor 8:16
+  Row  775: Ps 19:16             → Neh 5:19
+  Row  778: Ps 19:19             → Prv 8:4
+  Row  779: Ps 19:20             → 2Sam 22:23
+  Row  780: Ps 19:2              → Nm 6:25
+  Row  781: Ps 19:3              → Ex 33:16
+  Row  784: Ps 19:1              → Rom 10:4
+  Row  788: Ps 19:13             → Est 2:13
+  Row  793: Ps 19:22             → 1Chr 9:5
+  Row  795: Ps 19:24             → Phlm 1:6
+  Row  798: Ps 19:27             → Dt 32:3
+  Row  799: Ps 19:28             → Lv 13:38
+  Row  802: Ps 19:33             → Dt 32:3
+  Row  804: Ps 19:36             → Prv 14:26
+  Row  805: Ps 19:3              → Sir 25:22
+  Row  809: Ps 19:7              → 1Sam 24:13
+  Row  813: Ps 19:17             → 2Chr 6:42
+  Row  814: Ps 19:22             → Gn 20:12
+  Row  815: Ps 19:23             → Rom 11:9
+  Row  816: Ps 19:25             → Prv 5:18
+  Row  818: Ps 19:28             → Prv 23:12
+  Row  819: Ps 19:29             → Ex 25:38
+  Row  821: Ps 19:31             → Ex 31:3
+  Row  822: Ps 19:32             → Rev 21:27
+  Row  824: Ps 19:34             → Tb 13:19
+  Row  825: Ps 19:35             → Gal 6:6
+  Row  826: Ps 19:36             → Jer 9:23
+  Row  827: Ps 19:37             → Gn 37:31
+  Row  831: Ps 19:1              → 1Cor 7:31
+  Row  832: Ps 19:3              → 2Chr 6:40
+  Row  833: Ps 19:8              → Jb 36:19
+  Row  838: Ps 19:1              → 1Thes 5:18
+  Row  839: Ps 19:3              → Jdt 16:29
+  Row  841: Ps 19:9              → Jb 41:16
+  Row  842: Ps 19:8              → Nm 4:3
+  Row  843: Ps 19:9              → Jb 20:27
+  Row  844: Ps 19:12             → Jb 36:15
+  Row  845: Ps 19:13             → Jb 5:15
+  Row  846: Ps 19:19             → Jb 20:11
+  Row  848: Ps 19:18             → Jb 5:9
+  Row  850: Ps 19:3              → Rom 3:16
+  Row  851: Ps 19:4              → Sir 48:14
+  Row  852: Ps 19:5              → Jb 8:22
+  Row  854: Ps 19:7              → Jb 8:4
+  Row  855: Ps 19:15             → 2Jn 1:13
+  Row  856: Ps 19:17             → Nm 15:40
+  Row  859: Ps 19:26             → 1Chr 29:18
+  Row  861: Ps 19:2              → Est 13:16
+  Row  863: Ps 19:7              → Lv 21:9
+  Row  867: Ps 19:4              → 1Cor 10:26
+  Row  870: Ps 19:10             → 1Jn 2:17
+  Row  871: Ps 19:3              → 1Chr 16:27
+  Row  872: Ps 19:4              → Acts 18:11
+  Row  875: Ps 19:9              → Jer 99:61
+  Row  876: Ps 19:11             → Dt 22:18
+  Row  877: Ps 19:12             → Jos 23:3
+  Row  878: Ps 19:1              → Lk 20:22
+  Row  880: Ps 19:7              → Jb 31:27
+  Row  881: Ps 19:8              → Jdt 8:15
+  Row  884: Ps 19:13             → Ex 29:45
+  Row  886: Ps 19:18             → Apc 19:6
+  Row  887: Ps 19:65             → Est 9:11
+  Row  890: Ps 19:5              → Gn 41:48
+  Row  891: Ps 19:8              → Nm 25:1
+  Row  894: Ps 19:16             → Jn 10:39
+  Row  897: Ps 19:21             → Gn 1:3
+  Row  898: Ps 19:23             → Jn 3:31
+  Row  901: Ps 19:27             → Jn 18:6
+  Row  902: Ps 19:24             → Mk 6:44
+  Row  904: Ps 19:32             → Jb 8:12
+  Row  905: Ps 19:33             → Nm 1:21
+  Row  906: Ps 19:34             → Jn 8:2
+  Row  907: Ps 19:35             → Jdt 7:21
+  Row  909: Ps 19:38             → Heb 10:34
+  Row  911: Ps 19:42             → Jgs 9:17
+  Row  912: Ps 19:43             → Mt 12:21
+  Row  913: Ps 19:44             → Rev 11:6
+  Row  916: Ps 19:48             → Lk 23:24
+  Row  918: Ps 19:51             → 2Chr 19:5
+  Row  921: Ps 19:56             → Mk 2:20
+  Row  922: Ps 19:61             → Acts 27:19
+  Row  925: Ps 19:67             → Prv 31:11
+  Row  927: Ps 19:71             → Lk 24:25
+  Row  928: Ps 19:40             → Jdt 6:10
+  Row  929: Ps 19:1              → Is 99:1
+  Row  931: Ps 19:3              → Gn 30:38
+  Row  934: Ps 19:9              → Eph 5:20
+  Row  942: Ps 19:19             → Jb 21:14
+  Row  946: Ps 19:5              → 1Cor 15:43
+  Row  947: Ps 19:6              → 2Sam 10:7
+  Row  949: Ps 19:8              → Phil 1:30
+  Row  951: Ps 19:33             → Wis 4:20
+  Row  954: Ps 19:5              → Apc 12:8
+  Row  955: Ps 19:6              → 1Kings 8:3
+  Row  956: Ps 19:7              → Mt 12:31
+  Row  960: Ps 19:9              → Wis 5:5
+  Row  961: Ps 19:10             → Lk 20:25
+  Row  964: Ps 19:17             → 1Mc 1:66
+  Row  965: Ps 19:19             → 1Chr 16:14
+  Row  966: Ps 19:1              → Jdt 4:15
+  Row  967: Ps 19:4              → Bar 3:30
+  Row  968: Ps 19:6              → Lk 1:51
+  Row  969: Ps 19:8              → Jer 64:19
+  Row  971: Ps 19:18             → Est 14:12
+  Row  972: Ps 19:12             → Prv 16:6
+  Row  973: Ps 19:13             → Dt 12:25
+  Row  975: Ps 19:3              → Ex 22:28
+  Row  977: Ps 19:15             → 1Tim 2:3
+  Row  980: Ps 19:9              → 1Chr 16:14
+  Row  982: Ps 19:12             → Jn 3:31
+  Row  984: Ps 19:14             → Prv 11:5
+  Row  988: Ps 19:6              → Prv 8:4
+  Row  989: Ps 19:7              → 2Sam 22:19
+  Row  991: Ps 19:12             → 1Chr 17:2
+  Row  992: Ps 19:14             → Dt 7:21
+  Row  993: Ps 19:17             → Dt 6:2
+  Row  996: Ps 19:5              → Jb 5:7
+  Row  997: Ps 19:6              → Dt 22:23
+  Row  998: Ps 19:7              → Prv 15:15
+  Row 1003: Ps 19:5              → Mk 3:14
+  Row 1004: Ps 19:9              → Jb 19:13
+  Row 1007: Ps 19:13             → Nm 35:13
+  Row 1009: Ps 19:19             → Jb 19:13
+  Row 1012: Ps 19:8              → Mk 12:28
+  Row 1015: Ps 19:25             → Jb 20:11
+  Row 1016: Ps 19:27             → Mk 3:35
+  Row 1017: Ps 19:30             → 2Sam 7:13
+  Row 1020: Ps 19:34             → 2Sam 7:15
+  Row 1022: Ps 19:36             → Jb 31:5
+  Row 1023: Ps 19:38             → 1Sam 14:23
+  Row 1025: Ps 19:13             → 1Mc 3:60
+  Row 1026: Ps 19:7              → 1Chr 16:28
+  Row 1027: Ps 19:8              → Lk 7:31
+  Row 1030: Ps 19:4              → Gn 40:6
+  Row 1031: Ps 19:5              → Jgs 5:5
+  Row 1032: Ps 19:7              → Mt 27:16
+  Row 1033: Ps 19:12             → Lv 2:15
+  Row 1037: Ps 19:2              → Nm 14:37
+  Row 1040: Ps 19:6              → Dt 28:10
+  Row 1042: Ps 19:3              → 1Chr 17:20
+  Row 1047: Ps 19:8              → 2Kings 12:14
+  Row 1054: Ps 19:15             → Lv 7:3
+  Row 1055: Ps 19:17             → Prv 28:25
+  Row 1058: Ps 19:21             → Mk 10:13
+  Row 1060: Ps 19:26             → Tb 8:7
+  Row 1061: Ps 19:27             → Heb 1:10
+  Row 1062: Ps 19:39             → Nm 26:53
+  Row 1068: Ps 19:9              → Jdt 8:15
+  Row 1069: Ps 19:16             → Jn 14:17
+  Row 1070: Ps 19:19             → Prv 14:26
+  Row 1073: Ps 19:5              → Jer 64:7
+  Row 1075: Ps 19:1              → Gn 3:9
+  Row 1077: Ps 19:4              → Sir 50:9
+  Row 1078: Ps 19:5              → 2Jn 1:2
+  Row 1081: Ps 19:4              → Wis 14:13
+  Row 1084: Ps 19:28             → Heb 1:11
+  Row 1085: Ps 19:39             → Jb 5:25
+  Row 1086: Ps 19:32             → Eccl 12:7
+  Row 1087: Ps 19:33             → 2Chr 33:17
+  Row 1089: Ps 19:135            → 1Chr 16:31
+  Row 1090: Ps 19:4              → 1Chr 16:12
+  Row 1091: Ps 19:6              → 1Chr 16:13
+  Row 1092: Ps 19:7              → 1Chr 16:14
+  Row 1093: Ps 19:8              → 1Chr 16:15
+  Row 1094: Ps 19:9              → Dt 11:3
+  Row 1095: Ps 19:10             → 1Chr 16:18
+  Row 1096: Ps 19:13             → 1Chr 16:20
+  Row 1101: Ps 19:15             → 1Chr 16:22
+  Row 1102: Ps 19:23             → Apc 17:11
+  Row 1104: Ps 19:29             → Jdt 9:8
+  Row 1105: Ps 19:30             → Rev 21:24
+  Row 1109: Ps 19:35             → Dt 29:8
+  Row 1111: Ps 19:37             → Mk 1:23
+  Row 1113: Ps 19:40             → Ex 37:15
+  Row 1114: Ps 19:41             → 1Kings 18:33
+  Row 1115: Ps 19:45             → Mk 1:36
+  Row 1116: Ps 19:2              → Nm 6:8
+  Row 1117: Ps 19:3              → Prv 8:32
+  Row 1119: Ps 19:5              → Rom 15:32
+  Row 1120: Ps 19:6              → Jb 28:22
+  Row 1121: Ps 19:7              → Neh 9:16
+  Row 1124: Ps 19:17             → Dt 11:6
+  Row 1127: Ps 19:23             → Mk 10:32
+  Row 1128: Ps 19:25             → 1Kings 14:18
+  Row 1129: Ps 19:42             → Jb 26:5
+  Row 1130: Ps 19:31             → Rom 11:34
+  Row 1131: Ps 19:32             → Mt 21:39
+  Row 1132: Ps 19:35             → Ezr 2:62
+  Row 1133: Ps 19:37             → Jgs 3:6
+  Row 1135: Ps 19:40             → Ex 4:31
+  Row 1136: Ps 19:45             → Tb 1:22
+  Row 1137: Ps 19:46             → Mt 8:33
+  Row 1138: Ps 19:47             → 1Chr 16:35
+  Row 1140: Ps 19:2              → Acts 9:28
+  Row 1141: Ps 19:3              → Ex 35:20
+  Row 1142: Ps 19:4              → Lk 24:3
+  Row 1144: Ps 19:20             → Jgs 11:32
+  Row 1146: Ps 19:33             → Sir 50:23
+  Row 1148: Ps 19:35             → Mt 2:21
+  Row 1149: Ps 19:36             → Jb 35:12
+  Row 1151: Ps 19:38             → Mk 14:40
+  Row 1152: Ps 19:39             → Acts 10:46
+  Row 1153: Ps 19:43             → 2Thes 3:3
+  Row 1155: Ps 19:4              → Dt 28:37
+  Row 1158: Ps 19:5              → Jb 40:9
+  Row 1160: Ps 19:14             → Sg 8:8
+  Row 1161: Ps 19:2              → Jb 7:8
+  Row 1162: Ps 19:3              → Dt 18:17
+  Row 1165: Ps 19:9              → 1Cor 14:20
+  Row 1166: Ps 19:17             → Jb 34:28
+  Row 1167: Ps 19:31             → Apc 5:7
+  Row 1168: Ps 19:3              → Jn 1:2
+  Row 1170: Ps 19:7              → Prv 15:10
+  Row 1172: Ps 19:4              → Est 13:8
+  Row 1174: Ps 19:9              → Lk 20:44
+  Row 1175: Ps 19:1              → Jb 37:5
+  Row 1176: Ps 19:2              → Dt 25:10
+  Row 1177: Ps 19:3              → Jn 8:35
+  Row 1179: Ps 19:5              → Jb 15:29
+  Row 1181: Ps 19:8              → Prv 11:20
+  Row 1183: Ps 19:2              → Eph 5:20
+  Row 1185: Ps 19:4              → 1Chr 16:14
+  Row 1186: Ps 19:5              → 2Cor 11:31
+  Row 1187: Ps 19:7              → Jb 27:21
+  Row 1190: Ps 19:6              → Prv 6:5
+  Row 1192: Ps 19:11             → 1Chr 16:14
+  Row 1193: Ps 19:12             → Gal 5:19
+  Row 1194: Ps 19:13             → Rom 3:16
+  Row 1195: Ps 19:18             → 2Chr 35:2
+  Row 1196: Ps 19:20             → Jn 12:39
+  Row 1197: Ps 19:23             → 1Thes 5:28
+  Row 1198: Ps 19:25             → 1Cor 15:29
+  Row 1199: Ps 19:13             → Acts 15:15
+  Row 1200: Ps 19:6              → 1Chr 22:11
+  Row 1203: Ps 19:3              → Lk 1:49
+  Row 1204: Ps 19:4              → Wis 5:18
+  Row 1205: Ps 19:5              → 2Chr 7:4
+  Row 1206: Ps 19:6              → 2Sam 10:12
+  Row 1208: Ps 19:2              → Jb 18:10
+  Row 1209: Ps 19:5              → 2Sam 22:19
+  Row 1210: Ps 19:6              → Heb 13:6
+  Row 1211: Ps 19:10             → Dt 18:17
+  Row 1212: Ps 19:12             → Acts 9:28
+  Row 1213: Ps 19:13             → 2Chr 30:19
+  Row 1216: Ps 19:22             → Acts 4:11
+  Row 1218: Ps 19:26             → 1Thes 5:28
+  Row 1220: Ps 19:3              → Jb 9:5
+  Row 1221: Ps 19:4              → Dt 29:13
+  Row 1228: Ps 19:13             → Jb 22:22
+  Row 1230: Ps 19:15             → Ex 4:12
+  Row 1235: Ps 19:25             → Acts 15:15
+  Row 1236: Ps 19:27             → Prv 9:11
+  Row 1237: Ps 19:29             → Prv 5:8
+  Row 1244: Ps 19:38             → 1Chr 17:23
+  Row 1251: Ps 19:48             → Gn 37:6
+  Row 1256: Ps 19:54             → Gn 20:12
+  Row 1263: Ps 19:95             → Tb 3:2
+  Row 1264: Ps 19:76             → Ezr 10:12
+  Row 1273: Ps 19:88             → Prv 16:23
+  Row 1274: Ps 19:89             → Jn 17:17
+  Row 1275: Ps 19:91             → Mk 14:24
+  Row 1284: Ps 19:106            → Prv 6:20
+  Row 1285: Ps 19:113            → Dn 9:10
+  Row 1287: Ps 19:125            → Prv 8:21
+  Row 1298: Ps 19:148            → Jb 27:15
+  Row 1300: Ps 19:149            → Jb 10:12
+  Row 1301: Ps 19:150            → Jn 17:7
+  Row 1302: Ps 19:152            → Tb 8:18
+  Row 1303: Ps 19:153            → Jb 19:14
+  Row 1308: Ps 19:169            → Nm 14:20
+  Row 1312: Ps 19:175            → Gn 17:10
+  Row 1318: Ps 19:3              → Prv 24:8
+  Row 1319: Ps 19:4              → Is 46:18
+  Row 1321: Ps 19:1              → Dt 23:8
+  Row 1327: Ps 19:9              → Sir 3:25
+  Row 1328: Ps 19:2              → Acts 15:18
+  Row 1331: Ps 19:6              → 2Cor 10:8
+  Row 1333: Ps 19:8              → Gn 2:4
+  Row 1334: Ps 19:3              → Acts 21:14
+  Row 1335: Ps 19:4              → 2Sam 10:12
+  Row 1339: Ps 19:3              → Lam 3:13
+  Row 1343: Ps 19:1              → 2Cor 9:15
+  Row 1345: Ps 19:1              → Jdt 14:18
+  Row 1346: Ps 19:3              → Jn 4:19
+  Row 1348: Ps 19:7              → Jb 6:23
+  Row 1350: Ps 19:8              → Mt 10:7
+  Row 1351: Ps 19:9              → 1Kings 11:35
+  Row 1354: Ps 19:5              → Rev 21:26
+  Row 1355: Ps 19:6              → Dt 28:5
+  Row 1358: Ps 19:15             → Dt 10:14
+  Row 1361: Ps 19:1              → Jl 2:4
+  Row 1366: Ps 19:5              → Jb 36:26
+  Row 1369: Ps 19:10             → Ex 16:26
+  Row 1370: Ps 19:2              → Jb 8:4
+  Row 1371: Ps 19:3              → Dt 23:16
+  Row 1372: Ps 19:4              → Acts 16:32
+  Row 1394: Prv 16:1             → Lv 15:32
+  Row 1411: Prv 16:3             → Mt 8:23
+  Row 1421: Prv 16:17            → Nm 26:5
+  Row 1430: Prv 16:11            → 1Cor 2:15
+  Row 1467: Prv 16:25            → Sir 13:9
+  Row 1500: Prv 16:5             → Jas 2:24
+  Row 1508: Prv 16:3             → Jn 3:31
+  Row 1522: Prv 16:28            → Ps 37:15
+  Row 1541: Mk 16:3              → Prv 28:3
+  Row 1542: Mk 16:2              → Prv 28:7
+  Row 1543: Mk 16:8              → Prv 28:8
+  Row 1544: Mk 16:11             → Prv 28:11
+  Row 1545: Mk 16:14             → Prv 28:14
+  Row 1546: Mk 16:15             → Prv 28:15
+  Row 1547: Mk 16:18             → Prv 28:18
+  Row 1563: Prv 16:27            → Mt 24:16
+  Row 1569: Wis 16:8             → Sg 1:7
+  Row 1581: Wis 3:21             → Rom 8:33
+  Row 1582: Wis 3:15             → Prv 17:15
+  Row 1588: Sir 3:17             → Wis 19:16
+  Row 1589: Sir 3:39             → Dt 6:17
+  Row 1590: Sir 3:3              → 1Tim 4:5
+  Row 1591: Sir 3:8              → 1Pet 4:2
+  Row 1592: Sir 3:35             → Prv 3:9
+  Row 1595: Sir 3:3              → Est 16:21
+  Row 1597: Sir 3:5              → Lk 18:30
+  Row 1598: Sir 3:19             → Jb 23:14
+  Row 1600: Sir 3:25             → Jb 22:29
+  Row 1601: Sir 3:15             → Mt 21:43
+  Row 1602: Sir 3:27             → Rev 9:21
+  Row 1607: Sir 3:6              → Prv 30:11
+  Row 1609: Sir 3:9              → 2Chr 9:31
+  Row 1610: Sir 3:3              → Eph 4:6
+  Row 1611: Sir 3:24             → Ps 68:1
+  Row 1612: Sir 3:33             → Prv 31:26
+  Row 1615: Sir 3:46             → 2Chr 30:18
+  Row 1617: Sir 3:9              → Eccl 3:18
+  Row 1621: Sir 3:24             → Is 50:19
+  Row 1625: Sir 3:2              → Dt 28:44
+  Row 1628: Sir 3:14             → Jer 9:23
+  Row 1629: Sir 3:24             → Mt 22:26
+  Row 1632: Sir 3:20             → Eph 4:6
+  Row 1633: Sir 3:33             → Mt 24:7
+  Row 1639: Sir 3:5              → Ps 106:19
+  Row 1640: Sir 3:5              → Gn 40:21
+  Row 1641: Sir 3:19             → Wis 2:23
+  Row 1642: Sir 3:31             → 1Chr 22:6
+  Row 1644: Sir 3:14             → Lk 9:43
+  Row 1646: Sir 3:3              → 1Kings 22:53
+  Row 1647: Sir 3:14             → Jgs 1:32
+  Row 1648: Sir 3:10             → Lk 1:43
+  Row 1649: Sir 3:5              → Col 1:2
+  Row 1650: Sir 3:6              → Lv 8:29
+  Row 1651: Sir 3:29             → 1Chr 24:22
+  Row 1657: Is 3:8               → 2Sam 22:23
+  Row 1658: Is 3:2               → Jb 19:25
+  Row 1659: Is 3:2               → Prv 18:6
+  Row 1661: Is 3:3               → Ex 14:30
+  Row 1662: Ru 3:5               → Ps 134:6
+  Row 1663: Ru 3:4               → Is 16:9
+  Row 1664: Ru 3:19              → Lv 7:5
+  Row 1665: Ru 3:6               → Nm 4:26
+  Row 1666: Ru 3:15              → Heb 4:5
+  Row 1667: Ru 3:19              → Is 50:20
+  Row 1668: Ru 3:9               → 1Jn 5:14
+  Row 1669: Sg 3:3               → Ps 37:16
+  Row 1670: Sg 3:6               → Gn 46:23
+  Row 1671: Sg 3:7               → Ps 32:21
+  Row 1672: Sg 3:4               → Lv 14:29
+  Row 1673: Sg 3:1               → 1Cor 15:37
+  Row 1674: Sg 3:2               → Nm 6:25
+  Row 1675: Sg 3:6               → Dt 28:10
+  Row 1676: Sg 3:2               → Is 36:2
+  Row 1677: Sg 3:2               → 1Kings 13:7
+  Row 1678: Sg 3:2               → Is 84:19
+  Row 1679: Sg 3:9               → 2Kings 3:5
+  Row 1680: Sg 3:10              → Lv 26:11
+  Row 1681: Sg 3:10              → Lk 14:25
+  Row 1682: Sg 3:4               → Jl 2:4
+  Row 1683: Sg 3:5               → Jn 5:31
+  Row 1684: Sg 3:1               → Jb 27:22
+  Row 1685: Sg 3:9               → Is 46:9
+  Row 1686: Sg 3:10              → Is 46:8
+  Row 1687: Sg 3:9               → Jn 4:41
+  Row 1688: Sg 3:3               → Is 99:3
+  Row 1690: Sg 3:8               → 2Sam 5:24
+  Row 1692: Sg 3:6               → Jdt 5:21
+  Row 1693: Sg 3:2               → Acts 2:20
+  Row 1697: Jer 6:19             → Acts 2:20
+  Row 1698: Jer 6:26             → 2Sam 22:16
+  Row 1700: Jer 6:28             → Ps 82:9
+  Row 1705: Jer 9:48             → Gn 20:12
+  Row 1707: Jer 9:23             → 2Cor 10:17
+  Row 1711: Jer 13:4             → Tb 2:16
+  Row 1712: Jer 13:5             → Gn 23:20
+  Row 1713: Jer 13:9             → Prv 3:26
+  Row 1714: Jer 13:14            → 2Kings 17:12
+  Row 1715: Jer 13:15            → Ex 8:22
+  Row 1717: Jer 13:16            → Rom 10:20
+  Row 1721: Jer 15:5             → 2Kings 22:15
+  Row 1723: Jer 30:14            → Jgs 11:14
+  Row 1724: Jer 30:4             → Dn 11:9
+  Row 1725: Jer 30:7             → Lv 4:19
+  Row 1726: Jer 30:19            → Rev 7:13
+  Row 1727: Jer 39:2             → 2Kings 19:36
+  Row 1729: Jer 40:4             → 2Chr 32:3
+  Row 1730: Jer 40:18            → Is 50:15
+  Row 1731: Jer 30:17            → Nm 1:3
+  Row 1732: Jer 30:22            → Jn 14:20
+  Row 1734: 1Mc 1:10             → Gn 26:35
+  Row 1736: 1Mc 1:14             → 1Sam 2:23
+  Row 1737: 1Mc 1:17             → 2Chr 3:2
+  Row 1739: 1Mc 1:29             → Gn 29:3
+  Row 1744: 1Mc 1:6              → Lk 13:17
+  Row 1745: 1Mc 1:15             → 2Sam 10:14
+  Row 1746: 1Mc 1:23             → Gn 13:4
+  Row 1749: 1Mc 1:8              → Sir 15:20
+  Row 1753: 1Mc 1:56             → 1Chr 15:1
+  Row 1755: 1Mc 1:58             → 2Sam 18:7
+  Row 1756: 1Mc 1:22             → 1Sam 11:8
+  Row 1757: 1Mc 1:65             → Jn 4:30
+  Row 1760: 1Mc 1:2              → Jn 1:2
+  Row 1761: 1Mc 1:39             → Ex 8:30
+  Row 1762: 1Mc 1:23             → Prv 28:12
+  Row 1763: 1Mc 1:34             → Gn 46:6
+  Row 1767: 1Mc 11:7             → Jgs 9:55
+  Row 1768: 1Mc 11:25            → Gn 12:20
+  Row 1769: 1Mc 11:49            → Rev 9:17
+  Row 1770: 1Mc 11:53            → Tb 9:7
+  Row 1771: 1Mc 11:13            → Wis 3:3
+  Row 1772: 1Mc 11:40            → Mt 18:30
+  Row 1775: 1Mc 13:28            → 2Sam 18:7
+  Row 1776: 1Mc 15:4             → Jn 5:34
+  Row 1777: 1Mc 1:20             → Jn 10:2
+  Row 1778: 1Mc 1:20             → 1Chr 15:9
+  Row 1780: Lk 1:2               → Prv 31:12
+  Row 1781: Lk 1:30              → Tb 14:4
+  Row 1782: 1Mc 7:17             → 2Mc 7:17
+  Row 1783: 1Mc 7:35             → Acts 18:17
+  Row 1784: 1Mc 7:37             → Acts 26:6
+  Row 1785: 1Mc 7:7              → 2Kings 14:20
+  Row 1786: 1Mc 7:13             → 1Cor 7:31
+  Row 1787: 1Mc 10:4             → 2Mc 10:4
+  Row 1791: 1Mc 10:25            → 2Mc 11:25
+  Row 1792: 1Mc 10:32            → Jn 3:12
+  Row 1794: 1Mc 13:25            → 2Mc 14:25
+  Row 1795: 1Mc 15:27            → 2Mc 15:27
+  Row 1796: 1Mc 15:12            → Jn 9:5
+  Row 1797: 1Mc 15:39            → Rom 3:10
+  Row 1798: 1Mc 15:6             → Ps 72:4
+  Row 1800: Ezr 2:1              → Nm 22:39
+  Row 1801: Ezr 2:3              → Jos 23:8
+  Row 1802: Ezr 2:5              → Prv 6:20
+  Row 1803: Ezr 2:12             → Lv 3:5
+  Row 1804: Ezr 2:39             → Prv 1:29
+  Row 1806: Ezr 1:7              → Ps 36:5
+  Row 1807: Ezr 1:13             → Mt 25:39
+  Row 1808: Ezr 1:29             → Jn 20:14
+  Row 1809: Ezr 1:23             → Ez 37:18
+  Row 1810: Ezr 1:33             → Jn 3:9
+  Row 1811: Ezr 5:7              → Jdt 16:30
+  Row 1812: Ezr 5:20             → Ps 127:2
+  Row 1813: Ezr 5:13             → Tb 6:3
+  Row 1814: Ezr 5:27             → Lk 21:17
+  Row 1817: Ezr 7:4              → Rom 2:13
+  Row 1818: Ezr 7:39             → 2Thes 2:10
+  Row 1819: Ezr 6:3              → Prv 14:23
+  Row 1820: Ezr 6:9              → Ez 11:20
+  Row 1821: Ezr 6:10             → Gn 20:12
+  Row 1822: Ezr 6:36             → Acts 7:53
+  Row 1823: Ezr 6:39             → Jer 1:4
+  Row 1824: Ezr 6:15             → Jb 34:16
+  Row 1825: Ezr 6:3              → Tb 1:3
+  Row 1826: Ezr 6:12             → Acts 10:3
+  Row 1827: Ezr 6:13             → Jn 12:20
+  Row 1828: Ezr 6:1              → Jb 18:5
+  Row 1829: Ezr 6:26             → Nm 27:7
+  Row 1830: Mt 12:16             → Jn 9:1
+  Row 1831: Mt 12:16             → 2Chr 15:3
+  Row 1836: Mt 12:1              → Bar 3:5
+  Row 1838: Mt 12:6              → 2Chr 12:14
+  Row 1839: Mt 12:8              → Is 32:8
+  Row 1840: Mt 12:12             → Ps 52:2
+  Row 1841: Mt 12:16             → Gn 38:13
+  Row 1843: Mt 12:2              → Dt 2:33
+  Row 1845: Mt 12:6              → Hos 13:7
+  Row 1848: Mt 12:17             → Sir 17:28
+  Row 1849: Mt 12:35             → 1Cor 14:33
+  Row 1850: Mt 12:39             → 1Cor 11:29
+  Row 1851: Mt 12:1              → Jas 2:24
+  Row 1852: Mt 12:5              → Ps 36:31
+  Row 1853: Mt 12:7              → Lk 9:50
+  Row 1855: Mt 12:2              → Is 30:9
+  Row 1859: Mt 8:3               → Phil 1:5
+  Row 1860: Mt 8:3               → 2Mc 3:7
+  Row 1863: Mt 8:8               → Phil 2:27
+  Row 1866: Mt 8:2               → Rom 12:4
+  Row 1867: Mt 8:9               → Jer 13:10
+  Row 1868: Mt 8:14              → Prv 18:5
+  Row 1869: Mt 8:15              → Lk 10:12
+  Row 1872: Mt 8:34              → Ps 88:23
+  Row 1874: Jn 8:3               → Sir 29:8
+  Row 1876: Jn 8:21              → 1Jn 3:10
+  Row 1877: Jn 8:30              → Mt 11:30
+  Row 1878: Jn 8:24              → Mt 12:43
+  Row 1879: Jn 8:30              → Mt 24:16
+  Row 1880: Jn 8:30              → 1Tim 3:5
+  Row 1883: Jn 8:36              → 2Cor 2:17
+  Row 1884: Jn 8:44              → Eph 1:15
+  Row 1885: Jn 8:47              → Mt 13:47
+  Row 1886: Jn 8:8               → Ex 28:10
+  Row 1887: Jn 8:11              → 1Cor 12:8
+  Row 1888: Jn 8:15              → Ps 77:30
+  Row 1890: Jn 8:30              → 2Cor 2:15
+  Row 1891: Jn 8:32              → Jer 17:12
+  Row 1894: Jn 8:19              → Jgs 1:20
+  Row 1895: Jn 8:26              → Dn 8:24
+  Row 1899: Jn 8:2               → Prv 22:2
+  Row 1904: Jn 8:27              → 1Mc 11:11
+  Row 1905: Jn 8:13              → Acts 1:3
+  Row 1906: Jn 8:18              → Ps 77:49
+  Row 1910: Jn 8:2               → Col 1:18
+  Row 1912: Jn 8:19              → Acts 15:15
+  Row 1913: Jn 8:3               → Dt 12:25
+  Row 1914: Jn 8:9               → 1Mc 14:15
+  Row 1915: Jn 8:10              → Mt 11:14
+  Row 1916: Jn 8:30              → Rom 12:3
+  Row 1917: Jn 8:24              → Ex 34:31
+  Row 1918: Jn 18:1              → Nm 31:54
+  Row 1919: Jn 18:7              → Apc 6:17
+  Row 1921: Jn 18:17             → Ps 106:39
+  Row 1922: Jn 18:20             → Ps 18:15
+  Row 1923: Jn 18:31             → Mt 19:30
+  Row 1924: Jn 18:9              → 1Kings 7:4
+  Row 1926: Jn 18:13             → Nm 17:9
+  Row 1927: Jn 18:27             → 1Thes 5:18
+  Row 1928: Jn 18:27             → 1Mc 2:39
+  Row 1930: Jn 18:16             → Mt 10:17
+  Row 1931: Jn 18:23             → Lk 10:9
+  Row 1932: Jn 21:23             → Mt 21:23
+  Row 1933: Jn 21:6              → Mt 21:46
+  Row 1934: Jn 21:2              → Ps 32:6
+  Row 1937: Jn 21:15             → Gn 28:19
+  Row 1939: Jn 21:22             → 1Mc 12:14
+  Row 1940: Jn 21:23             → Acts 4:7
+  Row 1941: Jn 21:28             → Sir 48:17
+  Row 1943: Jn 21:32             → 2Chr 7:15
+  Row 1949: Jn 21:29             → 2Kings 21:24
+  Row 1950: Jn 21:31             → Mt 24:31
+  Row 1951: Jn 21:2              → Tb 1:24
+  Row 1953: Jn 21:3              → 1Jn 2:21
+  Row 1954: Jn 21:34             → Ps 95:4
+  Row 1956: Jn 21:29             → Jb 38:23
+  Row 1958: Mt 21:27             → Jas 1:13
+  Row 1961: Mt 21:26             → Gn 9:21
+  Row 1967: Mt 27:3              → Neh 3:22
+  Row 1968: Mt 27:40             → Prv 23:17
+  Row 1969: Mt 27:39             → Mk 12:11
+  Row 1970: Mt 27:1              → Neh 10:30
+  Row 1971: Mt 27:19             → Ps 115:8
+  Row 1972: Mt 27:23             → Tb 14:14
+  Row 1973: Mt 27:34             → Dn 13:46
+  Row 1975: Mt 27:48             → Prv 27:16
+  Row 1976: Mt 27:7              → 1Kings 11:19
+  Row 1978: Mt 27:5              → Eph 3:12
+  Row 1980: Mk 11:24             → Lk 24:24
+  Row 1983: Mk 11:30             → Rom 8:18
+  Row 1985: Mk 11:70             → Sir 9:22
+  Row 1987: Mk 11:42             → Prv 23:3
+  Row 1988: Mk 11:3              → Tb 1:11
+  Row 1989: Mk 11:3              → 2Mc 10:1
+  Row 1990: Mk 11:15             → Jdt 1:4
+  Row 1992: Mk 11:6              → Nm 33:44
+  Row 1994: Mk 11:2              → Neh 8:8
+  Row 1997: Mk 11:23             → Jn 6:9
+  Row 1999: Mk 11:26             → Jn 6:49
+  Row 2003: Jn 11:63             → Jb 24:17
+  Row 2005: Jn 11:37             → Mt 16:16
+  Row 2007: Jn 11:11             → Prv 23:3
+  Row 2008: Jn 11:22             → Jos 15:20
+  Row 2009: Jn 11:29             → Zec 11:4
+  Row 2014: Jn 11:28             → Ex 36:22
+  Row 2015: Jn 11:24             → Jer 29:9
+  Row 2018: Jn 11:16             → Sir 43:35
+  Row 2019: Jn 11:20             → 1Jn 2:2
+  Row 2028: Jn 11:19             → 1Cor 14:27
+  Row 2029: Jn 11:6              → Jb 33:19
+  Row 2030: Jn 11:23             → Lk 19:10
+  Row 2033: Jn 11:17             → Nm 15:23
+  Row 2035: Jn 8:47              → Acts 15:6
+  Row 2037: Jn 8:7               → Jos 2:9
+  Row 2041: Jn 8:25              → Mt 23:22
+  Row 2042: Jn 8:47              → Lk 9:43
+  Row 2044: Jn 8:4               → Sir 1:20
+  Row 2045: Jn 8:3               → Heb 7:23
+  Row 2049: Jn 8:2               → Tit 2:10
+  Row 2050: Jn 8:27              → Acts 11:28
+  Row 2052: Mk 8:5               → Apc 14:5
+  Row 2053: Mk 8:17              → Lk 4:6
+  Row 2054: Mk 8:3               → 1Cor 10:32
+  Row 2055: Mk 8:1               → Lk 23:4
+  Row 2056: Mk 8:22              → Prv 24:24
+  Row 2060: 1Cor 5:5             → Zec 14:19
+  Row 2064: 1Cor 5:3             → Ps 35:3
+  Row 2066: 1Cor 5:19            → Lk 18:27
+  Row 2069: Gal 1:19             → Ps 26:13
+  Row 2070: Gal 1:2              → 2Cor 4:7
+  Row 2071: Gal 1:8              → Tb 11:19
+  Row 2072: Gal 1:9              → Ps 144:3
+  Row 2074: Dt 1:11              → Jer 10:23
+  Row 2075: Dt 1:3               → Ps 145:3
+  Row 2078: Dt 1:3               → 1Chr 22:17
+  Row 2080: Dt 5:13              → Sir 5:2
+  Row 2081: Dt 5:6               → 3Jn 1:8
+  Row 2090: Eph 5:32             → Rom 16:5
+  Row 2098: Col 1:18             → Sir 41:20
+  Row 2102: Col 1:23             → 1Thes 1:10
+  Row 2106: Col 1:1              → Ps 65:4
+  Row 2107: Col 1:1              → 2Thes 1:1
+  Row 2108: Col 1:14             → 2Thes 2:14
+  Row 2109: Col 1:2              → 2Cor 12:3
+  Row 2111: Col 1:1              → 2Thes 3:8
+  Row 2112: Col 1:10             → 2Thes 3:10
+  Row 2113: Col 1:14             → Gn 34:17
+  Row 2114: Col 1:14             → Prv 28:24
+  Row 2117: Col 1:27             → Jb 36:12
+  Row 2118: Col 1:4              → 1Chr 23:16
+  Row 2120: Col 1:1              → Ps 137:5
+  Row 2121: Col 1:4              → Nm 9:23
+  Row 2122: Col 1:1              → 1Chr 23:16
+  Row 2125: Col 1:16             → 2Thes 1:12
+  Row 2126: Col 1:3              → Wis 15:6
+  Row 2130: Col 1:14             → Jer 43:11
+  Row 2133: Mk 10:5              → 1Tim 6:21
+  Row 2135: Mk 10:30             → Jer 50:7
+  Row 2140: Mk 1:2               → 2Tim 3:7
+  Row 2142: Mk 1:16              → Sir 33:3
+  Row 2145: Phlm 1:10            → Sir 19:28
+  Row 2147: Phlm 1:3             → Heb 4:3
+  Row 2149: Phlm 1:4             → Gal 5:21
+  Row 2153: Phlm 1:18            → Rom 1:5
+  Row 2154: Phlm 1:1             → Lk 4:3
+  Row 2156: Phlm 1:4             → Is 2:16
+  Row 2158: Phlm 1:17            → 1Jn 5:3
+  Row 2159: Phlm 1:18            → Lv 11:15
+  Row 2160: Phlm 1:19            → Heb 7:16
+  Row 2163: Phlm 1:3             → Prv 22:22
+  Row 2166: Phlm 1:10            → Gal 4:2
+  Row 2167: Phlm 1:23            → Sir 24:7
+  Row 2168: Phlm 1:25            → Rom 6:10
+  Row 2169: Phlm 1:14            → Heb 10:1
+  Row 2173: Phlm 1:2             → Jdt 4:7
+  Row 2174: Phlm 1:5             → 1Cor 11:29
+  Row 2175: Phlm 1:18            → 1Mc 2:21
+  Row 2178: Phlm 1:1             → Gal 3:2
+  Row 2183: Mk 11:4              → Sir 24:9
+  Row 2184: Mk 11:16             → Phil 1:28
+  Row 2185: Mk 11:2              → Jn 1:4
+  Row 2188: Mk 1:13              → Jdt 5:19
+  Row 2189: Mk 1:27              → Sir 11:27
+  Row 2194: Mk 1:18              → Rom 4:12
+  Row 2197: Rom 1:22             → Hos 4:4
+  Row 2198: Rom 1:25             → Ez 47:21
+  Row 2200: Rom 1:8              → Mt 10:36
+  Row 2201: Rom 1:14             → Est 6:5
+  Row 2202: Rom 1:1              → Ps 33:19
+  Row 2203: Rom 1:15             → 1Cor 7:26
+  Row 2204: Rom 1:15             → Jb 36:12
+  Row 2205: Rom 1:16             → Nm 19:22
+  Row 2207: Rom 1:20             → Gn 22:11
+  Row 2211: Rom 1:18             → Neh 12:7
+  Row 2213: Rom 1:20             → Jer 11:14
+  Row 2218: Rom 1:17             → Sir 22:29
+  Row 2219: Rom 1:3              → Ex 25:19
+  Row 2220: Jn 1:4               → Bar 1:11
+  Row 2225: Jn 1:3               → Sir 33:1
+  Row 2231: Mk 1:6               → Jb 7:8
+  Row 2232: Mk 1:8               → Heb 4:4
+  Row 2237: Mk 1:10              → 1Thes 1:1
+  Row 2238: Jude 1:10            → Jb 30:6
+  Row 2240: Jude 1:10            → Ps 81:1
+  Row 2241: Apc 1:19             → Gn 15:16
+  Row 2246: Nm 1:1               → Jn 6:29
+  Row 2251: Nm 1:12              → Rev 4:1
+  Row 2252: Nm 1:2               → Ez 41:4
+  Row 2253: Nm 5:8               → Phil 2:10
+  Row 2254: Nm 5:9               → Eph 5:23
+  Row 2255: Nm 5:10              → Jn 11:51
+  Row 2256: Nm 5:11              → Rom 3:11
+  Row 2257: Nm 5:10              → Rev 7:16
+  Row 2263: Nm 13:7              → Sir 38:34
+  Row 2264: Nm 13:17             → Ps 77:69
+  Row 2266: Nm 13:18             → Dt 28:44
+  Row 2268: Nm 13:18             → Jn 17:16
+  Row 2276: Jn 19:11             → Acts 1:7
+  Row 2277: Jn 19:18             → Gn 4:26
+  Row 2304: Jn 19:43             → Eph 5:21
+
+--- Chapter/verse corrections (same book) ---
+  Row    4: Gn 22:19             → Gn 23:2
+  Row    5: Gn 22:7              → Gn 24:7
+  Row    6: Gn 22:20             → Gn 24:20
+  Row    7: Gn 22:27             → Gn 24:27
+  Row   12: Gn 22:30             → Gn 25:30
+  Row   16: Gn 20:31             → Gn 25:31
+  Row   17: Gn 20:26             → Gn 26:1
+  Row   18: Gn 20:35             → Gn 26:4
+  Row   26: Gn 27:21             → Gn 28:21
+  Row   34: Gn 31:17             → Gn 32:17
+  Row   37: Gn 35:2              → Gn 33:3
+  Row   38: Gn 35:9              → Gn 33:9
+  Row   39: Gn 35:20             → Gn 33:20
+  Row   40: Gn 35:3              → Gn 34:3
+  Row   41: Gn 35:49             → Gn 34:9
+  Row   42: Gn 35:24             → Gn 34:24
+  Row   43: Gn 35:26             → Gn 34:26
+  Row   50: Gn 36:2              → Gn 26:32
+  Row   53: Gn 37:29             → Gn 37:30
+  Row   55: Gn 37:4              → Gn 38:4
+  Row   56: Gn 37:13             → Gn 38:14
+  Row   57: Gn 37:17             → Gn 38:17
+  Row   62: Gn 40:5              → Gn 41:5
+  Row   63: Gn 40:30             → Gn 41:30
+  Row   64: Gn 40:33             → Gn 41:33
+  Row   65: Gn 40:47             → Gn 41:47
+  Row   66: Gn 40:48             → Gn 41:48
+  Row   68: Gn 41:5              → Gn 42:20
+  Row   69: Gn 41:23             → Gn 42:24
+  Row   76: Gn 45:22             → Gn 44:22
+  Row   82: Gn 45:9              → Gn 46:9
+  Row   83: Gn 45:10             → Gn 46:10
+  Row   84: Gn 45:13             → Gn 46:14
+  Row   85: Gn 45:19             → Gn 46:19
+  Row   99: Gn 49:29             → Gn 49:20
+  Row  117: Ex 6:3               → Ex 40:23
+  Row  125: Ex 8:8               → Ex 9:13
+  Row  129: Ex 9:34              → Ex 9:13
+  Row  138: Ex 40:18             → Ex 12:18
+  Row  139: Ex 40:27             → Ex 12:27
+  Row  140: Ex 40:40             → Ex 12:40
+  Row  144: Ex 40:3              → Ex 15:3
+  Row  146: Ex 40:6              → Ex 15:6
+  Row  147: Ex 40:7              → Ex 15:7
+  Row  148: Ex 40:8              → Ex 15:8
+  Row  149: Ex 40:9              → Ex 15:9
+  Row  150: Ex 40:13             → Ex 15:13
+  Row  152: Ex 40:15             → Ex 15:15
+  Row  153: Ex 40:19             → Ex 15:19
+  Row  164: Ex 16:4              → Ex 16:15
+  Row  167: Ex 18:4              → Ex 19:4
+  Row  173: Ex 20:19             → Ex 22:19
+  Row  174: Ex 20:24             → Ex 23:24
+  Row  175: Ex 20:26             → Ex 23:26
+  Row  177: Ex 24:6              → Ex 25:6
+  Row  178: Ex 24:13             → Ex 25:13
+  Row  179: Ex 24:29             → Ex 26:29
+  Row  180: Ex 24:15             → Ex 28:15
+  Row  182: Ex 24:20             → Ex 29:20
+  Row  183: Ex 24:38             → Ex 29:38
+  Row  184: Ex 24:42             → Ex 29:42
+  Row  185: Ex 24:23             → Ex 30:23
+  Row  187: Lv 25:5              → Lv 24:5
+  Row  188: Lv 25:18             → Lv 24:18
+  Row  190: Lv 25:31             → Lv 26:31
+  Row  191: Lv 25:33             → Lv 27:33
+  Row  206: Jos 2:2              → Jos 3:2
+  Row  207: Jos 2:15             → Jos 3:15
+  Row  209: Jos 3:21             → Jos 4:21
+  Row  215: Jos 7:7              → Jos 8:7
+  Row  218: Jgs 13:7             → Jgs 14:9
+  Row  219: Jgs 18:19            → Jgs 16:19
+  Row  222: Jgs 18:30            → Jgs 20:30
+  Row  225: Ru 1:20              → Ru 2:20
+  Row  227: Ru 1:18              → Ru 3:18
+  Row  250: Tb 1:12              → Tb 1:13
+  Row  253: Tb 2:19              → Tb 4:3
+  Row  254: Tb 2:19              → Tb 4:20
+  Row  255: Tb 10:2              → Tb 5:2
+  Row  256: Tb 10:5              → Tb 6:5
+  Row  259: Tb 2:5               → Tb 7:5
+  Row  263: Jdt 2:4              → Jdt 1:4
+  Row  266: Jdt 2:6              → Jdt 3:6
+  Row  267: Jdt 2:5              → Jdt 4:5
+  Row  268: Jdt 2:10             → Jdt 4:9
+  Row  273: Jdt 13:16            → Jdt 14:16
+  Row  277: Jdt 15:2             → Jdt 16:2
+  Row  278: Jdt 15:3             → Jdt 16:3
+  Row  279: Jdt 15:5             → Jdt 16:5
+  Row  281: Jdt 15:7             → Jdt 16:7
+  Row  282: Jdt 15:8             → Jdt 16:8
+  Row  284: Jdt 15:10            → Jdt 16:10
+  Row  285: Jdt 15:11            → Jdt 16:11
+  Row  286: Jdt 15:13            → Jdt 16:13
+  Row  287: Jdt 15:15            → Jdt 16:15
+  Row  288: Jdt 15:17            → Jdt 16:17
+  Row  289: Jdt 15:1             → Jdt 16:18
+  Row  290: Jdt 15:19            → Jdt 16:19
+  Row  291: Jdt 15:20            → Jdt 16:20
+  Row  292: Jdt 15:21            → Jdt 16:21
+  Row  293: Jdt 15:22            → Jdt 16:22
+  Row  294: Jdt 15:29            → Jdt 16:29
+  Row  297: Est 3:8              → Est 2:8
+  Row  298: Est 3:19             → Est 2:19
+  Row  301: Est 3:12             → Est 4:12
+  Row  303: Est 3:4              → Est 7:4
+  Row  304: Est 3:13             → Est 8:13
+  Row  306: Est 3:2              → Est 11:2
+  Row  307: Est 12:8             → Est 13:9
+  Row  311: Est 16:19            → Est 14:19
+  Row  322: Jb 9:2               → Jb 8:2
+  Row  323: Jb 9:6               → Jb 8:6
+  Row  324: Jb 9:14              → Jb 8:14
+  Row  329: Jb 10:3              → Jb 10:13
+  Row  330: Jb 9:13              → Jb 13:13
+  Row  331: Jb 9:10              → Jb 13:20
+  Row  332: Jb 9:4               → Jb 14:4
+  Row  336: Jb 19:4              → Jb 19:5
+  Row  341: Ps 19:3              → Ps 1:3
+  Row  343: Ps 19:6              → Ps 1:6
+  Row  346: Ps 19:3              → Ps 2:3
+  Row  348: Ps 19:6              → Ps 2:6
+  Row  349: Ps 19:8              → Ps 2:8
+  Row  356: Ps 19:4              → Ps 3:4
+  Row  359: Ps 19:7              → Ps 108:26
+  Row  360: Ps 19:8              → Ps 3:8
+  Row  371: Ps 19:6              → Ps 5:6
+  Row  372: Ps 19:7              → Ps 5:8
+  Row  374: Ps 19:9              → Ps 5:9
+  Row  375: Ps 19:11             → Ps 5:11
+  Row  385: Ps 19:3              → Ps 7:3
+  Row  386: Ps 19:4              → Ps 7:4
+  Row  387: Ps 19:5              → Ps 7:5
+  Row  390: Ps 19:11             → Ps 7:11
+  Row  391: Ps 19:16             → Ps 7:16
+  Row  394: Ps 19:4              → Ps 8:4
+  Row  397: Ps 19:7              → Ps 101:16
+  Row  401: Ps 19:2              → Ps 9:2
+  Row  402: Ps 19:5              → Ps 9:5
+  Row  403: Ps 19:6              → Ps 9:6
+  Row  404: Ps 19:7              → Ps 9:7
+  Row  415: Ps 19:11             → Ps 9:32
+  Row  419: Ps 19:18             → Ps 9:39
+  Row  421: Ps 19:1              → Ps 11:1
+  Row  422: Ps 19:2              → Ps 11:2
+  Row  424: Ps 19:6              → Ps 11:6
+  Row  425: Ps 19:8              → Ps 11:8
+  Row  427: Ps 19:3              → Ps 12:3
+  Row  430: Ps 19:1              → Ps 20:1
+  Row  432: Ps 19:4              → Ps 13:4
+  Row  444: Ps 19:2              → Ps 29:2
+  Row  447: Ps 19:7              → Ps 29:7
+  Row  448: Ps 19:10             → Ps 29:10
+  Row  449: Ps 19:12             → Ps 29:12
+  Row  450: Ps 19:13             → Ps 34:23
+  Row  454: Ps 19:6              → Ps 30:6
+  Row  455: Ps 19:11             → Ps 30:11
+  Row  460: Ps 19:25             → Ps 75:12
+  Row  462: Ps 19:3              → Ps 31:3
+  Row  465: Ps 19:6              → Ps 31:6
+  Row  466: Ps 19:7              → Ps 31:7
+  Row  468: Ps 19:9              → Ps 31:9
+  Row  475: Ps 19:7              → Ps 32:7
+  Row  478: Ps 19:15             → Ps 32:15
+  Row  488: Ps 19:13             → Ps 33:13
+  Row  496: Ps 19:3              → Ps 34:3
+  Row  497: Ps 19:4              → Ps 69:3
+  Row  498: Ps 19:7              → Ps 34:7
+  Row  501: Ps 19:12             → Ps 34:11
+  Row  503: Ps 19:14             → Ps 34:14
+  Row  505: Ps 19:17             → Ps 34:17
+  Row  510: Ps 19:3              → Ps 35:3
+  Row  511: Ps 19:4              → Ps 35:4
+  Row  512: Ps 19:5              → Ps 35:5
+  Row  517: Ps 19:2              → Ps 36:2
+  Row  520: Ps 19:5              → Ps 36:5
+  Row  521: Ps 19:6              → Ps 36:6
+  Row  526: Ps 19:35             → Ps 36:15
+  Row  528: Ps 19:17             → Ps 36:17
+  Row  530: Ps 19:2              → Ps 36:22
+  Row  531: Ps 19:24             → Ps 36:24
+  Row  533: Ps 19:27             → Ps 36:27
+  Row  541: Ps 19:38             → Ps 36:35
+  Row  546: Ps 19:40             → Ps 36:40
+  Row  547: Ps 19:2              → Ps 6:2
+  Row  548: Ps 19:3              → Ps 37:3
+  Row  554: Ps 19:15             → Ps 37:15
+  Row  555: Ps 19:16             → Ps 37:16
+  Row  556: Ps 19:17             → Ps 37:17
+  Row  558: Ps 19:19             → Ps 37:19
+  Row  562: Ps 19:2              → Ps 38:2
+  Row  563: Ps 19:3              → Ps 38:3
+  Row  564: Ps 19:4              → Ps 38:4
+  Row  565: Ps 19:6              → Ps 142:6
+  Row  566: Ps 19:9              → Ps 38:7
+  Row  576: Ps 19:5              → Ps 39:5
+  Row  577: Ps 19:6              → Ps 39:6
+  Row  583: Ps 19:6              → Ps 110:9
+  Row  585: Ps 19:5              → Ps 40:9
+  Row  586: Ps 19:12             → Ps 40:12
+  Row  587: Ps 19:13             → Ps 40:13
+  Row  590: Ps 19:2              → Ps 41:2
+  Row  591: Ps 19:4              → Ps 41:4
+  Row  592: Ps 19:5              → Ps 41:5
+  Row  593: Ps 19:6              → Ps 87:15
+  Row  596: Ps 19:3              → Ps 91:3
+  Row  604: Ps 19:6              → Ps 43:6
+  Row  605: Ps 19:7              → Ps 43:7
+  Row  606: Ps 19:12             → Ps 43:12
+  Row  608: Ps 19:14             → Ps 43:14
+  Row  609: Ps 19:135            → Ps 43:15
+  Row  611: Ps 19:1              → Ps 43:23
+  Row  614: Ps 19:2              → Ps 44:2
+  Row  615: Ps 19:3              → Ps 44:3
+  Row  616: Ps 19:4              → Ps 44:4
+  Row  621: Ps 19:17             → Ps 44:17
+  Row  622: Ps 19:18             → Ps 43:9
+  Row  627: Ps 19:6              → Ps 45:6
+  Row  628: Ps 19:7              → Ps 45:7
+  Row  635: Ps 19:6              → Ps 51:9
+  Row  636: Ps 19:7              → Ps 98:5
+  Row  637: Ps 19:9              → Ps 46:9
+  Row  639: Ps 19:2              → Ps 47:2
+  Row  640: Ps 19:4              → Ps 47:4
+  Row  642: Ps 19:6              → Ps 47:6
+  Row  645: Ps 19:13             → Ps 47:13
+  Row  652: Ps 19:8              → Ps 48:8
+  Row  653: Ps 19:9              → Ps 48:9
+  Row  654: Ps 19:14             → Ps 48:14
+  Row  660: Ps 19:5              → Ps 49:5
+  Row  661: Ps 19:8              → Ps 49:8
+  Row  662: Ps 19:14             → Ps 49:14
+  Row  663: Ps 19:17             → Ps 49:17
+  Row  664: Ps 19:18             → Ps 49:19
+  Row  667: Ps 19:3              → Ps 108:26
+  Row  668: Ps 19:4              → Ps 50:4
+  Row  670: Ps 19:6              → Ps 50:6
+  Row  671: Ps 19:8              → Ps 50:8
+  Row  672: Ps 19:11             → Ps 50:11
+  Row  673: Ps 19:12             → Ps 50:12
+  Row  674: Ps 19:13             → Ps 50:13
+  Row  676: Ps 19:15             → Ps 50:15
+  Row  682: Ps 19:6              → Ps 51:7
+  Row  684: Ps 19:11             → Ps 51:11
+  Row  686: Ps 19:16             → Ps 13:5
+  Row  687: Ps 19:3              → Ps 53:3
+  Row  688: Ps 19:7              → Ps 53:7
+  Row  689: Ps 19:8              → Ps 53:8
+  Row  691: Ps 19:2              → Ps 54:2
+  Row  692: Ps 19:4              → Ps 43:17
+  Row  695: Ps 19:8              → Ps 54:8
+  Row  697: Ps 19:13             → Ps 54:13
+  Row  699: Ps 19:91             → Ps 54:19
+  Row  700: Ps 19:20             → Ps 54:20
+  Row  701: Ps 19:22             → Ps 54:22
+  Row  704: Ps 19:4              → Ps 55:4
+  Row  706: Ps 19:7              → Ps 55:7
+  Row  708: Ps 19:13             → Ps 55:13
+  Row  712: Ps 19:11             → Ps 56:6
+  Row  714: Ps 19:2              → Ps 57:2
+  Row  716: Ps 19:4              → Ps 57:4
+  Row  721: Ps 19:2              → Ps 58:2
+  Row  723: Ps 19:4              → Ps 58:4
+  Row  724: Ps 19:5              → Ps 58:5
+  Row  725: Ps 19:9              → Ps 58:15
+  Row  731: Ps 19:3              → Ps 59:3
+  Row  732: Ps 19:4              → Ps 59:4
+  Row  733: Ps 19:5              → Ps 59:5
+  Row  735: Ps 19:7              → Ps 59:7
+  Row  736: Ps 19:2              → Ps 60:3
+  Row  738: Ps 19:6              → Ps 60:6
+  Row  740: Ps 19:9              → Ps 60:9
+  Row  742: Ps 19:4              → Ps 61:4
+  Row  744: Ps 19:13             → Ps 61:13
+  Row  745: Ps 19:2              → Ps 62:2
+  Row  748: Ps 19:4              → Ps 62:4
+  Row  749: Ps 19:5              → Ps 62:5
+  Row  751: Ps 19:7              → Ps 62:7
+  Row  752: Ps 19:9              → Ps 62:9
+  Row  753: Ps 19:3              → Ps 63:3
+  Row  754: Ps 19:7              → Ps 113:15
+  Row  755: Ps 19:8              → Ps 63:8
+  Row  758: Ps 19:5              → Ps 64:5
+  Row  762: Ps 19:13             → Ps 64:13
+  Row  768: Ps 19:4              → Ps 65:4
+  Row  770: Ps 19:6              → Ps 65:6
+  Row  773: Ps 19:12             → Ps 65:12
+  Row  774: Ps 19:15             → Ps 65:15
+  Row  782: Ps 19:4              → Ps 66:6
+  Row  783: Ps 19:5              → Ps 66:5
+  Row  785: Ps 19:2              → Ps 67:2
+  Row  786: Ps 19:3              → Ps 67:3
+  Row  787: Ps 19:8              → Ps 67:8
+  Row  789: Ps 19:14             → Ps 67:14
+  Row  790: Ps 19:15             → Ps 67:15
+  Row  791: Ps 19:18             → Ps 67:18
+  Row  796: Ps 19:25             → Ps 67:25
+  Row  797: Ps 19:26             → Ps 67:26
+  Row  800: Ps 19:29             → Ps 67:29
+  Row  801: Ps 19:31             → Ps 67:31
+  Row  803: Ps 19:34             → Ps 67:34
+  Row  806: Ps 19:4              → Ps 68:4
+  Row  807: Ps 19:5              → Ps 68:5
+  Row  808: Ps 19:6              → Ps 68:6
+  Row  810: Ps 19:8              → Ps 68:8
+  Row  811: Ps 19:9              → Ps 68:9
+  Row  812: Ps 19:13             → Ps 68:13
+  Row  817: Ps 19:27             → Ps 68:27
+  Row  820: Ps 19:30             → Ps 65:19
+  Row  823: Ps 19:33             → Ps 68:33
+  Row  828: Ps 19:2              → Ps 69:2
+  Row  829: Ps 19:3              → Ps 69:3
+  Row  830: Ps 19:5              → Ps 69:5
+  Row  834: Ps 19:9              → Ps 70:9
+  Row  835: Ps 19:12             → Ps 70:12
+  Row  836: Ps 19:23             → Ps 70:23
+  Row  837: Ps 19:24             → Ps 88:17
+  Row  840: Ps 19:4              → Ps 71:4
+  Row  849: Ps 19:2              → Ps 72:2
+  Row  853: Ps 19:6              → Ps 72:6
+  Row  857: Ps 19:19             → Ps 72:19
+  Row  858: Ps 19:24             → Ps 72:24
+  Row  860: Ps 19:27             → Ps 72:27
+  Row  862: Ps 19:3              → Ps 73:3
+  Row  864: Ps 19:4              → Ps 73:9
+  Row  866: Ps 19:15             → Ps 73:15
+  Row  868: Ps 19:6              → Ps 74:6
+  Row  869: Ps 19:7              → Ps 74:7
+  Row  874: Ps 19:8              → Ps 75:8
+  Row  879: Ps 19:6              → Ps 76:6
+  Row  882: Ps 19:9              → Ps 76:10
+  Row  883: Ps 19:14             → Ps 76:12
+  Row  885: Ps 19:14             → Ps 76:14
+  Row  889: Ps 19:3              → Ps 77:4
+  Row  892: Ps 19:9              → Ps 77:9
+  Row  893: Ps 19:15             → Ps 77:15
+  Row  896: Ps 19:26             → Ps 77:20
+  Row  899: Ps 19:25             → Ps 77:25
+  Row  900: Ps 19:20             → Ps 77:26
+  Row  903: Ps 19:30             → Ps 77:30
+  Row  908: Ps 19:7              → Ps 77:37
+  Row  910: Ps 19:39             → Ps 77:39
+  Row  914: Ps 19:45             → Ps 77:45
+  Row  915: Ps 19:46             → Ps 77:46
+  Row  917: Ps 19:5              → Ps 77:50
+  Row  919: Ps 19:52             → Ps 77:52
+  Row  920: Ps 19:58             → Ps 77:58
+  Row  923: Ps 19:63             → Ps 77:63
+  Row  924: Ps 19:64             → Ps 77:64
+  Row  926: Ps 19:69             → Ps 77:69
+  Row  930: Ps 19:2              → Ps 78:2
+  Row  932: Ps 19:4              → Ps 78:4
+  Row  933: Ps 19:8              → Ps 78:8
+  Row  935: Ps 19:10             → Ps 78:10
+  Row  936: Ps 19:1              → Ps 68:1
+  Row  937: Ps 19:4              → Ps 79:4
+  Row  938: Ps 19:9              → Ps 79:9
+  Row  939: Ps 19:8              → Ps 79:4
+  Row  940: Ps 19:14             → Ps 79:14
+  Row  941: Ps 19:15             → Ps 79:15
+  Row  943: Ps 19:2              → Ps 80:2
+  Row  944: Ps 19:3              → Ps 80:3
+  Row  945: Ps 19:4              → Ps 80:4
+  Row  948: Ps 19:9              → Ps 80:7
+  Row  952: Ps 19:15             → Ps 80:15
+  Row  957: Ps 19:2              → Ps 82:2
+  Row  958: Ps 19:3              → Ps 82:3
+  Row  959: Ps 19:5              → Ps 82:5
+  Row  962: Ps 19:14             → Ps 82:14
+  Row  963: Ps 19:15             → Ps 82:15
+  Row  970: Ps 19:9              → Ps 83:9
+  Row  974: Ps 19:2              → Ps 84:2
+  Row  976: Ps 19:4              → Ps 84:4
+  Row  978: Ps 19:6              → Ps 84:6
+  Row  981: Ps 19:11             → Ps 84:11
+  Row  983: Ps 19:43             → Ps 84:13
+  Row  985: Ps 19:2              → Ps 85:2
+  Row  987: Ps 19:5              → Ps 85:5
+  Row  994: Ps 19:1              → Ps 86:1
+  Row  995: Ps 19:4              → Ps 86:4
+  Row 1005: Ps 19:11             → Ps 87:11
+  Row 1006: Ps 19:12             → Ps 87:12
+  Row 1008: Ps 19:17             → Ps 87:17
+  Row 1011: Ps 19:4              → Ps 88:4
+  Row 1013: Ps 19:10             → Ps 88:10
+  Row 1014: Ps 19:12             → Ps 88:12
+  Row 1018: Ps 19:32             → Ps 88:32
+  Row 1019: Ps 19:33             → Ps 88:33
+  Row 1021: Ps 19:35             → Ps 88:35
+  Row 1028: Ps 19:2              → Ps 96:2
+  Row 1029: Ps 19:3              → Ps 96:3
+  Row 1034: Ps 19:3              → Ps 67:33
+  Row 1036: Ps 19:5              → Ps 97:5
+  Row 1038: Ps 19:3              → Ps 98:3
+  Row 1043: Ps 19:4              → Ps 100:4
+  Row 1044: Ps 19:5              → Ps 100:5
+  Row 1045: Ps 19:6              → Ps 100:6
+  Row 1046: Ps 19:7              → Ps 100:7
+  Row 1048: Ps 19:4              → Ps 101:4
+  Row 1049: Ps 19:6              → Ps 101:6
+  Row 1051: Ps 19:12             → Ps 101:12
+  Row 1052: Ps 19:13             → Ps 101:13
+  Row 1053: Ps 19:14             → Ps 101:14
+  Row 1056: Ps 19:18             → Ps 101:18
+  Row 1057: Ps 19:19             → Ps 101:19
+  Row 1063: Ps 19:1              → Ps 102:1
+  Row 1064: Ps 19:3              → Ps 102:3
+  Row 1065: Ps 19:4              → Ps 102:4
+  Row 1066: Ps 19:5              → Ps 102:5
+  Row 1071: Ps 19:21             → Ps 102:21
+  Row 1072: Ps 19:8              → Ps 102:20
+  Row 1076: Ps 19:12             → Ps 103:2
+  Row 1079: Ps 19:6              → Ps 103:6
+  Row 1080: Ps 19:8              → Ps 103:8
+  Row 1082: Ps 19:19             → Ps 103:20
+  Row 1083: Ps 19:23             → Ps 103:23
+  Row 1088: Ps 19:34             → Ps 103:34
+  Row 1097: Ps 19:14             → Ps 104:14
+  Row 1098: Ps 19:18             → Ps 104:18
+  Row 1099: Ps 19:22             → Ps 104:22
+  Row 1100: Ps 19:25             → Ps 104:25
+  Row 1103: Ps 19:28             → Ps 104:28
+  Row 1106: Ps 19:31             → Ps 104:31
+  Row 1107: Ps 19:2              → Ps 104:32
+  Row 1108: Ps 19:34             → Ps 104:34
+  Row 1110: Ps 19:36             → Ps 104:36
+  Row 1112: Ps 19:38             → Ps 104:38
+  Row 1118: Ps 19:4              → Ps 105:4
+  Row 1122: Ps 19:13             → Ps 105:13
+  Row 1123: Ps 19:14             → Ps 105:14
+  Row 1126: Ps 19:20             → Ps 105:20
+  Row 1134: Ps 19:4              → Ps 105:39
+  Row 1143: Ps 19:10             → Ps 106:10
+  Row 1145: Ps 19:32             → Ps 106:32
+  Row 1147: Ps 19:34             → Ps 106:34
+  Row 1150: Ps 19:37             → Ps 106:37
+  Row 1154: Ps 19:3              → Ps 107:3
+  Row 1156: Ps 19:9              → Ps 107:9
+  Row 1159: Ps 19:11             → Ps 107:11
+  Row 1163: Ps 19:6              → Ps 108:6
+  Row 1164: Ps 19:7              → Ps 108:7
+  Row 1171: Ps 19:2              → Ps 67:35
+  Row 1173: Ps 19:8              → Ps 110:8
+  Row 1178: Ps 19:4              → Ps 111:4
+  Row 1180: Ps 19:7              → Ps 111:7
+  Row 1182: Ps 19:9              → Ps 111:9
+  Row 1184: Ps 19:3              → Ps 112:3
+  Row 1188: Ps 19:2              → Ps 113:2
+  Row 1189: Ps 19:4              → Ps 113:4
+  Row 1191: Ps 19:8              → Ps 113:8
+  Row 1201: Ps 19:8              → Ps 114:8
+  Row 1202: Ps 19:2              → Ps 115:2
+  Row 1207: Ps 19:7              → Ps 118:141
+  Row 1214: Ps 19:19             → Ps 117:19
+  Row 1215: Ps 19:21             → Ps 117:21
+  Row 1217: Ps 19:25             → Ps 117:25
+  Row 1219: Ps 19:28             → Ps 117:28
+  Row 1222: Ps 19:5              → Ps 118:5
+  Row 1223: Ps 19:6              → Ps 118:6
+  Row 1225: Ps 19:10             → Ps 118:10
+  Row 1226: Ps 19:11             → Ps 118:11
+  Row 1227: Ps 19:12             → Ps 84:9
+  Row 1229: Ps 19:14             → Ps 118:14
+  Row 1232: Ps 19:18             → Ps 118:18
+  Row 1233: Ps 19:23             → Ps 118:23
+  Row 1234: Ps 19:24             → Ps 118:24
+  Row 1238: Ps 19:30             → Ps 118:30
+  Row 1239: Ps 19:31             → Ps 118:31
+  Row 1240: Ps 19:34             → Ps 118:34
+  Row 1241: Ps 19:35             → Ps 118:35
+  Row 1242: Ps 19:36             → Ps 118:36
+  Row 1243: Ps 19:37             → Ps 118:37
+  Row 1245: Ps 19:39             → Ps 118:39
+  Row 1246: Ps 19:47             → Ps 118:38
+  Row 1248: Ps 19:43             → Ps 118:43
+  Row 1249: Ps 19:46             → Ps 118:46
+  Row 1250: Ps 19:47             → Ps 118:47
+  Row 1252: Ps 19:50             → Ps 118:50
+  Row 1253: Ps 19:52             → Ps 118:52
+  Row 1255: Ps 19:53             → Ps 118:53
+  Row 1257: Ps 19:57             → Ps 118:57
+  Row 1258: Ps 19:58             → Ps 118:58
+  Row 1260: Ps 19:67             → Ps 118:67
+  Row 1261: Ps 19:68             → Ps 118:69
+  Row 1262: Ps 19:2              → Ps 118:72
+  Row 1265: Ps 19:77             → Ps 118:92
+  Row 1266: Ps 19:78             → Ps 118:78
+  Row 1267: Ps 19:79             → Ps 118:79
+  Row 1268: Ps 19:80             → Ps 118:80
+  Row 1270: Ps 19:83             → Ps 118:83
+  Row 1271: Ps 19:84             → Ps 118:84
+  Row 1276: Ps 19:93             → Ps 118:93
+  Row 1279: Ps 19:97             → Ps 118:97
+  Row 1280: Ps 19:98             → Ps 118:98
+  Row 1281: Ps 19:99             → Ps 118:99
+  Row 1282: Ps 19:103            → Ps 118:103
+  Row 1283: Ps 19:105            → Ps 118:105
+  Row 1286: Ps 19:117            → Ps 118:117
+  Row 1288: Ps 19:126            → Ps 93:5
+  Row 1289: Ps 19:127            → Ps 118:127
+  Row 1290: Ps 19:130            → Ps 118:130
+  Row 1291: Ps 19:131            → Ps 118:131
+  Row 1292: Ps 19:137            → Ps 118:134
+  Row 1293: Ps 19:135            → Ps 118:135
+  Row 1294: Ps 19:136            → Ps 118:136
+  Row 1295: Ps 19:138            → Ps 118:142
+  Row 1297: Ps 19:143            → Ps 118:143
+  Row 1299: Ps 19:147            → Ps 118:147
+  Row 1304: Ps 19:15             → Ps 118:155
+  Row 1305: Ps 19:156            → Ps 118:157
+  Row 1306: Ps 19:159            → Ps 118:159
+  Row 1307: Ps 19:161            → Ps 118:161
+  Row 1309: Ps 19:171            → Ps 118:171
+  Row 1311: Ps 19:173            → Ps 118:173
+  Row 1314: Ps 19:2              → Ps 119:2
+  Row 1315: Ps 19:3              → Ps 119:3
+  Row 1316: Ps 19:4              → Ps 119:4
+  Row 1317: Ps 19:1              → Ps 120:1
+  Row 1320: Ps 19:5              → Ps 120:5
+  Row 1322: Ps 19:2              → Ps 121:2
+  Row 1323: Ps 19:3              → Ps 80:5
+  Row 1324: Ps 19:4              → Ps 121:4
+  Row 1325: Ps 19:5              → Ps 121:5
+  Row 1326: Ps 19:7              → Ps 121:7
+  Row 1329: Ps 19:4              → Ps 123:3
+  Row 1330: Ps 19:5              → Ps 123:5
+  Row 1332: Ps 19:7              → Ps 123:7
+  Row 1336: Ps 19:7              → Ps 141:7
+  Row 1338: Ps 19:2              → Ps 142:2
+  Row 1340: Ps 19:5              → Ps 142:5
+  Row 1341: Ps 19:6              → Ps 142:6
+  Row 1342: Ps 19:9              → Ps 142:9
+  Row 1347: Ps 19:5              → Ps 143:5
+  Row 1349: Ps 19:8              → Ps 22:1
+  Row 1353: Ps 19:4              → Ps 144:4
+  Row 1356: Ps 19:11             → Ps 144:11
+  Row 1357: Ps 19:13             → Ps 144:13
+  Row 1359: Ps 19:17             → Ps 144:17
+  Row 1362: Ps 19:2              → Ps 5:8
+  Row 1363: Ps 19:4              → Ps 145:4
+  Row 1364: Ps 19:2              → Ps 146:2
+  Row 1367: Ps 19:7              → Ps 146:7
+  Row 1374: Prv 16:24            → Prv 15:24
+  Row 1377: Prv 16:31            → Prv 15:31
+  Row 1378: Prv 16:32            → Prv 15:32
+  Row 1379: Prv 16:33            → Prv 15:33
+  Row 1381: Prv 16:9             → Prv 16:7
+  Row 1386: Prv 16:25            → Prv 14:12
+  Row 1395: Prv 16:2             → Prv 17:2
+  Row 1396: Prv 16:3             → Prv 17:3
+  Row 1397: Prv 16:4             → Prv 17:4
+  Row 1398: Prv 16:18            → Prv 17:8
+  Row 1400: Prv 16:9             → Prv 17:9
+  Row 1401: Prv 16:10            → Prv 17:11
+  Row 1402: Prv 16:14            → Prv 17:14
+  Row 1403: Prv 16:17            → Prv 17:17
+  Row 1404: Prv 16:20            → Prv 17:20
+  Row 1405: Prv 16:22            → Prv 17:22
+  Row 1406: Prv 16:23            → Prv 17:23
+  Row 1407: Prv 16:24            → Prv 17:24
+  Row 1408: Prv 16:25            → Prv 17:25
+  Row 1409: Prv 16:26            → Prv 17:26
+  Row 1410: Prv 16:28            → Prv 17:28
+  Row 1412: Prv 16:4             → Prv 18:4
+  Row 1413: Prv 16:7             → Prv 18:7
+  Row 1414: Prv 16:8             → Prv 18:8
+  Row 1415: Prv 16:9             → Prv 18:9
+  Row 1416: Prv 16:10            → Prv 14:14
+  Row 1417: Prv 16:32            → Prv 18:12
+  Row 1418: Prv 16:13            → Prv 18:13
+  Row 1419: Prv 16:14            → Prv 18:14
+  Row 1420: Prv 16:15            → Prv 18:15
+  Row 1422: Prv 16:18            → Prv 18:18
+  Row 1423: Prv 16:19            → Prv 18:19
+  Row 1424: Prv 16:23            → Prv 18:23
+  Row 1425: Prv 16:2             → Prv 19:2
+  Row 1426: Prv 16:5             → Prv 19:5
+  Row 1428: Prv 16:7             → Prv 19:7
+  Row 1429: Prv 16:9             → Prv 19:10
+  Row 1431: Prv 16:12            → Prv 19:12
+  Row 1432: Prv 16:14            → Prv 19:14
+  Row 1433: Prv 16:16            → Prv 19:16
+  Row 1434: Prv 16:19            → Prv 19:19
+  Row 1435: Prv 16:23            → Prv 19:23
+  Row 1436: Prv 16:29            → Prv 19:29
+  Row 1437: Prv 16:3             → Prv 20:3
+  Row 1438: Prv 16:5             → Prv 20:5
+  Row 1440: Prv 16:8             → Prv 20:8
+  Row 1441: Prv 16:9             → Prv 20:9
+  Row 1442: Prv 16:11            → Prv 20:11
+  Row 1443: Prv 16:13            → Prv 20:13
+  Row 1444: Prv 16:14            → Prv 20:14
+  Row 1445: Prv 16:15            → Prv 20:16
+  Row 1446: Prv 16:20            → Prv 20:20
+  Row 1447: Prv 16:23            → Prv 20:23
+  Row 1448: Prv 16:24            → Prv 20:24
+  Row 1449: Prv 16:27            → Prv 20:27
+  Row 1450: Prv 16:28            → Prv 20:28
+  Row 1451: Prv 16:29            → Prv 20:29
+  Row 1452: Prv 16:30            → Prv 20:30
+  Row 1453: Prv 16:4             → Prv 21:4
+  Row 1454: Prv 16:5             → Prv 21:5
+  Row 1455: Prv 16:6             → Prv 21:6
+  Row 1456: Prv 16:7             → Prv 21:7
+  Row 1457: Prv 16:8             → Prv 21:8
+  Row 1458: Prv 16:9             → Prv 21:9
+  Row 1459: Prv 16:13            → Prv 21:13
+  Row 1460: Prv 16:14            → Prv 21:14
+  Row 1461: Prv 16:15            → Prv 21:15
+  Row 1462: Prv 16:17            → Prv 21:17
+  Row 1463: Prv 16:19            → Prv 21:19
+  Row 1464: Prv 16:20            → Prv 18:12
+  Row 1466: Prv 16:22            → Prv 21:22
+  Row 1468: Prv 16:27            → Prv 21:28
+  Row 1469: Prv 16:29            → Prv 21:30
+  Row 1470: Prv 16:30            → Prv 21:31
+  Row 1471: Prv 16:2             → Prv 22:2
+  Row 1472: Prv 16:3             → Prv 22:3
+  Row 1473: Prv 16:4             → Prv 22:4
+  Row 1474: Prv 16:9             → Prv 22:7
+  Row 1475: Prv 16:8             → Prv 22:8
+  Row 1476: Prv 16:9             → Prv 22:9
+  Row 1477: Prv 16:17            → Prv 22:17
+  Row 1478: Prv 16:3             → Prv 23:3
+  Row 1479: Prv 16:4             → Prv 23:4
+  Row 1480: Prv 16:13            → Prv 15:19
+  Row 1481: Prv 16:14            → Prv 22:14
+  Row 1482: Prv 16:15            → Prv 22:15
+  Row 1483: Prv 16:22            → Prv 22:22
+  Row 1484: Prv 16:5             → Prv 23:5
+  Row 1485: Prv 16:6             → Prv 23:6
+  Row 1486: Prv 16:8             → Prv 23:8
+  Row 1487: Prv 16:12            → Prv 23:12
+  Row 1488: Prv 16:13            → Prv 23:13
+  Row 1489: Prv 16:15            → Prv 23:15
+  Row 1490: Prv 16:17            → Prv 23:17
+  Row 1492: Prv 16:20            → Prv 23:20
+  Row 1493: Prv 16:23            → Prv 23:24
+  Row 1494: Prv 16:27            → Prv 23:27
+  Row 1495: Prv 16:29            → Prv 23:29
+  Row 1496: Prv 16:30            → Prv 23:30
+  Row 1497: Prv 16:31            → Prv 23:31
+  Row 1498: Prv 16:34            → Prv 23:34
+  Row 1499: Prv 16:35            → Prv 23:35
+  Row 1501: Prv 16:7             → Prv 24:8
+  Row 1505: Prv 16:21            → Prv 24:21
+  Row 1506: Prv 16:23            → Prv 24:23
+  Row 1507: Prv 16:2             → Prv 25:2
+  Row 1509: Prv 16:6             → Prv 25:6
+  Row 1510: Prv 16:7             → Prv 25:7
+  Row 1511: Prv 16:8             → Prv 25:8
+  Row 1513: Prv 16:11            → Prv 25:11
+  Row 1514: Prv 16:12            → Prv 25:12
+  Row 1516: Prv 16:14            → Prv 25:14
+  Row 1517: Prv 16:35            → Prv 25:15
+  Row 1518: Prv 16:19            → Prv 25:19
+  Row 1519: Prv 16:21            → Prv 25:21
+  Row 1520: Prv 16:23            → Prv 25:23
+  Row 1521: Prv 16:26            → Prv 25:26
+  Row 1523: Prv 16:4             → Prv 26:4
+  Row 1524: Prv 16:5             → Prv 26:6
+  Row 1525: Prv 16:7             → Prv 26:7
+  Row 1526: Prv 16:9             → Prv 26:9
+  Row 1527: Prv 16:15            → Prv 26:15
+  Row 1528: Prv 16:22            → Prv 26:22
+  Row 1530: Prv 16:25            → Prv 26:25
+  Row 1531: Prv 16:26            → Prv 26:26
+  Row 1532: Prv 16:27            → Prv 26:27
+  Row 1533: Prv 16:2             → Prv 27:2
+  Row 1534: Prv 16:4             → Prv 27:4
+  Row 1535: Prv 16:9             → Prv 27:9
+  Row 1536: Prv 16:13            → Prv 20:16
+  Row 1537: Prv 16:14            → Prv 27:14
+  Row 1538: Prv 16:17            → Prv 27:17
+  Row 1539: Prv 16:19            → Prv 27:19
+  Row 1540: Prv 16:23            → Prv 27:23
+  Row 1548: Prv 16:13            → Prv 28:13
+  Row 1549: Prv 16:23            → Prv 28:23
+  Row 1550: Prv 16:26            → Prv 28:26
+  Row 1551: Prv 16:27            → Prv 28:27
+  Row 1552: Prv 16:2             → Prv 29:2
+  Row 1553: Prv 16:4             → Prv 29:4
+  Row 1554: Prv 16:5             → Prv 29:5
+  Row 1556: Prv 16:13            → Prv 22:2
+  Row 1557: Prv 16:15            → Prv 29:15
+  Row 1558: Prv 16:18            → Prv 29:18
+  Row 1559: Prv 16:21            → Prv 29:21
+  Row 1560: Prv 16:23            → Prv 29:23
+  Row 1561: Prv 16:25            → Prv 29:25
+  Row 1562: Prv 16:26            → Prv 29:26
+  Row 1565: Prv 16:15            → Prv 30:15
+  Row 1566: Prv 16:19            → Prv 30:19
+  Row 1567: Prv 16:32            → Prv 30:32
+  Row 1570: Wis 16:2             → Wis 1:2
+  Row 1571: Wis 16:3             → Wis 3:3
+  Row 1572: Wis 16:19            → Wis 3:19
+  Row 1573: Wis 3:8              → Wis 5:8
+  Row 1575: Wis 3:6              → Wis 9:6
+  Row 1576: Wis 3:1              → Wis 9:8
+  Row 1577: Wis 3:3              → Wis 10:3
+  Row 1578: Wis 3:6              → Wis 10:6
+  Row 1579: Wis 3:6              → Wis 10:1
+  Row 1584: Wis 3:2              → Wis 14:2
+  Row 1586: Wis 3:12             → Wis 15:12
+  Row 1593: Sir 3:37             → Sir 7:37
+  Row 1594: Sir 3:17             → Sir 8:1
+  Row 1596: Sir 3:6              → Sir 8:7
+  Row 1605: Sir 3:2              → Sir 20:2
+  Row 1606: Sir 3:9              → Sir 20:9
+  Row 1608: Sir 3:29             → Sir 20:30
+  Row 1613: Sir 3:41             → Sir 24:42
+  Row 1614: Sir 3:44             → Sir 24:44
+  Row 1616: Sir 3:14             → Sir 25:1
+  Row 1618: Sir 3:34             → Sir 25:34
+  Row 1620: Sir 3:32             → Sir 42:26
+  Row 1623: Sir 3:33             → Sir 31:33
+  Row 1624: Sir 3:7              → Sir 21:24
+  Row 1627: Sir 3:20             → Sir 33:30
+  Row 1634: Sir 3:17             → Sir 38:18
+  Row 1635: Sir 3:35             → Sir 39:35
+  Row 1636: Sir 3:4              → Sir 40:4
+  Row 1637: Sir 3:8              → Sir 40:8
+  Row 1638: Sir 3:18             → Sir 41:18
+  Row 1652: Sir 3:18             → Sir 51:19
+  Row 1654: Is 3:11              → Is 49:18
+  Row 1699: Jer 6:6              → Jer 5:6
+  Row 1701: Jer 6:30             → Jer 5:31
+  Row 1719: Jer 15:2             → Jer 16:2
+  Row 1722: Jer 35:9             → Jer 35:10
+  Row 1728: Jer 39:4             → Jer 85:13
+  Row 1733: Jer 39:28            → Jer 44:28
+  Row 1738: 1Mc 1:21             → 1Mc 1:18
+  Row 1751: 1Mc 1:20             → 1Mc 3:20
+  Row 1752: 1Mc 1:30             → 1Mc 3:30
+  Row 1754: 1Mc 1:52             → 1Mc 4:52
+  Row 1758: 1Mc 1:18             → 1Mc 6:18
+  Row 1759: 1Mc 1:36             → 1Mc 6:36
+  Row 1764: 1Mc 1:58             → 1Mc 9:58
+  Row 1765: 1Mc 11:3             → 1Mc 10:3
+  Row 1766: 1Mc 11:39            → 1Mc 10:39
+  Row 1773: 1Mc 11:49            → 1Mc 12:49
+  Row 1833: Mt 12:10             → Mt 2:12
+  Row 1834: Mt 12:2              → Mt 23:7
+  Row 1862: Mt 8:8               → Mt 9:8
+  Row 1881: Jn 8:32              → Jn 13:31
+  Row 1896: Jn 8:29              → Jn 21:25
+  Row 1946: Jn 21:3              → Jn 12:43
+  Row 1966: Mt 27:33             → Mt 27:32
+  Row 2004: Jn 11:33             → Jn 10:33
+  Row 2010: Jn 11:7              → Jn 11:9
+  Row 2012: Jn 11:18             → Jn 13:5
+  Row 2016: Jn 11:4              → Jn 10:25
+  Row 2017: Jn 11:24             → Jn 12:37
+  Row 2024: Jn 11:33             → Jn 19:6
+  Row 2025: Jn 11:57             → Jn 19:39
+  Row 2031: Jn 11:16             → Jn 6:8
+  Row 2036: Jn 8:2               → Jn 5:27
+  Row 2039: Jn 8:26              → Jn 6:46
+  Row 2085: Eph 5:1              → Eph 5:9
+  Row 2199: Rom 1:26             → Rom 3:30
+  Row 2262: Nm 13:1              → Nm 4:24
+  Row 2295: Jn 19:20             → Jn 10:2
+
+======================================================================
+SECTION 2: UNCHANGED LOW CONFIDENCE
+======================================================================
+(436 rows still marked LOW_CONFIDENCE — needs manual review)
+
+  Row   14: Gn 20:21
+           v.12.) yet he prayeth inftantly for the fainc. And Moy fes here attributeth Rebe...
+  Row   15: Gn 20:23
+           Augu- ftin ) that the elder people of the Iewes thal ferue the yonger Chriftian ...
+  Row   27: Gn 27:45
+           S.Cyprian alfo writing of Chrifme mentioneth the two forts of holie oyle vfed in...
+  Row   29: Gn 29:9
+           Rachel beareth lofeph. 25, Lacob defirous to rerurne honse, is hyred to ftay for...
+  Row   35: Gn 31:7
+           S. Auguftin anfwereth, chat he neither diftrufted in God, nor did amie vnlawful ...
+  Row   46: Gn 35:10
+           Alfo —4 prince , or valient with Ged, as S, Hierome sheweth Tradit Heb, For Ira ...
+  Row   51: Gn 36:6
+           Q 3 CHAP. By comparifon vf interrupted companies the continual fuc- cefhon of th...
+  Row   52: Gn 37:36
+           eae ND Iacob dwelt in the land of Chanaan , wherin = his father feiourned. 2. An...
+  Row   54: Gn 37:35
+           Bur in al their Edicicns, alfo in that which was printed the yeare next folowing...
+  Row   60: Gn 40:8
+           Some are rather etfeés of things paft , then fignes of anie things to come. Of w...
+  Row   67: Gn 41:45
+           The Rabins doe commonly rnterprete them both to- gether , Themansto whom fecrets...
+  Row   72: Gn 42:38
+           For this phratc, of bringing un o lel, and defeendirg mio hel , viually fpoken i...
+  Row   77: Gn 45:42
+           Jofeph. [LOW_CONFIDENCE]...
+  Row   78: Gn 45:5
+           me into thefe countries : for (2) God. fent me before you into AEgypr for your p...
+  Row   81: Gn 45:24
+           Trauelers in iourney are cafily prouoked to anger and brawling : cfpecially if t...
+  Row   87: Gn 48:3
+           called of God, and yet preferred before the lewes. S$. Cypri.li, 1.¢.21, aduer. ...
+  Row   88: Gn 48:14
+           nds underfland, that is, by his hands made it to be vnderftood , not only thar t...
+  Row   89: Gn 48:16
+           Itis evident by this plaine text, that Iacob was deliuered from cuils by an Ange...
+  Row   90: Gn 48:38
+           For firftit importeth that Ephraim and Manaiics were made participant among the ...
+  Row   97: Gn 49:19
+           GENESIS. 137 [LOW_CONFIDENCE]...
+  Row  104: Heb 2:15
+           and to drowne al rhe male-chilaren of them. God in the taeane time rewardeth the...
+  Row  105: Heb 2:19
+           Hercin the midwiues finned, Fer it is never law- ful to lye, Becaufe the law ef ...
+  Row  107: Heb 2:7
+           terminations doe not ex- ciude but in- clude wansen- \deauour, Thongh Moy- fes i...
+  Row  108: Heb 2:4
+           (a) See what manner of re- uerence & de- uotion is pre- fcribed, to goe bare-foo...
+  Row  110: Heb 2:1
+           bare word , affirming that he was fent to them by God, propofed this dirkcultie ...
+  Row  119: Ex 6:3
+           ayer, asthough he would haue afcended into hcanen, but S. Peter praying to God ,...
+  Row  121: Ex 6:2
+           He fhatbe deadly wounded and cured, Not only he fhal fhew ftrange wonders , but ...
+  Row  122: Ex 6:1
+           ders, : [LOW_CONFIDENCE]...
+  Row  123: Ex 6:2
+           know Anti- chrift, 4-Againft moft dangerous af- faulesGod fen-! deth moft fore c...
+  Row  124: Ex 8:18
+           a1. The fourshis of fires. 29. Pha- 140 Againe promifech to difmiffc he people o...
+  Row  128: Ex 8:46
+           (a) The ¢.pla- gue,Peftilence amdégft cartel, (6) Notalthe beafts died for ifome...
+  Row  133: Ex 9:30
+           b) The &. pla gue,Innumera- blelocuttes, litle flying beafts witn long hinder le...
+  Row  137: Ex 40:35
+           Incir.umut(ed men may net cate the Phafe. @ ND out Lord faidto Moyfes and Aaron ...
+  Row  141: Ex 1:15
+           The 30. read in AEgyptand in Chanaan, for explication, as S.Auguttin no- teth 4,...
+  Row  143: Ex 40:22
+           Comming to Elsm they find trrelne fountames and feuentie palmce-trees. HEN (a) f...
+  Row  151: Ex 40:15
+           tifme al finnes are deftroyed. S. Cyp. Ep, 76. in fine S. Ang, Tra ..1.0 33. in ...
+  Row  157: Ex 40:2
+           Iacob, He fpake truth} tin myflical fenfe. rious , but nei-}  lofeph, foo, Moyfe...
+  Row  160: Ex 40:1
+           Ac#.7. uw, 16. Tuc, 16, Mat, 22, [LOW_CONFIDENCE]...
+  Row  161: Ex 40:2
+           Touching the joules departed , euen the moft perfect went into the lower parts, ...
+  Row  162: Ex 40:3
+           Our B. Sausvur alfo proueth the Refurrection , becaufe the God of Abraham , Ifaa...
+  Row  172: Ex 20:4
+           The Greeke hath tid waoy, an idol, So al Proteftants Englith Bibles are falfe. 2...
+  Row  181: Ex 24:26
+           The _ daflitution of the daylis Sacrepce of swe lambes,one in the morning , the ...
+  Row  186: Lv 25:2
+           Calat 4. Codeff.2, and in other places } and it were plaine Iudaifime , and Here...
+  Row  197: Lv 1:1
+           v, 12, (e) This num ber exceedeth the other by reafon that joo. Leuites are omit...
+  Row  203: Jos 1:12
+           contra, {; anf, ‘Mani ch  py SS i oe ~ b \ 3 i NCE 27 q iS OS GOW S ie THE BOOK ...
+  Row  211: Jos 6:6
+           Religious ho-. nour due ta Angels, Holie places, The fecond part. Of conquering:...
+  Row  213: Jos 7:2
+           again{t Hai, which is betide Bethauen, at the f mM} Eait tide of the towne of Be...
+  Row  217: Jgs 11:39
+           queftion, faith S, Auguitine ‘q. 49. 1n Ub. Indic.) and not cafily aecided, the ...
+  Row  220: Jgs 16:30
+           c.a1.07 26.decinis, Dei, Secondly, he-was moued with zeale et Gods honour, heari...
+  Row  221: Jgs 18:18
+           where was} Aaron, but of} that is aPrieft}: cient ( yea too}:  ane but threugh t...
+  Row  228: Ru 1:13
+           Booz, [LOW_CONFIDENCE]...
+  Row  235: Ru 1:9
+           S. Hier. ind fee 8, )S.Greg ‘Leg. e.2. lia t, Reg. 8. Concil, Leteran ie s. de h...
+  Row  245: Ru 1:2
+           And Dauid faid: Thy father furely knoweth that I haue found orace in thy fight, ...
+  Row  248: Ru 1:1
+           Beda Quefin ey ROZ.6.140.  e)Saul vniuftly condemning Dauid,cédem- ned alfo al t...
+  Row  249: Tb 2:8
+           Etymot. cap, 1. Caflidorus 15.1. Disinarum Lecfionum, Rabanus, lib, 1. de Infius...
+  Row  251: Tb 2:19
+           aud jor 4 /crupulous word, reprochesh hss finceritie. fonne : Goe, and bring fom...
+  Row  258: Tb 2:6
+           And taking his daughter by -of Abraham, and the God of Ifaac, and the God of lac...
+  Row  270: Jdt 13:27
+           [LOW_CONFIDENCE]...
+  Row  295: Est 16:26
+           ringto the contrarie made her widow- hood more excellent. widowhood an Euangelj-...
+  Row  302: Est 3:14
+           in height , and {peake in the morning tothe Xing , that Mardocheus. may be hange...
+  Row  317: Est 16:5
+           Albeit the vertne of Sacrifice as wel of Ho- lecautt in the eld Teftament, as ef...
+  Row  321: Jb 6:3
+           Ladte > Who neuer Ginaed, rermayneth an infinicic treafure of fatisfactorie work...
+  Row  326: Jb 9:22
+           : [LOW_CONFIDENCE]...
+  Row  338: Jb 19:22
+           vild4. Rees e4 Ke The v 9. Heb. 4. ¥.7. t cA.  Mas. §, 7, 0%. Lh. Luc. 16, S.Gre...
+  Row  339: Jb 19:1
+           One God,the B. Trimitic. : Gods workes. }e Gods proui- dence, 4: The Hebrew ‘peo...
+  Row  340: Ps 19:66
+           the Canonicial Houres,.muft at leaft readthe whole Office res. privately, if the...
+  Row  352: Ps 19:9
+           So finners are more eafily reftored to grace shortly repen— ting, then long obdu...
+  Row  353: Ps 19:10
+           Kings conuer- ted to Chri- ftianitie. Defend Ca- tholikes and lauoached , thatCh...
+  Row  354: Ps 19:2
+           manic rife vp again{t me. (4) O God let meknow how gricuoufly [haue finned , (b)...
+  Row  361: Ps 19:6
+           v.22. Where the Euan- gelrft faith : thar after Chrifts Refurrection ;his difcip...
+  Row  366: Ps 19:6
+           (r) The folide rewards promifed by ? [LOW_CONFIDENCE]...
+  Row  369: Ps 19:6
+           so.) An affilted fpivit isa facrificeto God. Thefecond ts facrifice of Iuftice, ...
+  Row  373: Ps 19:8
+           wilenter intothy houfe:1 ‘wil adore toward ( &) thy hole remple inthy (1) feare....
+  Row  380: Ps 19:3
+           (f) among a. myne enemies. (q) myne eyes are dimme with weeping, for feare of th...
+  Row  382: Ps 19:1
+           Mat. 7. em 25, condemning the wicked to eternaldamnation: by vvrath , Gods fathe...
+  Row  389: Ps 19:8
+           g. And (4) for itreturne on high: our Lord iudgeth peoples, (k) For this encreaf...
+  Row  393: Ps 19:3
+           i - (e)Fulfilled when Chrift comming into lerufalem children fang Oxzanna. Maz 2...
+  Row  398: Ps 19:8
+           (A) fheep and oxen: moreouer alfothe beafts of the held, (i) ¥ea of Angels. Heb....
+  Row  400: Ps 19:1
+           But moft Chriftian Doct ours expound 1t literally of Chriits Pafsion, Who was ft...
+  Row  407: Ps 19:2
+           (x) they are caught in the couniels waich they deuife, (w)Extremely  an a Rom. J...
+  Row  414: Ps 19:9
+           He lyeth in wavretotakethe poore man violently , violently ro take the poore man...
+  Row  416: Ps 19:13
+           for he hath faid in his hart: He wil not enquire, deliuer them into thy Hands, T...
+  Row  420: Ps 19:21
+           And therefore maketh no argument that this Pfalme should be diuided. And thofe w...
+  Row  428: Ps 19:4
+           [LOW_CONFIDENCE]...
+  Row  439: Ps 19:4
+           [LOW_CONFIDENCE]...
+  Row  442: Ps 19:1
+           (b)in the dedication of Dauids houfe, (a) The ceneralnameot Pfalme common tothus...
+  Row  445: Ps 19:3
+           Lord thou haft (¢) brought forth my foule out ot hel: thou haft {auéd me from th...
+  Row  459: Ps 19:23
+           Holie Lob fpake fome things in fuch ftate of afdiction. cap.3. & 42. Therfore th...
+  Row  470: Ps 19:2
+           For ir hehaue, then he taiieth of the torefaid bleffednes , and his iniquities a...
+  Row  532: Ps 19:25
+           amold: and haue notfeenthe iuft torfaken, (1) nor his {cede tecking bread. (1'So...
+  Row  550: Ps 19:6
+           become miferable , and am made (m) crooked even tothe end : I went forow ful al ...
+  Row  557: Ps 19:15
+           [LOW_CONFIDENCE]...
+  Row  559: Ps 19:21
+           PSALME XXXVIIL AA int man in remediles perfecution refolueth to Juffer al with p...
+  Row  560: Ps 19:5
+           man for is finn?) prayet) for releale. [LOW_CONFIDENCE]...
+  Row  578: Ps 19:7
+           S. Paul for veares) faith ( bodie, } See Annotations Heb. 10. Holocautt and for ...
+  Row  600: Ps 19:1
+           S. Aug. ° 2, g7\Gop wehaue heard with our eares: our fathers haue deciared tovs,...
+  Row  610: Ps 19:18
+           t thee: fof. 24, [LOW_CONFIDENCE]...
+  Row  613: Ps 19:25
+           prop recieth Chrifts excellencie,in- dowsing bts Church with moft wort!ie dowrie...
+  Row  618: Ps 19:9
+           (c) Caffia from thy (4) garments, from: (a) Mortification which conferueth frd p...
+  Row  624: Ps 19:42
+           (e) haue found vs exceedingly, (c) Al refuge is not fecure,for one man is noz ab...
+  Row  632: Ps 19:2
+           ; [LOW_CONFIDENCE]...
+  Row  643: Ps 19:7
+           (k) Inwhich great confili@ of mans f pirit ,God by his grace giueth force ,to br...
+  Row  651: Ps 19:6
+           the iniquiticor my heeie fhal compaffe me, ; (g) What efpecial rhing is there in...
+  Row  655: Ps 19:19
+           (d) when thou shalt doe him good, (¢) Temporally: (¢) fo long as he enioyeth wor...
+  Row  656: Ps 19:9
+           The 9. key, 96 THE BOOK [LOW_CONFIDENCE]...
+  Row  669: Ps 19:5
+           (g) and I ceafe notzo confider of them with forow. 6,.Tothee  OF PSALMES. 99 [LO...
+  Row  679: Ps 19:7
+           finne , after remifsion therof , thereremaineth concupifcence , that ftriueth ag...
+  Row  680: Ps 19:19
+           And of fpi- crigce ese ritualfacrifices , this of a contrite fpirite is firftin ...
+  Row  690: Ps 19:1
+           (b) in fohgs , (¢) vnderftandingto Dauid. (2) A fong as wel for King Dautd himfe...
+  Row  703: Ps 19:3
+           (g) Saul with his great armie,the Philiftijms,& other ftrangers, fome in manisef...
+  Row  707: Ps 19:12
+           . [LOW_CONFIDENCE]...
+  Row  726: Ps 19:12
+           (m) Depriue them of power,that they may not doe fo much euilasthey defire. [LOW_...
+  Row  746: Ps 19:3
+           [LOW_CONFIDENCE]...
+  Row  747: Ps 19:3
+           (f) that] might feeihy ftrength, and thy gicric, (e, Being now in cafe that T.ca...
+  Row  776: Ps 19:17
+           18, (-y) IfT have beheld iniquitie in my hart, our Lord wil not heare, (¥) Whofo...
+  Row  777: Ps 19:19
+           The 6. key. The Chureh ftil conferued, The 6. key. anntith 120 THE BOOK [LOW_CON...
+  Row  792: Ps 19:19
+           (b) haftreeeiued guitts inmen ; tor euen thofe (+) that doc notbelieue, our Lord...
+  Row  794: Ps 19:23
+           (n) into the depth of the fea, _ (m) Euen of the rudeft barbarous nations, manie...
+  Row  847: Ps 19:20
+           (r) thefonne of Ieffe. are ended, pofedthough.not purin the laft place, but as 3...
+  Row  865: Ps 19:13
+           (q) of the Aethiopians, (q) Of blacke diuels. ; [LOW_CONFIDENCE]...
+  Row  873: Ps 19:5
+           alfo illuminated their minds with knowledge of true religion: (h) others are oft...
+  Row  888: Ps 19:2
+           as in therr entrance into the land of Exo14. Mat..3,  = .Par. f7-Ue 2}. OF PSALM...
+  Row  895: Ps 19:19
+           d [LOW_CONFIDENCE]...
+  Row  950: Ps 19:9
+           F: The feaft of 10,:: There shal be (n) no new God in thee, neither shal thou ad...
+  Row  953: Ps 19:5
+           Vv 34.  — OF PSALME'S. 153 [LOW_CONFIDENCE]...
+  Row  979: Ps 19:7
+           (b) thal! (g) Til God firft shew his mercie,finners lye dead in guile of finne,b...
+  Row  986: Ps 19:4
+           (g) Fifthly if Ve pray with attention “OF mind, [LOW_CONFIDENCE]...
+  Row  990: Ps 19:9
+           (n) come,and thal adore beiore thee,o Lord; and they shal (0) glcriferhyname, __...
+  Row  999: Ps 19:15
+           without al conjolation of freinds, [LOW_CONFIDENCE]...
+  Row 1000: Ps 19:1
+           (b) to anfwer, (c) of ynderftanding to Emau the Ezrahite, _ (4) An inframent of ...
+  Row 1001: Ps 19:3
+           petition. ched to hel. [LOW_CONFIDENCE]...
+  Row 1002: Ps 19:4
+           - [LOW_CONFIDENCE]...
+  Row 1010: Ps 19:1
+           Reg. 4.v. 31.and fignifieth ftrong : applicd-here to thofethat are ftrong in afi...
+  Row 1024: Ps 19:39
+           Reg. 16.1.Reg.s. and ether pla- ces. Which was performed asin > figure, put more...
+  Row 1035: Ps 19:4
+           (g) reioyce, and (b) fing. . ; . (fa Invaice. (g) In hart.(h) In inftruments, [L...
+  Row 1039: Ps 19:4
+           (d)} in lacob. 5 -Exalt ye the Lord our God, and “ adore ( ¢) his foot-ftoole : ...
+  Row 1041: Ps 19:1
+           Enter ye in (¢ ) beforehis fight, in exultation, ANNOTATIONS. PSALME XCVIt. 5c l...
+  Row 1050: Ps 19:9
+           Becaufe I did (p) eateafhesas bread, & mingled (4) my drinke With weeping, . _ {...
+  Row 1059: Ps 19:23
+           The 7. key. 7184 THE BOOK 25, -Cal me not backe (/) inthe halfe of my.daies: thy...
+  Row 1067: Ps 19:7
+           his wilsto the chil-. dren.of Ifrael. (m) By giuing thema written law. very merc...
+  Row 1074: Ps 19:9
+           Pfal.9.v.6. The impious hath perished: their name thou haf deftroyed for euer , ...
+  Row 1125: Ps 19:19
+           (p) They adored the iraage thar reprefented acalf,aot God. [LOW_CONFIDENCE]...
+  Row 1139: Ps 19:10
+           And touching the effea of Baptifme deftroying al former finnes , he reacheth mrh...
+  Row 1157: Ps 19:13
+           ginning ‘the mufike and voices fathers iudgement , was rather prophetically vete...
+  Row 1224: Ps 19:8
+           (q) forfake me not wholy. (p) 1 haue therforea firme purpofe, & doe faithtully p...
+  Row 1231: Ps 19:17
+           (b) quicken me with fpi- ritual life , thy grace. (c) fol shal keepe thy law, wh...
+  Row 1247: Ps 19:42
+           (d) becaufe I hauc hoped in thy * words, (£) Wherwith being afsifted and ftrenzt...
+  Row 1254: Ps 19:56
+           ) and that thou wilt exercife the like hereatter, (g ) which confideration of th...
+  Row 1259: Ps 19:63
+           (b)Lam partaker of al that feare thee: and that keepethy com- mandments. ° oe Le...
+  Row 1269: Ps 19:81
+           v. 17. And nowthe inft defire his comming in glorie. 2. Tim. 4. v. 8. 82,. Myne ...
+  Row 1272: Ps 19:86
+           (f)made end ot me in the earth: but I have nor. forfaken thy commandments, Cf )1...
+  Row 1277: Ps 19:94
+           95.Sinners haue expected meto deftroy me:I vnderftood thy teltimonies, [LOW_CONF...
+  Row 1278: Ps 19:96
+           (g)thy commandment is exceeding large. (f ) Al worldlie things haue their confum...
+  Row 1296: Ps 19:141
+           (e) haue.nor forgotten thy gee duftifications. (d) A ing man.is often indged ign...
+  Row 1310: Ps 19:172
+           Ee 3 (e) God Why publike prayeris con- {titured at thefehoures. - INot iawful to...
+  Row 1313: Ps 19:176
+           (k) becaufe I haue not forgotten thy commandments, _ (6) Al mankind, and yniuetf...
+  Row 1337: Ps 19:7
+           in thee, (o) Inthe firft affaule of tentation. haue lifted vp my fouleto thee, (...
+  Row 1344: Ps 19:3
+           promi‘eth anew fong of prayfe 11. deferibeth £¢ Yansie of worldlie men,15 .concl...
+  Row 1352: Ps 19:13
+           Their ewes ful of yong, abounding intheir going rorth: 1.4, their oxen are tatte...
+  Row 1360: Ps 19:1
+           and this 144.02 which the three former ‘want fome letters:fignitying as Cafsiodo...
+  Row 1365: Ps 19:4
+           (e) giueth names to thé al, (d} Befides experience of euerie one that shal behol...
+  Row 1368: Ps 19:8
+           Who bringeth forth graffe in the mountaines : and herbe for the fer- uice of men...
+  Row 1373: Ps 19:5
+           If vour finnes shal be as fcarler, they shal be made white as}: fnew,and if they...
+  Row 1375: Prv 16:27
+           ONE  Altberal mind. Mercic and witice . Obedience. God afsifterh the iaik. > Wor...
+  Row 1376: Prv 16:30
+           [LOW_CONFIDENCE]...
+  Row 1399: Prv 16:9
+           [LOW_CONFIDENCE]...
+  Row 1427: Prv 16:6
+           [LOW_CONFIDENCE]...
+  Row 1439: Prv 16:8
+           [LOW_CONFIDENCE]...
+  Row 1465: Prv 16:1
+           r 1 [LOW_CONFIDENCE]...
+  Row 1491: Prv 16:19
+           _ [LOW_CONFIDENCE]...
+  Row 1502: Prv 16:13
+           fo alfo the doctrine of wifdomto thy foule:which Whenthou shale finde, thou shal...
+  Row 1503: Prv 16:32
+           , Cuoarrer XXIILIL" [LOW_CONFIDENCE]...
+  Row 1504: Prv 16:16
+           hart reioyce: 18, Leit perhaps our Lord fee,and it difpleafe him, and he take aw...
+  Row 1512: Prv 16:9
+           areth , and ceafe notto vpbraid thee, Grace and freindship deliuer*: which keepe...
+  Row 1515: Prv 16:13
+           Performance of promifed indaftrie. Meeknes. ‘Femperance, Modeftie. Truc refime- ...
+  Row 1529: Prv 16:23
+           nemie is perceiued by his lips, when he fhal handle deceipts in ishart.. [LOW_CO...
+  Row 1555: Prv 16:10
+           Tut indge- ment. Moderate gaine. Freindlie cor-' reption. To rob parents’ isa gr...
+  Row 1564: Prv 16:11
+           Noteth certaine things hard to beknowen: 21. other rbyigs sntolerable, 24. other...
+  Row 1568: Prv 16:1
+           Bur the old Interpreter , whom $.Icrom approueth and foloweth , tranflated the f...
+  Row 1574: Wis 3:3
+           thie sieath (2) God firft gaue him graceto defire wifdom be- fore al other thing...
+  Row 1580: Wis 3:24
+           Sey He directed their workes in the hands of a4) holy 2 Prophet, 2. They madeaio...
+  Row 1583: Wis 3:1
+           As the thing thar isa’man , 1s nota beafts an oxe Is nota horfe &c.and telling w...
+  Row 1585: Wis 3:15
+           Againft which he alieadgeth thar Labans idols , and others more ancient, were be...
+  Row 1587: Heb 3:13
+           J . P ra SS ey j t _ ! ~ mor recciued nox the vnknowen ftrangers,and other-fome ...
+  Row 1599: Sir 3:4
+           Conuer[asion with the prowd Tick , and potent dangerous. 9. Relie Ypon Gods help...
+  Row 1603: Sir 3:1
+           Thef. 5. 397 ECCUE STA STICVS. CrHarv. NVIIL. Gods wonderful workes exceede man:...
+  Row 1604: Sir 3:24
+           by mortifying bis owne concu- C4 ) Al creaty Tes according totheir fubfea- tial ...
+  Row 1619: Sir 3:22
+           Thou canft no. more ‘Blinde him, and of a curfe there is reconciliation: 2 4. bu...
+  Row 1622: Sir 3:8
+           with temperance in diet, efpecially hing. snaring Atcutne (after honeftie fhal p...
+  Row 1626: Sir 3:5
+           A ftalion horfe neyeth vnder euerie one thar ( Men led ficteth ypon him fo: a fr...
+  Row 1630: Sir 3:1
+           Lf.y 22, Ler.7, prayer Exo. 3. Oy 34. Den,16, Orie to not the firft fruits of th...
+  Row 1631: Sir 3:9
+           Lenje, 22. Dew. 15. 2.Paral, rg, Rom.2, AG, 10, and he g. 18, amatio backe. tune...
+  Row 1643: Sir 3:1
+           oe eer it Reg. 7. ngth con- tofwer 4.) (  2.Reg. it. 1.Reg. 17. Bilem, J Rex Pay...
+  Row 1645: Sir 3:13
+           land twife more to burne an hundred men which perfecu- ted him.4. Reg.i. (6)The ...
+  Row 1653: Is 3:2
+           Ifo) The Lewes were reiected afver Chrifts death : before jwhich they were ftil ...
+  Row 1656: Is 3:4
+           and Ifrael shal -be deftroyed : and Inde fore affistted-: 8.-zet conferud with l...
+  Row 1660: Is 3:2
+           e,& he is become my faluation. [LOW_CONFIDENCE]...
+  Row 1689: Sg 3:4
+           Behold thou fhalr cal the nation, which thou knoweft not: andthe nations that-kn...
+  Row 1691: Sg 3:3
+           commended 'Proreftants de- inholie Scriptures, that Proreftants ( though not gre...
+  Row 1694: Sg 3:5
+           so me , becaufethou art vncleane ; theie fhal-be {moke in my turie, a fyre Ate b...
+  Row 1695: Sg 3:1
+           nie benefites to thofe that ferued him therein, yet his proper feate is notin an...
+  Row 1696: Jer 6:11
+           bis perfe- CHUL OUTS. He words of leremtie the fonne of * Helctas,of the Priefts...
+  Row 1704: Jer 9:25
+           [LOW_CONFIDENCE]...
+  Row 1710: Jer 13:12
+           The Prophet lamenting their ebftina- cic, .2.sheweth that thei fume is the caufe...
+  Row 1716: Jer 13:6
+           (e) There ean thardly be con- cord berween potent King- tomes, (4) The weaker is...
+  Row 1720: Jer 15:15
+           word of our Lor Teru a Oe ot hada and al Juda, and al the inhabitants of Icrufai...
+  Row 1735: 1Mc 1:17
+           forti- fieth the towre of Dauid ; 38. propbaneth al holie things; 43. commandeth...
+  Row 1747: 1Mc 1:29
+           judgement , aid iuftice ,-into the ‘hours 0 tFalfe defert: 30, and they fare the...
+  Row 1748: 1Mc 1:41
+           erronioufly as’ the Sadducees,' but fincerely profeffed a pe- culiar holie rule ...
+  Row 1750: 1Mc 1:29
+           whe fen- ding « great armic againt the Ifraclites , 42. Indasand-bis brethren co...
+  Row 1774: 1Mc 13:6
+           Jima seth God. Bue haomble faules defire onowy os Ged > proud men wil be nenosre...
+  Row 1788: 1Mc 10:2
+           But («) Gorgias being ca- ptayne ot the places, taking-vnto him ‘ftrangers often...
+  Row 1789: 1Mc 10:8
+           ( ii Ioam 10. v.22.) fet forth in En- glifh inthe yeare 1603. confefleth that th...
+  Row 1790: 1Mc 10:10
+           Lyfias- _perceiming Gods powre , offereth to procure peace. .22,. Weberto the .K...
+  Row 1793: 1Mc 13:7
+           Alcineus lay depe- fed from che offre of bigh Price, 6. accufeth good.men of dif...
+  Row 1799: 1Mc 15:17
+           C20, Other Angels the Patrones or Guardians of the Perfians and Grecians, prayed...
+  Row 1815: Ezr 7:2
+           [LOW_CONFIDENCE]...
+  Row 1816: Ezr 7:3
+           [LOW_CONFIDENCE]...
+  Row 1832: Mt 12:23
+           Aug. li. de Virg. cs. 2. Our B. Ladies a3. vind bring forth. } The Heretike foui...
+  Row 1835: Mt 12:16
+           ep. a8. Orig. 0. 3. in diner/as. CuHuap. III. Lehn Baptifi by hic Eremites life,...
+  Row 1837: Mt 12:3
+           Cyprian agp , ""7 Penance, ep. 52 often, and S. Auguitine li, 13 Contefc. 12. an...
+  Row 1842: Mt 12:1
+           beaits , and (ubiect co the aifaults of the Diuel for our finnes, geueth a Warra...
+  Row 1844: Mt 12:6
+           V. ACCORDING TO & MATTHEW, It Luc. 6, 20. Mr. 9, FO, Luc, 14, 34. [LOW_CONFIDENC...
+  Row 1846: Mt 12:17
+           g declareth,both beginning with penance, [LOW_CONFIDENCE]...
+  Row 1847: Mt 12:23
+           dug, devil. cred. ¢. 14. Tue szer- V mon of cf Cuar. Chrift vpon ; : the Mount: ...
+  Row 1854: Mt 12:14
+           re. Jud.20,26. 16.Fa/t.) He forbiddeth nor open and publike fafts, which in the*...
+  Row 1856: Mt 12:8
+           God wil vndoubtedly graunt when ir is beft for vs. [LOW_CONFIDENCE]...
+  Row 1857: Mt 12:13
+           Extraordinarie apparance of zeale and holines is the Cheepes cote in fome Hereti...
+  Row 1858: Mt 12:16
+           aboue al the holy Dodors, corruption, falfification , and quite denying of the p...
+  Row 1864: Mt 8:39
+           As thar woman fel ficke When the Wenche Was borne, fotne Gentils Went their owne...
+  Row 1865: Mt 8:28
+           HoW then aoe the Heretikes by thisand the like places pleade for their onely iuf...
+  Row 1870: Mt 8:19
+           thar haue no great learning, by their anfwers confound the-Aduerfaries. as. How ...
+  Row 1871: Mt 8:33
+           for as Whé Saul perfecuced the Churche,he iayd *him felf was pexfecured: Chia an...
+  Row 1873: Jn 8:37
+           Whereas oche'contrarie fide, he that.receiueth an Heretikeinto his hdute anda fa...
+  Row 1875: Jn 8:1
+           The faychful people inal ages reforted of devotion inco wildernes to fee men of ...
+  Row 1882: Jn 8:34
+           Auguitine and other Holy Doétors gather herevpon, chat fome Purgatoric (innes ma...
+  Row 1892: Jn 8:53
+           and threatening that after his rerurne the Carpenters fonne fhould not ce ablero...
+  Row 1893: Jn 8:13
+           asin the Primitiue Churche many good men (eing the miferable {tate of the world ...
+  Row 1897: Jn 8:1
+           And thertore iris not to be ynderitood of praying in vnknowen ronges , as Hereti...
+  Row 1898: Jn 8:9
+           Fer firch are nor repugnant but confonant to Gods Word and al pietie, and our pr...
+  Row 1900: Jn 8:1
+           de tep.2 st. Seer. Cor, 14,2. b Ep ? i falting of * Anna,Tobie, ludith, Efther, ...
+  Row 1901: Jn 8:11
+           tug. li, de mor. Ec. Cath. c. 31. °" [LOW_CONFIDENCE]...
+  Row 1902: Jn 8:18
+           As the apple Which our firtt parents did eare of, though ofic teifir ttinence. d...
+  Row 1903: Jn 8:17
+           Mar. 8, 27. Lue.9, 13. fo. 1, 42. lo. 21, 15.  Cua. XVI. ACCORDING TO S. MATTHEW...
+  Row 1907: Jn 8:18
+           As though Peter had been the proctor only penit. of the Church orof che Apoftles...
+  Row 1909: Jn 8:18
+           And fo by this promis Weare ailured , that no herettes nor other Wicked accepts ...
+  Row 1911: Jn 8:19
+           the (pi- titual charge,is comprifed vnder the Word,bind. Of which fort be Excomm...
+  Row 1920: Jn 18:17
+           Which Excommunication is a greater punifhement thenifhe were executed by (ward, ...
+  Row 1925: Jn 18:1
+           li, de grat, & lib. arbit.¢.4. So thacicis Orig. euident no man is excluded from...
+  Row 1936: Jn 21:9
+           s in the Preface of the Malle, as ic were the voice of the Prielt HOTANNA, and a...
+  Row 1938: Jn 21:16
+           the partie , are [LOW_CONFIDENCE]...
+  Row 1942: Jn 21:3
+           One te hue farme.) Such as refufe to be reconciled co Chriftes Church, allezge o...
+  Row 1945: Jn 21:2
+           Was. sd. [LOW_CONFIDENCE]...
+  Row 1947: Jn 21:15
+           lib. de fide a oper. sap. 36. ? 19. Sandlifieth,) Nove that donaries and gifts b...
+  Row 1948: Jn 21:38
+           : bur We that can not fee Within men, may not prefums to call mens external good...
+  Row 1952: Jn 21:1
+           adn. Gentes Chriff us te Dew, roote, Doeft thou fee how wharfoeuer he hath builr...
+  Row 1955: Jn 21:2
+           a6. In clofets.} Chrift hauing made the Churches authority bright and clere toth...
+  Row 1957: Jn 21:1
+           dug. ep. s20, 6. 33. Righe intédon. 3. Oyle.) This oyle is the right inward inte...
+  Row 1959: Mt 21:10
+           fome caie the poore are to be preferred: yea * in certaine cates of neceility , ...
+  Row 1960: Mt 21:26
+           A Sacrifice , in that it is or- chariftis botha Geined to continew the memory of...
+  Row 1962: Mt 21:24
+           li. ¢¢.14. Theophyl. in hunc locum, Conc, 2. DLic. af. 6, but a real pre- t0. « ...
+  Row 1963: Mt 21:29
+           Luke purreth thefe wordes before he cometo the confecration, Whereby it feemeth ...
+  Row 1964: Mt 21:39
+           We fhould deire nothing temporal, bur vnder the condition of his holy pleaiure a...
+  Row 1965: Mt 21:41
+           of al Chriftians,as is plaineby S$. Cyprian and* S$. Gurnes, Hierom : but afterw...
+  Row 1974: Mt 27:33
+           Pafting through the middes of them.) Either by making him {elf inuifible, oralfo...
+  Row 1977: Mt 27:20
+           Ambrofe)and pardoneth one fort through the merites of others. therfore if rhou d...
+  Row 1981: Mk 11:14
+           Ait.1,8. 2,1. Mr. 16, [LOW_CONFIDENCE]...
+  Row 1982: Mk 11:19
+           Cua. XXIIIL ACCORDING TO S. LVKE. 213 §2 vvascariedinto heauen. t And they adori...
+  Row 1984: Mk 11:26
+           the Scripture doth not expretle, but very like itis thatin forme of the crodle, ...
+  Row 1986: Mk 11:14
+           18, Noo man hath feen.} Never man in this morralitie {aw God in the very {hape a...
+  Row 1993: Mk 11:10
+           Wherevp6 our Baptifme,is water & the Holy Ghoft:our Penance, and bloud, the Word...
+  Row 1995: Mk 11:39
+           And therfore our Maitter referreth them noeto the reading onely or learning Scri...
+  Row 1996: Mk 11:13
+           ACCORDING TO S. IOHN, 233 Mt. 14) [LOW_CONFIDENCE]...
+  Row 1998: Mk 11:4
+           Pf 77, 24. ELAS, 13.  Cua. VI. ACCORDING TO S&S. IOHN, 235 Mt. 26, [LOW_CONFIDEN...
+  Row 2000: Mk 11:33
+           you can not haue life in you. So the life faith of life and to him chat thinkerh...
+  Row 2001: Mk 11:54
+           Andin reipect of vs Catholikes, Who belecue Chrifts Whole perfon both humani- ti...
+  Row 2002: Mk 11:6
+           Li,1 de pet. merit.4.20  Cua. VI. ACCORDING TO 5S. IOHN, 237 nedly miftakehim : ...
+  Row 2006: Jn 11:1
+           And generally euery me in an other onc thar defcendeth nor by Lawful {uccetlion ...
+  Row 2011: Jn 11:6
+           che came to Bethania, vvhere Lazarus I weekes pb 3 rE vvas, that had been dead, ...
+  Row 2020: Jn 11:36
+           T4, 32. Li. 22, 39. Mt. 26, [LOW_CONFIDENCE]...
+  Row 2021: Jn 11:47
+           Luc, 23, 47. 10.17,12 Io. M1, 49. Mr. 26, [LOW_CONFIDENCE]...
+  Row 2022: Jn 11:58
+           XVIIL ACCORDING TO §, roNnN. 269 Hory Mt.27;1 Mr. 15,1 Ly. 23,1 Io. 12,33 Mt. 10...
+  Row 2023: Jn 11:15
+           La 22,175. Mt. 27, 217. Myr.. 19,16.  Cua, X1X. ACCORDING TO S. IOHN. 271 Hory M...
+  Row 2027: Jn 11:14
+           ACCORDING TO & IGHN. 295 Hoty 19 26 27 28 29 the difciples, That 1 haue feen our...
+  Row 2032: Jn 11:1
+           After lohns emprifonment, Chrift returning into Galilee b Samaria, talketh vvith...
+  Row 2034: Jn 8:19
+           Auguftines THE ACTES OF THE#ss&: A P O S T L E Ss. ueriis. to. 10, The ¥. part. ...
+  Row 2038: Jn 8:14
+           forthough (he were ful of al diuine wifedom, and opened (no doubr) vnro the Euan...
+  Row 2040: Jn 8:1
+           Both which Pah ie & Pene daies the Church keepeth yerely for memorie of Chrifts ...
+  Row 2043: Jn 8:3
+           for: ic Was excommunication by S. Auguitines iudgement, conperal a de ven Parme ...
+  Row 2046: Jn 8:30
+           Gen. 37. Gen. 410 Gen.42.  Cura. VII. OF THE APOSTLES. 307 Gen. 45. Gen.4e, Gen....
+  Row 2047: Jn 8:58
+           Auguitine ofone ftone, thar hitting the Martyr onthe elbow, rebounded backe to a...
+  Row 2048: Jn 8:24
+           more) religious ment or other , which he plainely perceiued and conteied, {0 tur...
+  Row 2051: Mk 8:24
+           of the Proceftanesinuifible Church vve heare not one word, 26, Chriffians.) This...
+  Row 2057: Mk 8:22
+           Ltthey had tranilated itfo vvhen the Scriptures vvere firft yvricten, (at yvbich...
+  Row 2058: 1Cor 5:5
+           lefadtor after ht yvas excommunicated, thatthe Apoftle novy meaning to abfolue h...
+  Row 2059: 1Cor 5:13
+           To remit then the temporal punifhment or chaftifment duc to finners atter ** bus...
+  Row 2061: 1Cor 5:6
+           Hereuke : yvho alfe being carnal and void of {pirit, gaineth nothing by the exte...
+  Row 2062: 1Cor 5:4
+           in pf 9- pro- er adulteros, thecues and adulterers ofthe Scriptures. S. Cyprian(...
+  Row 2063: 1Cor 5:17
+           The temporal and Chort tribulations which vve patiently and willing - Tribulatio...
+  Row 2065: 1Cor 5:10
+           Neitheris faith alone fufficient to procure faluation, nor Jacke of faith the on...
+  Row 2067: 1Cor 5:14
+           Generally hereis forbidden conuertation and dealing vvich al [ufidels , and conf...
+  Row 2073: Gal 1:18
+           dred and thirtie yeres,maketh not void co fruftrate the pro-~ 18 mife. t For if ...
+  Row 2076: Dt 1:9
+           WV vhether he meane of the creatures vvhich the Gentils ferued (as it may feeme ...
+  Row 2077: Dt 1:28
+           hath kept not only his, but $. Steuens and rhe B, Innocents, cuen on the tame da...
+  Row 2079: Dt 5:6
+           Andno.e \ vel hai by thefe termes circumicifion & prepuce not auai- lable co jul...
+  Row 2082: Dt 5:10
+           likes,then Heretikes. See $, Hierom g. 1, ad Hedibiam. [LOW_CONFIDENCE]...
+  Row 2083: Eph 5:15
+           Vvbereby vve may learne that vnder the name of faith is conteined the vvhole ref...
+  Row 2084: Eph 5:10
+           AH. 20.¥.31. - . After all this he-vyriterh this Epifile vnto them from Rome( as...
+  Row 2086: Eph 5:26
+           Ro.9, 4 diye wees RO.$, Covmme Ail  Cua. IIL TO THE EPHESIANS. 17 [LOW_CONFIDENC...
+  Row 2087: Eph 5:1
+           C3 Ay - x70 Ta Riv ray cthatis, the eternal prafinisio fo) Il 12 13 14 15 16 17 ...
+  Row 2088: Eph 5:1
+           Py. 67, 19. 1.Cor.12, 28.  Cua. LITT. TO THE EPHESIANS. gt9 1 Pet. 4, [LOW_CONFI...
+  Row 2089: Eph 5:3
+           Pf. 4,5. 16 17 18 19 20 21 22 25 26 27 28 §. Onefaith. Astebeilion isthe bane of...
+  Row 2091: Eph 5:12
+           Abfurdities that folow, if the Church may erre. MATRIMONES a Sacrament. The grac...
+  Row 2092: Col 1:2
+           his wvife: putthey muft vnderftand that their Maifters Caluin and Beza miflike t...
+  Row 2093: Col 1:16
+           The Proteftancs vvilfully or ignorantly applie al chefe kindes of forbearing mea...
+  Row 2094: Col 1:18
+           Chryf, be. 7 in hune locem.and Epipl>. ner. 21.) vvho caught Angels to be our me...
+  Row 2095: Col 1:19
+           Whydoeyou.) A maruelous impudent trantlation of thefe vvordes in the Englifh ; B...
+  Row 2096: Col 1:1
+           Desw.10, [LOW_CONFIDENCE]...
+  Row 2097: Col 1:17
+           Epb. s, [LOW_CONFIDENCE]...
+  Row 2099: Col 1:5
+           authorifed. Vvhere for their errour againitthe Images of Chriftand his Saints, a...
+  Row 2100: Col 1:9
+           may fee,our juitice in Chriit to be a very qualitie and forme inherent in our fo...
+  Row 2101: Col 1:12
+           wulde Akt. 20, 34.1.Cor. 4,12. [LOW_CONFIDENCE]...
+  Row 2103: Col 1:6
+           Vvhere with- Religious out curiofitie he nameth him (elf firft, and our Lord aft...
+  Row 2104: Col 1:13
+           Some Heretikes peruerfly interred of this chat the foules dis fleepe til the day...
+  Row 2105: Col 1:17
+           Pro. 17, 13.R0.12 [LOW_CONFIDENCE]...
+  Row 2110: Col 1:4
+           Though vve can not be affured of the moment, houre,or any certaine time of our L...
+  Row 2115: Col 1:7
+           ciples of diuinitie, euen to the admiration truely of the learned that reade the...
+  Row 2116: Col 1:9
+           But 1 feripture. “8° Apoftles meaving 1s thatthe :ft man doth vvel, not as compe...
+  Row 2119: Col 1:5
+           fide ¢. 29. § One mediator: } The Proceftants ate to peuifh and pitifully blind ...
+  Row 2123: Col 1:14
+           Antbroie vpon this place , implicth in the vvord /mpofition af ands, Coatecratts...
+  Row 2124: Col 1:14
+           ot Carthage doch thus ferdovyne. When a Prie/f taketh orders, the Bip hop blefin...
+  Row 2127: Col 1:9
+           S. Chry- fottom li. 3 de Sacerdotio propius finem. S, Epipnanius in hareji 79 Co...
+  Row 2128: Col 1:11
+           They vil, ] Inthe chaftisie of vvidovvhed or Uirginitie ( faith S. Augutftine) t...
+  Row 2129: Col 1:12
+           Bede, Haimo, Anfelme, and the reft: alfo al others that by occafion vfe this pla...
+  Row 2131: Col 1:4
+           ox abfolutely. forbid them to-vovy marie. chaftitie: God forbid, fay they. Buc h...
+  Row 2132: Mk 10:15
+           after the yvovy And herevpon yve callthe Religious that maric (as Luther, Bucer,...
+  Row 2137: Mk 1:12
+           A great comrort toal Chriftians, that every oftheir good deedes and futferings f...
+  Row 2138: Mk 1:4
+           He that agree nor célilt is uvith avvife (faith he) is carefid for the vvorld , ...
+  Row 2139: Mk 1:20
+           the Church. Yeaandoften alloatrer they be feueredin hart and in the fightor God,...
+  Row 2141: Mk 1:9
+           Ai hereukes in the beginning feeme to haue fome {hewoftruh, The folly of God tur...
+  Row 2143: Mk 1:3
+           the people net to fatt crying , Speake placentia, things thas pleaje: but the Ma...
+  Row 2144: Tit 1:8
+           This place conuinceth for the Catholikes, chat al good vvorkes done by Gods grac...
+  Row 2146: Phlm 1:5
+           Malice and coarention doth fo blinde al Heretikes. THE ARGVMENT OF THE EPISTLE O...
+  Row 2150: Phlm 1:6
+           buc the Apoitle vrgeth (peciai:. uis Prieithod , as the more Prieft & king: exce...
+  Row 2151: Phlm 1:9
+           Bur this place and many other Chevy, that Chriftes Pailion, only yvhich thougn i...
+  Row 2152: Phlm 1:10
+           Rewera grandus iniufitia ‘Des (faith $. Hicrom ) 54 samtum peccata puniree, oy b...
+  Row 2155: Phlm 1:3
+           Hierom ep. 126: for The referablice Chrift him (elf vvas not without father, acc...
+  Row 2157: Phlm 1:12
+           Inthe lavv ot Nature, che {tare of the people hanged cut an external om one kind...
+  Row 2161: Phlm 1:21
+           This uthe fignifieth the infallible and abfolute promis of the eter- nitie of th...
+  Row 2162: Phlm 1:23
+           Which is againft the Prophet Efay, (pecially prophecying of the Priefts of the n...
+  Row 2164: Phlm 1:22
+           IS of feruice,and a fecular fanétuarie. t For on Imber tarar- aa the rabernacle ...
+  Row 2165: Phlm 1:5
+           ment, thar there fhould be no facred images in the Church, vvhen euen among thef...
+  Row 2170: Phlm 1:25
+           X therighthand of God, t hence forth expe@ting, vntil his 13 enemies be put the ...
+  Row 2171: Phlm 1:15
+           Cua. X. TO THE HEBREVVES, 627 Abac, 2, 3- Rot, [LOW_CONFIDENCE]...
+  Row 2172: Phlm 1:17
+           t Dorot therfore leefe your 36 «confidence, vvhich hath a great remuneration. + ...
+  Row 2176: Phlm 1:13
+           Gen. 12, 4.13, 43.  Cua. XI. TO THE HEBREYVES, 631 Aan. 17, [LOW_CONFIDENCE]...
+  Row 2177: Phlm 1:19
+           Eccl, 44 oa Gen. 22, 9. Gen. ‘21, 12.Rom. Gen. 27, 27,36. Gen, 48> 15. Gm. 47; 3...
+  Row 2179: Phlm 1:25
+           TO THE HEBREVVES. 633 21, Adored the toppe of hm rod.) The learned may fee here ...
+  Row 2180: Phlm 1:6
+           either bere next. Neither hawe the Hesetikes of thistime any reatom ox fcripcure...
+  Row 2181: Phlm 1:17
+           birth to his yonger brother, it vvasto late to be forie for his ynaduifed bargai...
+  Row 2182: Phlm 1:2
+           Hofpitality , thatis , receiuing and harbouring of poore pilgrimes, Hofpitalitie...
+  Row 2186: Mk 11:2
+           Re, §, 3- Mat. 21, 22. Marit, 24 Re NS ras ae FES ~G j 4 X ow , * a ‘af tee7 Fes...
+  Row 2187: Mk 1:6
+           Where the Apoitle mea- Vvhat faith is neth nothing eis, bur thar the afker of la...
+  Row 2190: Mk 1:15
+           [LOW_CONFIDENCE]...
+  Row 2191: Mk 1:23
+           Leu. 19, [LOW_CONFIDENCE]...
+  Row 2192: Mk 1:18
+           Rom.13. LEn.y9, 37-Den, 1,18. © xshaco xtueee V6 10.3137  Cu dead Gen,22, 10. Ge...
+  Row 2193: Mk 1:3
+           [LOW_CONFIDENCE]...
+  Row 2195: Mk 1:1
+           i ca betvvixe one degree and an other. for, God and nature, and the neceifitie o...
+  Row 2196: Mk 1:14
+           This vvhole pailage of the Apoftle is fo cleere againit iuitification or (aluati...
+  Row 2208: Rom 1:20
+           Yet the Heretikes are fo folifh and captiousin thiskinde,that they men, wyithout...
+  Row 2209: Rom 1:13
+           Cod him felfimmediatly. for Canft did exprefly confliture the forme of regiment ...
+  Row 2210: Rom 1:13
+           tran- aboue al Spiritual rulers: and to make it found better that vvay , they fa...
+  Row 2212: Rom 1:33
+           thofe fpirnes Gen. 6. Marg Gen.7,7 Vys.  Cua. Il. OF S. PETER. 661 [LOW_CONFIDEN...
+  Row 2214: Rom 1:21
+           Auguftine) vvieh bis, vvas delinered by gureo} chrifts the vvater and the vveed,...
+  Row 2215: Rom 1:21
+           forme of Catholike Bapti{me, conteinsng cerzaine interrogatories and folemne pro...
+  Row 2216: Rom 1:15
+           V vhar veere O.coo 1 CH &e  662 THE FIRST EPISTLE Cua. I1LI1 Cuar. III. That sey...
+  Row 2217: Rom 1:9
+           And faying charitie , he meaneth love and charitable vvorkes to- ye only ward ou...
+  Row 2221: Jn 1:10
+           Nay, the Apoitle saith, If thou hope to be one of the preceftinace(for knovv it ...
+  Row 2222: Jn 1:15
+           Signifying thachis care over them fhould noe ceale by death, & that by bis incer...
+  Row 2223: Jn 1:20
+           CuHoar. IL. w41 not onely Prophets, but ale falfe-prophess uvere in the eld Teff...
+  Row 2224: Jn 1:17
+           a ir 12 3 Crap. II. Thefe rove Epifiies he vvviteth to confirmed tkem in the Ape...
+  Row 2226: Mk 1:7
+           vvhich meanes yvboiceuer con emneth , de~ the force &mz- priveth nim felt of the...
+  Row 2227: Mk 1:2
+           Auguitine gathereth hereof againft the Donariftes, and al other . Heretikes ,.th...
+  Row 2228: Mk 1:4
+           lfany vaunt them {elues thus to knovy Gad , and yet-keepe not his commaundeniear...
+  Row 2229: Mk 1:18
+           thar uvere aduerjaries to the Church , or uvere gone ous fromilie fame, the fore...
+  Row 2230: Mk 1:4
+           So that the Apoftle remainine after Meaneth , that cucry finne is an ebliquitie ...
+  Row 2233: Mk 1:3
+           ctadmmia . not to death, Lut.214, 45. ‘one TwD adeAwt, sie to be kept. and Chrif...
+  Row 2234: Mk 1:7
+           Trin is tnougbt) alcerea and corrupted tne text both in Greeke anu Latin iany vv...
+  Row 2235: Mk 1:16
+           foricis tharmor- Vvharisa one ral {inne onely , vvhereofa man is neuer penitent ...
+  Row 2236: Jn 1:16
+           Auguitines vvordes betore remearied: then the praier vvhich he speaketh of, mult...
+  Row 2239: Jude 1:9
+           only this vve fee that wricten, and many truthes and ftories vvere kept in the m...
+  Row 2242: Apc 1:6
+           nation, vybuh are shefe, Amsicoripvand pis Falfeprepbet, andthe Deuil kim felf t...
+  Row 2243: Nm 1:4
+           holy Augels, by comparing this co the like ia the ¢ Chapcer toluvving: vvherc he...
+  Row 2244: Nm 1:6
+           Neuertbeleife, as if aay man vroula sherevpon athirme tha. chere ougnt ro be go ...
+  Row 2245: Nm 1:13
+           efts (for fo the vvord, podéres, doth lignifie, as Sap. 18,24) and thar vvas moi...
+  Row 2247: Nm 1:2
+           hirlt, good vvorkes, and . eat patience in Sidulaion, next,zeale and £ nespe duc...
+  Row 2248: Nm 1:5
+           Note thar the caufe vvhy God taketh the eruth from <ertaine countries, and Sinne...
+  Row 2249: Nm 1:5
+           TIE Ncolaises the 6..Of the Nicolaites.; Heretikes haue their callings of certai...
+  Row 2250: Nm 1:9
+           Col. 1,15. i fe) II 12 13 14 1S 16 17 1g and keepe, and doe penance. Iftherforet...
+  Row 2258: Nm 5:7
+           a». Idols of gold, } Here againe the mew Tranilacours abuic the people, for idel...
+  Row 2259: Nm 5:5
+           for, that Elias fhal enech & Elias ome againe before the,later day, is is « mo/f...
+  Row 2260: Nm 5:6
+           As the Churcn Cacholike novv in England a defertin An- in chis time of perfecuti...
+  Row 2261: Nm 5:15
+           ur every one ot ce faichful cleat , gladly bearing their part thereof, oucrcome ...
+  Row 2265: Nm 13:18
+           Though Sod vyould noe haue it manifeft before hand tothe vvorld,vvho 4 ready vva...
+  Row 2267: Nm 13:18
+           Fora(much as the auacient expofizots and other do thinke( for certaine Al framin...
+  Row 2269: Nm 13:5
+           Paul calleth this fecrete and clofe vyorking of abomination , the myfterie of 3 ...
+  Row 2270: Nm 13:6
+           The Proteftants folifhly expound it of perfecutors of Rome, for thar there they ...
+  Row 2271: Nm 13:9
+           Rome, are fo madde to take them for the feven hilles literally, vpon vvhich in o...
+  Row 2272: Nm 13:1
+           ZL2zuz 3j called ted the Chu: .:.  The double interpretation of Babylon, t: The ...
+  Row 2273: Nm 19:4
+           vvhereof {ce the Annotation /oas. 8. ¥. 34: andin their Seruice booke they tranf...
+  Row 2274: Nm 19:3
+           Luke, yvhereof {ce good workes, the Annotauié chere verl. «but they are forced t...
+  Row 2278: Jn 19:20
+           Andnovy 6 Lord Chrift, moftiuft and merciful , vve thy poore crea- A breefe peti...
+  Row 2279: Jn 19:29
+           The 210 funday, Ep.s2l-golp.z27. The 21 funduv Ep.st4-gofp. sa: The 22 funday, E...
+  Row 2280: Jn 19:21
+           pag.706.737ut large. 744 mare. S. Tohns adoring ofthe angcl, cxphi- cated. 736. ...
+  Row 2281: Jn 19:10
+           nu.1s. 679. of countries, 7o1. ot Churches, ibidem. The Pro- teftants alfo hold ...
+  Row 2282: Jn 19:27
+           They made the Creede. 376, Their Creede. ibidem, Theie learning, vvifedom , conf...
+  Row 2283: Jn 19:38
+           Epbetha. 107.Abre- nuntio. 661, The character thereof. pa. 471 nu, 22, Baptifme ...
+  Row 2284: Jn 19:18
+           Caluin confefleth the faid power. ib, Their contiftories. 739. They muflbe obete...
+  Row 2285: Jn 19:58
+           pag. 72 marg. 74. nu. 34. pag.142.169,nu.30. pag =19. 236.370. 387. nu. pag. 399...
+  Row 2286: Jn 19:26
+           pag. 490.$91. nU.6. [LOW_CONFIDENCE]...
+  Row 2287: Jn 19:9
+           marg. Vanitie in preaching,and vaine glorie. 154, Preaching licentiouines and li...
+  Row 2288: Jn 19:14
+           nu. 34, Controuling of the very text of Scripture, and the fa~ cred vvriters the...
+  Row 2289: Jn 19:53
+           p. 472.496. Defpiiny of Ru lers,{pecially Eccletiaftical.o93 & 694 mary. Lacke o...
+  Row 2290: Nm 19:6
+           nu.8, The iuitice of Moyfes Lavy, vvhat, 408 Marg. L Vr B. Lapis vvithout finne,...
+  Row 2291: Jn 19:47
+           pag. 473.474. 475.538. Al ardons are giuen in the vertue and name of Chriit. 474...
+  Row 2292: Jn 19:71
+           There fhal be great perfecution of Catholike men tovvard the end of the vvorld. ...
+  Row 2293: Jn 19:9
+           He breaketh the Churches ynitie,thac fortaketh this See or Chaire. 501. 520. Chr...
+  Row 2294: Jn 19:27
+           Theirim- pudentaffertion thathe was newerat Rome. 422, 500.665, For this purpofe...
+  Row 2296: Jn 19:18
+           The Proteftants carpe at this au- thoritie, as the Iewes did'at Chrift for the f...
+  Row 2297: Jn 19:14
+           See Schsfme. Religion. Men of no religion, Neuters, Atheiftes. 33. Moft happie t...
+  Row 2298: Jn 19:40
+           Reprobation, at large. 405. 406. Sinne is alvvaies the caufe thercot. ib. 127 ma...
+  Row 2299: Jn 19:58
+           pag. 238. 291.446, NU, 16. pag. 447. 453. 624. 628. 466 m, The Gofpel fo plaine ...
+  Row 2300: Jn 19:67
+           nu. 33. It is the fuperfub» ftantialand daily bread, {pecially de- fired inthe P...
+  Row 2301: Jn 19:49
+           Praying to Sain@s, & that thcy pray for vs. 380m. 186, 304.475. 668 at large.679...
+  Row 2302: Jn 19:24
+           num. J. See Church, Schifmatikes, Schi(matical feruice & fer- mons to be auoided...
+  Row 2303: Jn 19:20
+           MM. 35.39-D9,613.6 454 6Sf, NU.12, P.646.0U,21.P.68 2.711.740. Vvome great tacle...
+
+======================================================================
+SECTION 3: POTENTIAL NEW ISSUES — Flag for Review
+======================================================================
+(24 rows where new ref looks suspicious)
+
+  Row   25: Gn 27:19             → 2Sm 23:19             [implausible: unknown book '2Sm']
+  Row  463: Ps 19:4              → 2Tm 1:6               [implausible: unknown book '2Tm']
+  Row  493: Ps 19:1              → 1Tm 6:15              [implausible: unknown book '1Tm']
+  Row  494: Ps 19:14             → 2Kgs 14:4             [implausible: unknown book '2Kgs']
+  Row  561: Ps 19:1              → 2Sm 22:1              [implausible: unknown book '2Sm']
+  Row 1169: Ps 19:5              → 2Kgs 25:28            [implausible: unknown book '2Kgs']
+  Row 1779: Lk 1:21              → 2Kgs 15:18            [implausible: unknown book '2Kgs']
+  Row 1805: Ezr 1:13             → 1Pt 2:10              [implausible: unknown book '1Pt']
+  Row 1861: Mt 8:6               → 2Kgs 8:11             [implausible: unknown book '2Kgs']
+  Row 1889: Jn 8:39              → 1Pt 3:13              [implausible: unknown book '1Pt']
+  Row 1908: Jn 8:18              → 1Sm 15:13             [implausible: unknown book '1Sm']
+  Row 1929: Jn 18:9              → 2Kgs 23:23            [implausible: unknown book '2Kgs']
+  Row 1935: Jn 21:7              → 1Kgs 18:39            [implausible: unknown book '1Kgs']
+  Row 1944: Jn 21:2              → 2Tm 1:1               [implausible: unknown book '2Tm']
+  Row 1979: Mk 11:53             → 2Kgs 18:5             [implausible: unknown book '2Kgs']
+  Row 1991: Mk 11:31             → Hb 1:14               [implausible: unknown book 'Hb']
+  Row 2013: Jn 11:17             → 2Kgs 2:7              [implausible: unknown book '2Kgs']
+  Row 2026: Jn 11:27             → 1Kgs 6:26             [implausible: unknown book '1Kgs']
+  Row 2068: 1Cor 5:9             → 1Sm 15:29             [implausible: unknown book '1Sm']
+  Row 2134: Mk 10:4              → 2Pt 1:2               [implausible: unknown book '2Pt']
+  Row 2136: Mk 1:1               → 1Tm 4:4               [implausible: unknown book '1Tm']
+  Row 2148: Phlm 1:1             → 2Sm 15:6              [implausible: unknown book '2Sm']
+  Row 2206: Rom 1:17             → 1Kgs 21:28            [implausible: unknown book '1Kgs']
+  Row 2275: Jn 19:18             → Hb 2:11               [implausible: unknown book 'Hb']
+
+======================================================================
+END OF REPORT

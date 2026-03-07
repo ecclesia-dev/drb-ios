@@ -1,0 +1,59 @@
+======================================================================
+DOUAI 1609 ANNOTATION FIX REPORT v4
+======================================================================
+
+v4 CHANGES vs v3:
+  - MANUAL hard-code corrections for 3 misattributed books
+  - Sg (Song of Songs label) → Is (Isaiah)
+  - Rom (Romans label) → Jas (James)
+  - Phlm (Philemon label) → Heb (Hebrews)
+  - [LOW_CONFIDENCE] flag removed from corrected rows
+  - [BOOK_CORRECTED: X→Y by manual review] note added
+
+CORRECTION METHOD
+----------------------------------------
+These are MANUAL corrections, NOT algorithmic.
+Basis: content spot-check confirmed each misattribution:
+  Sg rows → Isaiah content (Ezechias, Assyrians, Rabshakeh)
+  Rom rows → James 5 content (Anointing of Sick, Elias, Confession)
+  Phlm rows → Hebrews content (high priests, heretics, entering God's rest)
+
+NOTE: The chapter:verse fields on these rows retain their v3 values
+(OCR garbage for chapter numbers), but the book abbreviation is now correct.
+
+SUMMARY
+----------------------------------------
+Total annotation rows:          2304
+Total rows corrected (v4):      85
+  Sg → Is (Isaiah):             23
+  Rom → Jas (James):             24
+  Phlm → Heb (Hebrews):         38
+
+NOTE ON EXPECTED COUNT
+----------------------------------------
+Task spec predicted 88 rows (27+23+38). Actual file counts:
+  Sg: 23 rows (spec: 27)
+  Rom: 24 rows (spec: 23)
+  Phlm: 38 rows (spec: 38)
+  Total: 85 rows corrected (spec: 88)
+All rows present in the file have been corrected. No rows missed.
+
+STATS CARRIED FORWARD FROM v3
+----------------------------------------
+Total annotation rows:          2304
+Matched (confident) in v3:      1284 (55.7%)
+  via saint-dismas        : 424
+  via originaldouay       : 802
+  via pdf-ocr             : 22
+  via modern-drb          : 36
+LOW_CONFIDENCE (kept in v3):    1020 (44.3%)
+Book changed (v3 algorithmic):  55
+Ref changed same book (v3):     1132
+Ref unchanged (v3):             97
+
+v4 ADJUSTMENT:
+  85 rows moved from LOW_CONFIDENCE to BOOK_CORRECTED
+  LOW_CONFIDENCE count after v4: 935
+
+======================================================================
+End of report

@@ -1,0 +1,2506 @@
+======================================================================
+DOUAI 1609 ANNOTATION FIX REPORT v2
+======================================================================
+
+SUMMARY
+----------------------------------------
+Total annotation rows:          2304
+Matched (confident):            1868 (81.1%)
+  via saint-dismas        : 1032
+  via originaldouay       : 416
+  via pdf-ocr             : 28
+  via modern-drb          : 392
+LOW_CONFIDENCE (kept):          436 (18.9%)
+Book changed:                   1014
+Ref changed (same book):        762
+Ref unchanged:                  92
+
+Thresholds: SD=0.25 ODR=0.25 PDF=0.22 DRB=0.2
+
+Hard rule: modern DRB text NEVER appears in output TSV.
+  VerseQuote = annotation's own original text (split from annotation).
+  Commentary = annotation's own original text (remainder after split).
+
+======================================================================
+SECTION A: BOOK-LEVEL CORRECTIONS
+======================================================================
+(1014 rows where book changed)
+
+  Row    3: Gn     22:1     → Jn     7:10      [score=0.225 via=modern-drb]
+  Row   11: Gn     22:14    → Jn     15:3      [score=0.206 via=modern-drb]
+  Row   13: Gn     20:6     → 1Chr   16:13     [score=0.273 via=saint-dismas]
+  Row   19: Gn     20:5     → Wis    12:26     [score=0.250 via=saint-dismas]
+  Row   20: Gn     20:12    → Ps     104:20    [score=0.235 via=modern-drb]
+  Row   25: Gn     27:19    → 2Sm    23:19     [score=0.226 via=modern-drb]
+  Row   33: Gn     31:19    → Est    9:32      [score=0.229 via=modern-drb]
+  Row   36: Gn     35:24    → Acts   23:9      [score=0.261 via=saint-dismas]
+  Row   45: Gn     35:2     → Ex     17:13     [score=0.219 via=modern-drb]
+  Row   58: Gn     39:8     → 1Chr   20:7      [score=0.250 via=saint-dismas]
+  Row   61: Gn     40:7     → Jn     1:10      [score=0.235 via=modern-drb]
+  Row   70: Gn     42:7     → Is     63:10     [score=0.209 via=modern-drb]
+  Row   71: Gn     42:9     → Lk     18:27     [score=0.278 via=saint-dismas]
+  Row   86: Gn     46:1     → Mt     27:33     [score=0.269 via=saint-dismas]
+  Row  103: Gn     49:4     → 1Chr   7:27      [score=0.238 via=modern-drb]
+  Row  106: Heb    2:23     → Ex     2:23      [score=0.235 via=modern-drb]
+  Row  109: Heb    3:20     → Ex     4:20      [score=0.400 via=saint-dismas]
+  Row  111: Heb    2:17     → Ex     5:17      [score=0.632 via=saint-dismas]
+  Row  112: Heb    2:21     → Ex     5:21      [score=0.424 via=saint-dismas]
+  Row  113: Heb    2:6      → Nm     8:14      [score=0.296 via=saint-dismas]
+  Row  114: Heb    6:3      → Ps     61:8      [score=0.250 via=originaldouay]
+  Row  115: Heb    6:17     → Mk     13:10     [score=0.286 via=saint-dismas]
+  Row  116: Heb    6:17     → Ex     7:17      [score=0.500 via=saint-dismas]
+  Row  118: Ex     6:11     → 2Cor   1:19      [score=0.244 via=modern-drb]
+  Row  120: Ex     6:2      → Jgs    20:11     [score=0.261 via=saint-dismas]
+  Row  127: Ex     8:19     → Lk     8:11      [score=0.500 via=saint-dismas]
+  Row  135: Ex     40:10    → 1Kings 14:29     [score=0.292 via=saint-dismas]
+  Row  136: Ex     40:29    → Jb     10:5      [score=0.294 via=saint-dismas]
+  Row  145: Ex     40:4     → Lk     24:8      [score=0.250 via=originaldouay]
+  Row  154: Ex     40:5     → Gn     49:10     [score=0.421 via=saint-dismas]
+  Row  155: Ex     40:22    → Gn     28:19     [score=0.207 via=modern-drb]
+  Row  156: Ex     40:28    → Lv     8:36      [score=0.206 via=modern-drb]
+  Row  158: Ex     40:50    → Prv    22:2      [score=0.200 via=modern-drb]
+  Row  159: Ex     40:31    → Wis    8:14      [score=0.217 via=modern-drb]
+  Row  163: Ex     40:6     → Dt     10:14     [score=0.269 via=saint-dismas]
+  Row  165: Ex     16:19    → Neh    13:24     [score=0.225 via=modern-drb]
+  Row  168: Ex     19:1     → Jos    9:17      [score=0.250 via=saint-dismas]
+  Row  169: Ex     20:23    → Jb     8:22      [score=0.226 via=modern-drb]
+  Row  176: Ex     24:8     → Mk     14:69     [score=0.212 via=modern-drb]
+  Row  192: Lv     1:42     → Nm     1:44      [score=0.344 via=saint-dismas]
+  Row  193: Lv     1:3      → Nm     2:3       [score=0.400 via=saint-dismas]
+  Row  194: Lv     1:3      → Nm     2:5       [score=0.310 via=saint-dismas]
+  Row  195: Lv     1:2      → Nm     3:2       [score=0.429 via=saint-dismas]
+  Row  196: Lv     1:12     → Nm     3:12      [score=0.667 via=saint-dismas]
+  Row  198: Lv     1:27     → Nm     3:27      [score=0.391 via=saint-dismas]
+  Row  199: Lv     1:35     → Nm     3:35      [score=0.400 via=saint-dismas]
+  Row  200: Lv     1:6      → Nm     4:6       [score=0.714 via=saint-dismas]
+  Row  201: Lv     1:2      → Nm     3:37      [score=0.786 via=saint-dismas]
+  Row  202: Jos    1:12     → Dt     34:12     [score=0.364 via=saint-dismas]
+  Row  208: Jos    3:8      → Mt     14:9      [score=0.205 via=modern-drb]
+  Row  210: Jos    3:16     → Jb     18:21     [score=0.200 via=modern-drb]
+  Row  216: Jgs    18:30    → Mt     22:2      [score=0.222 via=modern-drb]
+  Row  226: Ru     1:16     → Mt     10:35     [score=0.467 via=saint-dismas]
+  Row  229: Ru     1:6      → Prv    9:18      [score=0.200 via=modern-drb]
+  Row  230: Ru     1:4      → 1Sam   2:4       [score=0.296 via=saint-dismas]
+  Row  231: Ru     1:6      → 1Sam   2:6       [score=0.375 via=saint-dismas]
+  Row  232: Ru     1:8      → Ex     4:29      [score=0.462 via=saint-dismas]
+  Row  233: Ru     1:5      → 1Sam   6:5       [score=0.333 via=saint-dismas]
+  Row  234: Ru     1:4      → 1Sam   7:4       [score=0.312 via=saint-dismas]
+  Row  236: Ru     1:7      → Ps     84:9      [score=0.214 via=modern-drb]
+  Row  237: Ru     1:10     → Lk     17:9      [score=0.250 via=saint-dismas]
+  Row  238: Ru     1:19     → 2Chr   7:4       [score=0.462 via=saint-dismas]
+  Row  239: Ru     1:16     → 1Sam   15:16     [score=0.692 via=saint-dismas]
+  Row  240: Ru     1:7      → Sir    46:8      [score=0.243 via=modern-drb]
+  Row  241: Ru     1:22     → 1Sam   17:22     [score=0.583 via=saint-dismas]
+  Row  242: Ru     1:22     → 1Sam   18:22     [score=0.425 via=saint-dismas]
+  Row  243: Ru     1:17     → 1Sam   19:14     [score=0.448 via=saint-dismas]
+  Row  244: Ru     1:19     → 1Sam   19:16     [score=0.588 via=saint-dismas]
+  Row  246: Ru     1:4      → 1Sam   20:4      [score=0.429 via=saint-dismas]
+  Row  247: Ru     1:7      → 1Sam   21:7      [score=0.704 via=saint-dismas]
+  Row  257: Tb     2:5      → Sir    11:26     [score=0.208 via=modern-drb]
+  Row  264: Jdt    1:7      → Jon    4:1       [score=0.273 via=originaldouay]
+  Row  265: Jdt    1:6      → 1Cor   14:11     [score=0.216 via=modern-drb]
+  Row  269: Jdt    6:17     → Gn     3:23      [score=0.296 via=saint-dismas]
+  Row  272: Jdt    13:17    → Jb     23:15     [score=0.267 via=saint-dismas]
+  Row  275: Jdt    15:12    → Nm     31:2      [score=0.267 via=modern-drb]
+  Row  280: Jdt    15:6     → Gn     27:24     [score=0.231 via=modern-drb]
+  Row  283: Jdt    15:9     → Gn     38:19     [score=0.333 via=saint-dismas]
+  Row  300: Est    3:10     → Mk     3:14      [score=0.286 via=saint-dismas]
+  Row  308: Est    3:4      → 1Kings 10:6      [score=0.250 via=saint-dismas]
+  Row  309: Est    3:1      → Rom    8:8       [score=0.286 via=saint-dismas]
+  Row  310: Est    3:15     → Sir    40:5      [score=0.200 via=modern-drb]
+  Row  313: Est    16:10    → Acts   4:8       [score=0.206 via=modern-drb]
+  Row  318: Est    2:24     → Jb     2:12      [score=0.262 via=saint-dismas]
+  Row  319: Est    2:4      → Jb     2:4       [score=0.375 via=saint-dismas]
+  Row  320: Jb     5:17     → 2Kings 21:22     [score=0.290 via=saint-dismas]
+  Row  325: Jb     9:15     → Lv     4:19      [score=0.286 via=saint-dismas]
+  Row  342: Ps     19:4     → Jn     1:11      [score=0.250 via=saint-dismas]
+  Row  344: Ps     19:7     → Jb     28:23     [score=0.385 via=saint-dismas]
+  Row  345: Ps     19:2     → Acts   4:26      [score=0.435 via=saint-dismas]
+  Row  347: Ps     19:5     → Jb     13:10     [score=0.308 via=saint-dismas]
+  Row  350: Ps     19:9     → Dt     6:9       [score=0.300 via=saint-dismas]
+  Row  351: Ps     19:8     → Heb    11:2      [score=0.200 via=modern-drb]
+  Row  355: Ps     19:3     → 1Jn    3:9       [score=0.296 via=saint-dismas]
+  Row  357: Ps     19:5     → Gn     30:6      [score=0.346 via=saint-dismas]
+  Row  358: Ps     19:6     → Dt     2:2       [score=0.267 via=saint-dismas]
+  Row  362: Ps     19:1     → 2Sam   5:7       [score=0.250 via=saint-dismas]
+  Row  363: Ps     19:2     → Jb     33:8      [score=0.292 via=saint-dismas]
+  Row  364: Ps     19:3     → Mt     5:13      [score=0.250 via=saint-dismas]
+  Row  365: Ps     19:4     → Dt     16:17     [score=0.270 via=saint-dismas]
+  Row  367: Ps     19:9     → Est    15:17     [score=0.250 via=saint-dismas]
+  Row  368: Ps     19:8     → Jdt    13:2      [score=0.200 via=modern-drb]
+  Row  370: Ps     19:3     → Prv    8:4       [score=0.250 via=saint-dismas]
+  Row  376: Ps     19:13    → Dt     28:46     [score=0.310 via=saint-dismas]
+  Row  377: Ps     19:14    → 2Tim   2:3       [score=0.250 via=saint-dismas]
+  Row  378: Ps     19:1     → Lk     2:11      [score=0.214 via=modern-drb]
+  Row  379: Ps     19:6     → Jb     5:20      [score=0.294 via=saint-dismas]
+  Row  381: Ps     19:9     → 2Cor   12:8      [score=0.250 via=saint-dismas]
+  Row  383: Ps     19:1     → 2Kings 8:27      [score=0.257 via=saint-dismas]
+  Row  384: Ps     19:2     → 2Sam   22:23     [score=0.292 via=saint-dismas]
+  Row  388: Ps     19:6     → Rev    21:24     [score=0.333 via=saint-dismas]
+  Row  392: Ps     19:17    → Ex     29:7      [score=0.250 via=saint-dismas]
+  Row  395: Ps     19:5     → Heb    2:6       [score=0.429 via=saint-dismas]
+  Row  396: Ps     19:6     → Heb    2:7       [score=0.360 via=saint-dismas]
+  Row  399: Ps     19:9     → Prv    2:20      [score=0.263 via=saint-dismas]
+  Row  405: Ps     19:8     → 2Chr   20:13     [score=0.263 via=saint-dismas]
+  Row  406: Ps     19:17    → Prv    14:26     [score=0.286 via=saint-dismas]
+  Row  408: Ps     19:3     → Prv    15:23     [score=0.304 via=saint-dismas]
+  Row  409: Ps     19:4     → Dt     16:17     [score=0.417 via=saint-dismas]
+  Row  410: Ps     19:5     → Is     45:27     [score=0.237 via=pdf-ocr]
+  Row  411: Ps     19:6     → Jb     18:8      [score=0.259 via=saint-dismas]
+  Row  412: Ps     19:7     → Rom    3:13      [score=0.294 via=saint-dismas]
+  Row  413: Ps     19:8     → Jos    10:43     [score=0.250 via=saint-dismas]
+  Row  417: Ps     19:15    → 1Kings 2:45      [score=0.321 via=saint-dismas]
+  Row  418: Ps     19:17    → Tb     13:11     [score=0.250 via=saint-dismas]
+  Row  423: Ps     19:4     → Dt     1:20      [score=0.276 via=saint-dismas]
+  Row  426: Ps     19:9     → Sir    27:8      [score=0.206 via=modern-drb]
+  Row  429: Ps     19:5     → Jer    32:31     [score=0.222 via=modern-drb]
+  Row  431: Ps     19:3     → Eccl   7:21      [score=0.259 via=saint-dismas]
+  Row  433: Ps     19:6     → Ex     15:3      [score=0.250 via=saint-dismas]
+  Row  434: Ps     19:7     → Gn     31:49     [score=0.261 via=saint-dismas]
+  Row  435: Ps     19:6     → 1Kings 17:22     [score=0.300 via=saint-dismas]
+  Row  436: Ps     19:1     → Jb     29:4      [score=0.212 via=modern-drb]
+  Row  437: Ps     19:2     → 1Chr   16:29     [score=0.429 via=saint-dismas]
+  Row  438: Ps     19:3     → Ex     2:25      [score=0.250 via=saint-dismas]
+  Row  440: Ps     19:5     → Prv    10:27     [score=0.312 via=saint-dismas]
+  Row  441: Ps     19:6     → Rev    19:6      [score=0.294 via=saint-dismas]
+  Row  443: Ps     19:8     → 2Sam   22:47     [score=0.269 via=saint-dismas]
+  Row  446: Ps     19:5     → 1Chr   9:5       [score=0.286 via=saint-dismas]
+  Row  451: Ps     19:1     → Jb     7:2       [score=0.267 via=saint-dismas]
+  Row  452: Ps     19:4     → Est    15:17     [score=0.273 via=saint-dismas]
+  Row  453: Ps     19:5     → Neh    13:14     [score=0.258 via=saint-dismas]
+  Row  456: Ps     19:15    → Gn     30:29     [score=0.257 via=saint-dismas]
+  Row  457: Ps     19:20    → Dt     12:25     [score=0.257 via=saint-dismas]
+  Row  458: Ps     19:2     → Jb     10:5      [score=0.217 via=modern-drb]
+  Row  461: Ps     19:2     → Rom    4:8       [score=0.312 via=saint-dismas]
+  Row  463: Ps     19:4     → 2Tm    1:6       [score=0.200 via=modern-drb]
+  Row  464: Ps     19:5     → Jb     38:10     [score=0.200 via=modern-drb]
+  Row  467: Ps     19:8     → Ex     33:3      [score=0.290 via=saint-dismas]
+  Row  469: Ps     19:1     → Acts   16:8      [score=0.200 via=modern-drb]
+  Row  471: Ps     19:2     → Gn     22:14     [score=0.225 via=modern-drb]
+  Row  472: Ps     19:3     → Col    1:19      [score=0.267 via=saint-dismas]
+  Row  473: Ps     19:4     → Wis    7:16      [score=0.280 via=saint-dismas]
+  Row  474: Ps     19:6     → 2Sam   23:2      [score=0.320 via=saint-dismas]
+  Row  476: Ps     19:13    → Jn     3:31      [score=0.250 via=saint-dismas]
+  Row  477: Ps     19:14    → Jdt    2:3       [score=0.350 via=saint-dismas]
+  Row  479: Ps     19:17    → Lv     17:8      [score=0.286 via=saint-dismas]
+  Row  480: Ps     19:19    → Jb     33:30     [score=0.304 via=saint-dismas]
+  Row  481: Ps     19:20    → 2Sam   22:2      [score=0.333 via=saint-dismas]
+  Row  482: Ps     19:1     → 1Sam   19:12     [score=0.273 via=saint-dismas]
+  Row  483: Ps     19:3     → Ex     14:18     [score=0.308 via=saint-dismas]
+  Row  484: Ps     19:4     → Gn     30:6      [score=0.300 via=saint-dismas]
+  Row  485: Ps     19:6     → Mk     14:29     [score=0.263 via=saint-dismas]
+  Row  486: Ps     19:7     → Gn     39:2      [score=0.286 via=saint-dismas]
+  Row  487: Ps     19:8     → 1Sam   14:37     [score=0.333 via=saint-dismas]
+  Row  489: Ps     19:15    → 1Pet   3:12      [score=0.306 via=saint-dismas]
+  Row  490: Ps     19:38    → 1Sam   8:21      [score=0.292 via=saint-dismas]
+  Row  491: Ps     19:39    → 2Chr   30:18     [score=0.314 via=saint-dismas]
+  Row  492: Ps     19:43    → Acts   16:32     [score=0.391 via=saint-dismas]
+  Row  493: Ps     19:1     → 1Tm    6:15      [score=0.242 via=modern-drb]
+  Row  494: Ps     19:14    → 2Kgs   14:4      [score=0.216 via=modern-drb]
+  Row  495: Ps     19:1     → Jb     12:10     [score=0.250 via=saint-dismas]
+  Row  499: Ps     19:8     → Mt     24:17     [score=0.258 via=saint-dismas]
+  Row  500: Ps     19:9     → Tb     13:17     [score=0.304 via=saint-dismas]
+  Row  502: Ps     19:13    → Gal    3:27      [score=0.200 via=modern-drb]
+  Row  504: Ps     19:16    → Acts   7:49      [score=0.261 via=saint-dismas]
+  Row  506: Ps     19:19    → Jn     7:16      [score=0.250 via=saint-dismas]
+  Row  507: Ps     19:27    → 2Sam   21:6      [score=0.293 via=saint-dismas]
+  Row  508: Ps     19:1     → 1Chr   21:9      [score=0.400 via=saint-dismas]
+  Row  509: Ps     19:2     → Rom    3:17      [score=0.429 via=saint-dismas]
+  Row  513: Ps     19:9     → Nm     11:17     [score=0.294 via=saint-dismas]
+  Row  514: Ps     19:11    → Prv    8:9       [score=0.316 via=saint-dismas]
+  Row  515: Ps     19:12    → Prv    5:13      [score=0.286 via=saint-dismas]
+  Row  516: Ps     19:23    → Acts   11:2      [score=0.235 via=modern-drb]
+  Row  518: Ps     19:3     → Prv    15:3      [score=0.273 via=saint-dismas]
+  Row  519: Ps     19:4     → Jas    4:10      [score=0.421 via=saint-dismas]
+  Row  522: Ps     19:8     → Dt     6:12      [score=0.267 via=saint-dismas]
+  Row  523: Ps     19:11    → Nm     35:13     [score=0.389 via=saint-dismas]
+  Row  524: Ps     19:2     → Mt     24:51     [score=0.286 via=saint-dismas]
+  Row  525: Ps     19:17    → Gn     15:4      [score=0.302 via=saint-dismas]
+  Row  527: Ps     19:16    → Heb    7:22      [score=0.250 via=saint-dismas]
+  Row  529: Ps     19:18    → 1Kings 2:45      [score=0.290 via=saint-dismas]
+  Row  534: Ps     19:28    → Prv    20:22     [score=0.353 via=saint-dismas]
+  Row  535: Ps     19:29    → Lv     25:23     [score=0.292 via=saint-dismas]
+  Row  536: Ps     19:30    → Dt     21:19     [score=0.300 via=saint-dismas]
+  Row  537: Ps     19:31    → Lk     12:53     [score=0.333 via=saint-dismas]
+  Row  538: Ps     19:32    → Jer    99:9      [score=0.222 via=pdf-ocr]
+  Row  539: Ps     19:33    → Lv     21:4      [score=0.333 via=saint-dismas]
+  Row  540: Ps     19:34    → Ex     12:25     [score=0.281 via=saint-dismas]
+  Row  542: Ps     19:36    → Jn     1:10      [score=0.353 via=saint-dismas]
+  Row  543: Ps     19:37    → 1Cor   11:8      [score=0.250 via=saint-dismas]
+  Row  544: Ps     19:38    → Prv    10:28     [score=0.333 via=saint-dismas]
+  Row  545: Ps     19:39    → 2Chr   35:2      [score=0.348 via=saint-dismas]
+  Row  549: Ps     19:4     → 1Cor   1:28      [score=0.273 via=saint-dismas]
+  Row  551: Ps     19:1     → Jb     6:13      [score=0.269 via=saint-dismas]
+  Row  552: Ps     19:10    → Jb     42:2      [score=0.316 via=saint-dismas]
+  Row  553: Ps     19:12    → Jb     19:14     [score=0.263 via=saint-dismas]
+  Row  561: Ps     19:1     → 2Sm    22:1      [score=0.237 via=modern-drb]
+  Row  567: Ps     19:8     → Jb     17:15     [score=0.364 via=saint-dismas]
+  Row  568: Ps     19:9     → Eph    6:19      [score=0.257 via=saint-dismas]
+  Row  569: Ps     19:12    → Dt     8:17      [score=0.273 via=saint-dismas]
+  Row  570: Ps     19:13    → Jb     13:17     [score=0.261 via=saint-dismas]
+  Row  571: Ps     19:14    → Heb    13:19     [score=0.273 via=saint-dismas]
+  Row  572: Ps     19:6     → Gn     47:7      [score=0.250 via=modern-drb]
+  Row  573: Ps     19:2     → 2Sam   22:21     [score=0.316 via=saint-dismas]
+  Row  574: Ps     19:3     → Jb     19:9      [score=0.292 via=saint-dismas]
+  Row  575: Ps     19:4     → Jb     30:11     [score=0.259 via=saint-dismas]
+  Row  579: Ps     19:14    → Rom    16:8      [score=0.250 via=modern-drb]
+  Row  580: Ps     19:17    → Prv    23:25     [score=0.267 via=saint-dismas]
+  Row  581: Ps     19:2     → Prv    19:22     [score=0.312 via=saint-dismas]
+  Row  582: Ps     19:4     → Ex     29:24     [score=0.261 via=saint-dismas]
+  Row  584: Ps     19:7     → 1Cor   7:38      [score=0.275 via=saint-dismas]
+  Row  588: Ps     19:14    → Mt     13:49     [score=0.318 via=saint-dismas]
+  Row  589: Ps     19:1     → 2Chr   6:25      [score=0.211 via=modern-drb]
+  Row  594: Ps     19:8     → Prv    7:3       [score=0.312 via=saint-dismas]
+  Row  595: Ps     19:12    → Rev    2:28      [score=0.250 via=saint-dismas]
+  Row  597: Ps     19:4     → 1Tim   1:11      [score=0.357 via=saint-dismas]
+  Row  598: Ps     19:6     → Jb     2:9       [score=0.286 via=saint-dismas]
+  Row  599: Ps     19:6     → Is     46:23     [score=0.231 via=pdf-ocr]
+  Row  601: Ps     19:3     → Ex     15:12     [score=0.286 via=saint-dismas]
+  Row  602: Ps     19:4     → Gn     13:6      [score=0.269 via=saint-dismas]
+  Row  603: Ps     19:5     → Jn     1:49      [score=0.333 via=saint-dismas]
+  Row  607: Ps     19:13    → Rev    14:5      [score=0.348 via=saint-dismas]
+  Row  612: Ps     19:21    → Jos    9:19      [score=0.333 via=saint-dismas]
+  Row  617: Ps     19:7     → Heb    1:8       [score=0.348 via=saint-dismas]
+  Row  619: Ps     19:13    → Dt     28:42     [score=0.278 via=saint-dismas]
+  Row  620: Ps     19:16    → 2Chr   36:6      [score=0.318 via=saint-dismas]
+  Row  623: Ps     19:1     → Jb     7:2       [score=0.250 via=saint-dismas]
+  Row  625: Ps     19:3     → Nm     31:23     [score=0.256 via=saint-dismas]
+  Row  626: Ps     19:5     → 1Jn    5:10      [score=0.250 via=saint-dismas]
+  Row  629: Ps     19:12    → Prv    15:16     [score=0.300 via=saint-dismas]
+  Row  630: Ps     19:1     → Is     3:8       [score=0.231 via=pdf-ocr]
+  Row  631: Ps     19:2     → Neh    13:7      [score=0.333 via=saint-dismas]
+  Row  633: Ps     19:3     → Mt     5:35      [score=0.270 via=originaldouay]
+  Row  634: Ps     19:5     → Jn     13:23     [score=0.261 via=saint-dismas]
+  Row  638: Ps     19:10    → 1Chr   1:28      [score=0.300 via=saint-dismas]
+  Row  641: Ps     19:5     → 2Sam   2:25      [score=0.273 via=saint-dismas]
+  Row  644: Ps     19:9     → 1Jn    3:16      [score=0.270 via=saint-dismas]
+  Row  646: Ps     19:15    → Lk     1:55      [score=0.312 via=saint-dismas]
+  Row  647: Ps     19:1     → Mk     7:29      [score=0.242 via=modern-drb]
+  Row  648: Ps     19:2     → Jb     13:17     [score=0.278 via=saint-dismas]
+  Row  649: Ps     19:3     → Ex     4:29      [score=0.333 via=saint-dismas]
+  Row  650: Ps     19:4     → Jb     33:3      [score=0.300 via=saint-dismas]
+  Row  657: Ps     19:21    → Mk     2:27      [score=0.267 via=saint-dismas]
+  Row  658: Ps     19:3     → Prv    20:22     [score=0.312 via=saint-dismas]
+  Row  659: Ps     19:4     → Jn     3:31      [score=0.286 via=saint-dismas]
+  Row  665: Ps     19:23    → Ex     15:2      [score=0.276 via=saint-dismas]
+  Row  666: Ps     19:14    → 1Chr   15:12     [score=0.213 via=modern-drb]
+  Row  675: Ps     19:14    → 2Jn    1:13      [score=0.300 via=saint-dismas]
+  Row  677: Ps     19:16    → Mk     3:35      [score=0.318 via=saint-dismas]
+  Row  678: Ps     19:21    → Ex     28:13     [score=0.300 via=saint-dismas]
+  Row  681: Ps     19:4     → Jer    52:2      [score=0.205 via=modern-drb]
+  Row  683: Ps     19:8     → Wis    5:2       [score=0.286 via=saint-dismas]
+  Row  685: Ps     19:4     → Eccl   7:21      [score=0.250 via=saint-dismas]
+  Row  693: Ps     19:5     → 2Sam   22:6      [score=0.286 via=saint-dismas]
+  Row  694: Ps     19:7     → Rev    2:28      [score=0.250 via=saint-dismas]
+  Row  696: Ps     19:9     → Rev    19:10     [score=0.261 via=saint-dismas]
+  Row  698: Ps     19:14    → Prv    7:2       [score=0.250 via=saint-dismas]
+  Row  702: Ps     19:1     → 2Cor   3:11      [score=0.263 via=saint-dismas]
+  Row  705: Ps     19:5     → Gn     20:12     [score=0.273 via=saint-dismas]
+  Row  709: Ps     19:8     → Jos    13:2      [score=0.250 via=saint-dismas]
+  Row  710: Ps     19:3     → Rom    7:20      [score=0.300 via=saint-dismas]
+  Row  711: Ps     19:4     → 2Sam   22:17     [score=0.294 via=saint-dismas]
+  Row  713: Ps     19:1     → Lk     1:69      [score=0.263 via=saint-dismas]
+  Row  715: Ps     19:3     → 2Thes  2:17      [score=0.267 via=saint-dismas]
+  Row  717: Ps     19:6     → Jb     35:12     [score=0.300 via=saint-dismas]
+  Row  718: Ps     19:7     → Jos    9:14      [score=0.300 via=saint-dismas]
+  Row  719: Ps     19:1     → Mt     8:23      [score=0.250 via=saint-dismas]
+  Row  720: Ps     19:19    → 2Chr   17:4      [score=0.200 via=modern-drb]
+  Row  722: Ps     19:3     → Jb     34:8      [score=0.400 via=saint-dismas]
+  Row  727: Ps     19:13    → Jb     21:9      [score=0.273 via=saint-dismas]
+  Row  728: Ps     19:17    → Nm     17:4      [score=0.267 via=saint-dismas]
+  Row  729: Ps     19:1     → Mt     11:6      [score=0.333 via=saint-dismas]
+  Row  730: Ps     19:1     → Mk     15:38     [score=0.231 via=modern-drb]
+  Row  734: Ps     19:6     → Nm     16:24     [score=0.273 via=saint-dismas]
+  Row  737: Ps     19:5     → Nm     3:25      [score=0.294 via=saint-dismas]
+  Row  739: Ps     19:7     → Gn     35:28     [score=0.263 via=saint-dismas]
+  Row  741: Ps     19:1     → Dn     13:25     [score=0.227 via=modern-drb]
+  Row  743: Ps     19:7     → Gn     20:12     [score=0.276 via=saint-dismas]
+  Row  750: Ps     19:6     → Jb     8:21      [score=0.263 via=saint-dismas]
+  Row  756: Ps     19:1     → Acts   4:15      [score=0.304 via=saint-dismas]
+  Row  757: Ps     19:4     → Lk     14:14     [score=0.258 via=saint-dismas]
+  Row  759: Ps     19:6     → Eccl   6:7       [score=0.250 via=saint-dismas]
+  Row  760: Ps     19:9     → Jb     8:22      [score=0.318 via=saint-dismas]
+  Row  761: Ps     19:12    → Jb     5:23      [score=0.304 via=saint-dismas]
+  Row  763: Ps     19:14    → 2Cor   11:22     [score=0.333 via=saint-dismas]
+  Row  764: Ps     19:11    → Lam    3:34      [score=0.250 via=modern-drb]
+  Row  765: Ps     19:1     → Jb     38:19     [score=0.250 via=saint-dismas]
+  Row  766: Ps     19:3     → Nm     24:5      [score=0.250 via=saint-dismas]
+  Row  767: Ps     19:4     → 2Tim   4:8       [score=0.333 via=saint-dismas]
+  Row  769: Ps     19:5     → Ex     29:45     [score=0.316 via=saint-dismas]
+  Row  771: Ps     19:8     → 2Kings 21:22     [score=0.316 via=saint-dismas]
+  Row  772: Ps     19:9     → 2Cor   8:16      [score=0.265 via=saint-dismas]
+  Row  775: Ps     19:16    → Neh    5:19      [score=0.265 via=saint-dismas]
+  Row  778: Ps     19:19    → Prv    8:4       [score=0.353 via=saint-dismas]
+  Row  779: Ps     19:20    → 2Sam   22:23     [score=0.292 via=saint-dismas]
+  Row  780: Ps     19:2     → Nm     6:25      [score=0.333 via=saint-dismas]
+  Row  781: Ps     19:3     → Ex     33:16     [score=0.257 via=saint-dismas]
+  Row  784: Ps     19:1     → Rom    10:4      [score=0.278 via=saint-dismas]
+  Row  788: Ps     19:13    → Est    2:13      [score=0.250 via=saint-dismas]
+  Row  793: Ps     19:22    → 1Chr   9:5       [score=0.273 via=saint-dismas]
+  Row  795: Ps     19:24    → Phlm   1:6       [score=0.280 via=saint-dismas]
+  Row  798: Ps     19:27    → Dt     32:3      [score=0.267 via=saint-dismas]
+  Row  799: Ps     19:28    → Lv     13:38     [score=0.214 via=modern-drb]
+  Row  802: Ps     19:33    → Dt     32:3      [score=0.429 via=saint-dismas]
+  Row  804: Ps     19:36    → Prv    14:26     [score=0.250 via=saint-dismas]
+  Row  805: Ps     19:3     → Sir    25:22     [score=0.222 via=modern-drb]
+  Row  809: Ps     19:7     → 1Sam   24:13     [score=0.350 via=saint-dismas]
+  Row  813: Ps     19:17    → 2Chr   6:42      [score=0.281 via=saint-dismas]
+  Row  814: Ps     19:22    → Gn     20:12     [score=0.259 via=saint-dismas]
+  Row  815: Ps     19:23    → Rom    11:9      [score=0.300 via=saint-dismas]
+  Row  816: Ps     19:25    → Prv    5:18      [score=0.263 via=saint-dismas]
+  Row  818: Ps     19:28    → Prv    23:12     [score=0.263 via=saint-dismas]
+  Row  819: Ps     19:29    → Ex     25:38     [score=0.333 via=saint-dismas]
+  Row  821: Ps     19:31    → Ex     31:3      [score=0.333 via=saint-dismas]
+  Row  822: Ps     19:32    → Rev    21:27     [score=0.256 via=saint-dismas]
+  Row  824: Ps     19:34    → Tb     13:19     [score=0.258 via=saint-dismas]
+  Row  825: Ps     19:35    → Gal    6:6       [score=0.273 via=saint-dismas]
+  Row  826: Ps     19:36    → Jer    9:23      [score=0.333 via=pdf-ocr]
+  Row  827: Ps     19:37    → Gn     37:31     [score=0.250 via=saint-dismas]
+  Row  831: Ps     19:1     → 1Cor   7:31      [score=0.265 via=saint-dismas]
+  Row  832: Ps     19:3     → 2Chr   6:40      [score=0.270 via=saint-dismas]
+  Row  833: Ps     19:8     → Jb     36:19     [score=0.308 via=saint-dismas]
+  Row  838: Ps     19:1     → 1Thes  5:18      [score=0.200 via=modern-drb]
+  Row  839: Ps     19:3     → Jdt    16:29     [score=0.333 via=saint-dismas]
+  Row  841: Ps     19:9     → Jb     41:16     [score=0.267 via=saint-dismas]
+  Row  842: Ps     19:8     → Nm     4:3       [score=0.276 via=saint-dismas]
+  Row  843: Ps     19:9     → Jb     20:27     [score=0.316 via=saint-dismas]
+  Row  844: Ps     19:12    → Jb     36:15     [score=0.300 via=saint-dismas]
+  Row  845: Ps     19:13    → Jb     5:15      [score=0.368 via=saint-dismas]
+  Row  846: Ps     19:19    → Jb     20:11     [score=0.320 via=saint-dismas]
+  Row  848: Ps     19:18    → Jb     5:9       [score=0.273 via=saint-dismas]
+  Row  850: Ps     19:3     → Rom    3:16      [score=0.267 via=saint-dismas]
+  Row  851: Ps     19:4     → Sir    48:14     [score=0.231 via=modern-drb]
+  Row  852: Ps     19:5     → Jb     8:22      [score=0.381 via=saint-dismas]
+  Row  854: Ps     19:7     → Jb     8:4       [score=0.280 via=saint-dismas]
+  Row  855: Ps     19:15    → 2Jn    1:13      [score=0.400 via=saint-dismas]
+  Row  856: Ps     19:17    → Nm     15:40     [score=0.280 via=saint-dismas]
+  Row  859: Ps     19:26    → 1Chr   29:18     [score=0.250 via=saint-dismas]
+  Row  861: Ps     19:2     → Est    13:16     [score=0.250 via=saint-dismas]
+  Row  863: Ps     19:7     → Lv     21:9      [score=0.259 via=saint-dismas]
+  Row  867: Ps     19:4     → 1Cor   10:26     [score=0.364 via=saint-dismas]
+  Row  870: Ps     19:10    → 1Jn    2:17      [score=0.300 via=saint-dismas]
+  Row  871: Ps     19:3     → 1Chr   16:27     [score=0.267 via=saint-dismas]
+  Row  872: Ps     19:4     → Acts   18:11     [score=0.316 via=saint-dismas]
+  Row  875: Ps     19:9     → Jer    99:61     [score=0.231 via=pdf-ocr]
+  Row  876: Ps     19:11    → Dt     22:18     [score=0.357 via=saint-dismas]
+  Row  877: Ps     19:12    → Jos    23:3      [score=0.268 via=saint-dismas]
+  Row  878: Ps     19:1     → Lk     20:22     [score=0.250 via=saint-dismas]
+  Row  880: Ps     19:7     → Jb     31:27     [score=0.357 via=saint-dismas]
+  Row  881: Ps     19:8     → Jdt    8:15      [score=0.280 via=saint-dismas]
+  Row  884: Ps     19:13    → Ex     29:45     [score=0.263 via=saint-dismas]
+  Row  886: Ps     19:18    → Apc    19:6      [score=0.222 via=modern-drb]
+  Row  887: Ps     19:65    → Est    9:11      [score=0.206 via=modern-drb]
+  Row  890: Ps     19:5     → Gn     41:48     [score=0.200 via=modern-drb]
+  Row  891: Ps     19:8     → Nm     25:1      [score=0.206 via=modern-drb]
+  Row  894: Ps     19:16    → Jn     10:39     [score=0.267 via=saint-dismas]
+  Row  897: Ps     19:21    → Gn     1:3       [score=0.250 via=saint-dismas]
+  Row  898: Ps     19:23    → Jn     3:31      [score=0.318 via=saint-dismas]
+  Row  901: Ps     19:27    → Jn     18:6      [score=0.259 via=saint-dismas]
+  Row  902: Ps     19:24    → Mk     6:44      [score=0.312 via=saint-dismas]
+  Row  904: Ps     19:32    → Jb     8:12      [score=0.250 via=saint-dismas]
+  Row  905: Ps     19:33    → Nm     1:21      [score=0.273 via=saint-dismas]
+  Row  906: Ps     19:34    → Jn     8:2       [score=0.348 via=saint-dismas]
+  Row  907: Ps     19:35    → Jdt    7:21      [score=0.353 via=saint-dismas]
+  Row  909: Ps     19:38    → Heb    10:34     [score=0.273 via=saint-dismas]
+  Row  911: Ps     19:42    → Jgs    9:17      [score=0.364 via=saint-dismas]
+  Row  912: Ps     19:43    → Mt     12:21     [score=0.273 via=saint-dismas]
+  Row  913: Ps     19:44    → Rev    11:6      [score=0.283 via=saint-dismas]
+  Row  916: Ps     19:48    → Lk     23:24     [score=0.364 via=saint-dismas]
+  Row  918: Ps     19:51    → 2Chr   19:5      [score=0.261 via=saint-dismas]
+  Row  921: Ps     19:56    → Mk     2:20      [score=0.216 via=modern-drb]
+  Row  922: Ps     19:61    → Acts   27:19     [score=0.263 via=saint-dismas]
+  Row  925: Ps     19:67    → Prv    31:11     [score=0.294 via=saint-dismas]
+  Row  927: Ps     19:71    → Lk     24:25     [score=0.250 via=saint-dismas]
+  Row  928: Ps     19:40    → Jdt    6:10      [score=0.273 via=saint-dismas]
+  Row  929: Ps     19:1     → Is     99:1      [score=0.261 via=pdf-ocr]
+  Row  931: Ps     19:3     → Gn     30:38     [score=0.270 via=saint-dismas]
+  Row  934: Ps     19:9     → Eph    5:20      [score=0.333 via=saint-dismas]
+  Row  942: Ps     19:19    → Jb     21:14     [score=0.286 via=saint-dismas]
+  Row  946: Ps     19:5     → 1Cor   15:43     [score=0.231 via=modern-drb]
+  Row  947: Ps     19:6     → 2Sam   10:7      [score=0.261 via=saint-dismas]
+  Row  949: Ps     19:8     → Phil   1:30      [score=0.286 via=saint-dismas]
+  Row  951: Ps     19:33    → Wis    4:20      [score=0.320 via=saint-dismas]
+  Row  954: Ps     19:5     → Apc    12:8      [score=0.222 via=modern-drb]
+  Row  955: Ps     19:6     → 1Kings 8:3       [score=0.308 via=saint-dismas]
+  Row  956: Ps     19:7     → Mt     12:31     [score=0.261 via=saint-dismas]
+  Row  960: Ps     19:9     → Wis    5:5       [score=0.261 via=saint-dismas]
+  Row  961: Ps     19:10    → Lk     20:25     [score=0.250 via=saint-dismas]
+  Row  964: Ps     19:17    → 1Mc    1:66      [score=0.231 via=modern-drb]
+  Row  965: Ps     19:19    → 1Chr   16:14     [score=0.353 via=saint-dismas]
+  Row  966: Ps     19:1     → Jdt    4:15      [score=0.219 via=modern-drb]
+  Row  967: Ps     19:4     → Bar    3:30      [score=0.278 via=originaldouay]
+  Row  968: Ps     19:6     → Lk     1:51      [score=0.250 via=saint-dismas]
+  Row  969: Ps     19:8     → Jer    64:19     [score=0.250 via=pdf-ocr]
+  Row  971: Ps     19:18    → Est    14:12     [score=0.250 via=saint-dismas]
+  Row  972: Ps     19:12    → Prv    16:6      [score=0.278 via=saint-dismas]
+  Row  973: Ps     19:13    → Dt     12:25     [score=0.225 via=modern-drb]
+  Row  975: Ps     19:3     → Ex     22:28     [score=0.312 via=saint-dismas]
+  Row  977: Ps     19:15    → 1Tim   2:3       [score=0.333 via=saint-dismas]
+  Row  980: Ps     19:9     → 1Chr   16:14     [score=0.294 via=saint-dismas]
+  Row  982: Ps     19:12    → Jn     3:31      [score=0.286 via=saint-dismas]
+  Row  984: Ps     19:14    → Prv    11:5      [score=0.280 via=saint-dismas]
+  Row  988: Ps     19:6     → Prv    8:4       [score=0.316 via=saint-dismas]
+  Row  989: Ps     19:7     → 2Sam   22:19     [score=0.273 via=saint-dismas]
+  Row  991: Ps     19:12    → 1Chr   17:2      [score=0.308 via=saint-dismas]
+  Row  992: Ps     19:14    → Dt     7:21      [score=0.278 via=saint-dismas]
+  Row  993: Ps     19:17    → Dt     6:2       [score=0.282 via=saint-dismas]
+  Row  996: Ps     19:5     → Jb     5:7       [score=0.400 via=saint-dismas]
+  Row  997: Ps     19:6     → Dt     22:23     [score=0.250 via=saint-dismas]
+  Row  998: Ps     19:7     → Prv    15:15     [score=0.316 via=saint-dismas]
+  Row 1003: Ps     19:5     → Mk     3:14      [score=0.250 via=saint-dismas]
+  Row 1004: Ps     19:9     → Jb     19:13     [score=0.259 via=saint-dismas]
+  Row 1007: Ps     19:13    → Nm     35:13     [score=0.273 via=saint-dismas]
+  Row 1009: Ps     19:19    → Jb     19:13     [score=0.273 via=saint-dismas]
+  Row 1012: Ps     19:8     → Mk     12:28     [score=0.250 via=saint-dismas]
+  Row 1015: Ps     19:25    → Jb     20:11     [score=0.292 via=saint-dismas]
+  Row 1016: Ps     19:27    → Mk     3:35      [score=0.308 via=saint-dismas]
+  Row 1017: Ps     19:30    → 2Sam   7:13      [score=0.364 via=saint-dismas]
+  Row 1020: Ps     19:34    → 2Sam   7:15      [score=0.304 via=saint-dismas]
+  Row 1022: Ps     19:36    → Jb     31:5      [score=0.250 via=saint-dismas]
+  Row 1023: Ps     19:38    → 1Sam   14:23     [score=0.294 via=saint-dismas]
+  Row 1025: Ps     19:13    → 1Mc    3:60      [score=0.200 via=modern-drb]
+  Row 1026: Ps     19:7     → 1Chr   16:28     [score=0.692 via=saint-dismas]
+  Row 1027: Ps     19:8     → Lk     7:31      [score=0.208 via=modern-drb]
+  Row 1030: Ps     19:4     → Gn     40:6      [score=0.263 via=saint-dismas]
+  Row 1031: Ps     19:5     → Jgs    5:5       [score=0.333 via=saint-dismas]
+  Row 1032: Ps     19:7     → Mt     27:16     [score=0.214 via=modern-drb]
+  Row 1033: Ps     19:12    → Lv     2:15      [score=0.250 via=saint-dismas]
+  Row 1037: Ps     19:2     → Nm     14:37     [score=0.267 via=saint-dismas]
+  Row 1040: Ps     19:6     → Dt     28:10     [score=0.257 via=saint-dismas]
+  Row 1042: Ps     19:3     → 1Chr   17:20     [score=0.294 via=saint-dismas]
+  Row 1047: Ps     19:8     → 2Kings 12:14     [score=0.296 via=saint-dismas]
+  Row 1054: Ps     19:15    → Lv     7:3       [score=0.263 via=saint-dismas]
+  Row 1055: Ps     19:17    → Prv    28:25     [score=0.304 via=saint-dismas]
+  Row 1058: Ps     19:21    → Mk     10:13     [score=0.292 via=saint-dismas]
+  Row 1060: Ps     19:26    → Tb     8:7       [score=0.267 via=saint-dismas]
+  Row 1061: Ps     19:27    → Heb    1:10      [score=0.500 via=saint-dismas]
+  Row 1062: Ps     19:39    → Nm     26:53     [score=0.316 via=saint-dismas]
+  Row 1068: Ps     19:9     → Jdt    8:15      [score=0.333 via=saint-dismas]
+  Row 1069: Ps     19:16    → Jn     14:17     [score=0.303 via=saint-dismas]
+  Row 1070: Ps     19:19    → Prv    14:26     [score=0.250 via=saint-dismas]
+  Row 1073: Ps     19:5     → Jer    64:7      [score=0.222 via=pdf-ocr]
+  Row 1075: Ps     19:1     → Gn     3:9       [score=0.316 via=saint-dismas]
+  Row 1077: Ps     19:4     → Sir    50:9      [score=0.200 via=modern-drb]
+  Row 1078: Ps     19:5     → 2Jn    1:2       [score=0.353 via=saint-dismas]
+  Row 1081: Ps     19:4     → Wis    14:13     [score=0.286 via=saint-dismas]
+  Row 1084: Ps     19:28    → Heb    1:11      [score=0.276 via=saint-dismas]
+  Row 1085: Ps     19:39    → Jb     5:25      [score=0.308 via=saint-dismas]
+  Row 1086: Ps     19:32    → Eccl   12:7      [score=0.250 via=saint-dismas]
+  Row 1087: Ps     19:33    → 2Chr   33:17     [score=0.273 via=saint-dismas]
+  Row 1089: Ps     19:135   → 1Chr   16:31     [score=0.259 via=saint-dismas]
+  Row 1090: Ps     19:4     → 1Chr   16:12     [score=0.393 via=saint-dismas]
+  Row 1091: Ps     19:6     → 1Chr   16:13     [score=0.385 via=saint-dismas]
+  Row 1092: Ps     19:7     → 1Chr   16:14     [score=0.333 via=saint-dismas]
+  Row 1093: Ps     19:8     → 1Chr   16:15     [score=0.526 via=saint-dismas]
+  Row 1094: Ps     19:9     → Dt     11:3      [score=0.286 via=saint-dismas]
+  Row 1095: Ps     19:10    → 1Chr   16:18     [score=0.310 via=saint-dismas]
+  Row 1096: Ps     19:13    → 1Chr   16:20     [score=0.833 via=saint-dismas]
+  Row 1101: Ps     19:15    → 1Chr   16:22     [score=0.357 via=saint-dismas]
+  Row 1102: Ps     19:23    → Apc    17:11     [score=0.206 via=modern-drb]
+  Row 1104: Ps     19:29    → Jdt    9:8       [score=0.286 via=saint-dismas]
+  Row 1105: Ps     19:30    → Rev    21:24     [score=0.263 via=saint-dismas]
+  Row 1109: Ps     19:35    → Dt     29:8      [score=0.318 via=saint-dismas]
+  Row 1111: Ps     19:37    → Mk     1:23      [score=0.261 via=saint-dismas]
+  Row 1113: Ps     19:40    → Ex     37:15     [score=0.333 via=saint-dismas]
+  Row 1114: Ps     19:41    → 1Kings 18:33     [score=0.263 via=saint-dismas]
+  Row 1115: Ps     19:45    → Mk     1:36      [score=0.267 via=saint-dismas]
+  Row 1116: Ps     19:2     → Nm     6:8       [score=0.421 via=saint-dismas]
+  Row 1117: Ps     19:3     → Prv    8:32      [score=0.286 via=saint-dismas]
+  Row 1119: Ps     19:5     → Rom    15:32     [score=0.276 via=saint-dismas]
+  Row 1120: Ps     19:6     → Jb     28:22     [score=0.267 via=saint-dismas]
+  Row 1121: Ps     19:7     → Neh    9:16      [score=0.278 via=saint-dismas]
+  Row 1124: Ps     19:17    → Dt     11:6      [score=0.250 via=saint-dismas]
+  Row 1127: Ps     19:23    → Mk     10:32     [score=0.250 via=saint-dismas]
+  Row 1128: Ps     19:25    → 1Kings 14:18     [score=0.324 via=saint-dismas]
+  Row 1129: Ps     19:42    → Jb     26:5      [score=0.263 via=saint-dismas]
+  Row 1130: Ps     19:31    → Rom    11:34     [score=0.273 via=saint-dismas]
+  Row 1131: Ps     19:32    → Mt     21:39     [score=0.333 via=saint-dismas]
+  Row 1132: Ps     19:35    → Ezr    2:62      [score=0.250 via=saint-dismas]
+  Row 1133: Ps     19:37    → Jgs    3:6       [score=0.294 via=saint-dismas]
+  Row 1135: Ps     19:40    → Ex     4:31      [score=0.314 via=saint-dismas]
+  Row 1136: Ps     19:45    → Tb     1:22      [score=0.320 via=saint-dismas]
+  Row 1137: Ps     19:46    → Mt     8:33      [score=0.364 via=saint-dismas]
+  Row 1138: Ps     19:47    → 1Chr   16:35     [score=0.545 via=saint-dismas]
+  Row 1140: Ps     19:2     → Acts   9:28      [score=0.364 via=saint-dismas]
+  Row 1141: Ps     19:3     → Ex     35:20     [score=0.294 via=saint-dismas]
+  Row 1142: Ps     19:4     → Lk     24:3      [score=0.273 via=saint-dismas]
+  Row 1144: Ps     19:20    → Jgs    11:32     [score=0.312 via=saint-dismas]
+  Row 1146: Ps     19:33    → Sir    50:23     [score=0.321 via=modern-drb]
+  Row 1148: Ps     19:35    → Mt     2:21      [score=0.278 via=saint-dismas]
+  Row 1149: Ps     19:36    → Jb     35:12     [score=0.300 via=saint-dismas]
+  Row 1151: Ps     19:38    → Mk     14:40     [score=0.292 via=saint-dismas]
+  Row 1152: Ps     19:39    → Acts   10:46     [score=0.270 via=saint-dismas]
+  Row 1153: Ps     19:43    → 2Thes  3:3       [score=0.318 via=saint-dismas]
+  Row 1155: Ps     19:4     → Dt     28:37     [score=0.273 via=saint-dismas]
+  Row 1158: Ps     19:5     → Jb     40:9      [score=0.280 via=saint-dismas]
+  Row 1160: Ps     19:14    → Sg     8:8       [score=0.308 via=saint-dismas]
+  Row 1161: Ps     19:2     → Jb     7:8       [score=0.292 via=saint-dismas]
+  Row 1162: Ps     19:3     → Dt     18:17     [score=0.263 via=saint-dismas]
+  Row 1165: Ps     19:9     → 1Cor   14:20     [score=0.267 via=saint-dismas]
+  Row 1166: Ps     19:17    → Jb     34:28     [score=0.318 via=saint-dismas]
+  Row 1167: Ps     19:31    → Apc    5:7       [score=0.235 via=modern-drb]
+  Row 1168: Ps     19:3     → Jn     1:2       [score=0.375 via=saint-dismas]
+  Row 1169: Ps     19:5     → 2Kgs   25:28     [score=0.267 via=modern-drb]
+  Row 1170: Ps     19:7     → Prv    15:10     [score=0.278 via=saint-dismas]
+  Row 1172: Ps     19:4     → Est    13:8      [score=0.286 via=saint-dismas]
+  Row 1174: Ps     19:9     → Lk     20:44     [score=0.250 via=saint-dismas]
+  Row 1175: Ps     19:1     → Jb     37:5      [score=0.292 via=saint-dismas]
+  Row 1176: Ps     19:2     → Dt     25:10     [score=0.250 via=saint-dismas]
+  Row 1177: Ps     19:3     → Jn     8:35      [score=0.261 via=saint-dismas]
+  Row 1179: Ps     19:5     → Jb     15:29     [score=0.261 via=saint-dismas]
+  Row 1181: Ps     19:8     → Prv    11:20     [score=0.389 via=saint-dismas]
+  Row 1183: Ps     19:2     → Eph    5:20      [score=0.250 via=saint-dismas]
+  Row 1185: Ps     19:4     → 1Chr   16:14     [score=0.333 via=saint-dismas]
+  Row 1186: Ps     19:5     → 2Cor   11:31     [score=0.320 via=saint-dismas]
+  Row 1187: Ps     19:7     → Jb     27:21     [score=0.276 via=saint-dismas]
+  Row 1190: Ps     19:6     → Prv    6:5       [score=0.263 via=saint-dismas]
+  Row 1192: Ps     19:11    → 1Chr   16:14     [score=0.300 via=saint-dismas]
+  Row 1193: Ps     19:12    → Gal    5:19      [score=0.263 via=saint-dismas]
+  Row 1194: Ps     19:13    → Rom    3:16      [score=0.308 via=saint-dismas]
+  Row 1195: Ps     19:18    → 2Chr   35:2      [score=0.357 via=saint-dismas]
+  Row 1196: Ps     19:20    → Jn     12:39     [score=0.294 via=saint-dismas]
+  Row 1197: Ps     19:23    → 1Thes  5:28      [score=0.357 via=saint-dismas]
+  Row 1198: Ps     19:25    → 1Cor   15:29     [score=0.300 via=saint-dismas]
+  Row 1199: Ps     19:13    → Acts   15:15     [score=0.231 via=modern-drb]
+  Row 1200: Ps     19:6     → 1Chr   22:11     [score=0.263 via=saint-dismas]
+  Row 1203: Ps     19:3     → Lk     1:49      [score=0.269 via=saint-dismas]
+  Row 1204: Ps     19:4     → Wis    5:18      [score=0.312 via=saint-dismas]
+  Row 1205: Ps     19:5     → 2Chr   7:4       [score=0.333 via=saint-dismas]
+  Row 1206: Ps     19:6     → 2Sam   10:12     [score=0.312 via=saint-dismas]
+  Row 1208: Ps     19:2     → Jb     18:10     [score=0.286 via=saint-dismas]
+  Row 1209: Ps     19:5     → 2Sam   22:19     [score=0.278 via=saint-dismas]
+  Row 1210: Ps     19:6     → Heb    13:6      [score=0.619 via=saint-dismas]
+  Row 1211: Ps     19:10    → Dt     18:17     [score=0.333 via=saint-dismas]
+  Row 1212: Ps     19:12    → Acts   9:28      [score=0.308 via=saint-dismas]
+  Row 1213: Ps     19:13    → 2Chr   30:19     [score=0.333 via=saint-dismas]
+  Row 1216: Ps     19:22    → Acts   4:11      [score=0.393 via=saint-dismas]
+  Row 1218: Ps     19:26    → 1Thes  5:28      [score=0.333 via=saint-dismas]
+  Row 1220: Ps     19:3     → Jb     9:5       [score=0.278 via=saint-dismas]
+  Row 1221: Ps     19:4     → Dt     29:13     [score=0.229 via=modern-drb]
+  Row 1228: Ps     19:13    → Jb     22:22     [score=0.250 via=saint-dismas]
+  Row 1230: Ps     19:15    → Ex     4:12      [score=0.250 via=saint-dismas]
+  Row 1235: Ps     19:25    → Acts   15:15     [score=0.212 via=modern-drb]
+  Row 1236: Ps     19:27    → Prv    9:11      [score=0.296 via=saint-dismas]
+  Row 1237: Ps     19:29    → Prv    5:8       [score=0.381 via=saint-dismas]
+  Row 1244: Ps     19:38    → 1Chr   17:23     [score=0.250 via=saint-dismas]
+  Row 1251: Ps     19:48    → Gn     37:6      [score=0.294 via=saint-dismas]
+  Row 1256: Ps     19:54    → Gn     20:12     [score=0.250 via=saint-dismas]
+  Row 1263: Ps     19:95    → Tb     3:2       [score=0.273 via=saint-dismas]
+  Row 1264: Ps     19:76    → Ezr    10:12     [score=0.280 via=saint-dismas]
+  Row 1273: Ps     19:88    → Prv    16:23     [score=0.259 via=saint-dismas]
+  Row 1274: Ps     19:89    → Jn     17:17     [score=0.444 via=saint-dismas]
+  Row 1275: Ps     19:91    → Mk     14:24     [score=0.205 via=modern-drb]
+  Row 1284: Ps     19:106   → Prv    6:20      [score=0.263 via=saint-dismas]
+  Row 1285: Ps     19:113   → Dn     9:10      [score=0.256 via=originaldouay]
+  Row 1287: Ps     19:125   → Prv    8:21      [score=0.214 via=modern-drb]
+  Row 1298: Ps     19:148   → Jb     27:15     [score=0.216 via=modern-drb]
+  Row 1300: Ps     19:149   → Jb     10:12     [score=0.300 via=saint-dismas]
+  Row 1301: Ps     19:150   → Jn     17:7      [score=0.269 via=saint-dismas]
+  Row 1302: Ps     19:152   → Tb     8:18      [score=0.261 via=saint-dismas]
+  Row 1303: Ps     19:153   → Jb     19:14     [score=0.312 via=saint-dismas]
+  Row 1308: Ps     19:169   → Nm     14:20     [score=0.278 via=saint-dismas]
+  Row 1312: Ps     19:175   → Gn     17:10     [score=0.267 via=saint-dismas]
+  Row 1318: Ps     19:3     → Prv    24:8      [score=0.263 via=saint-dismas]
+  Row 1319: Ps     19:4     → Is     46:18     [score=0.333 via=pdf-ocr]
+  Row 1321: Ps     19:1     → Dt     23:8      [score=0.265 via=saint-dismas]
+  Row 1327: Ps     19:9     → Sir    3:25      [score=0.200 via=modern-drb]
+  Row 1328: Ps     19:2     → Acts   15:18     [score=0.344 via=saint-dismas]
+  Row 1331: Ps     19:6     → 2Cor   10:8      [score=0.345 via=saint-dismas]
+  Row 1333: Ps     19:8     → Gn     2:4       [score=0.278 via=saint-dismas]
+  Row 1334: Ps     19:3     → Acts   21:14     [score=0.273 via=saint-dismas]
+  Row 1335: Ps     19:4     → 2Sam   10:12     [score=0.324 via=saint-dismas]
+  Row 1339: Ps     19:3     → Lam    3:13      [score=0.214 via=modern-drb]
+  Row 1343: Ps     19:1     → 2Cor   9:15      [score=0.214 via=modern-drb]
+  Row 1345: Ps     19:1     → Jdt    14:18     [score=0.231 via=modern-drb]
+  Row 1346: Ps     19:3     → Jn     4:19      [score=0.357 via=saint-dismas]
+  Row 1348: Ps     19:7     → Jb     6:23      [score=0.304 via=saint-dismas]
+  Row 1350: Ps     19:8     → Mt     10:7      [score=0.312 via=saint-dismas]
+  Row 1351: Ps     19:9     → 1Kings 11:35     [score=0.263 via=saint-dismas]
+  Row 1354: Ps     19:5     → Rev    21:26     [score=0.263 via=saint-dismas]
+  Row 1355: Ps     19:6     → Dt     28:5      [score=0.273 via=saint-dismas]
+  Row 1358: Ps     19:15    → Dt     10:14     [score=0.280 via=saint-dismas]
+  Row 1361: Ps     19:1     → Jl     2:4       [score=0.240 via=modern-drb]
+  Row 1366: Ps     19:5     → Jb     36:26     [score=0.269 via=saint-dismas]
+  Row 1369: Ps     19:10    → Ex     16:26     [score=0.265 via=saint-dismas]
+  Row 1370: Ps     19:2     → Jb     8:4       [score=0.259 via=saint-dismas]
+  Row 1371: Ps     19:3     → Dt     23:16     [score=0.250 via=saint-dismas]
+  Row 1372: Ps     19:4     → Acts   16:32     [score=0.233 via=modern-drb]
+  Row 1394: Prv    16:1     → Lv     15:32     [score=0.226 via=modern-drb]
+  Row 1411: Prv    16:3     → Mt     8:23      [score=0.231 via=modern-drb]
+  Row 1421: Prv    16:17    → Nm     26:5      [score=0.250 via=saint-dismas]
+  Row 1430: Prv    16:11    → 1Cor   2:15      [score=0.278 via=saint-dismas]
+  Row 1467: Prv    16:25    → Sir    13:9      [score=0.250 via=modern-drb]
+  Row 1500: Prv    16:5     → Jas    2:24      [score=0.222 via=modern-drb]
+  Row 1508: Prv    16:3     → Jn     3:31      [score=0.348 via=saint-dismas]
+  Row 1522: Prv    16:28    → Ps     37:15     [score=0.250 via=originaldouay]
+  Row 1541: Mk     16:3     → Prv    28:3      [score=0.692 via=saint-dismas]
+  Row 1542: Mk     16:2     → Prv    28:7      [score=0.300 via=saint-dismas]
+  Row 1543: Mk     16:8     → Prv    28:8      [score=0.750 via=saint-dismas]
+  Row 1544: Mk     16:11    → Prv    28:11     [score=0.381 via=saint-dismas]
+  Row 1545: Mk     16:14    → Prv    28:14     [score=0.522 via=saint-dismas]
+  Row 1546: Mk     16:15    → Prv    28:15     [score=0.299 via=saint-dismas]
+  Row 1547: Mk     16:18    → Prv    28:18     [score=0.474 via=saint-dismas]
+  Row 1563: Prv    16:27    → Mt     24:16     [score=0.263 via=saint-dismas]
+  Row 1569: Wis    16:8     → Sg     1:7       [score=0.324 via=saint-dismas]
+  Row 1581: Wis    3:21     → Rom    8:33      [score=0.267 via=saint-dismas]
+  Row 1582: Wis    3:15     → Prv    17:15     [score=0.267 via=modern-drb]
+  Row 1588: Sir    3:17     → Wis    19:16     [score=0.366 via=saint-dismas]
+  Row 1589: Sir    3:39     → Dt     6:17      [score=0.273 via=saint-dismas]
+  Row 1590: Sir    3:3      → 1Tim   4:5       [score=0.286 via=saint-dismas]
+  Row 1591: Sir    3:8      → 1Pet   4:2       [score=0.355 via=saint-dismas]
+  Row 1592: Sir    3:35     → Prv    3:9       [score=0.280 via=saint-dismas]
+  Row 1595: Sir    3:3      → Est    16:21     [score=0.292 via=saint-dismas]
+  Row 1597: Sir    3:5      → Lk     18:30     [score=0.278 via=saint-dismas]
+  Row 1598: Sir    3:19     → Jb     23:14     [score=0.259 via=saint-dismas]
+  Row 1600: Sir    3:25     → Jb     22:29     [score=0.250 via=saint-dismas]
+  Row 1601: Sir    3:15     → Mt     21:43     [score=0.250 via=saint-dismas]
+  Row 1602: Sir    3:27     → Rev    9:21      [score=0.261 via=saint-dismas]
+  Row 1607: Sir    3:6      → Prv    30:11     [score=0.267 via=saint-dismas]
+  Row 1609: Sir    3:9      → 2Chr   9:31      [score=0.250 via=saint-dismas]
+  Row 1610: Sir    3:3      → Eph    4:6       [score=0.250 via=saint-dismas]
+  Row 1611: Sir    3:24     → Ps     68:1      [score=0.211 via=modern-drb]
+  Row 1612: Sir    3:33     → Prv    31:26     [score=0.333 via=saint-dismas]
+  Row 1615: Sir    3:46     → 2Chr   30:18     [score=0.290 via=saint-dismas]
+  Row 1617: Sir    3:9      → Eccl   3:18      [score=0.263 via=saint-dismas]
+  Row 1621: Sir    3:24     → Is     50:19     [score=0.227 via=pdf-ocr]
+  Row 1625: Sir    3:2      → Dt     28:44     [score=0.250 via=saint-dismas]
+  Row 1628: Sir    3:14     → Jer    9:23      [score=0.333 via=pdf-ocr]
+  Row 1629: Sir    3:24     → Mt     22:26     [score=0.214 via=modern-drb]
+  Row 1632: Sir    3:20     → Eph    4:6       [score=0.280 via=saint-dismas]
+  Row 1633: Sir    3:33     → Mt     24:7      [score=0.261 via=saint-dismas]
+  Row 1639: Sir    3:5      → Ps     106:19    [score=0.200 via=modern-drb]
+  Row 1640: Sir    3:5      → Gn     40:21     [score=0.333 via=saint-dismas]
+  Row 1641: Sir    3:19     → Wis    2:23      [score=0.250 via=saint-dismas]
+  Row 1642: Sir    3:31     → 1Chr   22:6      [score=0.278 via=saint-dismas]
+  Row 1644: Sir    3:14     → Lk     9:43      [score=0.265 via=saint-dismas]
+  Row 1646: Sir    3:3      → 1Kings 22:53     [score=0.257 via=saint-dismas]
+  Row 1647: Sir    3:14     → Jgs    1:32      [score=0.235 via=modern-drb]
+  Row 1648: Sir    3:10     → Lk     1:43      [score=0.206 via=modern-drb]
+  Row 1649: Sir    3:5      → Col    1:2       [score=0.211 via=modern-drb]
+  Row 1650: Sir    3:6      → Lv     8:29      [score=0.216 via=modern-drb]
+  Row 1651: Sir    3:29     → 1Chr   24:22     [score=0.286 via=saint-dismas]
+  Row 1657: Is     3:8      → 2Sam   22:23     [score=0.250 via=saint-dismas]
+  Row 1658: Is     3:2      → Jb     19:25     [score=0.292 via=saint-dismas]
+  Row 1659: Is     3:2      → Prv    18:6      [score=0.350 via=saint-dismas]
+  Row 1661: Is     3:3      → Ex     14:30     [score=0.292 via=saint-dismas]
+  Row 1662: Ru     3:5      → Ps     134:6     [score=0.265 via=originaldouay]
+  Row 1663: Ru     3:4      → Is     16:9      [score=0.244 via=modern-drb]
+  Row 1664: Ru     3:19     → Lv     7:5       [score=0.290 via=saint-dismas]
+  Row 1665: Ru     3:6      → Nm     4:26      [score=0.231 via=modern-drb]
+  Row 1666: Ru     3:15     → Heb    4:5       [score=0.211 via=modern-drb]
+  Row 1667: Ru     3:19     → Is     50:20     [score=0.333 via=pdf-ocr]
+  Row 1668: Ru     3:9      → 1Jn    5:14      [score=0.324 via=saint-dismas]
+  Row 1669: Sg     3:3      → Ps     37:16     [score=0.273 via=originaldouay]
+  Row 1670: Sg     3:6      → Gn     46:23     [score=0.286 via=originaldouay]
+  Row 1671: Sg     3:7      → Ps     32:21     [score=0.250 via=modern-drb]
+  Row 1672: Sg     3:4      → Lv     14:29     [score=0.250 via=saint-dismas]
+  Row 1673: Sg     3:1      → 1Cor   15:37     [score=0.205 via=modern-drb]
+  Row 1674: Sg     3:2      → Nm     6:25      [score=0.316 via=saint-dismas]
+  Row 1675: Sg     3:6      → Dt     28:10     [score=0.265 via=saint-dismas]
+  Row 1676: Sg     3:2      → Is     36:2      [score=0.581 via=pdf-ocr]
+  Row 1677: Sg     3:2      → 1Kings 13:7      [score=0.250 via=saint-dismas]
+  Row 1678: Sg     3:2      → Is     84:19     [score=0.246 via=pdf-ocr]
+  Row 1679: Sg     3:9      → 2Kings 3:5       [score=0.250 via=saint-dismas]
+  Row 1680: Sg     3:10     → Lv     26:11     [score=0.278 via=saint-dismas]
+  Row 1681: Sg     3:10     → Lk     14:25     [score=0.238 via=modern-drb]
+  Row 1682: Sg     3:4      → Jl     2:4       [score=0.219 via=modern-drb]
+  Row 1683: Sg     3:5      → Jn     5:31      [score=0.273 via=saint-dismas]
+  Row 1684: Sg     3:1      → Jb     27:22     [score=0.267 via=saint-dismas]
+  Row 1685: Sg     3:9      → Is     46:9      [score=0.275 via=pdf-ocr]
+  Row 1686: Sg     3:10     → Is     46:8      [score=0.571 via=pdf-ocr]
+  Row 1687: Sg     3:9      → Jn     4:41      [score=0.250 via=saint-dismas]
+  Row 1688: Sg     3:3      → Is     99:3      [score=0.632 via=pdf-ocr]
+  Row 1690: Sg     3:8      → 2Sam   5:24      [score=0.250 via=saint-dismas]
+  Row 1692: Sg     3:6      → Jdt    5:21      [score=0.312 via=saint-dismas]
+  Row 1693: Sg     3:2      → Acts   2:20      [score=0.290 via=saint-dismas]
+  Row 1697: Jer    6:19     → Acts   2:20      [score=0.296 via=saint-dismas]
+  Row 1698: Jer    6:26     → 2Sam   22:16     [score=0.300 via=saint-dismas]
+  Row 1700: Jer    6:28     → Ps     82:9      [score=0.250 via=originaldouay]
+  Row 1705: Jer    9:48     → Gn     20:12     [score=0.250 via=saint-dismas]
+  Row 1707: Jer    9:23     → 2Cor   10:17     [score=0.259 via=saint-dismas]
+  Row 1711: Jer    13:4     → Tb     2:16      [score=0.263 via=saint-dismas]
+  Row 1712: Jer    13:5     → Gn     23:20     [score=0.269 via=saint-dismas]
+  Row 1713: Jer    13:9     → Prv    3:26      [score=0.259 via=saint-dismas]
+  Row 1714: Jer    13:14    → 2Kings 17:12     [score=0.250 via=saint-dismas]
+  Row 1715: Jer    13:15    → Ex     8:22      [score=0.261 via=saint-dismas]
+  Row 1717: Jer    13:16    → Rom    10:20     [score=0.250 via=saint-dismas]
+  Row 1721: Jer    15:5     → 2Kings 22:15     [score=0.300 via=saint-dismas]
+  Row 1723: Jer    30:14    → Jgs    11:14     [score=0.200 via=modern-drb]
+  Row 1724: Jer    30:4     → Dn     11:9      [score=0.250 via=originaldouay]
+  Row 1725: Jer    30:7     → Lv     4:19      [score=0.273 via=saint-dismas]
+  Row 1726: Jer    30:19    → Rev    7:13      [score=0.256 via=saint-dismas]
+  Row 1727: Jer    39:2     → 2Kings 19:36     [score=0.400 via=saint-dismas]
+  Row 1729: Jer    40:4     → 2Chr   32:3      [score=0.278 via=saint-dismas]
+  Row 1730: Jer    40:18    → Is     50:15     [score=0.231 via=pdf-ocr]
+  Row 1731: Jer    30:17    → Nm     1:3       [score=0.250 via=saint-dismas]
+  Row 1732: Jer    30:22    → Jn     14:20     [score=0.250 via=saint-dismas]
+  Row 1734: 1Mc    1:10     → Gn     26:35     [score=0.250 via=modern-drb]
+  Row 1736: 1Mc    1:14     → 1Sam   2:23      [score=0.296 via=saint-dismas]
+  Row 1737: 1Mc    1:17     → 2Chr   3:2       [score=0.286 via=saint-dismas]
+  Row 1739: 1Mc    1:29     → Gn     29:3      [score=0.258 via=saint-dismas]
+  Row 1744: 1Mc    1:6      → Lk     13:17     [score=0.320 via=saint-dismas]
+  Row 1745: 1Mc    1:15     → 2Sam   10:14     [score=0.324 via=saint-dismas]
+  Row 1746: 1Mc    1:23     → Gn     13:4      [score=0.250 via=saint-dismas]
+  Row 1749: 1Mc    1:8      → Sir    15:20     [score=0.250 via=modern-drb]
+  Row 1753: 1Mc    1:56     → 1Chr   15:1      [score=0.205 via=modern-drb]
+  Row 1755: 1Mc    1:58     → 2Sam   18:7      [score=0.346 via=saint-dismas]
+  Row 1756: 1Mc    1:22     → 1Sam   11:8      [score=0.304 via=saint-dismas]
+  Row 1757: 1Mc    1:65     → Jn     4:30      [score=0.333 via=saint-dismas]
+  Row 1760: 1Mc    1:2      → Jn     1:2       [score=0.250 via=saint-dismas]
+  Row 1761: 1Mc    1:39     → Ex     8:30      [score=0.267 via=modern-drb]
+  Row 1762: 1Mc    1:23     → Prv    28:12     [score=0.212 via=modern-drb]
+  Row 1763: 1Mc    1:34     → Gn     46:6      [score=0.269 via=saint-dismas]
+  Row 1767: 1Mc    11:7     → Jgs    9:55      [score=0.296 via=saint-dismas]
+  Row 1768: 1Mc    11:25    → Gn     12:20     [score=0.303 via=saint-dismas]
+  Row 1769: 1Mc    11:49    → Rev    9:17      [score=0.297 via=saint-dismas]
+  Row 1770: 1Mc    11:53    → Tb     9:7       [score=0.265 via=saint-dismas]
+  Row 1771: 1Mc    11:13    → Wis    3:3       [score=0.261 via=saint-dismas]
+  Row 1772: 1Mc    11:40    → Mt     18:30     [score=0.261 via=modern-drb]
+  Row 1775: 1Mc    13:28    → 2Sam   18:7      [score=0.258 via=saint-dismas]
+  Row 1776: 1Mc    15:4     → Jn     5:34      [score=0.269 via=saint-dismas]
+  Row 1777: 1Mc    1:20     → Jn     10:2      [score=0.207 via=modern-drb]
+  Row 1778: 1Mc    1:20     → 1Chr   15:9      [score=0.278 via=saint-dismas]
+  Row 1779: Lk     1:21     → 2Kgs   15:18     [score=0.220 via=modern-drb]
+  Row 1780: Lk     1:2      → Prv    31:12     [score=0.227 via=modern-drb]
+  Row 1781: Lk     1:30     → Tb     14:4      [score=0.286 via=saint-dismas]
+  Row 1782: 1Mc    7:17     → 2Mc    7:17      [score=0.286 via=modern-drb]
+  Row 1783: 1Mc    7:35     → Acts   18:17     [score=0.286 via=saint-dismas]
+  Row 1784: 1Mc    7:37     → Acts   26:6      [score=0.303 via=saint-dismas]
+  Row 1785: 1Mc    7:7      → 2Kings 14:20     [score=0.258 via=saint-dismas]
+  Row 1786: 1Mc    7:13     → 1Cor   7:31      [score=0.258 via=modern-drb]
+  Row 1787: 1Mc    10:4     → 2Mc    10:4      [score=0.314 via=modern-drb]
+  Row 1791: 1Mc    10:25    → 2Mc    11:25     [score=0.279 via=modern-drb]
+  Row 1792: 1Mc    10:32    → Jn     3:12      [score=0.263 via=saint-dismas]
+  Row 1794: 1Mc    13:25    → 2Mc    14:25     [score=0.235 via=modern-drb]
+  Row 1795: 1Mc    15:27    → 2Mc    15:27     [score=0.256 via=modern-drb]
+  Row 1796: 1Mc    15:12    → Jn     9:5       [score=0.214 via=modern-drb]
+  Row 1797: 1Mc    15:39    → Rom    3:10      [score=0.200 via=modern-drb]
+  Row 1798: 1Mc    15:6     → Ps     72:4      [score=0.235 via=modern-drb]
+  Row 1800: Ezr    2:1      → Nm     22:39     [score=0.270 via=saint-dismas]
+  Row 1801: Ezr    2:3      → Jos    23:8      [score=0.276 via=saint-dismas]
+  Row 1802: Ezr    2:5      → Prv    6:20      [score=0.400 via=saint-dismas]
+  Row 1803: Ezr    2:12     → Lv     3:5       [score=0.281 via=saint-dismas]
+  Row 1804: Ezr    2:39     → Prv    1:29      [score=0.304 via=saint-dismas]
+  Row 1805: Ezr    1:13     → 1Pt    2:10      [score=0.200 via=modern-drb]
+  Row 1806: Ezr    1:7      → Ps     36:5      [score=0.276 via=originaldouay]
+  Row 1807: Ezr    1:13     → Mt     25:39     [score=0.316 via=saint-dismas]
+  Row 1808: Ezr    1:29     → Jn     20:14     [score=0.229 via=modern-drb]
+  Row 1809: Ezr    1:23     → Ez     37:18     [score=0.220 via=modern-drb]
+  Row 1810: Ezr    1:33     → Jn     3:9       [score=0.235 via=modern-drb]
+  Row 1811: Ezr    5:7      → Jdt    16:30     [score=0.250 via=saint-dismas]
+  Row 1812: Ezr    5:20     → Ps     127:2     [score=0.257 via=modern-drb]
+  Row 1813: Ezr    5:13     → Tb     6:3       [score=0.231 via=modern-drb]
+  Row 1814: Ezr    5:27     → Lk     21:17     [score=0.250 via=saint-dismas]
+  Row 1817: Ezr    7:4      → Rom    2:13      [score=0.200 via=modern-drb]
+  Row 1818: Ezr    7:39     → 2Thes  2:10      [score=0.265 via=originaldouay]
+  Row 1819: Ezr    6:3      → Prv    14:23     [score=0.273 via=saint-dismas]
+  Row 1820: Ezr    6:9      → Ez     11:20     [score=0.214 via=modern-drb]
+  Row 1821: Ezr    6:10     → Gn     20:12     [score=0.258 via=saint-dismas]
+  Row 1822: Ezr    6:36     → Acts   7:53      [score=0.227 via=modern-drb]
+  Row 1823: Ezr    6:39     → Jer    1:4       [score=0.231 via=pdf-ocr]
+  Row 1824: Ezr    6:15     → Jb     34:16     [score=0.259 via=saint-dismas]
+  Row 1825: Ezr    6:3      → Tb     1:3       [score=0.270 via=saint-dismas]
+  Row 1826: Ezr    6:12     → Acts   10:3      [score=0.212 via=modern-drb]
+  Row 1827: Ezr    6:13     → Jn     12:20     [score=0.290 via=saint-dismas]
+  Row 1828: Ezr    6:1      → Jb     18:5      [score=0.300 via=saint-dismas]
+  Row 1829: Ezr    6:26     → Nm     27:7      [score=0.238 via=modern-drb]
+  Row 1830: Mt     12:16    → Jn     9:1       [score=0.200 via=modern-drb]
+  Row 1831: Mt     12:16    → 2Chr   15:3      [score=0.217 via=modern-drb]
+  Row 1836: Mt     12:1     → Bar    3:5       [score=0.250 via=originaldouay]
+  Row 1838: Mt     12:6     → 2Chr   12:14     [score=0.286 via=modern-drb]
+  Row 1839: Mt     12:8     → Is     32:8      [score=0.212 via=modern-drb]
+  Row 1840: Mt     12:12    → Ps     52:2      [score=0.207 via=modern-drb]
+  Row 1841: Mt     12:16    → Gn     38:13     [score=0.257 via=saint-dismas]
+  Row 1843: Mt     12:2     → Dt     2:33      [score=0.290 via=saint-dismas]
+  Row 1845: Mt     12:6     → Hos    13:7      [score=0.200 via=modern-drb]
+  Row 1848: Mt     12:17    → Sir    17:28     [score=0.229 via=modern-drb]
+  Row 1849: Mt     12:35    → 1Cor   14:33     [score=0.214 via=modern-drb]
+  Row 1850: Mt     12:39    → 1Cor   11:29     [score=0.250 via=saint-dismas]
+  Row 1851: Mt     12:1     → Jas    2:24      [score=0.219 via=modern-drb]
+  Row 1852: Mt     12:5     → Ps     36:31     [score=0.217 via=modern-drb]
+  Row 1853: Mt     12:7     → Lk     9:50      [score=0.250 via=modern-drb]
+  Row 1855: Mt     12:2     → Is     30:9      [score=0.229 via=modern-drb]
+  Row 1859: Mt     8:3      → Phil   1:5       [score=0.200 via=modern-drb]
+  Row 1860: Mt     8:3      → 2Mc    3:7       [score=0.204 via=modern-drb]
+  Row 1861: Mt     8:6      → 2Kgs   8:11      [score=0.200 via=modern-drb]
+  Row 1863: Mt     8:8      → Phil   2:27      [score=0.214 via=modern-drb]
+  Row 1866: Mt     8:2      → Rom    12:4      [score=0.333 via=saint-dismas]
+  Row 1867: Mt     8:9      → Jer    13:10     [score=0.226 via=modern-drb]
+  Row 1868: Mt     8:14     → Prv    18:5      [score=0.208 via=modern-drb]
+  Row 1869: Mt     8:15     → Lk     10:12     [score=0.278 via=originaldouay]
+  Row 1872: Mt     8:34     → Ps     88:23     [score=0.267 via=originaldouay]
+  Row 1874: Jn     8:3      → Sir    29:8      [score=0.276 via=modern-drb]
+  Row 1876: Jn     8:21     → 1Jn    3:10      [score=0.211 via=modern-drb]
+  Row 1877: Jn     8:30     → Mt     11:30     [score=0.278 via=saint-dismas]
+  Row 1878: Jn     8:24     → Mt     12:43     [score=0.333 via=saint-dismas]
+  Row 1879: Jn     8:30     → Mt     24:16     [score=0.226 via=modern-drb]
+  Row 1880: Jn     8:30     → 1Tim   3:5       [score=0.265 via=saint-dismas]
+  Row 1883: Jn     8:36     → 2Cor   2:17      [score=0.206 via=modern-drb]
+  Row 1884: Jn     8:44     → Eph    1:15      [score=0.250 via=saint-dismas]
+  Row 1885: Jn     8:47     → Mt     13:47     [score=0.375 via=saint-dismas]
+  Row 1886: Jn     8:8      → Ex     28:10     [score=0.250 via=saint-dismas]
+  Row 1887: Jn     8:11     → 1Cor   12:8      [score=0.276 via=saint-dismas]
+  Row 1888: Jn     8:15     → Ps     77:30     [score=0.222 via=modern-drb]
+  Row 1889: Jn     8:39     → 1Pt    3:13      [score=0.219 via=modern-drb]
+  Row 1890: Jn     8:30     → 2Cor   2:15      [score=0.207 via=modern-drb]
+  Row 1891: Jn     8:32     → Jer    17:12     [score=0.208 via=modern-drb]
+  Row 1894: Jn     8:19     → Jgs    1:20      [score=0.250 via=saint-dismas]
+  Row 1895: Jn     8:26     → Dn     8:24      [score=0.217 via=modern-drb]
+  Row 1899: Jn     8:2      → Prv    22:2      [score=0.241 via=modern-drb]
+  Row 1904: Jn     8:27     → 1Mc    11:11     [score=0.222 via=modern-drb]
+  Row 1905: Jn     8:13     → Acts   1:3       [score=0.225 via=modern-drb]
+  Row 1906: Jn     8:18     → Ps     77:49     [score=0.200 via=modern-drb]
+  Row 1908: Jn     8:18     → 1Sm    15:13     [score=0.216 via=modern-drb]
+  Row 1910: Jn     8:2      → Col    1:18      [score=0.219 via=modern-drb]
+  Row 1912: Jn     8:19     → Acts   15:15     [score=0.231 via=modern-drb]
+  Row 1913: Jn     8:3      → Dt     12:25     [score=0.225 via=modern-drb]
+  Row 1914: Jn     8:9      → 1Mc    14:15     [score=0.278 via=modern-drb]
+  Row 1915: Jn     8:10     → Mt     11:14     [score=0.238 via=modern-drb]
+  Row 1916: Jn     8:30     → Rom    12:3      [score=0.304 via=saint-dismas]
+  Row 1917: Jn     8:24     → Ex     34:31     [score=0.200 via=modern-drb]
+  Row 1918: Jn     18:1     → Nm     31:54     [score=0.235 via=modern-drb]
+  Row 1919: Jn     18:7     → Apc    6:17      [score=0.242 via=modern-drb]
+  Row 1921: Jn     18:17    → Ps     106:39    [score=0.212 via=modern-drb]
+  Row 1922: Jn     18:20    → Ps     18:15     [score=0.206 via=modern-drb]
+  Row 1923: Jn     18:31    → Mt     19:30     [score=0.200 via=modern-drb]
+  Row 1924: Jn     18:9     → 1Kings 7:4       [score=0.300 via=saint-dismas]
+  Row 1926: Jn     18:13    → Nm     17:9      [score=0.256 via=saint-dismas]
+  Row 1927: Jn     18:27    → 1Thes  5:18      [score=0.250 via=saint-dismas]
+  Row 1928: Jn     18:27    → 1Mc    2:39      [score=0.231 via=modern-drb]
+  Row 1929: Jn     18:9     → 2Kgs   23:23     [score=0.200 via=modern-drb]
+  Row 1930: Jn     18:16    → Mt     10:17     [score=0.226 via=modern-drb]
+  Row 1931: Jn     18:23    → Lk     10:9      [score=0.286 via=saint-dismas]
+  Row 1932: Jn     21:23    → Mt     21:23     [score=0.415 via=saint-dismas]
+  Row 1933: Jn     21:6     → Mt     21:46     [score=0.333 via=saint-dismas]
+  Row 1934: Jn     21:2     → Ps     32:6      [score=0.207 via=modern-drb]
+  Row 1935: Jn     21:7     → 1Kgs   18:39     [score=0.222 via=modern-drb]
+  Row 1937: Jn     21:15    → Gn     28:19     [score=0.300 via=saint-dismas]
+  Row 1939: Jn     21:22    → 1Mc    12:14     [score=0.211 via=modern-drb]
+  Row 1940: Jn     21:23    → Acts   4:7       [score=0.229 via=modern-drb]
+  Row 1941: Jn     21:28    → Sir    48:17     [score=0.214 via=modern-drb]
+  Row 1943: Jn     21:32    → 2Chr   7:15      [score=0.205 via=modern-drb]
+  Row 1944: Jn     21:2     → 2Tm    1:1       [score=0.233 via=modern-drb]
+  Row 1949: Jn     21:29    → 2Kings 21:24     [score=0.256 via=saint-dismas]
+  Row 1950: Jn     21:31    → Mt     24:31     [score=0.200 via=modern-drb]
+  Row 1951: Jn     21:2     → Tb     1:24      [score=0.200 via=modern-drb]
+  Row 1953: Jn     21:3     → 1Jn    2:21      [score=0.263 via=saint-dismas]
+  Row 1954: Jn     21:34    → Ps     95:4      [score=0.273 via=modern-drb]
+  Row 1956: Jn     21:29    → Jb     38:23     [score=0.200 via=modern-drb]
+  Row 1958: Mt     21:27    → Jas    1:13      [score=0.211 via=modern-drb]
+  Row 1961: Mt     21:26    → Gn     9:21      [score=0.269 via=modern-drb]
+  Row 1967: Mt     27:3     → Neh    3:22      [score=0.207 via=modern-drb]
+  Row 1968: Mt     27:40    → Prv    23:17     [score=0.261 via=saint-dismas]
+  Row 1969: Mt     27:39    → Mk     12:11     [score=0.250 via=saint-dismas]
+  Row 1970: Mt     27:1     → Neh    10:30     [score=0.214 via=modern-drb]
+  Row 1971: Mt     27:19    → Ps     115:8     [score=0.217 via=modern-drb]
+  Row 1972: Mt     27:23    → Tb     14:14     [score=0.214 via=modern-drb]
+  Row 1973: Mt     27:34    → Dn     13:46     [score=0.214 via=modern-drb]
+  Row 1975: Mt     27:48    → Prv    27:16     [score=0.241 via=modern-drb]
+  Row 1976: Mt     27:7     → 1Kings 11:19     [score=0.250 via=saint-dismas]
+  Row 1978: Mt     27:5     → Eph    3:12      [score=0.280 via=saint-dismas]
+  Row 1979: Mk     11:53    → 2Kgs   18:5      [score=0.220 via=modern-drb]
+  Row 1980: Mk     11:24    → Lk     24:24     [score=0.419 via=saint-dismas]
+  Row 1983: Mk     11:30    → Rom    8:18      [score=0.250 via=saint-dismas]
+  Row 1985: Mk     11:70    → Sir    9:22      [score=0.233 via=modern-drb]
+  Row 1987: Mk     11:42    → Prv    23:3      [score=0.250 via=saint-dismas]
+  Row 1988: Mk     11:3     → Tb     1:11      [score=0.265 via=modern-drb]
+  Row 1989: Mk     11:3     → 2Mc    10:1      [score=0.212 via=modern-drb]
+  Row 1990: Mk     11:15    → Jdt    1:4       [score=0.206 via=modern-drb]
+  Row 1991: Mk     11:31    → Hb     1:14      [score=0.207 via=modern-drb]
+  Row 1992: Mk     11:6     → Nm     33:44     [score=0.235 via=modern-drb]
+  Row 1994: Mk     11:2     → Neh    8:8       [score=0.242 via=modern-drb]
+  Row 1997: Mk     11:23    → Jn     6:9       [score=0.423 via=saint-dismas]
+  Row 1999: Mk     11:26    → Jn     6:49      [score=0.268 via=saint-dismas]
+  Row 2003: Jn     11:63    → Jb     24:17     [score=0.211 via=modern-drb]
+  Row 2005: Jn     11:37    → Mt     16:16     [score=0.333 via=saint-dismas]
+  Row 2007: Jn     11:11    → Prv    23:3      [score=0.200 via=modern-drb]
+  Row 2008: Jn     11:22    → Jos    15:20     [score=0.353 via=saint-dismas]
+  Row 2009: Jn     11:29    → Zec    11:4      [score=0.200 via=modern-drb]
+  Row 2013: Jn     11:17    → 2Kgs   2:7       [score=0.229 via=modern-drb]
+  Row 2014: Jn     11:28    → Ex     36:22     [score=0.227 via=modern-drb]
+  Row 2015: Jn     11:24    → Jer    29:9      [score=0.243 via=modern-drb]
+  Row 2018: Jn     11:16    → Sir    43:35     [score=0.214 via=modern-drb]
+  Row 2019: Jn     11:20    → 1Jn    2:2       [score=0.206 via=modern-drb]
+  Row 2026: Jn     11:27    → 1Kgs   6:26      [score=0.229 via=modern-drb]
+  Row 2028: Jn     11:19    → 1Cor   14:27     [score=0.216 via=modern-drb]
+  Row 2029: Jn     11:6     → Jb     33:19     [score=0.258 via=saint-dismas]
+  Row 2030: Jn     11:23    → Lk     19:10     [score=0.222 via=modern-drb]
+  Row 2033: Jn     11:17    → Nm     15:23     [score=0.267 via=saint-dismas]
+  Row 2035: Jn     8:47     → Acts   15:6      [score=0.200 via=modern-drb]
+  Row 2037: Jn     8:7      → Jos    2:9       [score=0.237 via=modern-drb]
+  Row 2041: Jn     8:25     → Mt     23:22     [score=0.276 via=saint-dismas]
+  Row 2042: Jn     8:47     → Lk     9:43      [score=0.250 via=saint-dismas]
+  Row 2044: Jn     8:4      → Sir    1:20      [score=0.286 via=modern-drb]
+  Row 2045: Jn     8:3      → Heb    7:23      [score=0.200 via=modern-drb]
+  Row 2049: Jn     8:2      → Tit    2:10      [score=0.250 via=saint-dismas]
+  Row 2050: Jn     8:27     → Acts   11:28     [score=0.293 via=originaldouay]
+  Row 2052: Mk     8:5      → Apc    14:5      [score=0.216 via=modern-drb]
+  Row 2053: Mk     8:17     → Lk     4:6       [score=0.263 via=saint-dismas]
+  Row 2054: Mk     8:3      → 1Cor   10:32     [score=0.227 via=modern-drb]
+  Row 2055: Mk     8:1      → Lk     23:4      [score=0.226 via=modern-drb]
+  Row 2056: Mk     8:22     → Prv    24:24     [score=0.211 via=modern-drb]
+  Row 2060: 1Cor   5:5      → Zec    14:19     [score=0.211 via=modern-drb]
+  Row 2064: 1Cor   5:3      → Ps     35:3      [score=0.200 via=modern-drb]
+  Row 2066: 1Cor   5:19     → Lk     18:27     [score=0.242 via=modern-drb]
+  Row 2068: 1Cor   5:9      → 1Sm    15:29     [score=0.237 via=modern-drb]
+  Row 2069: Gal    1:19     → Ps     26:13     [score=0.231 via=modern-drb]
+  Row 2070: Gal    1:2      → 2Cor   4:7       [score=0.229 via=modern-drb]
+  Row 2071: Gal    1:8      → Tb     11:19     [score=0.237 via=modern-drb]
+  Row 2072: Gal    1:9      → Ps     144:3     [score=0.200 via=modern-drb]
+  Row 2074: Dt     1:11     → Jer    10:23     [score=0.222 via=modern-drb]
+  Row 2075: Dt     1:3      → Ps     145:3     [score=0.231 via=modern-drb]
+  Row 2078: Dt     1:3      → 1Chr   22:17     [score=0.250 via=saint-dismas]
+  Row 2080: Dt     5:13     → Sir    5:2       [score=0.231 via=modern-drb]
+  Row 2081: Dt     5:6      → 3Jn    1:8       [score=0.273 via=saint-dismas]
+  Row 2090: Eph    5:32     → Rom    16:5      [score=0.250 via=saint-dismas]
+  Row 2098: Col    1:18     → Sir    41:20     [score=0.229 via=modern-drb]
+  Row 2102: Col    1:23     → 1Thes  1:10      [score=0.321 via=modern-drb]
+  Row 2106: Col    1:1      → Ps     65:4      [score=0.235 via=modern-drb]
+  Row 2107: Col    1:1      → 2Thes  1:1       [score=0.294 via=saint-dismas]
+  Row 2108: Col    1:14     → 2Thes  2:14      [score=0.324 via=saint-dismas]
+  Row 2109: Col    1:2      → 2Cor   12:3      [score=0.258 via=saint-dismas]
+  Row 2111: Col    1:1      → 2Thes  3:8       [score=0.412 via=saint-dismas]
+  Row 2112: Col    1:10     → 2Thes  3:10      [score=0.406 via=saint-dismas]
+  Row 2113: Col    1:14     → Gn     34:17     [score=0.200 via=modern-drb]
+  Row 2114: Col    1:14     → Prv    28:24     [score=0.229 via=modern-drb]
+  Row 2117: Col    1:27     → Jb     36:12     [score=0.229 via=modern-drb]
+  Row 2118: Col    1:4      → 1Chr   23:16     [score=0.222 via=modern-drb]
+  Row 2120: Col    1:1      → Ps     137:5     [score=0.231 via=modern-drb]
+  Row 2121: Col    1:4      → Nm     9:23      [score=0.235 via=modern-drb]
+  Row 2122: Col    1:1      → 1Chr   23:16     [score=0.214 via=modern-drb]
+  Row 2125: Col    1:16     → 2Thes  1:12      [score=0.200 via=modern-drb]
+  Row 2126: Col    1:3      → Wis    15:6      [score=0.243 via=modern-drb]
+  Row 2130: Col    1:14     → Jer    43:11     [score=0.200 via=modern-drb]
+  Row 2133: Mk     10:5     → 1Tim   6:21      [score=0.350 via=saint-dismas]
+  Row 2134: Mk     10:4     → 2Pt    1:2       [score=0.200 via=modern-drb]
+  Row 2135: Mk     10:30    → Jer    50:7      [score=0.237 via=pdf-ocr]
+  Row 2136: Mk     1:1      → 1Tm    4:4       [score=0.206 via=modern-drb]
+  Row 2140: Mk     1:2      → 2Tim   3:7       [score=0.364 via=saint-dismas]
+  Row 2142: Mk     1:16     → Sir    33:3      [score=0.214 via=modern-drb]
+  Row 2145: Phlm   1:10     → Sir    19:28     [score=0.214 via=modern-drb]
+  Row 2147: Phlm   1:3      → Heb    4:3       [score=0.333 via=saint-dismas]
+  Row 2148: Phlm   1:1      → 2Sm    15:6      [score=0.200 via=modern-drb]
+  Row 2149: Phlm   1:4      → Gal    5:21      [score=0.256 via=modern-drb]
+  Row 2153: Phlm   1:18     → Rom    1:5       [score=0.273 via=saint-dismas]
+  Row 2154: Phlm   1:1      → Lk     4:3       [score=0.250 via=saint-dismas]
+  Row 2156: Phlm   1:4      → Is     2:16      [score=0.231 via=modern-drb]
+  Row 2158: Phlm   1:17     → 1Jn    5:3       [score=0.257 via=saint-dismas]
+  Row 2159: Phlm   1:18     → Lv     11:15     [score=0.214 via=modern-drb]
+  Row 2160: Phlm   1:19     → Heb    7:16      [score=0.250 via=modern-drb]
+  Row 2163: Phlm   1:3      → Prv    22:22     [score=0.212 via=modern-drb]
+  Row 2166: Phlm   1:10     → Gal    4:2       [score=0.250 via=saint-dismas]
+  Row 2167: Phlm   1:23     → Sir    24:7      [score=0.217 via=modern-drb]
+  Row 2168: Phlm   1:25     → Rom    6:10      [score=0.226 via=modern-drb]
+  Row 2169: Phlm   1:14     → Heb    10:1      [score=0.297 via=originaldouay]
+  Row 2173: Phlm   1:2      → Jdt    4:7       [score=0.233 via=modern-drb]
+  Row 2174: Phlm   1:5      → 1Cor   11:29     [score=0.235 via=modern-drb]
+  Row 2175: Phlm   1:18     → 1Mc    2:21      [score=0.216 via=modern-drb]
+  Row 2178: Phlm   1:1      → Gal    3:2       [score=0.242 via=modern-drb]
+  Row 2183: Mk     11:4     → Sir    24:9      [score=0.286 via=modern-drb]
+  Row 2184: Mk     11:16    → Phil   1:28      [score=0.225 via=modern-drb]
+  Row 2185: Mk     11:2     → Jn     1:4       [score=0.250 via=saint-dismas]
+  Row 2188: Mk     1:13     → Jdt    5:19      [score=0.243 via=modern-drb]
+  Row 2189: Mk     1:27     → Sir    11:27     [score=0.214 via=modern-drb]
+  Row 2194: Mk     1:18     → Rom    4:12      [score=0.209 via=modern-drb]
+  Row 2197: Rom    1:22     → Hos    4:4       [score=0.205 via=modern-drb]
+  Row 2198: Rom    1:25     → Ez     47:21     [score=0.227 via=modern-drb]
+  Row 2200: Rom    1:8      → Mt     10:36     [score=0.267 via=saint-dismas]
+  Row 2201: Rom    1:14     → Est    6:5       [score=0.267 via=saint-dismas]
+  Row 2202: Rom    1:1      → Ps     33:19     [score=0.200 via=modern-drb]
+  Row 2203: Rom    1:15     → 1Cor   7:26      [score=0.229 via=modern-drb]
+  Row 2204: Rom    1:15     → Jb     36:12     [score=0.200 via=modern-drb]
+  Row 2205: Rom    1:16     → Nm     19:22     [score=0.222 via=modern-drb]
+  Row 2206: Rom    1:17     → 1Kgs   21:28     [score=0.222 via=modern-drb]
+  Row 2207: Rom    1:20     → Gn     22:11     [score=0.205 via=modern-drb]
+  Row 2211: Rom    1:18     → Neh    12:7      [score=0.294 via=saint-dismas]
+  Row 2213: Rom    1:20     → Jer    11:14     [score=0.200 via=modern-drb]
+  Row 2218: Rom    1:17     → Sir    22:29     [score=0.200 via=modern-drb]
+  Row 2219: Rom    1:3      → Ex     25:19     [score=0.214 via=modern-drb]
+  Row 2220: Jn     1:4      → Bar    1:11      [score=0.216 via=modern-drb]
+  Row 2225: Jn     1:3      → Sir    33:1      [score=0.211 via=modern-drb]
+  Row 2231: Mk     1:6      → Jb     7:8       [score=0.200 via=modern-drb]
+  Row 2232: Mk     1:8      → Heb    4:4       [score=0.267 via=saint-dismas]
+  Row 2237: Mk     1:10     → 1Thes  1:1       [score=0.206 via=modern-drb]
+  Row 2238: Jude   1:10     → Jb     30:6      [score=0.217 via=modern-drb]
+  Row 2240: Jude   1:10     → Ps     81:1      [score=0.200 via=modern-drb]
+  Row 2241: Apc    1:19     → Gn     15:16     [score=0.200 via=modern-drb]
+  Row 2246: Nm     1:1      → Jn     6:29      [score=0.256 via=saint-dismas]
+  Row 2251: Nm     1:12     → Rev    4:1       [score=0.260 via=originaldouay]
+  Row 2252: Nm     1:2      → Ez     41:4      [score=0.222 via=modern-drb]
+  Row 2253: Nm     5:8      → Phil   2:10      [score=0.212 via=modern-drb]
+  Row 2254: Nm     5:9      → Eph    5:23      [score=0.212 via=modern-drb]
+  Row 2255: Nm     5:10     → Jn     11:51     [score=0.200 via=modern-drb]
+  Row 2256: Nm     5:11     → Rom    3:11      [score=0.214 via=modern-drb]
+  Row 2257: Nm     5:10     → Rev    7:16      [score=0.250 via=saint-dismas]
+  Row 2263: Nm     13:7     → Sir    38:34     [score=0.231 via=modern-drb]
+  Row 2264: Nm     13:17    → Ps     77:69     [score=0.206 via=modern-drb]
+  Row 2266: Nm     13:18    → Dt     28:44     [score=0.250 via=saint-dismas]
+  Row 2268: Nm     13:18    → Jn     17:16     [score=0.200 via=modern-drb]
+  Row 2275: Jn     19:18    → Hb     2:11      [score=0.200 via=modern-drb]
+  Row 2276: Jn     19:11    → Acts   1:7       [score=0.225 via=modern-drb]
+  Row 2277: Jn     19:18    → Gn     4:26      [score=0.200 via=modern-drb]
+  Row 2304: Jn     19:43    → Eph    5:21      [score=0.267 via=originaldouay]
+
+======================================================================
+SECTION B: CHAPTER/VERSE CORRECTIONS (SAME BOOK)
+======================================================================
+(762 rows)
+
+  Row    4: Gn     22:19    → 23:2      [score=0.406 via=saint-dismas]
+  Row    5: Gn     22:7     → 24:7      [score=0.348 via=saint-dismas]
+  Row    6: Gn     22:20    → 24:20     [score=0.438 via=saint-dismas]
+  Row    7: Gn     22:27    → 24:27     [score=0.576 via=saint-dismas]
+  Row   12: Gn     22:30    → 25:30     [score=0.217 via=modern-drb]
+  Row   16: Gn     20:31    → 25:31     [score=0.250 via=saint-dismas]
+  Row   17: Gn     20:26    → 26:1      [score=0.382 via=saint-dismas]
+  Row   18: Gn     20:35    → 26:4      [score=0.277 via=saint-dismas]
+  Row   26: Gn     27:21    → 28:21     [score=0.714 via=saint-dismas]
+  Row   34: Gn     31:17    → 32:17     [score=0.469 via=saint-dismas]
+  Row   37: Gn     35:2     → 33:3      [score=0.455 via=saint-dismas]
+  Row   38: Gn     35:9     → 33:9      [score=0.643 via=saint-dismas]
+  Row   39: Gn     35:20    → 33:20     [score=0.571 via=saint-dismas]
+  Row   40: Gn     35:3     → 34:3      [score=0.455 via=saint-dismas]
+  Row   41: Gn     35:49    → 34:9      [score=0.312 via=saint-dismas]
+  Row   42: Gn     35:24    → 34:24     [score=0.333 via=saint-dismas]
+  Row   43: Gn     35:26    → 34:26     [score=0.500 via=saint-dismas]
+  Row   50: Gn     36:2     → 26:32     [score=0.290 via=saint-dismas]
+  Row   53: Gn     37:29    → 37:30     [score=0.714 via=saint-dismas]
+  Row   55: Gn     37:4     → 38:4      [score=0.588 via=saint-dismas]
+  Row   56: Gn     37:13    → 38:14     [score=0.390 via=saint-dismas]
+  Row   57: Gn     37:17    → 38:17     [score=0.393 via=saint-dismas]
+  Row   62: Gn     40:5     → 41:5      [score=0.458 via=saint-dismas]
+  Row   63: Gn     40:30    → 41:30     [score=0.516 via=saint-dismas]
+  Row   64: Gn     40:33    → 41:33     [score=0.433 via=saint-dismas]
+  Row   65: Gn     40:47    → 41:47     [score=0.478 via=saint-dismas]
+  Row   66: Gn     40:48    → 41:48     [score=0.562 via=saint-dismas]
+  Row   68: Gn     41:5     → 42:20     [score=0.250 via=saint-dismas]
+  Row   69: Gn     41:23    → 42:24     [score=0.625 via=saint-dismas]
+  Row   76: Gn     45:22    → 44:22     [score=0.500 via=saint-dismas]
+  Row   82: Gn     45:9     → 46:9      [score=0.636 via=saint-dismas]
+  Row   83: Gn     45:10    → 46:10     [score=0.444 via=saint-dismas]
+  Row   84: Gn     45:13    → 46:14     [score=0.400 via=saint-dismas]
+  Row   85: Gn     45:19    → 46:19     [score=0.462 via=saint-dismas]
+  Row   99: Gn     49:29    → 49:20     [score=0.600 via=saint-dismas]
+  Row  117: Ex     6:3      → 40:23     [score=0.267 via=saint-dismas]
+  Row  125: Ex     8:8      → 9:13      [score=0.310 via=saint-dismas]
+  Row  129: Ex     9:34     → 9:13      [score=0.350 via=saint-dismas]
+  Row  138: Ex     40:18    → 12:18     [score=0.522 via=saint-dismas]
+  Row  139: Ex     40:27    → 12:27     [score=0.375 via=saint-dismas]
+  Row  140: Ex     40:40    → 12:40     [score=0.353 via=saint-dismas]
+  Row  144: Ex     40:3     → 15:3      [score=0.727 via=saint-dismas]
+  Row  146: Ex     40:6     → 15:6      [score=0.562 via=saint-dismas]
+  Row  147: Ex     40:7     → 15:7      [score=0.583 via=saint-dismas]
+  Row  148: Ex     40:8     → 15:8      [score=0.571 via=saint-dismas]
+  Row  149: Ex     40:9     → 15:9      [score=0.233 via=modern-drb]
+  Row  150: Ex     40:13    → 15:13     [score=0.276 via=saint-dismas]
+  Row  152: Ex     40:15    → 15:15     [score=0.650 via=saint-dismas]
+  Row  153: Ex     40:19    → 15:19     [score=0.528 via=saint-dismas]
+  Row  164: Ex     16:4     → 16:15     [score=0.333 via=saint-dismas]
+  Row  167: Ex     18:4     → 19:4      [score=0.571 via=saint-dismas]
+  Row  173: Ex     20:19    → 22:19     [score=0.818 via=saint-dismas]
+  Row  174: Ex     20:24    → 23:24     [score=0.478 via=saint-dismas]
+  Row  175: Ex     20:26    → 23:26     [score=0.283 via=saint-dismas]
+  Row  177: Ex     24:6     → 25:6      [score=0.500 via=saint-dismas]
+  Row  178: Ex     24:13    → 25:13     [score=0.688 via=saint-dismas]
+  Row  179: Ex     24:29    → 26:29     [score=0.417 via=saint-dismas]
+  Row  180: Ex     24:15    → 28:15     [score=0.613 via=saint-dismas]
+  Row  182: Ex     24:20    → 29:20     [score=0.417 via=saint-dismas]
+  Row  183: Ex     24:38    → 29:38     [score=0.750 via=saint-dismas]
+  Row  184: Ex     24:42    → 29:42     [score=0.621 via=saint-dismas]
+  Row  185: Ex     24:23    → 30:23     [score=0.333 via=saint-dismas]
+  Row  187: Lv     25:5     → 24:5      [score=0.571 via=saint-dismas]
+  Row  188: Lv     25:18    → 24:18     [score=0.316 via=saint-dismas]
+  Row  190: Lv     25:31    → 26:31     [score=0.250 via=saint-dismas]
+  Row  191: Lv     25:33    → 27:33     [score=0.312 via=saint-dismas]
+  Row  206: Jos    2:2      → 3:2       [score=0.538 via=saint-dismas]
+  Row  207: Jos    2:15     → 3:15      [score=0.552 via=saint-dismas]
+  Row  209: Jos    3:21     → 4:21      [score=0.419 via=saint-dismas]
+  Row  215: Jos    7:7      → 8:7       [score=0.485 via=saint-dismas]
+  Row  218: Jgs    13:7     → 14:9      [score=0.308 via=saint-dismas]
+  Row  219: Jgs    18:19    → 16:19     [score=0.353 via=saint-dismas]
+  Row  222: Jgs    18:30    → 20:30     [score=0.588 via=saint-dismas]
+  Row  225: Ru     1:20     → 2:20      [score=0.273 via=saint-dismas]
+  Row  227: Ru     1:18     → 3:18      [score=0.200 via=modern-drb]
+  Row  250: Tb     1:12     → 1:13      [score=0.318 via=saint-dismas]
+  Row  253: Tb     2:19     → 4:3       [score=0.296 via=saint-dismas]
+  Row  254: Tb     2:19     → 4:20      [score=0.419 via=saint-dismas]
+  Row  255: Tb     10:2     → 5:2       [score=0.455 via=saint-dismas]
+  Row  256: Tb     10:5     → 6:5       [score=0.417 via=saint-dismas]
+  Row  259: Tb     2:5      → 7:5       [score=0.438 via=saint-dismas]
+  Row  263: Jdt    2:4      → 1:4       [score=0.333 via=saint-dismas]
+  Row  266: Jdt    2:6      → 3:6       [score=0.344 via=saint-dismas]
+  Row  267: Jdt    2:5      → 4:5       [score=0.354 via=saint-dismas]
+  Row  268: Jdt    2:10     → 4:9       [score=0.439 via=saint-dismas]
+  Row  273: Jdt    13:16    → 14:16     [score=0.645 via=saint-dismas]
+  Row  277: Jdt    15:2     → 16:2      [score=0.385 via=saint-dismas]
+  Row  278: Jdt    15:3     → 16:3      [score=0.750 via=saint-dismas]
+  Row  279: Jdt    15:5     → 16:5      [score=0.258 via=saint-dismas]
+  Row  281: Jdt    15:7     → 16:7      [score=0.278 via=saint-dismas]
+  Row  282: Jdt    15:8     → 16:8      [score=0.311 via=saint-dismas]
+  Row  284: Jdt    15:10    → 16:10     [score=0.368 via=saint-dismas]
+  Row  285: Jdt    15:11    → 16:11     [score=0.364 via=saint-dismas]
+  Row  286: Jdt    15:13    → 16:13     [score=0.650 via=saint-dismas]
+  Row  287: Jdt    15:15    → 16:15     [score=0.615 via=saint-dismas]
+  Row  288: Jdt    15:17    → 16:17     [score=0.375 via=saint-dismas]
+  Row  289: Jdt    15:1     → 16:18     [score=0.571 via=saint-dismas]
+  Row  290: Jdt    15:19    → 16:19     [score=0.846 via=saint-dismas]
+  Row  291: Jdt    15:20    → 16:20     [score=0.655 via=saint-dismas]
+  Row  292: Jdt    15:21    → 16:21     [score=0.579 via=saint-dismas]
+  Row  293: Jdt    15:22    → 16:22     [score=0.500 via=saint-dismas]
+  Row  294: Jdt    15:29    → 16:29     [score=0.800 via=saint-dismas]
+  Row  297: Est    3:8      → 2:8       [score=0.341 via=saint-dismas]
+  Row  298: Est    3:19     → 2:19      [score=0.344 via=saint-dismas]
+  Row  301: Est    3:12     → 4:12      [score=0.667 via=saint-dismas]
+  Row  303: Est    3:4      → 7:4       [score=0.325 via=saint-dismas]
+  Row  304: Est    3:13     → 8:13      [score=0.421 via=saint-dismas]
+  Row  306: Est    3:2      → 11:2      [score=0.344 via=saint-dismas]
+  Row  307: Est    12:8     → 13:9      [score=0.300 via=saint-dismas]
+  Row  311: Est    16:19    → 14:19     [score=0.373 via=saint-dismas]
+  Row  322: Jb     9:2      → 8:2       [score=0.295 via=saint-dismas]
+  Row  323: Jb     9:6      → 8:6       [score=0.304 via=saint-dismas]
+  Row  324: Jb     9:14     → 8:14      [score=0.600 via=saint-dismas]
+  Row  329: Jb     10:3     → 10:13     [score=0.281 via=saint-dismas]
+  Row  330: Jb     9:13     → 13:13     [score=0.647 via=saint-dismas]
+  Row  331: Jb     9:10     → 13:20     [score=0.400 via=saint-dismas]
+  Row  332: Jb     9:4      → 14:4      [score=0.700 via=saint-dismas]
+  Row  336: Jb     19:4     → 19:5      [score=0.290 via=saint-dismas]
+  Row  341: Ps     19:3     → 1:3       [score=0.212 via=modern-drb]
+  Row  343: Ps     19:6     → 1:6       [score=0.389 via=originaldouay]
+  Row  346: Ps     19:3     → 2:3       [score=0.312 via=modern-drb]
+  Row  348: Ps     19:6     → 2:6       [score=0.296 via=originaldouay]
+  Row  349: Ps     19:8     → 2:8       [score=0.257 via=originaldouay]
+  Row  356: Ps     19:4     → 3:4       [score=0.600 via=originaldouay]
+  Row  359: Ps     19:7     → 108:26    [score=0.333 via=originaldouay]
+  Row  360: Ps     19:8     → 3:8       [score=0.304 via=originaldouay]
+  Row  371: Ps     19:6     → 5:6       [score=0.400 via=originaldouay]
+  Row  372: Ps     19:7     → 5:8       [score=0.273 via=originaldouay]
+  Row  374: Ps     19:9     → 5:9       [score=0.286 via=originaldouay]
+  Row  375: Ps     19:11    → 5:11      [score=0.273 via=originaldouay]
+  Row  385: Ps     19:3     → 7:3       [score=0.294 via=originaldouay]
+  Row  386: Ps     19:4     → 7:4       [score=0.261 via=modern-drb]
+  Row  387: Ps     19:5     → 7:5       [score=0.364 via=originaldouay]
+  Row  390: Ps     19:11    → 7:11      [score=0.500 via=originaldouay]
+  Row  391: Ps     19:16    → 7:16      [score=0.667 via=originaldouay]
+  Row  394: Ps     19:4     → 8:4       [score=0.391 via=originaldouay]
+  Row  397: Ps     19:7     → 101:16    [score=0.263 via=originaldouay]
+  Row  401: Ps     19:2     → 9:2       [score=0.304 via=originaldouay]
+  Row  402: Ps     19:5     → 9:5       [score=0.333 via=originaldouay]
+  Row  403: Ps     19:6     → 9:6       [score=0.310 via=originaldouay]
+  Row  404: Ps     19:7     → 9:7       [score=0.526 via=originaldouay]
+  Row  415: Ps     19:11    → 9:32      [score=0.367 via=modern-drb]
+  Row  419: Ps     19:18    → 9:39      [score=0.200 via=modern-drb]
+  Row  421: Ps     19:1     → 11:1      [score=0.300 via=originaldouay]
+  Row  422: Ps     19:2     → 11:2      [score=0.550 via=originaldouay]
+  Row  424: Ps     19:6     → 11:6      [score=0.348 via=originaldouay]
+  Row  425: Ps     19:8     → 11:8      [score=0.304 via=originaldouay]
+  Row  427: Ps     19:3     → 12:3      [score=0.636 via=originaldouay]
+  Row  430: Ps     19:1     → 20:1      [score=0.375 via=originaldouay]
+  Row  432: Ps     19:4     → 13:4      [score=0.706 via=originaldouay]
+  Row  444: Ps     19:2     → 29:2      [score=0.281 via=originaldouay]
+  Row  447: Ps     19:7     → 29:7      [score=0.308 via=originaldouay]
+  Row  448: Ps     19:10    → 29:10     [score=0.450 via=originaldouay]
+  Row  449: Ps     19:12    → 29:12     [score=0.476 via=originaldouay]
+  Row  450: Ps     19:13    → 34:23     [score=0.222 via=modern-drb]
+  Row  454: Ps     19:6     → 30:6      [score=0.312 via=originaldouay]
+  Row  455: Ps     19:11    → 30:11     [score=0.346 via=originaldouay]
+  Row  460: Ps     19:25    → 75:12     [score=0.250 via=originaldouay]
+  Row  462: Ps     19:3     → 31:3      [score=0.385 via=originaldouay]
+  Row  465: Ps     19:6     → 31:6      [score=0.435 via=originaldouay]
+  Row  466: Ps     19:7     → 31:7      [score=0.450 via=originaldouay]
+  Row  468: Ps     19:9     → 31:9      [score=0.286 via=originaldouay]
+  Row  475: Ps     19:7     → 32:7      [score=0.235 via=modern-drb]
+  Row  478: Ps     19:15    → 32:15     [score=0.308 via=originaldouay]
+  Row  488: Ps     19:13    → 33:13     [score=0.389 via=originaldouay]
+  Row  496: Ps     19:3     → 34:3      [score=0.269 via=originaldouay]
+  Row  497: Ps     19:4     → 69:3      [score=0.417 via=originaldouay]
+  Row  498: Ps     19:7     → 34:7      [score=0.375 via=originaldouay]
+  Row  501: Ps     19:12    → 34:11     [score=0.368 via=originaldouay]
+  Row  503: Ps     19:14    → 34:14     [score=0.321 via=originaldouay]
+  Row  505: Ps     19:17    → 34:17     [score=0.379 via=originaldouay]
+  Row  510: Ps     19:3     → 35:3      [score=0.222 via=modern-drb]
+  Row  511: Ps     19:4     → 35:4      [score=0.240 via=modern-drb]
+  Row  512: Ps     19:5     → 35:5      [score=0.500 via=originaldouay]
+  Row  517: Ps     19:2     → 36:2      [score=0.333 via=originaldouay]
+  Row  520: Ps     19:5     → 36:5      [score=0.375 via=originaldouay]
+  Row  521: Ps     19:6     → 36:6      [score=0.350 via=originaldouay]
+  Row  526: Ps     19:35    → 36:15     [score=0.467 via=originaldouay]
+  Row  528: Ps     19:17    → 36:17     [score=0.350 via=originaldouay]
+  Row  530: Ps     19:2     → 36:22     [score=0.333 via=originaldouay]
+  Row  531: Ps     19:24    → 36:24     [score=0.344 via=originaldouay]
+  Row  533: Ps     19:27    → 36:27     [score=0.292 via=originaldouay]
+  Row  541: Ps     19:38    → 36:35     [score=0.643 via=originaldouay]
+  Row  546: Ps     19:40    → 36:40     [score=0.257 via=modern-drb]
+  Row  547: Ps     19:2     → 6:2       [score=0.250 via=originaldouay]
+  Row  548: Ps     19:3     → 37:3      [score=0.286 via=originaldouay]
+  Row  554: Ps     19:15    → 37:15     [score=0.643 via=originaldouay]
+  Row  555: Ps     19:16    → 37:16     [score=0.500 via=originaldouay]
+  Row  556: Ps     19:17    → 37:17     [score=0.323 via=originaldouay]
+  Row  558: Ps     19:19    → 37:19     [score=0.261 via=originaldouay]
+  Row  562: Ps     19:2     → 38:2      [score=0.250 via=originaldouay]
+  Row  563: Ps     19:3     → 38:3      [score=0.208 via=modern-drb]
+  Row  564: Ps     19:4     → 38:4      [score=0.258 via=originaldouay]
+  Row  565: Ps     19:6     → 142:6     [score=0.292 via=originaldouay]
+  Row  566: Ps     19:9     → 38:7      [score=0.261 via=originaldouay]
+  Row  576: Ps     19:5     → 39:5      [score=0.560 via=originaldouay]
+  Row  577: Ps     19:6     → 39:6      [score=0.333 via=originaldouay]
+  Row  583: Ps     19:6     → 110:9     [score=0.200 via=modern-drb]
+  Row  585: Ps     19:5     → 40:9      [score=0.344 via=originaldouay]
+  Row  586: Ps     19:12    → 40:12     [score=0.421 via=originaldouay]
+  Row  587: Ps     19:13    → 40:13     [score=0.269 via=originaldouay]
+  Row  590: Ps     19:2     → 41:2      [score=0.265 via=originaldouay]
+  Row  591: Ps     19:4     → 41:4      [score=0.500 via=originaldouay]
+  Row  592: Ps     19:5     → 41:5      [score=0.349 via=originaldouay]
+  Row  593: Ps     19:6     → 87:15     [score=0.222 via=modern-drb]
+  Row  596: Ps     19:3     → 91:3      [score=0.273 via=originaldouay]
+  Row  604: Ps     19:6     → 43:6      [score=0.727 via=originaldouay]
+  Row  605: Ps     19:7     → 43:7      [score=0.391 via=originaldouay]
+  Row  606: Ps     19:12    → 43:12     [score=0.250 via=originaldouay]
+  Row  608: Ps     19:14    → 43:14     [score=0.458 via=originaldouay]
+  Row  609: Ps     19:135   → 43:15     [score=0.393 via=originaldouay]
+  Row  611: Ps     19:1     → 43:23     [score=0.310 via=originaldouay]
+  Row  614: Ps     19:2     → 44:2      [score=0.286 via=originaldouay]
+  Row  615: Ps     19:3     → 44:3      [score=0.429 via=originaldouay]
+  Row  616: Ps     19:4     → 44:4      [score=0.545 via=originaldouay]
+  Row  621: Ps     19:17    → 44:17     [score=0.619 via=originaldouay]
+  Row  622: Ps     19:18    → 43:9      [score=0.257 via=originaldouay]
+  Row  627: Ps     19:6     → 45:6      [score=0.300 via=originaldouay]
+  Row  628: Ps     19:7     → 45:7      [score=0.312 via=originaldouay]
+  Row  635: Ps     19:6     → 51:9      [score=0.216 via=modern-drb]
+  Row  636: Ps     19:7     → 98:5      [score=0.259 via=originaldouay]
+  Row  637: Ps     19:9     → 46:9      [score=0.467 via=originaldouay]
+  Row  639: Ps     19:2     → 47:2      [score=0.294 via=originaldouay]
+  Row  640: Ps     19:4     → 47:4      [score=0.276 via=originaldouay]
+  Row  642: Ps     19:6     → 47:6      [score=0.286 via=originaldouay]
+  Row  645: Ps     19:13    → 47:13     [score=0.556 via=originaldouay]
+  Row  652: Ps     19:8     → 48:8      [score=0.300 via=originaldouay]
+  Row  653: Ps     19:9     → 48:9      [score=0.278 via=originaldouay]
+  Row  654: Ps     19:14    → 48:14     [score=0.323 via=originaldouay]
+  Row  660: Ps     19:5     → 49:5      [score=0.467 via=originaldouay]
+  Row  661: Ps     19:8     → 49:8      [score=0.286 via=originaldouay]
+  Row  662: Ps     19:14    → 49:14     [score=0.412 via=originaldouay]
+  Row  663: Ps     19:17    → 49:17     [score=0.538 via=originaldouay]
+  Row  664: Ps     19:18    → 49:19     [score=0.333 via=originaldouay]
+  Row  667: Ps     19:3     → 108:26    [score=0.263 via=originaldouay]
+  Row  668: Ps     19:4     → 50:4      [score=0.364 via=originaldouay]
+  Row  670: Ps     19:6     → 50:6      [score=0.276 via=originaldouay]
+  Row  671: Ps     19:8     → 50:8      [score=0.387 via=originaldouay]
+  Row  672: Ps     19:11    → 50:11     [score=0.667 via=originaldouay]
+  Row  673: Ps     19:12    → 50:12     [score=0.524 via=originaldouay]
+  Row  674: Ps     19:13    → 50:13     [score=0.250 via=originaldouay]
+  Row  676: Ps     19:15    → 50:15     [score=0.368 via=originaldouay]
+  Row  682: Ps     19:6     → 51:7      [score=0.259 via=originaldouay]
+  Row  684: Ps     19:11    → 51:11     [score=0.211 via=modern-drb]
+  Row  686: Ps     19:16    → 13:5      [score=0.688 via=originaldouay]
+  Row  687: Ps     19:3     → 53:3      [score=0.300 via=originaldouay]
+  Row  688: Ps     19:7     → 53:7      [score=0.600 via=originaldouay]
+  Row  689: Ps     19:8     → 53:8      [score=0.320 via=originaldouay]
+  Row  691: Ps     19:2     → 54:2      [score=0.385 via=originaldouay]
+  Row  692: Ps     19:4     → 43:17     [score=0.263 via=modern-drb]
+  Row  695: Ps     19:8     → 54:8      [score=0.750 via=originaldouay]
+  Row  697: Ps     19:13    → 54:13     [score=0.393 via=originaldouay]
+  Row  699: Ps     19:91    → 54:19     [score=0.375 via=originaldouay]
+  Row  700: Ps     19:20    → 54:20     [score=0.312 via=originaldouay]
+  Row  701: Ps     19:22    → 54:22     [score=0.263 via=originaldouay]
+  Row  704: Ps     19:4     → 55:4      [score=0.391 via=originaldouay]
+  Row  706: Ps     19:7     → 55:7      [score=0.467 via=originaldouay]
+  Row  708: Ps     19:13    → 55:13     [score=0.269 via=modern-drb]
+  Row  712: Ps     19:11    → 56:6      [score=0.545 via=originaldouay]
+  Row  714: Ps     19:2     → 57:2      [score=0.316 via=originaldouay]
+  Row  716: Ps     19:4     → 57:4      [score=0.345 via=originaldouay]
+  Row  721: Ps     19:2     → 58:2      [score=0.381 via=originaldouay]
+  Row  723: Ps     19:4     → 58:4      [score=0.412 via=originaldouay]
+  Row  724: Ps     19:5     → 58:5      [score=0.263 via=originaldouay]
+  Row  725: Ps     19:9     → 58:15     [score=0.312 via=originaldouay]
+  Row  731: Ps     19:3     → 59:3      [score=0.267 via=originaldouay]
+  Row  732: Ps     19:4     → 59:4      [score=0.421 via=originaldouay]
+  Row  733: Ps     19:5     → 59:5      [score=0.529 via=originaldouay]
+  Row  735: Ps     19:7     → 59:7      [score=0.714 via=originaldouay]
+  Row  736: Ps     19:2     → 60:3      [score=0.542 via=originaldouay]
+  Row  738: Ps     19:6     → 60:6      [score=0.333 via=originaldouay]
+  Row  740: Ps     19:9     → 60:9      [score=0.391 via=modern-drb]
+  Row  742: Ps     19:4     → 61:4      [score=0.278 via=originaldouay]
+  Row  744: Ps     19:13    → 61:13     [score=0.281 via=modern-drb]
+  Row  745: Ps     19:2     → 62:2      [score=0.440 via=originaldouay]
+  Row  748: Ps     19:4     → 62:4      [score=0.467 via=originaldouay]
+  Row  749: Ps     19:5     → 62:5      [score=0.294 via=originaldouay]
+  Row  751: Ps     19:7     → 62:7      [score=0.412 via=originaldouay]
+  Row  752: Ps     19:9     → 62:9      [score=0.583 via=originaldouay]
+  Row  753: Ps     19:3     → 63:3      [score=0.250 via=originaldouay]
+  Row  754: Ps     19:7     → 113:15    [score=0.261 via=originaldouay]
+  Row  755: Ps     19:8     → 63:8      [score=0.444 via=originaldouay]
+  Row  758: Ps     19:5     → 64:5      [score=0.300 via=originaldouay]
+  Row  762: Ps     19:13    → 64:13     [score=0.250 via=originaldouay]
+  Row  768: Ps     19:4     → 65:4      [score=0.353 via=originaldouay]
+  Row  770: Ps     19:6     → 65:6      [score=0.381 via=originaldouay]
+  Row  773: Ps     19:12    → 65:12     [score=0.647 via=originaldouay]
+  Row  774: Ps     19:15    → 65:15     [score=0.381 via=originaldouay]
+  Row  782: Ps     19:4     → 66:6      [score=0.625 via=originaldouay]
+  Row  783: Ps     19:5     → 66:5      [score=0.300 via=originaldouay]
+  Row  785: Ps     19:2     → 67:2      [score=0.286 via=modern-drb]
+  Row  786: Ps     19:3     → 67:3      [score=0.303 via=originaldouay]
+  Row  787: Ps     19:8     → 67:8      [score=0.381 via=originaldouay]
+  Row  789: Ps     19:14    → 67:14     [score=0.419 via=originaldouay]
+  Row  790: Ps     19:15    → 67:15     [score=0.344 via=originaldouay]
+  Row  791: Ps     19:18    → 67:18     [score=0.375 via=originaldouay]
+  Row  796: Ps     19:25    → 67:25     [score=0.550 via=originaldouay]
+  Row  797: Ps     19:26    → 67:26     [score=0.350 via=originaldouay]
+  Row  800: Ps     19:29    → 67:29     [score=0.615 via=originaldouay]
+  Row  801: Ps     19:31    → 67:31     [score=0.432 via=originaldouay]
+  Row  803: Ps     19:34    → 67:34     [score=0.375 via=originaldouay]
+  Row  806: Ps     19:4     → 68:4      [score=0.333 via=originaldouay]
+  Row  807: Ps     19:5     → 68:5      [score=0.258 via=originaldouay]
+  Row  808: Ps     19:6     → 68:6      [score=0.571 via=originaldouay]
+  Row  810: Ps     19:8     → 68:8      [score=0.467 via=originaldouay]
+  Row  811: Ps     19:9     → 68:9      [score=0.267 via=originaldouay]
+  Row  812: Ps     19:13    → 68:13     [score=0.333 via=originaldouay]
+  Row  817: Ps     19:27    → 68:27     [score=0.500 via=originaldouay]
+  Row  820: Ps     19:30    → 65:19     [score=0.250 via=modern-drb]
+  Row  823: Ps     19:33    → 68:33     [score=0.529 via=originaldouay]
+  Row  828: Ps     19:2     → 69:2      [score=0.500 via=originaldouay]
+  Row  829: Ps     19:3     → 69:3      [score=0.357 via=originaldouay]
+  Row  830: Ps     19:5     → 69:5      [score=0.424 via=originaldouay]
+  Row  834: Ps     19:9     → 70:9      [score=0.265 via=originaldouay]
+  Row  835: Ps     19:12    → 70:12     [score=0.458 via=originaldouay]
+  Row  836: Ps     19:23    → 70:23     [score=0.333 via=originaldouay]
+  Row  837: Ps     19:24    → 88:17     [score=0.333 via=originaldouay]
+  Row  840: Ps     19:4     → 71:4      [score=0.435 via=originaldouay]
+  Row  849: Ps     19:2     → 72:2      [score=0.364 via=originaldouay]
+  Row  853: Ps     19:6     → 72:6      [score=0.733 via=originaldouay]
+  Row  857: Ps     19:19    → 72:19     [score=0.393 via=originaldouay]
+  Row  858: Ps     19:24    → 72:24     [score=0.429 via=originaldouay]
+  Row  860: Ps     19:27    → 72:27     [score=0.292 via=originaldouay]
+  Row  862: Ps     19:3     → 73:3      [score=0.458 via=originaldouay]
+  Row  864: Ps     19:4     → 73:9      [score=0.314 via=originaldouay]
+  Row  866: Ps     19:15    → 73:15     [score=0.500 via=originaldouay]
+  Row  868: Ps     19:6     → 74:6      [score=0.462 via=originaldouay]
+  Row  869: Ps     19:7     → 74:7      [score=0.250 via=originaldouay]
+  Row  874: Ps     19:8     → 75:8      [score=0.385 via=originaldouay]
+  Row  879: Ps     19:6     → 76:6      [score=0.571 via=originaldouay]
+  Row  882: Ps     19:9     → 76:10     [score=0.500 via=originaldouay]
+  Row  883: Ps     19:14    → 76:12     [score=0.320 via=originaldouay]
+  Row  885: Ps     19:14    → 76:14     [score=0.692 via=originaldouay]
+  Row  889: Ps     19:3     → 77:4      [score=0.325 via=originaldouay]
+  Row  892: Ps     19:9     → 77:9      [score=0.588 via=originaldouay]
+  Row  893: Ps     19:15    → 77:15     [score=0.444 via=originaldouay]
+  Row  896: Ps     19:26    → 77:20     [score=0.345 via=originaldouay]
+  Row  899: Ps     19:25    → 77:25     [score=0.421 via=originaldouay]
+  Row  900: Ps     19:20    → 77:26     [score=0.258 via=originaldouay]
+  Row  903: Ps     19:30    → 77:30     [score=0.588 via=originaldouay]
+  Row  908: Ps     19:7     → 77:37     [score=0.667 via=originaldouay]
+  Row  910: Ps     19:39    → 77:39     [score=0.286 via=originaldouay]
+  Row  914: Ps     19:45    → 77:45     [score=0.333 via=originaldouay]
+  Row  915: Ps     19:46    → 77:46     [score=0.231 via=modern-drb]
+  Row  917: Ps     19:5     → 77:50     [score=0.625 via=originaldouay]
+  Row  919: Ps     19:52    → 77:52     [score=0.281 via=originaldouay]
+  Row  920: Ps     19:58    → 77:58     [score=0.333 via=originaldouay]
+  Row  923: Ps     19:63    → 77:63     [score=0.500 via=originaldouay]
+  Row  924: Ps     19:64    → 77:64     [score=0.267 via=originaldouay]
+  Row  926: Ps     19:69    → 77:69     [score=0.421 via=originaldouay]
+  Row  930: Ps     19:2     → 78:2      [score=0.261 via=originaldouay]
+  Row  932: Ps     19:4     → 78:4      [score=0.474 via=originaldouay]
+  Row  933: Ps     19:8     → 78:8      [score=0.650 via=originaldouay]
+  Row  935: Ps     19:10    → 78:10     [score=0.359 via=originaldouay]
+  Row  936: Ps     19:1     → 68:1      [score=0.360 via=originaldouay]
+  Row  937: Ps     19:4     → 79:4      [score=0.538 via=originaldouay]
+  Row  938: Ps     19:9     → 79:9      [score=0.312 via=originaldouay]
+  Row  939: Ps     19:8     → 79:4      [score=0.636 via=originaldouay]
+  Row  940: Ps     19:14    → 79:14     [score=0.333 via=originaldouay]
+  Row  941: Ps     19:15    → 79:15     [score=0.357 via=originaldouay]
+  Row  943: Ps     19:2     → 80:2      [score=0.400 via=originaldouay]
+  Row  944: Ps     19:3     → 80:3      [score=0.263 via=originaldouay]
+  Row  945: Ps     19:4     → 80:4      [score=0.259 via=originaldouay]
+  Row  948: Ps     19:9     → 80:7      [score=0.333 via=modern-drb]
+  Row  952: Ps     19:15    → 80:15     [score=0.632 via=originaldouay]
+  Row  957: Ps     19:2     → 82:2      [score=0.267 via=originaldouay]
+  Row  958: Ps     19:3     → 82:3      [score=0.353 via=originaldouay]
+  Row  959: Ps     19:5     → 82:5      [score=0.324 via=originaldouay]
+  Row  962: Ps     19:14    → 82:14     [score=0.375 via=originaldouay]
+  Row  963: Ps     19:15    → 82:15     [score=0.529 via=originaldouay]
+  Row  970: Ps     19:9     → 83:9      [score=0.290 via=originaldouay]
+  Row  974: Ps     19:2     → 84:2      [score=0.533 via=originaldouay]
+  Row  976: Ps     19:4     → 84:4      [score=0.500 via=originaldouay]
+  Row  978: Ps     19:6     → 84:6      [score=0.222 via=modern-drb]
+  Row  981: Ps     19:11    → 84:11     [score=0.538 via=originaldouay]
+  Row  983: Ps     19:43    → 84:13     [score=0.333 via=originaldouay]
+  Row  985: Ps     19:2     → 85:2      [score=0.375 via=originaldouay]
+  Row  987: Ps     19:5     → 85:5      [score=0.273 via=originaldouay]
+  Row  994: Ps     19:1     → 86:1      [score=0.500 via=originaldouay]
+  Row  995: Ps     19:4     → 86:4      [score=0.278 via=originaldouay]
+  Row 1005: Ps     19:11    → 87:11     [score=0.333 via=originaldouay]
+  Row 1006: Ps     19:12    → 87:12     [score=0.304 via=originaldouay]
+  Row 1008: Ps     19:17    → 87:17     [score=0.583 via=originaldouay]
+  Row 1011: Ps     19:4     → 88:4      [score=0.438 via=originaldouay]
+  Row 1013: Ps     19:10    → 88:10     [score=0.391 via=originaldouay]
+  Row 1014: Ps     19:12    → 88:12     [score=0.478 via=originaldouay]
+  Row 1018: Ps     19:32    → 88:32     [score=0.250 via=originaldouay]
+  Row 1019: Ps     19:33    → 88:33     [score=0.286 via=originaldouay]
+  Row 1021: Ps     19:35    → 88:35     [score=0.429 via=originaldouay]
+  Row 1028: Ps     19:2     → 96:2      [score=0.444 via=originaldouay]
+  Row 1029: Ps     19:3     → 96:3      [score=0.533 via=originaldouay]
+  Row 1034: Ps     19:3     → 67:33     [score=0.273 via=originaldouay]
+  Row 1036: Ps     19:5     → 97:5      [score=0.538 via=originaldouay]
+  Row 1038: Ps     19:3     → 98:3      [score=0.562 via=originaldouay]
+  Row 1043: Ps     19:4     → 100:4     [score=0.846 via=originaldouay]
+  Row 1044: Ps     19:5     → 100:5     [score=0.350 via=originaldouay]
+  Row 1045: Ps     19:6     → 100:6     [score=0.296 via=originaldouay]
+  Row 1046: Ps     19:7     → 100:7     [score=0.357 via=originaldouay]
+  Row 1048: Ps     19:4     → 101:4     [score=0.281 via=originaldouay]
+  Row 1049: Ps     19:6     → 101:6     [score=0.267 via=originaldouay]
+  Row 1051: Ps     19:12    → 101:12    [score=0.364 via=originaldouay]
+  Row 1052: Ps     19:13    → 101:13    [score=0.500 via=originaldouay]
+  Row 1053: Ps     19:14    → 101:14    [score=0.407 via=originaldouay]
+  Row 1056: Ps     19:18    → 101:18    [score=0.348 via=originaldouay]
+  Row 1057: Ps     19:19    → 101:19    [score=0.483 via=originaldouay]
+  Row 1063: Ps     19:1     → 102:1     [score=0.424 via=originaldouay]
+  Row 1064: Ps     19:3     → 102:3     [score=0.500 via=originaldouay]
+  Row 1065: Ps     19:4     → 102:4     [score=0.733 via=originaldouay]
+  Row 1066: Ps     19:5     → 102:5     [score=0.588 via=originaldouay]
+  Row 1071: Ps     19:21    → 102:21    [score=0.450 via=originaldouay]
+  Row 1072: Ps     19:8     → 102:20    [score=0.250 via=originaldouay]
+  Row 1076: Ps     19:12    → 103:2     [score=0.263 via=originaldouay]
+  Row 1079: Ps     19:6     → 103:6     [score=0.345 via=originaldouay]
+  Row 1080: Ps     19:8     → 103:8     [score=0.429 via=originaldouay]
+  Row 1082: Ps     19:19    → 103:20    [score=0.433 via=originaldouay]
+  Row 1083: Ps     19:23    → 103:23    [score=0.556 via=originaldouay]
+  Row 1088: Ps     19:34    → 103:34    [score=0.750 via=originaldouay]
+  Row 1097: Ps     19:14    → 104:14    [score=0.320 via=originaldouay]
+  Row 1098: Ps     19:18    → 104:18    [score=0.438 via=originaldouay]
+  Row 1099: Ps     19:22    → 104:22    [score=0.500 via=originaldouay]
+  Row 1100: Ps     19:25    → 104:25    [score=0.400 via=originaldouay]
+  Row 1103: Ps     19:28    → 104:28    [score=0.273 via=originaldouay]
+  Row 1106: Ps     19:31    → 104:31    [score=0.294 via=originaldouay]
+  Row 1107: Ps     19:2     → 104:32    [score=0.333 via=originaldouay]
+  Row 1108: Ps     19:34    → 104:34    [score=0.381 via=originaldouay]
+  Row 1110: Ps     19:36    → 104:36    [score=0.316 via=originaldouay]
+  Row 1112: Ps     19:38    → 104:38    [score=0.455 via=originaldouay]
+  Row 1118: Ps     19:4     → 105:4     [score=0.375 via=originaldouay]
+  Row 1122: Ps     19:13    → 105:13    [score=0.333 via=originaldouay]
+  Row 1123: Ps     19:14    → 105:14    [score=0.250 via=originaldouay]
+  Row 1126: Ps     19:20    → 105:20    [score=0.600 via=originaldouay]
+  Row 1134: Ps     19:4     → 105:39    [score=0.529 via=originaldouay]
+  Row 1143: Ps     19:10    → 106:10    [score=0.360 via=originaldouay]
+  Row 1145: Ps     19:32    → 106:32    [score=0.556 via=originaldouay]
+  Row 1147: Ps     19:34    → 106:34    [score=0.529 via=originaldouay]
+  Row 1150: Ps     19:37    → 106:37    [score=0.286 via=originaldouay]
+  Row 1154: Ps     19:3     → 107:3     [score=0.545 via=originaldouay]
+  Row 1156: Ps     19:9     → 107:9     [score=0.476 via=originaldouay]
+  Row 1159: Ps     19:11    → 107:11    [score=0.273 via=originaldouay]
+  Row 1163: Ps     19:6     → 108:6     [score=0.375 via=originaldouay]
+  Row 1164: Ps     19:7     → 108:7     [score=0.429 via=originaldouay]
+  Row 1171: Ps     19:2     → 67:35     [score=0.219 via=modern-drb]
+  Row 1173: Ps     19:8     → 110:8     [score=0.304 via=originaldouay]
+  Row 1178: Ps     19:4     → 111:4     [score=0.471 via=originaldouay]
+  Row 1180: Ps     19:7     → 111:7     [score=0.294 via=originaldouay]
+  Row 1182: Ps     19:9     → 111:9     [score=0.381 via=originaldouay]
+  Row 1184: Ps     19:3     → 112:3     [score=0.533 via=originaldouay]
+  Row 1188: Ps     19:2     → 113:2     [score=0.273 via=originaldouay]
+  Row 1189: Ps     19:4     → 113:4     [score=0.300 via=originaldouay]
+  Row 1191: Ps     19:8     → 113:8     [score=0.333 via=originaldouay]
+  Row 1201: Ps     19:8     → 114:8     [score=0.625 via=originaldouay]
+  Row 1202: Ps     19:2     → 115:2     [score=0.500 via=originaldouay]
+  Row 1207: Ps     19:7     → 118:141   [score=0.273 via=originaldouay]
+  Row 1214: Ps     19:19    → 117:19    [score=0.556 via=originaldouay]
+  Row 1215: Ps     19:21    → 117:21    [score=0.333 via=originaldouay]
+  Row 1217: Ps     19:25    → 117:25    [score=0.304 via=originaldouay]
+  Row 1219: Ps     19:28    → 117:28    [score=0.522 via=originaldouay]
+  Row 1222: Ps     19:5     → 118:5     [score=0.357 via=originaldouay]
+  Row 1223: Ps     19:6     → 118:6     [score=0.360 via=originaldouay]
+  Row 1225: Ps     19:10    → 118:10    [score=0.375 via=originaldouay]
+  Row 1226: Ps     19:11    → 118:11    [score=0.471 via=originaldouay]
+  Row 1227: Ps     19:12    → 84:9      [score=0.238 via=modern-drb]
+  Row 1229: Ps     19:14    → 118:14    [score=0.450 via=originaldouay]
+  Row 1232: Ps     19:18    → 118:18    [score=0.250 via=originaldouay]
+  Row 1233: Ps     19:23    → 118:23    [score=0.381 via=originaldouay]
+  Row 1234: Ps     19:24    → 118:24    [score=0.455 via=originaldouay]
+  Row 1238: Ps     19:30    → 118:30    [score=0.375 via=originaldouay]
+  Row 1239: Ps     19:31    → 118:31    [score=0.286 via=originaldouay]
+  Row 1240: Ps     19:34    → 118:34    [score=0.407 via=originaldouay]
+  Row 1241: Ps     19:35    → 118:35    [score=0.500 via=originaldouay]
+  Row 1242: Ps     19:36    → 118:36    [score=0.385 via=originaldouay]
+  Row 1243: Ps     19:37    → 118:37    [score=0.310 via=originaldouay]
+  Row 1245: Ps     19:39    → 118:39    [score=0.462 via=originaldouay]
+  Row 1246: Ps     19:47    → 118:38    [score=0.300 via=originaldouay]
+  Row 1248: Ps     19:43    → 118:43    [score=0.565 via=originaldouay]
+  Row 1249: Ps     19:46    → 118:46    [score=0.321 via=originaldouay]
+  Row 1250: Ps     19:47    → 118:47    [score=0.375 via=originaldouay]
+  Row 1252: Ps     19:50    → 118:50    [score=0.278 via=originaldouay]
+  Row 1253: Ps     19:52    → 118:52    [score=0.500 via=originaldouay]
+  Row 1255: Ps     19:53    → 118:53    [score=0.286 via=originaldouay]
+  Row 1257: Ps     19:57    → 118:57    [score=0.500 via=originaldouay]
+  Row 1258: Ps     19:58    → 118:58    [score=0.429 via=originaldouay]
+  Row 1260: Ps     19:67    → 118:67    [score=0.429 via=originaldouay]
+  Row 1261: Ps     19:68    → 118:69    [score=0.355 via=originaldouay]
+  Row 1262: Ps     19:2     → 118:72    [score=0.273 via=originaldouay]
+  Row 1265: Ps     19:77    → 118:92    [score=0.300 via=originaldouay]
+  Row 1266: Ps     19:78    → 118:78    [score=0.522 via=originaldouay]
+  Row 1267: Ps     19:79    → 118:79    [score=0.353 via=originaldouay]
+  Row 1268: Ps     19:80    → 118:80    [score=0.438 via=originaldouay]
+  Row 1270: Ps     19:83    → 118:83    [score=0.368 via=originaldouay]
+  Row 1271: Ps     19:84    → 118:84    [score=0.382 via=originaldouay]
+  Row 1276: Ps     19:93    → 118:93    [score=0.250 via=originaldouay]
+  Row 1279: Ps     19:97    → 118:97    [score=0.857 via=originaldouay]
+  Row 1280: Ps     19:98    → 118:98    [score=0.522 via=originaldouay]
+  Row 1281: Ps     19:99    → 118:99    [score=0.529 via=originaldouay]
+  Row 1282: Ps     19:103   → 118:103   [score=0.259 via=originaldouay]
+  Row 1283: Ps     19:105   → 118:105   [score=0.259 via=originaldouay]
+  Row 1286: Ps     19:117   → 118:117   [score=0.444 via=originaldouay]
+  Row 1288: Ps     19:126   → 93:5      [score=0.286 via=originaldouay]
+  Row 1289: Ps     19:127   → 118:127   [score=0.636 via=originaldouay]
+  Row 1290: Ps     19:130   → 118:130   [score=0.474 via=originaldouay]
+  Row 1291: Ps     19:131   → 118:131   [score=0.667 via=originaldouay]
+  Row 1292: Ps     19:137   → 118:134   [score=0.227 via=modern-drb]
+  Row 1293: Ps     19:135   → 118:135   [score=0.308 via=originaldouay]
+  Row 1294: Ps     19:136   → 118:136   [score=0.265 via=originaldouay]
+  Row 1295: Ps     19:138   → 118:142   [score=0.273 via=originaldouay]
+  Row 1297: Ps     19:143   → 118:143   [score=0.667 via=originaldouay]
+  Row 1299: Ps     19:147   → 118:147   [score=0.438 via=originaldouay]
+  Row 1304: Ps     19:15    → 118:155   [score=0.304 via=originaldouay]
+  Row 1305: Ps     19:156   → 118:157   [score=0.385 via=originaldouay]
+  Row 1306: Ps     19:159   → 118:159   [score=0.556 via=originaldouay]
+  Row 1307: Ps     19:161   → 118:161   [score=0.368 via=originaldouay]
+  Row 1309: Ps     19:171   → 118:171   [score=0.474 via=originaldouay]
+  Row 1311: Ps     19:173   → 118:173   [score=0.294 via=originaldouay]
+  Row 1314: Ps     19:2     → 119:2     [score=0.333 via=modern-drb]
+  Row 1315: Ps     19:3     → 119:3     [score=0.286 via=originaldouay]
+  Row 1316: Ps     19:4     → 119:4     [score=0.385 via=originaldouay]
+  Row 1317: Ps     19:1     → 120:1     [score=0.652 via=originaldouay]
+  Row 1320: Ps     19:5     → 120:5     [score=0.308 via=originaldouay]
+  Row 1322: Ps     19:2     → 121:2     [score=0.455 via=originaldouay]
+  Row 1323: Ps     19:3     → 80:5      [score=0.241 via=modern-drb]
+  Row 1324: Ps     19:4     → 121:4     [score=0.250 via=originaldouay]
+  Row 1325: Ps     19:5     → 121:5     [score=0.286 via=originaldouay]
+  Row 1326: Ps     19:7     → 121:7     [score=0.389 via=originaldouay]
+  Row 1329: Ps     19:4     → 123:3     [score=0.400 via=originaldouay]
+  Row 1330: Ps     19:5     → 123:5     [score=0.412 via=originaldouay]
+  Row 1332: Ps     19:7     → 123:7     [score=0.300 via=originaldouay]
+  Row 1336: Ps     19:7     → 141:7     [score=0.270 via=originaldouay]
+  Row 1338: Ps     19:2     → 142:2     [score=0.263 via=originaldouay]
+  Row 1340: Ps     19:5     → 142:5     [score=0.500 via=originaldouay]
+  Row 1341: Ps     19:6     → 142:6     [score=0.294 via=modern-drb]
+  Row 1342: Ps     19:9     → 142:9     [score=0.583 via=originaldouay]
+  Row 1347: Ps     19:5     → 143:5     [score=0.273 via=originaldouay]
+  Row 1349: Ps     19:8     → 22:1      [score=0.286 via=originaldouay]
+  Row 1353: Ps     19:4     → 144:4     [score=0.267 via=originaldouay]
+  Row 1356: Ps     19:11    → 144:11    [score=0.474 via=originaldouay]
+  Row 1357: Ps     19:13    → 144:13    [score=0.360 via=originaldouay]
+  Row 1359: Ps     19:17    → 144:17    [score=0.333 via=originaldouay]
+  Row 1362: Ps     19:2     → 5:8       [score=0.250 via=originaldouay]
+  Row 1363: Ps     19:4     → 145:4     [score=0.333 via=originaldouay]
+  Row 1364: Ps     19:2     → 146:2     [score=0.333 via=originaldouay]
+  Row 1367: Ps     19:7     → 146:7     [score=0.538 via=originaldouay]
+  Row 1374: Prv    16:24    → 15:24     [score=0.409 via=saint-dismas]
+  Row 1377: Prv    16:31    → 15:31     [score=0.300 via=saint-dismas]
+  Row 1378: Prv    16:32    → 15:32     [score=0.320 via=saint-dismas]
+  Row 1379: Prv    16:33    → 15:33     [score=0.500 via=saint-dismas]
+  Row 1381: Prv    16:9     → 16:7      [score=0.476 via=saint-dismas]
+  Row 1386: Prv    16:25    → 14:12     [score=0.280 via=saint-dismas]
+  Row 1395: Prv    16:2     → 17:2      [score=0.421 via=saint-dismas]
+  Row 1396: Prv    16:3     → 17:3      [score=0.409 via=saint-dismas]
+  Row 1397: Prv    16:4     → 17:4      [score=0.412 via=saint-dismas]
+  Row 1398: Prv    16:18    → 17:8      [score=0.346 via=saint-dismas]
+  Row 1400: Prv    16:9     → 17:9      [score=0.320 via=saint-dismas]
+  Row 1401: Prv    16:10    → 17:11     [score=0.294 via=saint-dismas]
+  Row 1402: Prv    16:14    → 17:14     [score=0.435 via=saint-dismas]
+  Row 1403: Prv    16:17    → 17:17     [score=0.562 via=saint-dismas]
+  Row 1404: Prv    16:20    → 17:20     [score=0.545 via=saint-dismas]
+  Row 1405: Prv    16:22    → 17:22     [score=0.467 via=saint-dismas]
+  Row 1406: Prv    16:23    → 17:23     [score=0.389 via=saint-dismas]
+  Row 1407: Prv    16:24    → 17:24     [score=0.562 via=saint-dismas]
+  Row 1408: Prv    16:25    → 17:25     [score=0.733 via=saint-dismas]
+  Row 1409: Prv    16:26    → 17:26     [score=0.500 via=saint-dismas]
+  Row 1410: Prv    16:28    → 17:28     [score=0.294 via=modern-drb]
+  Row 1412: Prv    16:4     → 18:4      [score=0.588 via=saint-dismas]
+  Row 1413: Prv    16:7     → 18:7      [score=0.600 via=saint-dismas]
+  Row 1414: Prv    16:8     → 18:8      [score=0.333 via=saint-dismas]
+  Row 1415: Prv    16:9     → 18:9      [score=0.600 via=saint-dismas]
+  Row 1416: Prv    16:10    → 14:14     [score=0.250 via=saint-dismas]
+  Row 1417: Prv    16:32    → 18:12     [score=0.688 via=saint-dismas]
+  Row 1418: Prv    16:13    → 18:13     [score=0.450 via=saint-dismas]
+  Row 1419: Prv    16:14    → 18:14     [score=0.700 via=saint-dismas]
+  Row 1420: Prv    16:15    → 18:15     [score=0.438 via=saint-dismas]
+  Row 1422: Prv    16:18    → 18:18     [score=0.267 via=saint-dismas]
+  Row 1423: Prv    16:19    → 18:19     [score=0.353 via=saint-dismas]
+  Row 1424: Prv    16:23    → 18:23     [score=0.333 via=saint-dismas]
+  Row 1425: Prv    16:2     → 19:2      [score=0.333 via=saint-dismas]
+  Row 1426: Prv    16:5     → 19:5      [score=0.500 via=saint-dismas]
+  Row 1428: Prv    16:7     → 19:7      [score=0.476 via=saint-dismas]
+  Row 1429: Prv    16:9     → 19:10     [score=0.263 via=saint-dismas]
+  Row 1431: Prv    16:12    → 19:12     [score=0.250 via=saint-dismas]
+  Row 1432: Prv    16:14    → 19:14     [score=0.545 via=saint-dismas]
+  Row 1433: Prv    16:16    → 19:16     [score=0.280 via=saint-dismas]
+  Row 1434: Prv    16:19    → 19:19     [score=0.632 via=saint-dismas]
+  Row 1435: Prv    16:23    → 19:23     [score=0.387 via=saint-dismas]
+  Row 1436: Prv    16:29    → 19:29     [score=0.261 via=modern-drb]
+  Row 1437: Prv    16:3     → 20:3      [score=0.292 via=saint-dismas]
+  Row 1438: Prv    16:5     → 20:5      [score=0.250 via=saint-dismas]
+  Row 1440: Prv    16:8     → 20:8      [score=0.421 via=saint-dismas]
+  Row 1441: Prv    16:9     → 20:9      [score=0.429 via=saint-dismas]
+  Row 1442: Prv    16:11    → 20:11     [score=0.500 via=saint-dismas]
+  Row 1443: Prv    16:13    → 20:13     [score=0.450 via=saint-dismas]
+  Row 1444: Prv    16:14    → 20:14     [score=0.500 via=saint-dismas]
+  Row 1445: Prv    16:15    → 20:16     [score=0.333 via=saint-dismas]
+  Row 1446: Prv    16:20    → 20:20     [score=0.545 via=saint-dismas]
+  Row 1447: Prv    16:23    → 20:23     [score=1.000 via=saint-dismas]
+  Row 1448: Prv    16:24    → 20:24     [score=0.609 via=saint-dismas]
+  Row 1449: Prv    16:27    → 20:27     [score=0.600 via=saint-dismas]
+  Row 1450: Prv    16:28    → 20:28     [score=0.533 via=saint-dismas]
+  Row 1451: Prv    16:29    → 20:29     [score=0.615 via=saint-dismas]
+  Row 1452: Prv    16:30    → 20:30     [score=0.255 via=saint-dismas]
+  Row 1453: Prv    16:4     → 21:4      [score=0.462 via=saint-dismas]
+  Row 1454: Prv    16:5     → 21:5      [score=0.529 via=saint-dismas]
+  Row 1455: Prv    16:6     → 21:6      [score=0.375 via=saint-dismas]
+  Row 1456: Prv    16:7     → 21:7      [score=0.350 via=saint-dismas]
+  Row 1457: Prv    16:8     → 21:8      [score=0.500 via=saint-dismas]
+  Row 1458: Prv    16:9     → 21:9      [score=0.565 via=saint-dismas]
+  Row 1459: Prv    16:13    → 21:13     [score=0.545 via=saint-dismas]
+  Row 1460: Prv    16:14    → 21:14     [score=0.538 via=saint-dismas]
+  Row 1461: Prv    16:15    → 21:15     [score=0.550 via=saint-dismas]
+  Row 1462: Prv    16:17    → 21:17     [score=0.327 via=saint-dismas]
+  Row 1463: Prv    16:19    → 21:19     [score=0.450 via=saint-dismas]
+  Row 1464: Prv    16:20    → 18:12     [score=0.280 via=saint-dismas]
+  Row 1466: Prv    16:22    → 21:22     [score=0.333 via=saint-dismas]
+  Row 1468: Prv    16:27    → 21:28     [score=0.500 via=saint-dismas]
+  Row 1469: Prv    16:29    → 21:30     [score=0.500 via=saint-dismas]
+  Row 1470: Prv    16:30    → 21:31     [score=0.375 via=saint-dismas]
+  Row 1471: Prv    16:2     → 22:2      [score=0.765 via=saint-dismas]
+  Row 1472: Prv    16:3     → 22:3      [score=0.381 via=saint-dismas]
+  Row 1473: Prv    16:4     → 22:4      [score=0.435 via=saint-dismas]
+  Row 1474: Prv    16:9     → 22:7      [score=0.611 via=saint-dismas]
+  Row 1475: Prv    16:8     → 22:8      [score=0.600 via=saint-dismas]
+  Row 1476: Prv    16:9     → 22:9      [score=0.375 via=saint-dismas]
+  Row 1477: Prv    16:17    → 22:17     [score=0.318 via=saint-dismas]
+  Row 1478: Prv    16:3     → 23:3      [score=0.571 via=saint-dismas]
+  Row 1479: Prv    16:4     → 23:4      [score=0.304 via=saint-dismas]
+  Row 1480: Prv    16:13    → 15:19     [score=0.211 via=modern-drb]
+  Row 1481: Prv    16:14    → 22:14     [score=0.478 via=saint-dismas]
+  Row 1482: Prv    16:15    → 22:15     [score=0.448 via=saint-dismas]
+  Row 1483: Prv    16:22    → 22:22     [score=0.588 via=saint-dismas]
+  Row 1484: Prv    16:5     → 23:5      [score=0.290 via=saint-dismas]
+  Row 1485: Prv    16:6     → 23:6      [score=0.538 via=saint-dismas]
+  Row 1486: Prv    16:8     → 23:8      [score=0.500 via=saint-dismas]
+  Row 1487: Prv    16:12    → 23:12     [score=0.625 via=saint-dismas]
+  Row 1488: Prv    16:13    → 23:13     [score=0.435 via=saint-dismas]
+  Row 1489: Prv    16:15    → 23:15     [score=0.846 via=saint-dismas]
+  Row 1490: Prv    16:17    → 23:17     [score=0.583 via=saint-dismas]
+  Row 1492: Prv    16:20    → 23:20     [score=0.303 via=saint-dismas]
+  Row 1493: Prv    16:23    → 23:24     [score=0.483 via=saint-dismas]
+  Row 1494: Prv    16:27    → 23:27     [score=0.333 via=saint-dismas]
+  Row 1495: Prv    16:29    → 23:29     [score=0.312 via=saint-dismas]
+  Row 1496: Prv    16:30    → 23:30     [score=0.350 via=saint-dismas]
+  Row 1497: Prv    16:31    → 23:31     [score=0.619 via=saint-dismas]
+  Row 1498: Prv    16:34    → 23:34     [score=0.370 via=saint-dismas]
+  Row 1499: Prv    16:35    → 23:35     [score=0.405 via=saint-dismas]
+  Row 1501: Prv    16:7     → 24:8      [score=0.444 via=saint-dismas]
+  Row 1505: Prv    16:21    → 24:21     [score=0.440 via=saint-dismas]
+  Row 1506: Prv    16:23    → 24:23     [score=0.368 via=saint-dismas]
+  Row 1507: Prv    16:2     → 25:2      [score=0.250 via=saint-dismas]
+  Row 1509: Prv    16:6     → 25:6      [score=0.929 via=saint-dismas]
+  Row 1510: Prv    16:7     → 25:7      [score=0.652 via=saint-dismas]
+  Row 1511: Prv    16:8     → 25:8      [score=0.382 via=saint-dismas]
+  Row 1513: Prv    16:11    → 25:11     [score=0.350 via=saint-dismas]
+  Row 1514: Prv    16:12    → 25:12     [score=0.588 via=saint-dismas]
+  Row 1516: Prv    16:14    → 25:14     [score=0.421 via=saint-dismas]
+  Row 1517: Prv    16:35    → 25:15     [score=0.379 via=saint-dismas]
+  Row 1518: Prv    16:19    → 25:19     [score=0.409 via=saint-dismas]
+  Row 1519: Prv    16:21    → 25:21     [score=0.391 via=saint-dismas]
+  Row 1520: Prv    16:23    → 25:23     [score=0.385 via=saint-dismas]
+  Row 1521: Prv    16:26    → 25:26     [score=0.450 via=saint-dismas]
+  Row 1523: Prv    16:4     → 26:4      [score=0.625 via=saint-dismas]
+  Row 1524: Prv    16:5     → 26:6      [score=0.292 via=saint-dismas]
+  Row 1525: Prv    16:7     → 26:7      [score=0.600 via=saint-dismas]
+  Row 1526: Prv    16:9     → 26:9      [score=0.265 via=saint-dismas]
+  Row 1527: Prv    16:15    → 26:15     [score=0.300 via=saint-dismas]
+  Row 1528: Prv    16:22    → 26:22     [score=0.375 via=saint-dismas]
+  Row 1530: Prv    16:25    → 26:25     [score=0.250 via=saint-dismas]
+  Row 1531: Prv    16:26    → 26:26     [score=0.421 via=saint-dismas]
+  Row 1532: Prv    16:27    → 26:27     [score=0.310 via=saint-dismas]
+  Row 1533: Prv    16:2     → 27:2      [score=0.273 via=modern-drb]
+  Row 1534: Prv    16:4     → 27:4      [score=0.455 via=saint-dismas]
+  Row 1535: Prv    16:9     → 27:9      [score=0.303 via=saint-dismas]
+  Row 1536: Prv    16:13    → 20:16     [score=0.273 via=saint-dismas]
+  Row 1537: Prv    16:14    → 27:14     [score=0.241 via=modern-drb]
+  Row 1538: Prv    16:17    → 27:17     [score=0.317 via=saint-dismas]
+  Row 1539: Prv    16:19    → 27:19     [score=0.500 via=saint-dismas]
+  Row 1540: Prv    16:23    → 27:23     [score=0.286 via=saint-dismas]
+  Row 1548: Prv    16:13    → 28:13     [score=0.429 via=saint-dismas]
+  Row 1549: Prv    16:23    → 28:23     [score=0.424 via=saint-dismas]
+  Row 1550: Prv    16:26    → 28:26     [score=0.435 via=saint-dismas]
+  Row 1551: Prv    16:27    → 28:27     [score=0.526 via=saint-dismas]
+  Row 1552: Prv    16:2     → 29:2      [score=0.591 via=saint-dismas]
+  Row 1553: Prv    16:4     → 29:4      [score=0.250 via=modern-drb]
+  Row 1554: Prv    16:5     → 29:5      [score=0.261 via=saint-dismas]
+  Row 1556: Prv    16:13    → 22:2      [score=0.545 via=saint-dismas]
+  Row 1557: Prv    16:15    → 29:15     [score=0.423 via=saint-dismas]
+  Row 1558: Prv    16:18    → 29:18     [score=0.481 via=saint-dismas]
+  Row 1559: Prv    16:21    → 29:21     [score=0.471 via=saint-dismas]
+  Row 1560: Prv    16:23    → 29:23     [score=0.350 via=saint-dismas]
+  Row 1561: Prv    16:25    → 29:25     [score=0.706 via=saint-dismas]
+  Row 1562: Prv    16:26    → 29:26     [score=0.875 via=saint-dismas]
+  Row 1565: Prv    16:15    → 30:15     [score=0.278 via=saint-dismas]
+  Row 1566: Prv    16:19    → 30:19     [score=0.318 via=saint-dismas]
+  Row 1567: Prv    16:32    → 30:32     [score=0.515 via=saint-dismas]
+  Row 1570: Wis    16:2     → 1:2       [score=0.286 via=saint-dismas]
+  Row 1571: Wis    16:3     → 3:3       [score=0.290 via=saint-dismas]
+  Row 1572: Wis    16:19    → 3:19      [score=0.700 via=saint-dismas]
+  Row 1573: Wis    3:8      → 5:8       [score=0.385 via=saint-dismas]
+  Row 1575: Wis    3:6      → 9:6       [score=0.524 via=saint-dismas]
+  Row 1576: Wis    3:1      → 9:8       [score=0.306 via=saint-dismas]
+  Row 1577: Wis    3:3      → 10:3      [score=0.387 via=saint-dismas]
+  Row 1578: Wis    3:6      → 10:6      [score=0.312 via=saint-dismas]
+  Row 1579: Wis    3:6      → 10:1      [score=0.415 via=saint-dismas]
+  Row 1584: Wis    3:2      → 14:2      [score=0.500 via=saint-dismas]
+  Row 1586: Wis    3:12     → 15:12     [score=0.485 via=saint-dismas]
+  Row 1593: Sir    3:37     → 7:37      [score=0.304 via=modern-drb]
+  Row 1594: Sir    3:17     → 8:1       [score=0.200 via=modern-drb]
+  Row 1596: Sir    3:6      → 8:7       [score=0.267 via=modern-drb]
+  Row 1605: Sir    3:2      → 20:2      [score=0.250 via=modern-drb]
+  Row 1606: Sir    3:9      → 20:9      [score=0.273 via=modern-drb]
+  Row 1608: Sir    3:29     → 20:30     [score=0.243 via=modern-drb]
+  Row 1613: Sir    3:41     → 24:42     [score=0.231 via=modern-drb]
+  Row 1614: Sir    3:44     → 24:44     [score=0.304 via=modern-drb]
+  Row 1616: Sir    3:14     → 25:1      [score=0.281 via=modern-drb]
+  Row 1618: Sir    3:34     → 25:34     [score=0.318 via=modern-drb]
+  Row 1620: Sir    3:32     → 42:26     [score=0.200 via=modern-drb]
+  Row 1623: Sir    3:33     → 31:33     [score=0.364 via=modern-drb]
+  Row 1624: Sir    3:7      → 21:24     [score=0.212 via=modern-drb]
+  Row 1627: Sir    3:20     → 33:30     [score=0.295 via=modern-drb]
+  Row 1634: Sir    3:17     → 38:18     [score=0.250 via=modern-drb]
+  Row 1635: Sir    3:35     → 39:35     [score=0.308 via=modern-drb]
+  Row 1636: Sir    3:4      → 40:4      [score=0.308 via=modern-drb]
+  Row 1637: Sir    3:8      → 40:8      [score=0.208 via=modern-drb]
+  Row 1638: Sir    3:18     → 41:18     [score=0.333 via=modern-drb]
+  Row 1652: Sir    3:18     → 51:19     [score=0.265 via=modern-drb]
+  Row 1654: Is     3:11     → 49:18     [score=0.312 via=pdf-ocr]
+  Row 1699: Jer    6:6      → 5:6       [score=0.310 via=modern-drb]
+  Row 1701: Jer    6:30     → 5:31      [score=0.281 via=modern-drb]
+  Row 1719: Jer    15:2     → 16:2      [score=0.474 via=modern-drb]
+  Row 1722: Jer    35:9     → 35:10     [score=0.235 via=modern-drb]
+  Row 1728: Jer    39:4     → 85:13     [score=0.242 via=pdf-ocr]
+  Row 1733: Jer    39:28    → 44:28     [score=0.571 via=pdf-ocr]
+  Row 1738: 1Mc    1:21     → 1:18      [score=0.258 via=modern-drb]
+  Row 1751: 1Mc    1:20     → 3:20      [score=0.333 via=modern-drb]
+  Row 1752: 1Mc    1:30     → 3:30      [score=0.368 via=modern-drb]
+  Row 1754: 1Mc    1:52     → 4:52      [score=0.321 via=modern-drb]
+  Row 1758: 1Mc    1:18     → 6:18      [score=0.278 via=modern-drb]
+  Row 1759: 1Mc    1:36     → 6:36      [score=0.440 via=modern-drb]
+  Row 1764: 1Mc    1:58     → 9:58      [score=0.386 via=modern-drb]
+  Row 1765: 1Mc    11:3     → 10:3      [score=0.353 via=modern-drb]
+  Row 1766: 1Mc    11:39    → 10:39     [score=0.297 via=modern-drb]
+  Row 1773: 1Mc    11:49    → 12:49     [score=0.333 via=modern-drb]
+  Row 1833: Mt     12:10    → 2:12      [score=0.382 via=saint-dismas]
+  Row 1834: Mt     12:2     → 23:7      [score=0.286 via=originaldouay]
+  Row 1862: Mt     8:8      → 9:8       [score=0.267 via=saint-dismas]
+  Row 1881: Jn     8:32     → 13:31     [score=0.257 via=saint-dismas]
+  Row 1896: Jn     8:29     → 21:25     [score=0.213 via=modern-drb]
+  Row 1946: Jn     21:3     → 12:43     [score=0.235 via=modern-drb]
+  Row 1966: Mt     27:33    → 27:32     [score=0.444 via=saint-dismas]
+  Row 2004: Jn     11:33    → 10:33     [score=0.387 via=saint-dismas]
+  Row 2010: Jn     11:7     → 11:9      [score=0.263 via=saint-dismas]
+  Row 2012: Jn     11:18    → 13:5      [score=0.250 via=saint-dismas]
+  Row 2016: Jn     11:4     → 10:25     [score=0.250 via=saint-dismas]
+  Row 2017: Jn     11:24    → 12:37     [score=0.208 via=modern-drb]
+  Row 2024: Jn     11:33    → 19:6      [score=0.342 via=saint-dismas]
+  Row 2025: Jn     11:57    → 19:39     [score=0.275 via=saint-dismas]
+  Row 2031: Jn     11:16    → 6:8       [score=0.286 via=saint-dismas]
+  Row 2036: Jn     8:2      → 5:27      [score=0.212 via=modern-drb]
+  Row 2039: Jn     8:26     → 6:46      [score=0.214 via=modern-drb]
+  Row 2085: Eph    5:1      → 5:9       [score=0.206 via=modern-drb]
+  Row 2199: Rom    1:26     → 3:30      [score=0.217 via=modern-drb]
+  Row 2262: Nm     13:1     → 4:24      [score=0.250 via=saint-dismas]
+  Row 2295: Jn     19:20    → 10:2      [score=0.250 via=saint-dismas]
+
+======================================================================
+SECTION C: LOW_CONFIDENCE ROWS (original ref kept)
+======================================================================
+(436 rows)
+
+  Row   14: Gn     20:21        — best scores: sd=0.000
+  Row   15: Gn     20:23        — best scores: sd=0.000
+  Row   27: Gn     27:45        — best scores: sd=0.000
+  Row   29: Gn     29:9         — best scores: sd=0.000
+  Row   35: Gn     31:7         — best scores: sd=0.000
+  Row   46: Gn     35:10        — best scores: sd=0.000
+  Row   51: Gn     36:6         — best scores: sd=0.000
+  Row   52: Gn     37:36        — best scores: sd=0.000
+  Row   54: Gn     37:35        — best scores: sd=0.000
+  Row   60: Gn     40:8         — best scores: sd=0.000
+  Row   67: Gn     41:45        — best scores: sd=0.000
+  Row   72: Gn     42:38        — best scores: sd=0.000
+  Row   77: Gn     45:42        — best scores: sd=0.000
+  Row   78: Gn     45:5         — best scores: sd=0.000
+  Row   81: Gn     45:24        — best scores: sd=0.000
+  Row   87: Gn     48:3         — best scores: sd=0.000
+  Row   88: Gn     48:14        — best scores: sd=0.000
+  Row   89: Gn     48:16        — best scores: sd=0.000
+  Row   90: Gn     48:38        — best scores: sd=0.000
+  Row   97: Gn     49:19        — best scores: sd=0.000
+  Row  104: Heb    2:15         — best scores: sd=0.000
+  Row  105: Heb    2:19         — best scores: sd=0.000
+  Row  107: Heb    2:7          — best scores: sd=0.000
+  Row  108: Heb    2:4          — best scores: sd=0.000
+  Row  110: Heb    2:1          — best scores: sd=0.000
+  Row  119: Ex     6:3          — best scores: sd=0.000
+  Row  121: Ex     6:2          — best scores: sd=0.000
+  Row  122: Ex     6:1          — best scores: sd=0.000
+  Row  123: Ex     6:2          — best scores: sd=0.000
+  Row  124: Ex     8:18         — best scores: sd=0.000
+  Row  128: Ex     8:46         — best scores: sd=0.000
+  Row  133: Ex     9:30         — best scores: sd=0.000
+  Row  137: Ex     40:35        — best scores: sd=0.000
+  Row  141: Ex     1:15         — best scores: sd=0.000
+  Row  143: Ex     40:22        — best scores: sd=0.000
+  Row  151: Ex     40:15        — best scores: sd=0.000
+  Row  157: Ex     40:2         — best scores: sd=0.000
+  Row  160: Ex     40:1         — best scores: sd=0.000
+  Row  161: Ex     40:2         — best scores: sd=0.000
+  Row  162: Ex     40:3         — best scores: sd=0.000
+  Row  172: Ex     20:4         — best scores: sd=0.000
+  Row  181: Ex     24:26        — best scores: sd=0.000
+  Row  186: Lv     25:2         — best scores: sd=0.000
+  Row  197: Lv     1:1          — best scores: sd=0.000
+  Row  203: Jos    1:12         — best scores: sd=0.000
+  Row  211: Jos    6:6          — best scores: sd=0.000
+  Row  213: Jos    7:2          — best scores: sd=0.000
+  Row  217: Jgs    11:39        — best scores: sd=0.000
+  Row  220: Jgs    16:30        — best scores: sd=0.000
+  Row  221: Jgs    18:18        — best scores: sd=0.000
+  Row  228: Ru     1:13         — best scores: sd=0.000
+  Row  235: Ru     1:9          — best scores: sd=0.000
+  Row  245: Ru     1:2          — best scores: sd=0.000
+  Row  248: Ru     1:1          — best scores: sd=0.000
+  Row  249: Tb     2:8          — best scores: sd=0.000
+  Row  251: Tb     2:19         — best scores: sd=0.000
+  Row  258: Tb     2:6          — best scores: sd=0.000
+  Row  270: Jdt    13:27        — best scores: sd=0.000
+  Row  295: Est    16:26        — best scores: sd=0.000
+  Row  302: Est    3:14         — best scores: sd=0.000
+  Row  317: Est    16:5         — best scores: sd=0.000
+  Row  321: Jb     6:3          — best scores: sd=0.000
+  Row  326: Jb     9:22         — best scores: sd=0.000
+  Row  338: Jb     19:22        — best scores: sd=0.000
+  Row  339: Jb     19:1         — best scores: sd=0.000
+  Row  340: Ps     19:66        — best scores: sd=0.000
+  Row  352: Ps     19:9         — best scores: sd=0.000
+  Row  353: Ps     19:10        — best scores: sd=0.000
+  Row  354: Ps     19:2         — best scores: sd=0.000
+  Row  361: Ps     19:6         — best scores: sd=0.000
+  Row  366: Ps     19:6         — best scores: sd=0.000
+  Row  369: Ps     19:6         — best scores: sd=0.000
+  Row  373: Ps     19:8         — best scores: sd=0.000
+  Row  380: Ps     19:3         — best scores: sd=0.000
+  Row  382: Ps     19:1         — best scores: sd=0.000
+  Row  389: Ps     19:8         — best scores: sd=0.000
+  Row  393: Ps     19:3         — best scores: sd=0.000
+  Row  398: Ps     19:8         — best scores: sd=0.000
+  Row  400: Ps     19:1         — best scores: sd=0.000
+  Row  407: Ps     19:2         — best scores: sd=0.000
+  Row  414: Ps     19:9         — best scores: sd=0.000
+  Row  416: Ps     19:13        — best scores: sd=0.000
+  Row  420: Ps     19:21        — best scores: sd=0.000
+  Row  428: Ps     19:4         — best scores: sd=0.000
+  Row  439: Ps     19:4         — best scores: sd=0.000
+  Row  442: Ps     19:1         — best scores: sd=0.000
+  Row  445: Ps     19:3         — best scores: sd=0.000
+  Row  459: Ps     19:23        — best scores: sd=0.000
+  Row  470: Ps     19:2         — best scores: sd=0.000
+  Row  532: Ps     19:25        — best scores: sd=0.000
+  Row  550: Ps     19:6         — best scores: sd=0.000
+  Row  557: Ps     19:15        — best scores: sd=0.000
+  Row  559: Ps     19:21        — best scores: sd=0.000
+  Row  560: Ps     19:5         — best scores: sd=0.000
+  Row  578: Ps     19:7         — best scores: sd=0.000
+  Row  600: Ps     19:1         — best scores: sd=0.000
+  Row  610: Ps     19:18        — best scores: sd=0.000
+  Row  613: Ps     19:25        — best scores: sd=0.000
+  Row  618: Ps     19:9         — best scores: sd=0.000
+  Row  624: Ps     19:42        — best scores: sd=0.000
+  Row  632: Ps     19:2         — best scores: sd=0.000
+  Row  643: Ps     19:7         — best scores: sd=0.000
+  Row  651: Ps     19:6         — best scores: sd=0.000
+  Row  655: Ps     19:19        — best scores: sd=0.000
+  Row  656: Ps     19:9         — best scores: sd=0.000
+  Row  669: Ps     19:5         — best scores: sd=0.000
+  Row  679: Ps     19:7         — best scores: sd=0.000
+  Row  680: Ps     19:19        — best scores: sd=0.000
+  Row  690: Ps     19:1         — best scores: sd=0.000
+  Row  703: Ps     19:3         — best scores: sd=0.000
+  Row  707: Ps     19:12        — best scores: sd=0.000
+  Row  726: Ps     19:12        — best scores: sd=0.000
+  Row  746: Ps     19:3         — best scores: sd=0.000
+  Row  747: Ps     19:3         — best scores: sd=0.000
+  Row  776: Ps     19:17        — best scores: sd=0.000
+  Row  777: Ps     19:19        — best scores: sd=0.000
+  Row  792: Ps     19:19        — best scores: sd=0.000
+  Row  794: Ps     19:23        — best scores: sd=0.000
+  Row  847: Ps     19:20        — best scores: sd=0.000
+  Row  865: Ps     19:13        — best scores: sd=0.000
+  Row  873: Ps     19:5         — best scores: sd=0.000
+  Row  888: Ps     19:2         — best scores: sd=0.000
+  Row  895: Ps     19:19        — best scores: sd=0.000
+  Row  950: Ps     19:9         — best scores: sd=0.000
+  Row  953: Ps     19:5         — best scores: sd=0.000
+  Row  979: Ps     19:7         — best scores: sd=0.000
+  Row  986: Ps     19:4         — best scores: sd=0.000
+  Row  990: Ps     19:9         — best scores: sd=0.000
+  Row  999: Ps     19:15        — best scores: sd=0.000
+  Row 1000: Ps     19:1         — best scores: sd=0.000
+  Row 1001: Ps     19:3         — best scores: sd=0.000
+  Row 1002: Ps     19:4         — best scores: sd=0.000
+  Row 1010: Ps     19:1         — best scores: sd=0.000
+  Row 1024: Ps     19:39        — best scores: sd=0.000
+  Row 1035: Ps     19:4         — best scores: sd=0.000
+  Row 1039: Ps     19:4         — best scores: sd=0.000
+  Row 1041: Ps     19:1         — best scores: sd=0.000
+  Row 1050: Ps     19:9         — best scores: sd=0.000
+  Row 1059: Ps     19:23        — best scores: sd=0.000
+  Row 1067: Ps     19:7         — best scores: sd=0.000
+  Row 1074: Ps     19:9         — best scores: sd=0.000
+  Row 1125: Ps     19:19        — best scores: sd=0.000
+  Row 1139: Ps     19:10        — best scores: sd=0.000
+  Row 1157: Ps     19:13        — best scores: sd=0.000
+  Row 1224: Ps     19:8         — best scores: sd=0.000
+  Row 1231: Ps     19:17        — best scores: sd=0.000
+  Row 1247: Ps     19:42        — best scores: sd=0.000
+  Row 1254: Ps     19:56        — best scores: sd=0.000
+  Row 1259: Ps     19:63        — best scores: sd=0.000
+  Row 1269: Ps     19:81        — best scores: sd=0.000
+  Row 1272: Ps     19:86        — best scores: sd=0.000
+  Row 1277: Ps     19:94        — best scores: sd=0.000
+  Row 1278: Ps     19:96        — best scores: sd=0.000
+  Row 1296: Ps     19:141       — best scores: sd=0.000
+  Row 1310: Ps     19:172       — best scores: sd=0.000
+  Row 1313: Ps     19:176       — best scores: sd=0.000
+  Row 1337: Ps     19:7         — best scores: sd=0.000
+  Row 1344: Ps     19:3         — best scores: sd=0.000
+  Row 1352: Ps     19:13        — best scores: sd=0.000
+  Row 1360: Ps     19:1         — best scores: sd=0.000
+  Row 1365: Ps     19:4         — best scores: sd=0.000
+  Row 1368: Ps     19:8         — best scores: sd=0.000
+  Row 1373: Ps     19:5         — best scores: sd=0.000
+  Row 1375: Prv    16:27        — best scores: sd=0.000
+  Row 1376: Prv    16:30        — best scores: sd=0.000
+  Row 1399: Prv    16:9         — best scores: sd=0.000
+  Row 1427: Prv    16:6         — best scores: sd=0.000
+  Row 1439: Prv    16:8         — best scores: sd=0.000
+  Row 1465: Prv    16:1         — best scores: sd=0.000
+  Row 1491: Prv    16:19        — best scores: sd=0.000
+  Row 1502: Prv    16:13        — best scores: sd=0.000
+  Row 1503: Prv    16:32        — best scores: sd=0.000
+  Row 1504: Prv    16:16        — best scores: sd=0.000
+  Row 1512: Prv    16:9         — best scores: sd=0.000
+  Row 1515: Prv    16:13        — best scores: sd=0.000
+  Row 1529: Prv    16:23        — best scores: sd=0.000
+  Row 1555: Prv    16:10        — best scores: sd=0.000
+  Row 1564: Prv    16:11        — best scores: sd=0.000
+  Row 1568: Prv    16:1         — best scores: sd=0.000
+  Row 1574: Wis    3:3          — best scores: sd=0.000
+  Row 1580: Wis    3:24         — best scores: sd=0.000
+  Row 1583: Wis    3:1          — best scores: sd=0.000
+  Row 1585: Wis    3:15         — best scores: sd=0.000
+  Row 1587: Heb    3:13         — best scores: sd=0.000
+  Row 1599: Sir    3:4          — best scores: sd=0.000
+  Row 1603: Sir    3:1          — best scores: sd=0.000
+  Row 1604: Sir    3:24         — best scores: sd=0.000
+  Row 1619: Sir    3:22         — best scores: sd=0.000
+  Row 1622: Sir    3:8          — best scores: sd=0.000
+  Row 1626: Sir    3:5          — best scores: sd=0.000
+  Row 1630: Sir    3:1          — best scores: sd=0.000
+  Row 1631: Sir    3:9          — best scores: sd=0.000
+  Row 1643: Sir    3:1          — best scores: sd=0.000
+  Row 1645: Sir    3:13         — best scores: sd=0.000
+  Row 1653: Is     3:2          — best scores: sd=0.000
+  Row 1656: Is     3:4          — best scores: sd=0.000
+  Row 1660: Is     3:2          — best scores: sd=0.000
+  Row 1689: Sg     3:4          — best scores: sd=0.000
+  Row 1691: Sg     3:3          — best scores: sd=0.000
+  Row 1694: Sg     3:5          — best scores: sd=0.000
+  Row 1695: Sg     3:1          — best scores: sd=0.000
+  Row 1696: Jer    6:11         — best scores: sd=0.000
+  Row 1704: Jer    9:25         — best scores: sd=0.000
+  Row 1710: Jer    13:12        — best scores: sd=0.000
+  Row 1716: Jer    13:6         — best scores: sd=0.000
+  Row 1720: Jer    15:15        — best scores: sd=0.000
+  Row 1735: 1Mc    1:17         — best scores: sd=0.000
+  Row 1747: 1Mc    1:29         — best scores: sd=0.000
+  Row 1748: 1Mc    1:41         — best scores: sd=0.000
+  Row 1750: 1Mc    1:29         — best scores: sd=0.000
+  Row 1774: 1Mc    13:6         — best scores: sd=0.000
+  Row 1788: 1Mc    10:2         — best scores: sd=0.000
+  Row 1789: 1Mc    10:8         — best scores: sd=0.000
+  Row 1790: 1Mc    10:10        — best scores: sd=0.000
+  Row 1793: 1Mc    13:7         — best scores: sd=0.000
+  Row 1799: 1Mc    15:17        — best scores: sd=0.000
+  Row 1815: Ezr    7:2          — best scores: sd=0.000
+  Row 1816: Ezr    7:3          — best scores: sd=0.000
+  Row 1832: Mt     12:23        — best scores: sd=0.000
+  Row 1835: Mt     12:16        — best scores: sd=0.000
+  Row 1837: Mt     12:3         — best scores: sd=0.000
+  Row 1842: Mt     12:1         — best scores: sd=0.000
+  Row 1844: Mt     12:6         — best scores: sd=0.000
+  Row 1846: Mt     12:17        — best scores: sd=0.000
+  Row 1847: Mt     12:23        — best scores: sd=0.000
+  Row 1854: Mt     12:14        — best scores: sd=0.000
+  Row 1856: Mt     12:8         — best scores: sd=0.000
+  Row 1857: Mt     12:13        — best scores: sd=0.000
+  Row 1858: Mt     12:16        — best scores: sd=0.000
+  Row 1864: Mt     8:39         — best scores: sd=0.000
+  Row 1865: Mt     8:28         — best scores: sd=0.000
+  Row 1870: Mt     8:19         — best scores: sd=0.000
+  Row 1871: Mt     8:33         — best scores: sd=0.000
+  Row 1873: Jn     8:37         — best scores: sd=0.000
+  Row 1875: Jn     8:1          — best scores: sd=0.000
+  Row 1882: Jn     8:34         — best scores: sd=0.000
+  Row 1892: Jn     8:53         — best scores: sd=0.000
+  Row 1893: Jn     8:13         — best scores: sd=0.000
+  Row 1897: Jn     8:1          — best scores: sd=0.000
+  Row 1898: Jn     8:9          — best scores: sd=0.000
+  Row 1900: Jn     8:1          — best scores: sd=0.000
+  Row 1901: Jn     8:11         — best scores: sd=0.000
+  Row 1902: Jn     8:18         — best scores: sd=0.000
+  Row 1903: Jn     8:17         — best scores: sd=0.000
+  Row 1907: Jn     8:18         — best scores: sd=0.000
+  Row 1909: Jn     8:18         — best scores: sd=0.000
+  Row 1911: Jn     8:19         — best scores: sd=0.000
+  Row 1920: Jn     18:17        — best scores: sd=0.000
+  Row 1925: Jn     18:1         — best scores: sd=0.000
+  Row 1936: Jn     21:9         — best scores: sd=0.000
+  Row 1938: Jn     21:16        — best scores: sd=0.000
+  Row 1942: Jn     21:3         — best scores: sd=0.000
+  Row 1945: Jn     21:2         — best scores: sd=0.000
+  Row 1947: Jn     21:15        — best scores: sd=0.000
+  Row 1948: Jn     21:38        — best scores: sd=0.000
+  Row 1952: Jn     21:1         — best scores: sd=0.000
+  Row 1955: Jn     21:2         — best scores: sd=0.000
+  Row 1957: Jn     21:1         — best scores: sd=0.000
+  Row 1959: Mt     21:10        — best scores: sd=0.000
+  Row 1960: Mt     21:26        — best scores: sd=0.000
+  Row 1962: Mt     21:24        — best scores: sd=0.000
+  Row 1963: Mt     21:29        — best scores: sd=0.000
+  Row 1964: Mt     21:39        — best scores: sd=0.000
+  Row 1965: Mt     21:41        — best scores: sd=0.000
+  Row 1974: Mt     27:33        — best scores: sd=0.000
+  Row 1977: Mt     27:20        — best scores: sd=0.000
+  Row 1981: Mk     11:14        — best scores: sd=0.000
+  Row 1982: Mk     11:19        — best scores: sd=0.000
+  Row 1984: Mk     11:26        — best scores: sd=0.000
+  Row 1986: Mk     11:14        — best scores: sd=0.000
+  Row 1993: Mk     11:10        — best scores: sd=0.000
+  Row 1995: Mk     11:39        — best scores: sd=0.000
+  Row 1996: Mk     11:13        — best scores: sd=0.000
+  Row 1998: Mk     11:4         — best scores: sd=0.000
+  Row 2000: Mk     11:33        — best scores: sd=0.000
+  Row 2001: Mk     11:54        — best scores: sd=0.000
+  Row 2002: Mk     11:6         — best scores: sd=0.000
+  Row 2006: Jn     11:1         — best scores: sd=0.000
+  Row 2011: Jn     11:6         — best scores: sd=0.000
+  Row 2020: Jn     11:36        — best scores: sd=0.000
+  Row 2021: Jn     11:47        — best scores: sd=0.000
+  Row 2022: Jn     11:58        — best scores: sd=0.000
+  Row 2023: Jn     11:15        — best scores: sd=0.000
+  Row 2027: Jn     11:14        — best scores: sd=0.000
+  Row 2032: Jn     11:1         — best scores: sd=0.000
+  Row 2034: Jn     8:19         — best scores: sd=0.000
+  Row 2038: Jn     8:14         — best scores: sd=0.000
+  Row 2040: Jn     8:1          — best scores: sd=0.000
+  Row 2043: Jn     8:3          — best scores: sd=0.000
+  Row 2046: Jn     8:30         — best scores: sd=0.000
+  Row 2047: Jn     8:58         — best scores: sd=0.000
+  Row 2048: Jn     8:24         — best scores: sd=0.000
+  Row 2051: Mk     8:24         — best scores: sd=0.000
+  Row 2057: Mk     8:22         — best scores: sd=0.000
+  Row 2058: 1Cor   5:5          — best scores: sd=0.000
+  Row 2059: 1Cor   5:13         — best scores: sd=0.000
+  Row 2061: 1Cor   5:6          — best scores: sd=0.000
+  Row 2062: 1Cor   5:4          — best scores: sd=0.000
+  Row 2063: 1Cor   5:17         — best scores: sd=0.000
+  Row 2065: 1Cor   5:10         — best scores: sd=0.000
+  Row 2067: 1Cor   5:14         — best scores: sd=0.000
+  Row 2073: Gal    1:18         — best scores: sd=0.000
+  Row 2076: Dt     1:9          — best scores: sd=0.000
+  Row 2077: Dt     1:28         — best scores: sd=0.000
+  Row 2079: Dt     5:6          — best scores: sd=0.000
+  Row 2082: Dt     5:10         — best scores: sd=0.000
+  Row 2083: Eph    5:15         — best scores: sd=0.000
+  Row 2084: Eph    5:10         — best scores: sd=0.000
+  Row 2086: Eph    5:26         — best scores: sd=0.000
+  Row 2087: Eph    5:1          — best scores: sd=0.000
+  Row 2088: Eph    5:1          — best scores: sd=0.000
+  Row 2089: Eph    5:3          — best scores: sd=0.000
+  Row 2091: Eph    5:12         — best scores: sd=0.000
+  Row 2092: Col    1:2          — best scores: sd=0.000
+  Row 2093: Col    1:16         — best scores: sd=0.000
+  Row 2094: Col    1:18         — best scores: sd=0.000
+  Row 2095: Col    1:19         — best scores: sd=0.000
+  Row 2096: Col    1:1          — best scores: sd=0.000
+  Row 2097: Col    1:17         — best scores: sd=0.000
+  Row 2099: Col    1:5          — best scores: sd=0.000
+  Row 2100: Col    1:9          — best scores: sd=0.000
+  Row 2101: Col    1:12         — best scores: sd=0.000
+  Row 2103: Col    1:6          — best scores: sd=0.000
+  Row 2104: Col    1:13         — best scores: sd=0.000
+  Row 2105: Col    1:17         — best scores: sd=0.000
+  Row 2110: Col    1:4          — best scores: sd=0.000
+  Row 2115: Col    1:7          — best scores: sd=0.000
+  Row 2116: Col    1:9          — best scores: sd=0.000
+  Row 2119: Col    1:5          — best scores: sd=0.000
+  Row 2123: Col    1:14         — best scores: sd=0.000
+  Row 2124: Col    1:14         — best scores: sd=0.000
+  Row 2127: Col    1:9          — best scores: sd=0.000
+  Row 2128: Col    1:11         — best scores: sd=0.000
+  Row 2129: Col    1:12         — best scores: sd=0.000
+  Row 2131: Col    1:4          — best scores: sd=0.000
+  Row 2132: Mk     10:15        — best scores: sd=0.000
+  Row 2137: Mk     1:12         — best scores: sd=0.000
+  Row 2138: Mk     1:4          — best scores: sd=0.000
+  Row 2139: Mk     1:20         — best scores: sd=0.000
+  Row 2141: Mk     1:9          — best scores: sd=0.000
+  Row 2143: Mk     1:3          — best scores: sd=0.000
+  Row 2144: Tit    1:8          — best scores: sd=0.000
+  Row 2146: Phlm   1:5          — best scores: sd=0.000
+  Row 2150: Phlm   1:6          — best scores: sd=0.000
+  Row 2151: Phlm   1:9          — best scores: sd=0.000
+  Row 2152: Phlm   1:10         — best scores: sd=0.000
+  Row 2155: Phlm   1:3          — best scores: sd=0.000
+  Row 2157: Phlm   1:12         — best scores: sd=0.000
+  Row 2161: Phlm   1:21         — best scores: sd=0.000
+  Row 2162: Phlm   1:23         — best scores: sd=0.000
+  Row 2164: Phlm   1:22         — best scores: sd=0.000
+  Row 2165: Phlm   1:5          — best scores: sd=0.000
+  Row 2170: Phlm   1:25         — best scores: sd=0.000
+  Row 2171: Phlm   1:15         — best scores: sd=0.000
+  Row 2172: Phlm   1:17         — best scores: sd=0.000
+  Row 2176: Phlm   1:13         — best scores: sd=0.000
+  Row 2177: Phlm   1:19         — best scores: sd=0.000
+  Row 2179: Phlm   1:25         — best scores: sd=0.000
+  Row 2180: Phlm   1:6          — best scores: sd=0.000
+  Row 2181: Phlm   1:17         — best scores: sd=0.000
+  Row 2182: Phlm   1:2          — best scores: sd=0.000
+  Row 2186: Mk     11:2         — best scores: sd=0.000
+  Row 2187: Mk     1:6          — best scores: sd=0.000
+  Row 2190: Mk     1:15         — best scores: sd=0.000
+  Row 2191: Mk     1:23         — best scores: sd=0.000
+  Row 2192: Mk     1:18         — best scores: sd=0.000
+  Row 2193: Mk     1:3          — best scores: sd=0.000
+  Row 2195: Mk     1:1          — best scores: sd=0.000
+  Row 2196: Mk     1:14         — best scores: sd=0.000
+  Row 2208: Rom    1:20         — best scores: sd=0.000
+  Row 2209: Rom    1:13         — best scores: sd=0.000
+  Row 2210: Rom    1:13         — best scores: sd=0.000
+  Row 2212: Rom    1:33         — best scores: sd=0.000
+  Row 2214: Rom    1:21         — best scores: sd=0.000
+  Row 2215: Rom    1:21         — best scores: sd=0.000
+  Row 2216: Rom    1:15         — best scores: sd=0.000
+  Row 2217: Rom    1:9          — best scores: sd=0.000
+  Row 2221: Jn     1:10         — best scores: sd=0.000
+  Row 2222: Jn     1:15         — best scores: sd=0.000
+  Row 2223: Jn     1:20         — best scores: sd=0.000
+  Row 2224: Jn     1:17         — best scores: sd=0.000
+  Row 2226: Mk     1:7          — best scores: sd=0.000
+  Row 2227: Mk     1:2          — best scores: sd=0.000
+  Row 2228: Mk     1:4          — best scores: sd=0.000
+  Row 2229: Mk     1:18         — best scores: sd=0.000
+  Row 2230: Mk     1:4          — best scores: sd=0.000
+  Row 2233: Mk     1:3          — best scores: sd=0.000
+  Row 2234: Mk     1:7          — best scores: sd=0.000
+  Row 2235: Mk     1:16         — best scores: sd=0.000
+  Row 2236: Jn     1:16         — best scores: sd=0.000
+  Row 2239: Jude   1:9          — best scores: sd=0.000
+  Row 2242: Apc    1:6          — best scores: sd=0.000
+  Row 2243: Nm     1:4          — best scores: sd=0.000
+  Row 2244: Nm     1:6          — best scores: sd=0.000
+  Row 2245: Nm     1:13         — best scores: sd=0.000
+  Row 2247: Nm     1:2          — best scores: sd=0.000
+  Row 2248: Nm     1:5          — best scores: sd=0.000
+  Row 2249: Nm     1:5          — best scores: sd=0.000
+  Row 2250: Nm     1:9          — best scores: sd=0.000
+  Row 2258: Nm     5:7          — best scores: sd=0.000
+  Row 2259: Nm     5:5          — best scores: sd=0.000
+  Row 2260: Nm     5:6          — best scores: sd=0.000
+  Row 2261: Nm     5:15         — best scores: sd=0.000
+  Row 2265: Nm     13:18        — best scores: sd=0.000
+  Row 2267: Nm     13:18        — best scores: sd=0.000
+  Row 2269: Nm     13:5         — best scores: sd=0.000
+  Row 2270: Nm     13:6         — best scores: sd=0.000
+  Row 2271: Nm     13:9         — best scores: sd=0.000
+  Row 2272: Nm     13:1         — best scores: sd=0.000
+  Row 2273: Nm     19:4         — best scores: sd=0.000
+  Row 2274: Nm     19:3         — best scores: sd=0.000
+  Row 2278: Jn     19:20        — best scores: sd=0.000
+  Row 2279: Jn     19:29        — best scores: sd=0.000
+  Row 2280: Jn     19:21        — best scores: sd=0.000
+  Row 2281: Jn     19:10        — best scores: sd=0.000
+  Row 2282: Jn     19:27        — best scores: sd=0.000
+  Row 2283: Jn     19:38        — best scores: sd=0.000
+  Row 2284: Jn     19:18        — best scores: sd=0.000
+  Row 2285: Jn     19:58        — best scores: sd=0.000
+  Row 2286: Jn     19:26        — best scores: sd=0.000
+  Row 2287: Jn     19:9         — best scores: sd=0.000
+  Row 2288: Jn     19:14        — best scores: sd=0.000
+  Row 2289: Jn     19:53        — best scores: sd=0.000
+  Row 2290: Nm     19:6         — best scores: sd=0.000
+  Row 2291: Jn     19:47        — best scores: sd=0.000
+  Row 2292: Jn     19:71        — best scores: sd=0.000
+  Row 2293: Jn     19:9         — best scores: sd=0.000
+  Row 2294: Jn     19:27        — best scores: sd=0.000
+  Row 2296: Jn     19:18        — best scores: sd=0.000
+  Row 2297: Jn     19:14        — best scores: sd=0.000
+  Row 2298: Jn     19:40        — best scores: sd=0.000
+  Row 2299: Jn     19:58        — best scores: sd=0.000
+  Row 2300: Jn     19:67        — best scores: sd=0.000
+  Row 2301: Jn     19:49        — best scores: sd=0.000
+  Row 2302: Jn     19:24        — best scores: sd=0.000
+  Row 2303: Jn     19:20        — best scores: sd=0.000
+
+======================================================================
+SECTION D: SPLIT ISSUES
+======================================================================
+(248 flags)
+
+  Row   73: 43:19        — no commentary
+  Row   82: 45:9         — no commentary
+  Row   93: 49:13        — no commentary
+  Row   95: 49:16        — no commentary
+  Row   98: 49:19        — no commentary
+  Row  136: 40:29        — no commentary
+  Row  144: 40:3         — no commentary
+  Row  146: 40:6         — no commentary
+  Row  160: 40:1         — quote too short
+  Row  270: 13:27        — no commentary
+  Row  284: 15:10        — no commentary
+  Row  289: 15:1         — no commentary
+  Row  290: 15:19        — no commentary
+  Row  292: 15:21        — no commentary
+  Row  307: 12:8         — quote too short
+  Row  338: 19:22        — quote too short
+  Row  340: 19:66        — quote too short
+  Row  380: 19:3         — quote too short
+  Row  384: 19:2         — no commentary
+  Row  386: 19:4         — no commentary
+  Row  391: 19:16        — no commentary
+  Row  394: 19:4         — no commentary
+  Row  397: 19:7         — no commentary
+  Row  404: 19:7         — no commentary
+  Row  408: 19:3         — no commentary
+  Row  412: 19:7         — no commentary
+  Row  413: 19:8         — no commentary
+  Row  428: 19:4         — no commentary
+  Row  439: 19:4         — no commentary
+  Row  449: 19:12        — no commentary
+  Row  452: 19:4         — no commentary
+  Row  453: 19:5         — no commentary
+  Row  466: 19:7         — no commentary
+  Row  476: 19:13        — no commentary
+  Row  477: 19:14        — no commentary
+  Row  480: 19:19        — no commentary
+  Row  483: 19:3         — no commentary
+  Row  485: 19:6         — no commentary
+  Row  490: 19:38        — no commentary
+  Row  493: 19:1         — quote too short
+  Row  498: 19:7         — no commentary
+  Row  514: 19:11        — no commentary
+  Row  519: 19:4         — no commentary
+  Row  520: 19:5         — no commentary
+  Row  523: 19:11        — no commentary
+  Row  524: 19:2         — no commentary
+  Row  527: 19:16        — no commentary
+  Row  535: 19:29        — no commentary
+  Row  536: 19:30        — no commentary
+  Row  537: 19:31        — no commentary
+  Row  538: 19:32        — no commentary
+  Row  539: 19:33        — no commentary
+  Row  541: 19:38        — no commentary
+  Row  542: 19:36        — no commentary
+  Row  543: 19:37        — no commentary
+  Row  544: 19:38        — no commentary
+  Row  554: 19:15        — no commentary
+  Row  555: 19:16        — no commentary
+  Row  557: 19:15        — no commentary
+  Row  576: 19:5         — no commentary
+  Row  583: 19:6         — no commentary
+  Row  586: 19:12        — no commentary
+  Row  603: 19:5         — no commentary
+  Row  608: 19:14        — no commentary
+  Row  620: 19:16        — no commentary
+  Row  634: 19:5         — no commentary
+  Row  637: 19:9         — no commentary
+  Row  642: 19:6         — no commentary
+  Row  649: 19:3         — no commentary
+  Row  663: 19:17        — no commentary
+  Row  674: 19:13        — no commentary
+  Row  691: 19:2         — no commentary
+  Row  710: 19:3         — no commentary
+  Row  721: 19:2         — no commentary
+  Row  722: 19:3         — no commentary
+  Row  732: 19:4         — no commentary
+  Row  738: 19:6         — no commentary
+  Row  746: 19:3         — quote too short
+  Row  746: 19:3         — no commentary
+  Row  768: 19:4         — no commentary
+  Row  769: 19:5         — no commentary
+  Row  778: 19:19        — no commentary
+  Row  781: 19:3         — no commentary
+  Row  784: 19:1         — no commentary
+  Row  810: 19:8         — no commentary
+  Row  821: 19:31        — no commentary
+  Row  823: 19:33        — no commentary
+  Row  844: 19:12        — no commentary
+  Row  850: 19:3         — no commentary
+  Row  868: 19:6         — no commentary
+  Row  879: 19:6         — no commentary
+  Row  883: 19:14        — no commentary
+  Row  902: 19:24        — no commentary
+  Row  904: 19:32        — no commentary
+  Row  908: 19:7         — no commentary
+  Row  911: 19:42        — no commentary
+  Row  917: 19:5         — no commentary
+  Row  931: 19:3         — no commentary
+  Row  943: 19:2         — no commentary
+  Row  944: 19:3         — no commentary
+  Row  976: 19:4         — no commentary
+  Row  988: 19:6         — no commentary
+  Row 1018: 19:32        — no commentary
+  Row 1019: 19:33        — no commentary
+  Row 1020: 19:34        — no commentary
+  Row 1021: 19:35        — no commentary
+  Row 1029: 19:3         — no commentary
+  Row 1030: 19:4         — no commentary
+  Row 1037: 19:2         — no commentary
+  Row 1038: 19:3         — no commentary
+  Row 1043: 19:4         — no commentary
+  Row 1055: 19:17        — no commentary
+  Row 1060: 19:26        — no commentary
+  Row 1075: 19:1         — no commentary
+  Row 1086: 19:32        — no commentary
+  Row 1087: 19:33        — no commentary
+  Row 1091: 19:6         — no commentary
+  Row 1094: 19:9         — no commentary
+  Row 1096: 19:13        — no commentary
+  Row 1104: 19:29        — no commentary
+  Row 1109: 19:35        — no commentary
+  Row 1111: 19:37        — no commentary
+  Row 1113: 19:40        — no commentary
+  Row 1130: 19:31        — no commentary
+  Row 1145: 19:32        — no commentary
+  Row 1148: 19:35        — no commentary
+  Row 1149: 19:36        — no commentary
+  Row 1151: 19:38        — no commentary
+  Row 1177: 19:3         — no commentary
+  Row 1181: 19:8         — no commentary
+  Row 1183: 19:2         — no commentary
+  Row 1184: 19:3         — no commentary
+  Row 1185: 19:4         — no commentary
+  Row 1192: 19:11        — no commentary
+  Row 1193: 19:12        — no commentary
+  Row 1205: 19:5         — no commentary
+  Row 1215: 19:21        — no commentary
+  Row 1238: 19:30        — no commentary
+  Row 1276: 19:93        — no commentary
+  Row 1309: 19:171       — no commentary
+  Row 1330: 19:5         — no commentary
+  Row 1331: 19:6         — no commentary
+  Row 1353: 19:4         — no commentary
+  Row 1354: 19:5         — no commentary
+  Row 1367: 19:7         — no commentary
+  Row 1376: 16:30        — no commentary
+  Row 1377: 16:31        — no commentary
+  Row 1378: 16:32        — no commentary
+  Row 1379: 16:33        — no commentary
+  Row 1380: 16:6         — no commentary
+  Row 1382: 16:14        — no commentary
+  Row 1383: 16:15        — no commentary
+  Row 1386: 16:25        — no commentary
+  Row 1387: 16:26        — no commentary
+  Row 1388: 16:27        — no commentary
+  Row 1389: 16:28        — no commentary
+  Row 1391: 16:30        — no commentary
+  Row 1395: 16:2         — no commentary
+  Row 1396: 16:3         — no commentary
+  Row 1398: 16:18        — no commentary
+  Row 1399: 16:9         — no commentary
+  Row 1400: 16:9         — no commentary
+  Row 1405: 16:22        — no commentary
+  Row 1406: 16:23        — no commentary
+  Row 1407: 16:24        — no commentary
+  Row 1408: 16:25        — no commentary
+  Row 1413: 16:7         — no commentary
+  Row 1415: 16:9         — no commentary
+  Row 1417: 16:32        — no commentary
+  Row 1418: 16:13        — no commentary
+  Row 1419: 16:14        — no commentary
+  Row 1421: 16:17        — no commentary
+  Row 1422: 16:18        — no commentary
+  Row 1426: 16:5         — no commentary
+  Row 1427: 16:6         — no commentary
+  Row 1429: 16:9         — no commentary
+  Row 1430: 16:11        — no commentary
+  Row 1439: 16:8         — no commentary
+  Row 1443: 16:13        — no commentary
+  Row 1444: 16:14        — no commentary
+  Row 1447: 16:23        — no commentary
+  Row 1449: 16:27        — no commentary
+  Row 1450: 16:28        — no commentary
+  Row 1451: 16:29        — no commentary
+  Row 1453: 16:4         — no commentary
+  Row 1455: 16:6         — no commentary
+  Row 1457: 16:8         — no commentary
+  Row 1459: 16:13        — no commentary
+  Row 1460: 16:14        — no commentary
+  Row 1463: 16:19        — no commentary
+  Row 1469: 16:29        — no commentary
+  Row 1471: 16:2         — no commentary
+  Row 1472: 16:3         — no commentary
+  Row 1474: 16:9         — no commentary
+  Row 1475: 16:8         — no commentary
+  Row 1477: 16:17        — no commentary
+  Row 1478: 16:3         — no commentary
+  Row 1480: 16:13        — no commentary
+  Row 1481: 16:14        — no commentary
+  Row 1496: 16:30        — no commentary
+  Row 1498: 16:34        — no commentary
+  Row 1507: 16:2         — no commentary
+  Row 1509: 16:6         — no commentary
+  Row 1510: 16:7         — no commentary
+  Row 1513: 16:11        — no commentary
+  Row 1514: 16:12        — no commentary
+  Row 1516: 16:14        — no commentary
+  Row 1528: 16:22        — no commentary
+  Row 1531: 16:26        — no commentary
+  Row 1542: 16:2         — no commentary
+  Row 1545: 16:14        — no commentary
+  Row 1550: 16:26        — no commentary
+  Row 1553: 16:4         — no commentary
+  Row 1556: 16:13        — no commentary
+  Row 1561: 16:25        — no commentary
+  Row 1562: 16:26        — no commentary
+  Row 1575: 3:6          — no commentary
+  Row 1630: 3:1          — quote too short
+  Row 1643: 3:1          — quote too short
+  Row 1704: 9:25         — no commentary
+  Row 1728: 39:4         — quote too short
+  Row 1729: 40:4         — quote too short
+  Row 1749: 1:8          — quote too short
+  Row 1774: 13:6         — quote too short
+  Row 1815: 7:2          — no commentary
+  Row 1816: 7:3          — no commentary
+  Row 1830: 12:16        — no commentary
+  Row 1868: 8:14         — no commentary
+  Row 1882: 8:34         — quote too short
+  Row 1943: 21:32        — quote too short
+  Row 1954: 21:34        — no commentary
+  Row 1963: 21:29        — quote too short
+  Row 1992: 11:6         — quote too short
+  Row 1998: 11:4         — quote too short
+  Row 2020: 11:36        — quote too short
+  Row 2024: 11:33        — quote too short
+  Row 2046: 8:30         — quote too short
+  Row 2098: 1:18         — quote too short
+  Row 2101: 1:12         — quote too short
+  Row 2102: 1:23         — no commentary
+  Row 2190: 1:15         — no commentary
+  Row 2193: 1:3          — no commentary
+  Row 2225: 1:3          — quote too short
+  Row 2227: 1:2          — quote too short
+  Row 2250: 1:9          — quote too short
+  Row 2255: 5:10         — quote too short
+  Row 2269: 13:5         — quote too short
+  Row 2300: 19:67        — quote too short

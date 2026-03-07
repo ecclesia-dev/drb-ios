@@ -28,7 +28,7 @@ enum CommentarySource: String, CaseIterable, Identifiable {
     var description: String {
         switch self {
         case .haydock: return "Haydock Catholic Bible Commentary"
-        case .lapide: return "Cornelius à Lapide (New Testament)"
+        case .lapide: return "Cornelius à Lapide (Full Bible)"
         case .douai1609: return "Original Douai Annotations (1609)"
         }
     }
@@ -73,8 +73,9 @@ final class CommentaryManager: ObservableObject {
     @Published private(set) var haydockLoaded = false
 
     private init() {
-        // Fix 1 + 4: Load only the small sources (Douai ~3k lines, Lapide ~2.4k lines)
-        // eagerly in the background. Haydock (13MB / ~36k lines) loads lazily on first access.
+        // Fix 1 + 4: Load Douai (~3k rows) eagerly. Lapide (~7.8k rows, full Bible) also loads
+        // eagerly for now — NOT "small". TODO (QA-002/Cyprian): move Lapide to lazy-load like Haydock
+        // to reduce startup memory pressure. Haydock (13MB / ~36k rows) remains lazy on first access.
         Task {
             await loadSourceInBackground(.douai1609)
             await loadSourceInBackground(.lapide)
