@@ -16,7 +16,7 @@ enum ResourceType: String, CaseIterable, Identifiable {
         switch self {
         case .drb: return "Douay-Rheims (Challoner)"
         case .vulgate: return "Vulgate (Clementine)"
-        case .drb1609: return "Douay-Rheims 1609"
+        case .drb1609: return "Douay-Rheims (1609)"
         case .haydock: return "Haydock"
         case .lapide: return "Lapide"
         case .chrysostom: return "Chrysostom"
