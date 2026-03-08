@@ -44,7 +44,7 @@ final class DatabaseManager: ObservableObject {
         return docs.appendingPathComponent("drb_v2.sqlite")
     }
 
-    private static func createTables(_ db: OpaquePointer) {
+    nonisolated private static func createTables(_ db: OpaquePointer) {
         let sql = """
         CREATE TABLE IF NOT EXISTS verses (
             book TEXT NOT NULL,
@@ -70,7 +70,7 @@ final class DatabaseManager: ObservableObject {
 
     // MARK: - TSV Import
 
-    private static func importAllTSVs(_ db: OpaquePointer) {
+    nonisolated private static func importAllTSVs(_ db: OpaquePointer) {
         sqlite3_exec(db, "BEGIN TRANSACTION", nil, nil, nil)
         importDRB(db)
         importCommentary3Col(db, resource: "haydock", source: "haydock", hasHeader: false)
