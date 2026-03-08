@@ -35,6 +35,14 @@ enum Testament: String, CaseIterable {
     case newTestament = "New Testament"
 }
 
+// MARK: - Translation
+
+enum Translation {
+    case challoner
+    case vulgate
+    case douai1609
+}
+
 // MARK: - Bible Data Manager
 
 @MainActor
@@ -48,6 +56,10 @@ final class BibleDataManager: ObservableObject {
     // Fix 2: Two-level index — O(1) chapter lookup instead of O(n) filter
     private var verseIndex: [String: [Int: [Verse]]] = [:]
     private var verseById: [String: Verse] = [:]
+
+    // Parallel translation indexes (keyed by full book name, same as verseIndex)
+    private var vulgateIndex: [String: [Int: [Verse]]] = [:]
+    private var drb1609Index: [String: [Int: [Verse]]] = [:]
 
     private init() {
         // Fix 1: Load off the main thread — fire-and-forget Task on @MainActor,
@@ -69,6 +81,8 @@ final class BibleDataManager: ObservableObject {
         self.verseIndex = result.verseIndex
         self.verseById = result.verseById
         self.books = result.books
+        self.vulgateIndex = result.vulgateIndex
+        self.drb1609Index = result.drb1609Index
         self.isLoaded = true
     }
 
@@ -79,19 +93,24 @@ final class BibleDataManager: ObservableObject {
         let verseIndex: [String: [Int: [Verse]]]
         let verseById: [String: Verse]
         let books: [Book]
+        let vulgateIndex: [String: [Int: [Verse]]]
+        let drb1609Index: [String: [Int: [Verse]]]
     }
 
     nonisolated private static func parseData() -> LoadResult {
-        guard let url = Bundle.main.url(forResource: "drb", withExtension: "tsv"),
-              let data = try? String(contentsOf: url, encoding: .utf8) else {
-            return LoadResult(verses: [], verseIndex: [:], verseById: [:], books: [])
+        // ── 1. Load Challoner (drb.tsv) ──────────────────────────────────────
+        guard let drbURL = Bundle.main.url(forResource: "drb", withExtension: "tsv"),
+              let drbData = try? String(contentsOf: drbURL, encoding: .utf8) else {
+            return LoadResult(verses: [], verseIndex: [:], verseById: [:], books: [],
+                              vulgateIndex: [:], drb1609Index: [:])
         }
 
         var verses: [Verse] = []
         var bookChapters: [String: (abbrev: String, order: Int, chapters: Set<Int>)] = [:]
+        var abbrevToName: [String: String] = [:]
 
-        let lines = data.components(separatedBy: .newlines)
-        for line in lines {
+        let drbLines = drbData.components(separatedBy: .newlines)
+        for line in drbLines {
             let parts = line.components(separatedBy: "\t")
             guard parts.count >= 6 else { continue }
 
@@ -110,7 +129,7 @@ final class BibleDataManager: ObservableObject {
                 chapter: chapter,
                 verse: verseNum,
                 text: text,
-                lowercasedText: text.lowercased()  // Fix 3: one alloc per verse, at parse time
+                lowercasedText: text.lowercased()
             )
             verses.append(verse)
 
@@ -119,17 +138,17 @@ final class BibleDataManager: ObservableObject {
                 bookChapters[bookName] = info
             } else {
                 bookChapters[bookName] = (abbrev, bookOrder, [chapter])
+                abbrevToName[abbrev] = bookName
             }
         }
 
-        // Fix 2: Build two-level index and id→verse map in one pass
+        // Build verse index and id map for Challoner
         var verseIndex: [String: [Int: [Verse]]] = [:]
         var verseById: [String: Verse] = [:]
         for verse in verses {
             verseIndex[verse.bookName, default: [:]][verse.chapter, default: []].append(verse)
             verseById[verse.id] = verse
         }
-        // Verses arrive in order from the TSV but sort within each chapter to be safe
         for bookName in verseIndex.keys {
             for chapter in verseIndex[bookName]!.keys {
                 verseIndex[bookName]![chapter]!.sort { $0.verse < $1.verse }
@@ -147,14 +166,109 @@ final class BibleDataManager: ObservableObject {
             )
         }.sorted { $0.order < $1.order }
 
-        return LoadResult(verses: verses, verseIndex: verseIndex, verseById: verseById, books: books)
+        // ── 2. Load Clementine Vulgate (vulgate-clementine.tsv) ──────────────
+        // Schema: FullBookName(0) BookAbbrev(1) BookNum(2) Chapter(3) Verse(4) Text(5)
+        var vulgateIndex: [String: [Int: [Verse]]] = [:]
+        if let vulURL = Bundle.main.url(forResource: "vulgate-clementine", withExtension: "tsv"),
+           let vulData = try? String(contentsOf: vulURL, encoding: .utf8) {
+            let vulLines = vulData.components(separatedBy: .newlines)
+            for line in vulLines {
+                let parts = line.components(separatedBy: "\t")
+                guard parts.count >= 6 else { continue }
+                let bookName = parts[0]
+                let abbrev = parts[1]
+                let bookOrder = Int(parts[2]) ?? 0
+                let chapter = Int(parts[3]) ?? 0
+                let verseNum = Int(parts[4]) ?? 0
+                let text = parts[5]
+                guard !bookName.isEmpty, chapter > 0, verseNum > 0 else { continue }
+
+                let verse = Verse(
+                    id: "vul:\(bookName):\(chapter):\(verseNum)",
+                    bookName: bookName,
+                    abbreviation: abbrev,
+                    bookOrder: bookOrder,
+                    chapter: chapter,
+                    verse: verseNum,
+                    text: text,
+                    lowercasedText: text.lowercased()
+                )
+                vulgateIndex[bookName, default: [:]][chapter, default: []].append(verse)
+            }
+            for bookName in vulgateIndex.keys {
+                for chapter in vulgateIndex[bookName]!.keys {
+                    vulgateIndex[bookName]![chapter]!.sort { $0.verse < $1.verse }
+                }
+            }
+        }
+
+        // ── 3. Load Douay-Rheims 1609 (drb-1609.tsv) ─────────────────────────
+        // Schema: header row + BookAbbrev(0) Chapter(1) Verse(2) Text(3)
+        var drb1609Index: [String: [Int: [Verse]]] = [:]
+        if let d1609URL = Bundle.main.url(forResource: "drb-1609", withExtension: "tsv"),
+           let d1609Data = try? String(contentsOf: d1609URL, encoding: .utf8) {
+            let d1609Lines = d1609Data.components(separatedBy: .newlines)
+            var skipHeader = true
+            for line in d1609Lines {
+                if skipHeader { skipHeader = false; continue }  // skip header row
+                let parts = line.components(separatedBy: "\t")
+                guard parts.count >= 4 else { continue }
+                let abbrev = parts[0]
+                let chapter = Int(parts[1]) ?? 0
+                let verseNum = Int(parts[2]) ?? 0
+                let text = parts[3]
+                guard !abbrev.isEmpty, chapter > 0, verseNum > 0 else { continue }
+
+                // Map abbreviation → full book name using DRB data
+                let bookName = abbrevToName[abbrev] ?? abbrev
+                let bookOrder = bookChapters[bookName]?.order ?? 0
+
+                let verse = Verse(
+                    id: "1609:\(bookName):\(chapter):\(verseNum)",
+                    bookName: bookName,
+                    abbreviation: abbrev,
+                    bookOrder: bookOrder,
+                    chapter: chapter,
+                    verse: verseNum,
+                    text: text,
+                    lowercasedText: text.lowercased()
+                )
+                drb1609Index[bookName, default: [:]][chapter, default: []].append(verse)
+            }
+            for bookName in drb1609Index.keys {
+                for chapter in drb1609Index[bookName]!.keys {
+                    drb1609Index[bookName]![chapter]!.sort { $0.verse < $1.verse }
+                }
+            }
+        }
+
+        return LoadResult(
+            verses: verses,
+            verseIndex: verseIndex,
+            verseById: verseById,
+            books: books,
+            vulgateIndex: vulgateIndex,
+            drb1609Index: drb1609Index
+        )
     }
 
     // MARK: - Public API
 
-    // Fix 2: O(1) chapter lookup — no more O(n) filter through the full book
+    // O(1) chapter lookup for any translation
+    func verses(for book: String, chapter: Int, translation: Translation = .challoner) -> [Verse] {
+        switch translation {
+        case .challoner:
+            return verseIndex[book]?[chapter] ?? []
+        case .vulgate:
+            return vulgateIndex[book]?[chapter] ?? []
+        case .douai1609:
+            return drb1609Index[book]?[chapter] ?? []
+        }
+    }
+
+    // Convenience overload — keeps callers using the old signature working
     func verses(for book: String, chapter: Int) -> [Verse] {
-        verseIndex[book]?[chapter] ?? []
+        verses(for: book, chapter: chapter, translation: .challoner)
     }
 
     // Fix 3: Use precomputed lowercasedText — no per-search String allocation

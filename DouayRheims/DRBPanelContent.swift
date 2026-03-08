@@ -4,6 +4,7 @@ struct DRBPanelContent: View {
     let book: String
     let abbreviation: String
     let chapter: Int
+    var translation: Translation = .challoner
 
     @EnvironmentObject var bibleData: BibleDataManager
     @EnvironmentObject var navigator: BibleNavigator
@@ -13,7 +14,7 @@ struct DRBPanelContent: View {
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
-        let verses = bibleData.verses(for: book, chapter: chapter)
+        let verses = bibleData.verses(for: book, chapter: chapter, translation: translation)
 
         ScrollViewReader { proxy in
             ScrollView {

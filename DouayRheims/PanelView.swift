@@ -138,11 +138,13 @@ struct PanelView: View {
 
     @ViewBuilder
     private var panelContent: some View {
-        if panel.resource == .drb {
+        if let translation = panel.resource.translation {
+            // Bible text panel (DRB Challoner, Vulgate, Douay 1609)
             DRBPanelContent(
                 book: currentBook,
                 abbreviation: currentAbbreviation,
-                chapter: currentChapter
+                chapter: currentChapter,
+                translation: translation
             )
         } else {
             CommentaryPanelContent(

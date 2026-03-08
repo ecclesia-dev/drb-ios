@@ -2,6 +2,8 @@ import Foundation
 
 enum ResourceType: String, CaseIterable, Identifiable {
     case drb = "Douay-Rheims"
+    case vulgate = "Vulgate"
+    case drb1609 = "Douay-Rheims 1609"
     case haydock = "Haydock"
     case lapide = "Lapide"
     case chrysostom = "Chrysostom"
@@ -13,6 +15,8 @@ enum ResourceType: String, CaseIterable, Identifiable {
     var shortName: String {
         switch self {
         case .drb: return "DRB"
+        case .vulgate: return "Vulgate"
+        case .drb1609: return "Douay 1609"
         case .haydock: return "Haydock"
         case .lapide: return "Lapide"
         case .chrysostom: return "Chrysostom"
@@ -24,6 +28,8 @@ enum ResourceType: String, CaseIterable, Identifiable {
     var dbSource: String {
         switch self {
         case .drb: return ""
+        case .vulgate: return ""
+        case .drb1609: return ""
         case .haydock: return "haydock"
         case .lapide: return "lapide"
         case .chrysostom: return "chrysostom"
@@ -35,6 +41,8 @@ enum ResourceType: String, CaseIterable, Identifiable {
     var description: String {
         switch self {
         case .drb: return "Douay-Rheims Bible"
+        case .vulgate: return "Clementine Vulgate (Latin, 1592)"
+        case .drb1609: return "Douay OT (1609) / Rheims NT (1582)"
         case .haydock: return "Haydock Catholic Bible Commentary"
         case .lapide: return "Cornelius a Lapide"
         case .chrysostom: return "St. John Chrysostom"
@@ -43,12 +51,30 @@ enum ResourceType: String, CaseIterable, Identifiable {
         }
     }
 
+    /// True for commentary panels; false for Bible text panels.
     var isCommentary: Bool {
-        self != .drb
+        switch self {
+        case .drb, .vulgate, .drb1609: return false
+        default: return true
+        }
+    }
+
+    /// The Translation enum value for Bible-text resources; nil for commentaries.
+    var translation: Translation? {
+        switch self {
+        case .drb: return .challoner
+        case .vulgate: return .vulgate
+        case .drb1609: return .douai1609
+        default: return nil
+        }
     }
 
     var spellingNote: String? {
         switch self {
+        case .vulgate:
+            return "Clementine Vulgate, the authoritative Latin text of the Catholic Church (Sixtus V / Clement VIII, 1592)."
+        case .drb1609:
+            return "Original 1609 (OT) / 1582 (NT) spelling is preserved. Old English orthography — including ſ (long s) printed as f, and other archaic forms — is authentic, not an error."
         case .douai:
             return "Original 1609 spelling is preserved. Old English orthography — including ſ (long s) printed as f, and other archaic forms — is authentic, not an error."
         default:
@@ -59,11 +85,13 @@ enum ResourceType: String, CaseIterable, Identifiable {
     var icon: String {
         switch self {
         case .drb: return "book.closed"
+        case .vulgate: return "character.book.closed"
+        case .drb1609: return "scroll"
         case .haydock: return "text.book.closed"
         case .lapide: return "text.quote"
         case .chrysostom: return "person.text.rectangle"
         case .aquinas: return "graduationcap"
-        case .douai: return "scroll"
+        case .douai: return "doc.text"
         }
     }
 }

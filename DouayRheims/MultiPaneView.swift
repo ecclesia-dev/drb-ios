@@ -87,6 +87,15 @@ struct MultiPaneView: View {
 
             Spacer()
 
+            // Parallel preset
+            Button {
+                setParallelPreset()
+            } label: {
+                Label("Parallel", systemImage: "rectangle.split.3x1")
+                    .font(.system(size: 14))
+                    .foregroundColor(Theme.accent(colorScheme))
+            }
+
             // Add panel
             if panels.count < maxPanels {
                 Button {
@@ -217,5 +226,13 @@ struct MultiPaneView: View {
         if selectedTab >= panels.count {
             selectedTab = panels.count - 1
         }
+    }
+
+    private func setParallelPreset() {
+        panels = [
+            Panel(resource: .vulgate),
+            Panel(resource: .drb1609),
+            Panel(resource: .drb)
+        ]
     }
 }

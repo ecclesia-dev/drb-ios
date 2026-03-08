@@ -41,6 +41,9 @@
 		A1000032 /* chrysostom-epistles.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000032; };
 		A1000033 /* aquinas-psalms.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000033; };
 		A1000034 /* aquinas-isaiah.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000034; };
+		A1000035 /* vulgate-clementine.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000035; };
+		A1000036 /* drb-1609.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000036; };
+		A1000037 /* VerseCompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000037; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,9 @@
 		A2000032 /* chrysostom-epistles.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "chrysostom-epistles.tsv"; sourceTree = "<group>"; };
 		A2000033 /* aquinas-psalms.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "aquinas-psalms.tsv"; sourceTree = "<group>"; };
 		A2000034 /* aquinas-isaiah.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "aquinas-isaiah.tsv"; sourceTree = "<group>"; };
+		A2000035 /* vulgate-clementine.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "vulgate-clementine.tsv"; sourceTree = "<group>"; };
+		A2000036 /* drb-1609.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "drb-1609.tsv"; sourceTree = "<group>"; };
+		A2000037 /* VerseCompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseCompareView.swift; sourceTree = "<group>"; };
 		A3000001 /* DouayRheims.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouayRheims.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +141,9 @@
 				A2000032 /* chrysostom-epistles.tsv */,
 				A2000033 /* aquinas-psalms.tsv */,
 				A2000034 /* aquinas-isaiah.tsv */,
+				A2000035 /* vulgate-clementine.tsv */,
+				A2000036 /* drb-1609.tsv */,
+				A2000037 /* VerseCompareView.swift */,
 				A2000003 /* Assets.xcassets */,
 				A2000020 /* LaunchScreen.storyboard */,
 			);
@@ -218,6 +227,8 @@
 				A1000032 /* chrysostom-epistles.tsv in Resources */,
 				A1000033 /* aquinas-psalms.tsv in Resources */,
 				A1000034 /* aquinas-isaiah.tsv in Resources */,
+				A1000035 /* vulgate-clementine.tsv in Resources */,
+				A1000036 /* drb-1609.tsv in Resources */,
 				A1000020 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +262,7 @@
 				A1000026 /* CommentaryPanelContent.swift in Sources */,
 				A1000027 /* PanelView.swift in Sources */,
 				A1000028 /* MultiPaneView.swift in Sources */,
+				A1000037 /* VerseCompareView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

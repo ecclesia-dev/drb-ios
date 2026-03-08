@@ -13,6 +13,7 @@ struct ChapterView: View {
     @Environment(\.accessibilityReduceMotion) var reduceMotion
 
     @State private var selectedVerse: Verse?
+    @State private var verseCompareVerse: Verse?
 
     private var isIPad: Bool {
         horizontalSizeClass == .regular
@@ -31,6 +32,10 @@ struct ChapterView: View {
         .navigationTitle("\(book.abbreviation) \(chapter)")
         .navigationBarTitleDisplayMode(.inline)
         .background(Theme.background(colorScheme))
+        .sheet(item: $verseCompareVerse) { verse in
+            VerseCompareView(verse: verse)
+                .environmentObject(bibleData)
+        }
     }
 
     // MARK: - iPhone Layout (sheet)
@@ -120,6 +125,9 @@ struct ChapterView: View {
                                 }
                             }
                         }
+                    },
+                    onCompare: {
+                        verseCompareVerse = verse
                     }
                 )
                 .padding(.bottom, 8)
@@ -158,6 +166,7 @@ struct VerseRow: View {
     var isSelected: Bool = false
     var hasCommentary: Bool = false
     var onTap: (() -> Void)? = nil
+    var onCompare: (() -> Void)? = nil
 
     @EnvironmentObject var bookmarks: BookmarkManager
     @EnvironmentObject var settings: SettingsManager
@@ -206,6 +215,15 @@ struct VerseRow: View {
 
             ShareLink(item: "\(verse.reference)\n\(verse.text)") {
                 Label("Share", systemImage: "square.and.arrow.up")
+            }
+
+            if let onCompare = onCompare {
+                Divider()
+                Button {
+                    onCompare()
+                } label: {
+                    Label("Compare Translations", systemImage: "text.alignleft")
+                }
             }
         }
         .overlay(alignment: .trailing) {
