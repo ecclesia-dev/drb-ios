@@ -14,14 +14,14 @@ enum ResourceType: String, CaseIterable, Identifiable {
 
     var shortName: String {
         switch self {
-        case .drb: return "DRB"
-        case .vulgate: return "Vulgate"
-        case .drb1609: return "Douay 1609"
+        case .drb: return "Douay-Rheims (Challoner)"
+        case .vulgate: return "Vulgate (Clementine)"
+        case .drb1609: return "Douay-Rheims 1609"
         case .haydock: return "Haydock"
         case .lapide: return "Lapide"
         case .chrysostom: return "Chrysostom"
         case .aquinas: return "Aquinas"
-        case .douai: return "Douai"
+        case .douai: return "Douai 1609 Annotations"
         }
     }
 
@@ -84,14 +84,14 @@ enum ResourceType: String, CaseIterable, Identifiable {
 
     var icon: String {
         switch self {
-        case .drb: return "book.closed"
-        case .vulgate: return "character.book.closed"
-        case .drb1609: return "scroll"
-        case .haydock: return "text.book.closed"
-        case .lapide: return "text.quote"
-        case .chrysostom: return "person.text.rectangle"
-        case .aquinas: return "graduationcap"
-        case .douai: return "doc.text"
+        case .drb: return "book.closed.fill"
+        case .vulgate: return "book.closed.fill"
+        case .drb1609: return "book.closed.fill"
+        case .haydock: return "text.bubble.fill"
+        case .lapide: return "text.bubble.fill"
+        case .chrysostom: return "text.bubble.fill"
+        case .aquinas: return "text.bubble.fill"
+        case .douai: return "text.bubble.fill"
         }
     }
 }

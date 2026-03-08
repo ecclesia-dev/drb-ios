@@ -50,7 +50,7 @@ struct PanelView: View {
                         Button {
                             panel.resource = res
                         } label: {
-                            Label(res.rawValue, systemImage: res.icon)
+                            Label(res.shortName, systemImage: res.icon)
                         }
                     }
                 } label: {

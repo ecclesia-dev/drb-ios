@@ -12,11 +12,15 @@ struct CommentaryPanelContent: View {
     @Environment(\.colorScheme) var colorScheme
 
     @State private var entries: [DatabaseManager.CommentaryRow] = []
+    /// Verse numbers whose commentary rows are currently visible in this panel's ScrollView.
+    @State private var visibleVerses: Set<Int> = []
+    /// True while this panel is responding to an external scroll-sync event.
+    @State private var isSyncReceiver = false
 
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
-                VStack(alignment: .leading, spacing: 0) {
+                LazyVStack(alignment: .leading, spacing: 0) {
                     // Source header
                     HStack(spacing: 8) {
                         Image(systemName: resource.icon)
@@ -46,6 +50,13 @@ struct CommentaryPanelContent: View {
                             )
                             .id(entry.verse)
                             .padding(.bottom, 10)
+                            .onAppear {
+                                visibleVerses.insert(entry.verse)
+                                broadcastTopVerse()
+                            }
+                            .onDisappear {
+                                visibleVerses.remove(entry.verse)
+                            }
                         }
                     }
 
@@ -69,18 +80,46 @@ struct CommentaryPanelContent: View {
             .onChange(of: navigator.verse) {
                 if let v = navigator.verse,
                    navigator.book == book,
-                   navigator.chapter == chapter {
+                   navigator.chapter == chapter,
+                   !visibleVerses.contains(v) {
+                    isSyncReceiver = true
                     withAnimation(.easeInOut(duration: 0.3)) {
                         proxy.scrollTo(v, anchor: .top)
                     }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                        isSyncReceiver = false
+                    }
                 }
+            }
+            .onChange(of: book) {
+                visibleVerses.removeAll()
+                isSyncReceiver = false
+            }
+            .onChange(of: chapter) {
+                visibleVerses.removeAll()
+                isSyncReceiver = false
             }
         }
         .onAppear { loadEntries() }
         .onChange(of: book) { loadEntries() }
         .onChange(of: chapter) { loadEntries() }
-        .onChange(of: resource) { loadEntries() }
+        .onChange(of: resource) {
+            visibleVerses.removeAll()
+            isSyncReceiver = false
+            loadEntries()
+        }
         .onChange(of: database.isReady) { loadEntries() }
+    }
+
+    /// If this panel is not responding to sync and the top visible commentary entry
+    /// has changed, publish it to navigator so other linked panels can follow.
+    private func broadcastTopVerse() {
+        guard !isSyncReceiver,
+              navigator.book == book,
+              navigator.chapter == chapter,
+              let topVerse = visibleVerses.min(),
+              navigator.verse != topVerse else { return }
+        navigator.verse = topVerse
     }
 
     private func loadEntries() {

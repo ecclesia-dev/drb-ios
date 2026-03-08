@@ -13,12 +13,18 @@ struct DRBPanelContent: View {
     @EnvironmentObject var database: DatabaseManager
     @Environment(\.colorScheme) var colorScheme
 
+    /// Verse numbers currently visible in this panel's ScrollView.
+    @State private var visibleVerses: Set<Int> = []
+    /// True while this panel is responding to an external scroll-sync event,
+    /// preventing it from re-broadcasting back to navigator.
+    @State private var isSyncReceiver = false
+
     var body: some View {
         let verses = bibleData.verses(for: book, chapter: chapter, translation: translation)
 
         ScrollViewReader { proxy in
             ScrollView {
-                VStack(alignment: .leading, spacing: 0) {
+                LazyVStack(alignment: .leading, spacing: 0) {
                     // Chapter header
                     Text(book)
                         .font(settings.headerFont)
@@ -43,6 +49,13 @@ struct DRBPanelContent: View {
                         )
                         .id(verse.verse)
                         .padding(.bottom, 6)
+                        .onAppear {
+                            visibleVerses.insert(verse.verse)
+                            broadcastTopVerse()
+                        }
+                        .onDisappear {
+                            visibleVerses.remove(verse.verse)
+                        }
                     }
                 }
                 .padding(.horizontal, 16)
@@ -51,13 +64,37 @@ struct DRBPanelContent: View {
             .onChange(of: navigator.verse) {
                 if let v = navigator.verse,
                    navigator.book == book,
-                   navigator.chapter == chapter {
+                   navigator.chapter == chapter,
+                   !visibleVerses.contains(v) {
+                    isSyncReceiver = true
                     withAnimation(.easeInOut(duration: 0.3)) {
                         proxy.scrollTo(v, anchor: .top)
                     }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                        isSyncReceiver = false
+                    }
                 }
             }
+            .onChange(of: book) {
+                visibleVerses.removeAll()
+                isSyncReceiver = false
+            }
+            .onChange(of: chapter) {
+                visibleVerses.removeAll()
+                isSyncReceiver = false
+            }
         }
+    }
+
+    /// If this panel is not responding to sync and the top visible verse has changed,
+    /// publish it to navigator so other linked panels can follow.
+    private func broadcastTopVerse() {
+        guard !isSyncReceiver,
+              navigator.book == book,
+              navigator.chapter == chapter,
+              let topVerse = visibleVerses.min(),
+              navigator.verse != topVerse else { return }
+        navigator.verse = topVerse
     }
 }
 
