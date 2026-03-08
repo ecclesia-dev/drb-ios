@@ -118,7 +118,8 @@ final class BibleDataManager: ObservableObject {
         guard let drbURL = Bundle.main.url(forResource: "drb", withExtension: "tsv"),
               let drbData = try? String(contentsOf: drbURL, encoding: .utf8) else {
             return LoadResult(verses: [], verseIndex: [:], verseById: [:], books: [],
-                              vulgateIndex: [:], drb1609Index: [:])
+                              vulgateIndex: [:], drb1609Index: [:],
+                              vulgateVerses: [], drb1609Verses: [])
         }
 
         var verses: [Verse] = []
