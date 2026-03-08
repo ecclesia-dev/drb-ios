@@ -26,7 +26,6 @@
 		A1000017 /* haydock.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000017; };
 		A1000018 /* lapide.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000018; };
 		A1000019 /* douai-1609.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A2000019; };
-		A1000020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2000020; };
 		A1000021 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000021; };
 		A1000022 /* BibleNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000022; };
 		A1000023 /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000023; };
@@ -66,7 +65,6 @@
 		A2000017 /* haydock.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = haydock.tsv; sourceTree = "<group>"; };
 		A2000018 /* lapide.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = lapide.tsv; sourceTree = "<group>"; };
 		A2000019 /* douai-1609.tsv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "douai-1609.tsv"; sourceTree = "<group>"; };
-		A2000020 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2000021 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		A2000022 /* BibleNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleNavigator.swift; sourceTree = "<group>"; };
 		A2000023 /* ResourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceType.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				A2000036 /* drb-1609.tsv */,
 				A2000037 /* VerseCompareView.swift */,
 				A2000003 /* Assets.xcassets */,
-				A2000020 /* LaunchScreen.storyboard */,
 			);
 			path = DouayRheims;
 			sourceTree = "<group>";
@@ -229,7 +226,6 @@
 				A1000034 /* aquinas-isaiah.tsv in Resources */,
 				A1000035 /* vulgate-clementine.tsv in Resources */,
 				A1000036 /* drb-1609.tsv in Resources */,
-				A1000020 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +394,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Douay-Rheims";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -426,7 +421,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Douay-Rheims";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
