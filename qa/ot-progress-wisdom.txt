@@ -1,0 +1,107 @@
+## OT Wisdom Books — Annotation Scan Progress Log
+## Updated by jerome-ot-wisd4 session
+
+### STATUS: COMPLETE (all needed sections scanned)
+
+---
+## FINAL TSV STATS
+- Total rows: 605 (including header)
+- Psalm entries: 55 (covering ~38 Psalms)
+- Total book breakdown: Job, Prv, Eccl, Sir, Wis, Sg, Ps all scanned
+
+---
+## PSALMS — COMPLETE (all 150 Psalms scanned, all 3 PDF batches)
+
+### PDF ranges rendered via pdftoppm (GS failed on these pages):
+- Batch A: PDF 1043-1110 (psA-*.png) → 18 annotation hits
+- Batch B: PDF 1111-1200 (psB-*.png) → 9 annotation hits  
+- Batch C: PDF 1201-1291 (psC-*.png) → 9 annotation hits
+
+### Psalms WITH annotations (55 entries written):
+Ps 1:1, 1:3
+Ps 2:2, 2:8, 2:9
+Ps 3:1, 3:6
+Ps 4:5, 4:6, 4:7
+Ps 5:5
+Ps 6:2, 6:4
+Ps 8:1
+Ps 9:21
+Ps 10:1, 10:5
+Ps 12:1
+Ps 14:2, 14:5
+Ps 15:1, 15:5, 15:10
+Ps 18:5, 18:8
+Ps 21:1, 21:3, 21:18, 21:23
+Ps 25:5
+Ps 28:1
+Ps 31:1, 31:2
+Ps 33:1
+Ps 39:7, 39:10
+Ps 44:7
+Ps 50:5
+Ps 64:12
+Ps 65:1
+Ps 68:16
+Ps 77:38, 77:40
+Ps 88:34
+Ps 90:5
+Ps 94:8
+Ps 97:5
+Ps 101:5, 101:9
+Ps 105:30
+Ps 109:4
+Ps 113:14
+Ps 118:1
+Ps 144:14
+Ps 150:1
+
+### Psalms with NO annotations confirmed (scanned, not found):
+7, 11, 13, 16-17, 19-20, 22-24, 26-27, 29-30, 32, 34-38, 40-43, 45-49, 51-63,
+66-67, 69-76, 78-87, 89, 91-93, 95-96, 98-100, 102-104, 106-108, 110-112,
+114-117, 119-143, 145-149
+
+---
+## PROVERBS — COMPLETE
+
+### PDF range: 1305-1338 (prv-001..034.png, GS rendered)
+All 34 pages OCR'd. Only 5 pages had ANNOTATIONS:
+- prv-001 (PDF 1305): Ch 9 annotations — already in TSV
+- prv-009 (PDF 1313): Ch 14 annotations — already in TSV  
+- prv-013 (PDF 1317): Ch 16 annotations — already in TSV
+- prv-024 (PDF 1328): "ANNOTATIONS CUARTER XXIII" = actually Ch 24 annotations — already in TSV
+- prv-033 (PDF 1337): Ch 30 annotations — already in TSV
+
+### Chapters with NO annotations (confirmed by full scan):
+Prv 10, 11, 12, 15, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29
+
+---
+## ECCLESIASTES 5 — COMPLETE
+
+### PDF range scanned: 1342-1350 via pdftoppm
+Eccl 5 (PDF 1346) has only margin/sidebar notes, NO formal ANNOTATIONS section.
+Margin notes include brief references to vows, angels, riches, but these are
+not the same quality as the discursive ANNOTATIONS sections captured elsewhere.
+Result: No TSV entries added for Eccl 5.
+
+---
+## SIRACH 14, 17, 19, 20 — COMPLETE
+
+### PDF range: 1400-1475 via pdftoppm (sirB-*.png, sirA-*.png)
+- Sir 14: PDF 1409-1410 — NO annotations section
+- Sir 17: PDF 1412 — NO annotations section
+- Sir 19: PDF 1415 — NO annotations section
+- Sir 20: PDF 1416 — NO annotations section
+
+---
+## TOOLS NOTE
+- GS (Ghostscript) renders fail for PDF pages 1043-1304 and 1391-1550
+- pdftoppm works reliably for all pages
+- OCR via tesseract at 100-120dpi sufficient for keyword scanning
+- Vision model at 150dpi for detailed annotation extraction
+
+---
+## NUMBERING NOTE
+All Psalm numbers in TSV use VULGATE (DRB) numbering:
+- Ps 18 DRB = "The heavens shew forth the glory of God" (Ps 19 Hebrew)
+- Ps 21 DRB = "My God, my God, why hast thou forsaken me?" (Ps 22 Hebrew)
+- etc.

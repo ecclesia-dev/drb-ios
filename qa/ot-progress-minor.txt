@@ -1,0 +1,46 @@
+=== Minor Prophets OT Annotation Extraction ===
+Started: Sat Mar 7 2026
+
+Book page map (approximate PDF pages):
+- Hos: 1790-1801
+- Joel: 1802-1805
+- Am: 1806-1819
+- Ob: ~1815-1817
+- Jon: 1818-1821
+- Mic: 1822-1831
+- Nah: 1832-1835
+- Hab: 1836-1840
+- Zeph: ~1840-1843
+- Hag: 1843-1844
+- Zech: 1845-1872
+- Mal: 1873+
+
+
+=== EXTRACTION COMPLETE ===
+
+Total annotations extracted: 234 (excluding header)
+
+Per-book counts:
+- Hos: 40 annotations (ch 1-14 complete)
+- Joel: 10 annotations (ch 1-3 complete)
+- Am: 33 annotations (ch 1-9 complete)
+- Ob: 4 annotations (ch 1 complete)
+- Jon: 12 annotations (ch 1-4 complete)
+- Mic: 25 annotations (ch 1-7 complete)
+- Nah: 9 annotations (ch 1-3 complete)
+- Hab: 16 annotations (ch 1-3 complete)
+- Zeph: 14 annotations (ch 1-3 complete)
+- Hag: 8 annotations (ch 1-2 complete)
+- Zech: 51 annotations (ch 1-14 complete)
+- Mal: 12 annotations (ch 1-4 complete)
+
+Output file: douai-1609-minor-prophets.tsv
+PDF pages scanned: ~1784-1867 (83 pages)
+
+Notes:
+- All 12 minor prophet books covered
+- Many chapters have no annotations (normal for this edition - annotations are selective)
+- Malachi 1:11 annotation confirms Eucharistic prophecy content
+- Annotations transcribed from vision model analysis of 200dpi scans
+- Zech has most annotations (51) due to its rich prophetic content
+

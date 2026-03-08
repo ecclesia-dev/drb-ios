@@ -1,0 +1,130 @@
+=== Historical Books OT Extraction — COMPLETE ===
+Jerome (⚙️) — subagent session jerome-ot-hist
+Started: Sat Mar 7 18:21 CST 2026
+Completed: Sat Mar 7 ~19:00 CST 2026
+
+Output file: douai-1609-historical.tsv
+Format: BookAbbrev\tChapter:Verse\tAnnotation\tSource
+
+=== ANNOTATION COUNTS BY BOOK ===
+1Sam:   48 annotations
+2Sam:   27 annotations
+1Kings: 21 annotations
+2Kings: 14 annotations
+2Chr:   14 annotations
+Jgs:    10 annotations
+Jos:     8 annotations
+1Chr:    7 annotations
+Ru:      6 annotations
+Neh:     5 annotations
+Ezr:     5 annotations
+TOTAL:  165 annotations (166 lines including header)
+
+=== KEY FINDINGS ===
+1. The historical books have MUCH fewer formal ANNOTATIONS sections than
+   the Pentateuch. Most commentary is in marginal notes within Bible text.
+
+2. Formal ANNOTATIONS sections found at:
+   - PDF 489: Jos 24:1,30
+   - PDF 514: Jgs 16:30 (already in main TSV)
+   - PDF 545-546: 1Sam 8:7,11,18
+   - PDF 560: 1Sam 16:7
+   - PDF 583-584: 1Sam 28:14 (long annotation about Samuel's apparition)
+   - PDF 654-665: 3 Kings general argument (Fourth/Fifth Age essays - NOT verse-specific)
+   - PDF 710-711: 2Kings 5:19 (long annotation about Catholics vs Protestants)
+   - PDF 753: 1 Paralipomenon annotations about reconciling differences in Scripture
+   - PDF 856-862: 2 Paralipomenon general argument (Fifth Age - NOT verse-specific)
+
+3. The large theological essays (Fourth Age, Fifth Age of the Church) are
+   NOT verse-specific annotations but general prefaces/arguments for the
+   historical books section. They discuss free will, grace, Church authority,
+   sacraments, images, relics, Purgatorie, etc.
+
+4. PDF page mapping:
+   - Joshua starts: ~PDF 440
+   - Judges starts: ~PDF 485
+   - Ruth starts: ~PDF 526
+   - 1 Samuel (1 Kings DRB): ~PDF 534
+   - 2 Samuel (2 Kings DRB): ~PDF 589
+   - 1 Kings (3 Kings DRB): ~PDF 635
+   - 2 Kings (4 Kings DRB): ~PDF 700
+   - 1 Chronicles (1 Paralip): ~PDF 750
+   - 2 Chronicles (2 Paralip): ~PDF 799
+   - Ezra (1 Esdras): ~PDF 865
+   - Nehemiah (2 Esdras): ~PDF 883
+   - Tobit starts: ~PDF 907
+
+5. Duplicates with main TSV (4 entries):
+   - Jos 3:8, Jgs 11:39, Jgs 16:30, Ezr 2:1
+
+6. Chapters confirmed as having NO annotations (SKIP):
+   - Jos: 4, 8 (partial - just brief notes), 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
+   - Most Jgs chapters have no formal annotations
+   - Most 1Sam chapters 19-27, 29, 31 have only brief marginal notes
+   - 2Sam chapters 3, 9, 13, 14, 15, 20 have no marginal notes
+   - 1Kings chapters 2, 4, 5, 7, 8 (mostly), 9, 12, 16 have minimal notes
+   - 2Kings chapters 9, 14, 15, 16, 17, 19, 20, 24 have minimal/no notes
+   - Most 1Chr chapters are genealogies with no annotations
+   - Many 2Chr chapters have no annotations
+   - Most Ezr and Neh chapters have no annotations
+
+=== NOTES ON DRB NAMING ===
+- DRB "First Book of Kings" = 1 Samuel
+- DRB "Second Book of Kings" = 2 Samuel
+- DRB "Third Book of Kings" = 1 Kings
+- DRB "Fourth Book of Kings" = 2 Kings
+- DRB "1 Paralipomenon" = 1 Chronicles
+- DRB "2 Paralipomenon" = 2 Chronicles
+- DRB "1 Esdras" = Ezra
+- DRB "2 Esdras" = Nehemiah
+
+The existing Ezr entries in the main TSV with very high verse numbers
+(e.g., Ezr 1:63, 2:89) are likely from 3 Esdras (the apocryphal book),
+not canonical Ezra.
+
+=== RESUME SESSION: jerome-ot-hist4 ===
+Date: Sat Mar 7 22:12 CST 2026
+Agent: Jerome (⚙️) — subagent session jerome-ot-hist4
+
+## TASK: Verify all "still needed" chapters for Historical Books
+
+## METHOD:
+1. Rendered PDF pages 440–900 (461 pages) at 100dpi pnggray via ghostscript
+2. Ran tesseract + grep "ANNOTATION" batch scan on ALL 461 pages
+3. Found 12 hits — all already in TSV from previous session
+4. Visual spot-checks on 1Chr, 2Chr, 2Sam, Neh ranges confirmed: no formal ANNOTATIONS sections
+
+## HITS FOUND (all accounted for):
+- p0006 = PDF 445 → Jos 3 (already in TSV)
+- p0010 = PDF 449 → Jos 5 (already in TSV)
+- p0042 = PDF 481 → Jos 24 (already in TSV)
+- p0062 = PDF 501 → Jgs 9 (already in TSV)
+- p0066 = PDF 505 → Jgs 11 (already in TSV)
+- p0069 = PDF 508 → Jgs 13 (already in TSV)
+- p0075 = PDF 514 → Jgs 16 (already in TSV)
+- p0106 = PDF 545 → 1Sam 8 (already in TSV)
+- p0121 = PDF 560 → 1Sam 16 (already in TSV)
+- p0144 = PDF 583 → 1Sam 28 (already in TSV)
+- p0271 = PDF 710 → 2Kings 5 (already in TSV)
+- p0314 = PDF 753 → 1Chr 21/26 (already in TSV)
+
+## CONFIRMED: NO ANNOTATIONS in these chapters:
+- Jos: 4, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
+- Jgs: 2, 4, 6, 7, 8, 10, 12, 14, 15, 17, 19, 20, 21
+- 1Sam: 7, 12, 19, 20, 22, 31
+- 2Sam: 2, 3, 4, 9, 13, 14, 15, 20, 21, 22
+- 1Kings: 5, 7, 9, 12, 16
+- 2Kings: 1, 2, 3, 6, 9, 14, 15, 16, 17, 19, 20, 22, 24
+- 1Chr: 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 22, 23, 24, 25, 27, 28, 29
+- 2Chr: 1, 2, 3, 5, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 19, 21, 22, 24, 26, 27, 29, 31, 33, 35
+- Ezr: 3, 4, 8, 10
+- Neh: 2, 3, 4, 5, 7, 9, 11, 13
+
+## CONCLUSION:
+Historical Books scan is COMPLETE. The TSV contains all formal ANNOTATIONS
+from the 1609 Douai-Rheims Bible for the historical books. No new annotations
+found in this pass. TSV final count: 166 lines (165 annotations + 1 header).
+
+NOTE: Some chapters contain marginal notes (inline with text, not formal
+ANNOTATIONS sections). Those are intentionally excluded per project scope —
+only formal ANNOTATIONS sections are in scope.

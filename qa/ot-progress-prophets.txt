@@ -1,0 +1,95 @@
+=== Prophets OT Extraction Started ===
+Jerome (⚙️) — subagent session jerome-ot-proph
+Date: 2026-03-07
+
+Missing chapters to fill:
+- Tb: 3, 4, 5, 6, 7, 11, 13, 14
+- Jdt: 3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 16
+- Est: 4, 5, 6, 7, 8, 10, 11, 13, 14
+- 1Mc: 2, 3, 4, 5, 6, 8, 9, 12, 14, 16
+- 2Mc: ALL (1-15)
+- Is: 1, 2, 4-66 (all except ch.3 which exists)
+- Jer: 1-5, 8, 11-12, 14, 16-29, 31-34, 36-38, 41-52
+- Lam: ALL (1-5)
+- Bar: ALL (1-6)
+- Ez: ALL (1-48)
+- Dn: ALL (1-14)
+
+=== Tobit complete ===
+Tb: 3, 4, 5, 6, 7, 8 (bonus), 9 (bonus), 10 (bonus), 11, 12 (bonus), 13, 14 — DONE
+Jdt: 3, 4, 5, 7, 8, 9, 10, 11, 12, 13(bonus), 14, 15(bonus), 16 — DONE
+Est: 4, 5, 6, 7, 8, 10, 11, 12(bonus), 13, 14 — DONE
+Is: ALL chapters 1-66 — DONE
+1Mc: 2,3,4,5,6,7,8,9,12,14,16 — DONE
+2Mc: ALL chapters 1-15 — DONE
+Jer: chapters 1-5, 8, 11-14, 16-29, 31-34, 36-38, 41-52 — DONE
+Lam: ALL (1-5) — DONE
+Bar: ALL (1-6) — DONE
+
+=== SESSION INTERRUPTED (Jerome subagent, 2026-03-07) ===
+STATUS: Reconnaissance only — NO new TSV rows written this session.
+
+FINDINGS (page mapping):
+- jer27_0030.png = PDF 1579 = Jer ~ch 19 (page 562 in Bible)
+- jer27_0050.png = PDF 1599 = Jer ~ch 31 (page 582 in Bible)
+- jer27_0070.png = PDF 1619 = Jer ch 42-43 (page 602 in Bible)
+  → Therefore Jer 27 is around PDF pages 1583-1592 (estimate)
+
+Ezekiel page mapping (from /tmp/drb-proph3/ p0001-p0201, PDF 1620-1820):
+- p0001 (PDF 1620) = Jer 42-43 (Bible p.603)
+- p0050 (PDF 1669) = Ez 5-6   (Bible p.652)
+- p0100 (PDF 1719) = Ez 34    (Bible p.702)
+  → Ez 1 starts ~PDF 1655, Ez 48 ends ~PDF 1760 (estimate)
+  → Daniel starts ~PDF 1760+ (need to render 1820-1880)
+
+NEXT AGENT MUST:
+1. Find Jer 27: render PDF 1583-1595, find chapter heading, extract annotations via vision
+2. Process Ez 1-48: PDF range ~1655-1760, render & vision each chapter
+3. Process Dn 1-14: PDF range ~1760-1850+, render & render 1820-1900 first
+4. Tesseract was returning empty — use VISION MODEL directly on pages (skip tesseract)
+5. Files in /tmp/drb-proph3/ may still be present (check before re-rendering)
+
+STILL NEEDED (unchanged from task spec):
+- Jer: 27 only
+- Ez: 1-8, 10-17, 19-37, 39-48
+- Dn: 1-3, 5-11, 13-14
+
+=== SESSION COMPLETE (Jerome subagent jerome-ot-proph4, 2026-03-07) ===
+
+STATUS: ALL ASSIGNED CHAPTERS COMPLETE
+
+COMPLETED THIS SESSION:
+- Jer 27: 3 new annotations (27:2, 27:7, 27:18) — some pre-existing entries found
+- Ez: ALL 48 chapters — 154 total entries in TSV
+  - Ch 1, 2, 4, 5, 6, 10, 11, 13-17, 19-22, 24-28, 31-35, 37, 39, 41-48: fully processed
+  - Ch 3, 7, 8, 9, 12, 18, 23, 29, 30, 36, 38, 40: previously done
+- Dn: ALL 14 chapters — 74 total entries in TSV  
+  - Ch 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13, 14: newly processed
+  - Ch 4, 12: previously done
+
+METHODOLOGY:
+- Reused /tmp/drb-proph3/ p0001-p0201 files (existed at session start)
+- Rendered PDF pages 1737-1820 to /tmp/drb-proph4/ (84 new pages)
+- Used vision model on batches of 15 pages
+- Located Jer 27 at jer27_0043.png in /tmp/drb-proph3/
+
+PAGE MAPPING (drb-proph3/):
+- p0044 = Ez 1 (PDF ~1663)
+- p0050 = Ez 5 (PDF ~1669)
+- p0100 = Ez 34 (PDF ~1719)
+
+PAGE MAPPING (drb-proph4/):
+- p0001 = Ez 43-44 (PDF 1737)
+- p0020 = Dn 3 (PDF 1756)
+- p0040 = Dn 11-12 (PDF 1776)
+- Daniel ends ~PDF 1784 (p0048)
+
+TOTAL TSV ROWS: 663 (was ~400 before this session)
+
+2026-03-07 22:30 — Jerome (subagent jerome-ezdn)
+  Ez coverage: ALL 48 chapters covered (1-48)
+  Dn coverage: ALL 14 chapters covered (1-14)  
+  Removed 12 duplicate rows (Dn 3 dupes + 1Mc/2Mc dupes from earlier runs)
+  Total annotations: Ez=154, Dn=85 (after dedup)
+  Jer 27: already present from earlier run
+  Status: COMPLETE — no missing Ez or Dn chapters
