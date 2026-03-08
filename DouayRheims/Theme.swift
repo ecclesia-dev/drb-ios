@@ -13,8 +13,8 @@ enum Theme {
 
     // Deuterocanonical books
     static let deuterocanonical: Set<String> = [
-        "Tobit", "Judith", "Wisdom", "Sirach", "Baruch",
-        "1 Maccabees", "2 Maccabees"
+        "Tobias", "Judith", "Wisdom", "Ecclesiasticus", "Baruch",
+        "1 Machabees", "2 Machabees"
     ]
 
     // MARK: - Fonts
