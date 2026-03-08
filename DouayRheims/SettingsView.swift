@@ -70,6 +70,21 @@ struct SettingsView: View {
                 .tint(Theme.accent(colorScheme))
             }
 
+            Section {
+                Picker("Primary Bible", selection: $settings.primaryTranslation) {
+                    Text("Douay-Rheims (Challoner)").tag(Translation.challoner)
+                    Text("Clementine Vulgate (Latin)").tag(Translation.vulgate)
+                    Text("Douay 1609 / Rheims 1582").tag(Translation.douai1609)
+                }
+                .pickerStyle(.inline)
+                .labelsHidden()
+            } header: {
+                Text("Primary Bible")
+            } footer: {
+                Text("Sets the default panel, chapter navigation, search, and verse numbering.")
+                    .font(Theme.serifBody(12))
+            }
+
             Section("About") {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Douay-Rheims Bible")

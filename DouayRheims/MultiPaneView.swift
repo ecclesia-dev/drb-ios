@@ -32,6 +32,12 @@ struct MultiPaneView: View {
                 iPhoneLayout
             }
         }
+        .onAppear {
+            syncPrimaryPanel()
+        }
+        .onChange(of: settings.primaryTranslation) { _, _ in
+            syncPrimaryPanel()
+        }
         .sheet(isPresented: $showSearch) {
             NavigationStack { SearchView() }
                 .environmentObject(bibleData)
@@ -234,5 +240,18 @@ struct MultiPaneView: View {
             Panel(resource: .drb1609),
             Panel(resource: .drb)
         ]
+    }
+
+    /// Keep panel[0] in sync with the user's chosen primary translation.
+    /// Called on appear and whenever `settings.primaryTranslation` changes.
+    private func syncPrimaryPanel() {
+        let primaryResource: ResourceType
+        switch settings.primaryTranslation {
+        case .challoner: primaryResource = .drb
+        case .vulgate:   primaryResource = .vulgate
+        case .douai1609: primaryResource = .drb1609
+        }
+        guard panels[0].resource != primaryResource else { return }
+        panels[0].resource = primaryResource
     }
 }

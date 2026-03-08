@@ -37,10 +37,18 @@ enum Testament: String, CaseIterable {
 
 // MARK: - Translation
 
-enum Translation {
-    case challoner
-    case vulgate
-    case douai1609
+enum Translation: String, CaseIterable {
+    case challoner = "challoner"
+    case vulgate   = "vulgate"
+    case douai1609 = "douai1609"
+
+    var displayName: String {
+        switch self {
+        case .challoner: return "Douay-Rheims (Challoner)"
+        case .vulgate:   return "Clementine Vulgate"
+        case .douai1609: return "Douay 1609 / Rheims 1582"
+        }
+    }
 }
 
 // MARK: - Bible Data Manager
@@ -60,6 +68,10 @@ final class BibleDataManager: ObservableObject {
     // Parallel translation indexes (keyed by full book name, same as verseIndex)
     private var vulgateIndex: [String: [Int: [Verse]]] = [:]
     private var drb1609Index: [String: [Int: [Verse]]] = [:]
+
+    // Flat verse arrays for search across non-Challoner translations
+    private var vulgateVerses: [Verse] = []
+    private var drb1609Verses: [Verse] = []
 
     private init() {
         // Fix 1: Load off the main thread — fire-and-forget Task on @MainActor,
@@ -83,6 +95,8 @@ final class BibleDataManager: ObservableObject {
         self.books = result.books
         self.vulgateIndex = result.vulgateIndex
         self.drb1609Index = result.drb1609Index
+        self.vulgateVerses = result.vulgateVerses
+        self.drb1609Verses = result.drb1609Verses
         self.isLoaded = true
     }
 
@@ -95,6 +109,8 @@ final class BibleDataManager: ObservableObject {
         let books: [Book]
         let vulgateIndex: [String: [Int: [Verse]]]
         let drb1609Index: [String: [Int: [Verse]]]
+        let vulgateVerses: [Verse]
+        let drb1609Verses: [Verse]
     }
 
     nonisolated private static func parseData() -> LoadResult {
@@ -169,6 +185,7 @@ final class BibleDataManager: ObservableObject {
         // ── 2. Load Clementine Vulgate (vulgate-clementine.tsv) ──────────────
         // Schema: FullBookName(0) BookAbbrev(1) BookNum(2) Chapter(3) Verse(4) Text(5)
         var vulgateIndex: [String: [Int: [Verse]]] = [:]
+        var vulgateVerses: [Verse] = []
         if let vulURL = Bundle.main.url(forResource: "vulgate-clementine", withExtension: "tsv"),
            let vulData = try? String(contentsOf: vulURL, encoding: .utf8) {
             let vulLines = vulData.components(separatedBy: .newlines)
@@ -194,6 +211,7 @@ final class BibleDataManager: ObservableObject {
                     lowercasedText: text.lowercased()
                 )
                 vulgateIndex[bookName, default: [:]][chapter, default: []].append(verse)
+                vulgateVerses.append(verse)
             }
             for bookName in vulgateIndex.keys {
                 for chapter in vulgateIndex[bookName]!.keys {
@@ -205,6 +223,7 @@ final class BibleDataManager: ObservableObject {
         // ── 3. Load Douay-Rheims 1609 (drb-1609.tsv) ─────────────────────────
         // Schema: header row + BookAbbrev(0) Chapter(1) Verse(2) Text(3)
         var drb1609Index: [String: [Int: [Verse]]] = [:]
+        var drb1609Verses: [Verse] = []
         if let d1609URL = Bundle.main.url(forResource: "drb-1609", withExtension: "tsv"),
            let d1609Data = try? String(contentsOf: d1609URL, encoding: .utf8) {
             let d1609Lines = d1609Data.components(separatedBy: .newlines)
@@ -234,6 +253,7 @@ final class BibleDataManager: ObservableObject {
                     lowercasedText: text.lowercased()
                 )
                 drb1609Index[bookName, default: [:]][chapter, default: []].append(verse)
+                drb1609Verses.append(verse)
             }
             for bookName in drb1609Index.keys {
                 for chapter in drb1609Index[bookName]!.keys {
@@ -248,7 +268,9 @@ final class BibleDataManager: ObservableObject {
             verseById: verseById,
             books: books,
             vulgateIndex: vulgateIndex,
-            drb1609Index: drb1609Index
+            drb1609Index: drb1609Index,
+            vulgateVerses: vulgateVerses,
+            drb1609Verses: drb1609Verses
         )
     }
 
@@ -266,17 +288,25 @@ final class BibleDataManager: ObservableObject {
         }
     }
 
-    // Convenience overload — keeps callers using the old signature working
+    // Convenience overload — uses the user's chosen primary translation.
+    // Callers that don't pass an explicit translation automatically follow the setting.
     func verses(for book: String, chapter: Int) -> [Verse] {
-        verses(for: book, chapter: chapter, translation: .challoner)
+        verses(for: book, chapter: chapter, translation: SettingsManager.shared.primaryTranslation)
     }
 
-    // Fix 3: Use precomputed lowercasedText — no per-search String allocation
-    func search(_ query: String, limit: Int = 100) -> [Verse] {
+    // Fix 3: Use precomputed lowercasedText — no per-search String allocation.
+    // Searches the specified translation; defaults to the user's primary translation.
+    func search(_ query: String, translation: Translation, limit: Int = 100) -> [Verse] {
         guard !query.isEmpty else { return [] }
         let lowered = query.lowercased()
+        let sourceVerses: [Verse]
+        switch translation {
+        case .challoner: sourceVerses = allVerses
+        case .vulgate:   sourceVerses = vulgateVerses
+        case .douai1609: sourceVerses = drb1609Verses
+        }
         var results: [Verse] = []
-        for verse in allVerses {
+        for verse in sourceVerses {
             if verse.lowercasedText.contains(lowered) ||
                verse.bookName.lowercased().contains(lowered) {
                 results.append(verse)
@@ -284,6 +314,11 @@ final class BibleDataManager: ObservableObject {
             }
         }
         return results
+    }
+
+    // Convenience overload — searches using the user's primary translation
+    func search(_ query: String, limit: Int = 100) -> [Verse] {
+        search(query, translation: SettingsManager.shared.primaryTranslation, limit: limit)
     }
 
     // Fix 2: O(1) bookmark lookup — was allVerses.first { $0.id == id }

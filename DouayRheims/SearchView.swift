@@ -3,6 +3,7 @@ import SwiftUI
 struct SearchView: View {
     @EnvironmentObject var bibleData: BibleDataManager
     @EnvironmentObject var bookmarks: BookmarkManager
+    @EnvironmentObject var settings: SettingsManager
     @Environment(\.colorScheme) var colorScheme
 
     @State private var query = ""
@@ -13,7 +14,7 @@ struct SearchView: View {
         List {
             if !hasSearched {
                 Section {
-                    Text("Search across all 35,805 verses of the Douay-Rheims Bible.")
+                    Text("Search across all verses of the \(settings.primaryTranslation.displayName).")
                         .font(Theme.serifItalic(16))
                         .foregroundColor(.secondary)
                         .listRowBackground(Color.clear)
@@ -81,6 +82,6 @@ struct SearchView: View {
 
     private func performSearch() {
         hasSearched = true
-        results = bibleData.search(query)
+        results = bibleData.search(query, translation: settings.primaryTranslation)
     }
 }

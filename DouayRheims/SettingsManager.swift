@@ -8,6 +8,9 @@ final class SettingsManager: ObservableObject {
     @AppStorage("fontSize") var fontSize: Double = 18.0
     @AppStorage("lineSpacing") var lineSpacing: Double = 5.0
     @AppStorage("showCommentary") var showCommentary: Bool = true
+    /// The translation that drives chapter navigation, search, and panel 1.
+    /// Persisted via UserDefaults key "primaryTranslation". Default: Challoner.
+    @AppStorage("primaryTranslation") var primaryTranslation: Translation = .challoner
 
     private init() {}
 
