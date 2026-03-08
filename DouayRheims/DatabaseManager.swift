@@ -84,7 +84,7 @@ final class DatabaseManager: ObservableObject {
         sqlite3_exec(db, "COMMIT", nil, nil, nil)
     }
 
-    private static func importDRB(_ db: OpaquePointer) {
+    nonisolated private static func importDRB(_ db: OpaquePointer) {
         guard let url = Bundle.main.url(forResource: "drb", withExtension: "tsv"),
               let data = try? String(contentsOf: url, encoding: .utf8) else { return }
 
@@ -115,7 +115,7 @@ final class DatabaseManager: ObservableObject {
     }
 
     /// Import 3-column commentary TSV: BookAbbrev\tChapter:Verse\tText
-    private static func importCommentary3Col(_ db: OpaquePointer, resource: String, source: String, hasHeader: Bool) {
+    nonisolated private static func importCommentary3Col(_ db: OpaquePointer, resource: String, source: String, hasHeader: Bool) {
         guard let url = Bundle.main.url(forResource: resource, withExtension: "tsv"),
               let data = try? String(contentsOf: url, encoding: .utf8) else { return }
 
@@ -152,7 +152,7 @@ final class DatabaseManager: ObservableObject {
     }
 
     /// Import 4-column Chrysostom TSV: book\tchapter\tverse\tcommentary (with header)
-    private static func importChrysostom(_ db: OpaquePointer, resource: String, source: String) {
+    nonisolated private static func importChrysostom(_ db: OpaquePointer, resource: String, source: String) {
         guard let url = Bundle.main.url(forResource: resource, withExtension: "tsv"),
               let data = try? String(contentsOf: url, encoding: .utf8) else { return }
 
@@ -181,7 +181,7 @@ final class DatabaseManager: ObservableObject {
     }
 
     /// Import 5-column Aquinas TSV: book\tchapter\tverse\tlatin_incipit\tenglish_translation (with header)
-    private static func importAquinas(_ db: OpaquePointer, resource: String, source: String) {
+    nonisolated private static func importAquinas(_ db: OpaquePointer, resource: String, source: String) {
         guard let url = Bundle.main.url(forResource: resource, withExtension: "tsv"),
               let data = try? String(contentsOf: url, encoding: .utf8) else { return }
 
